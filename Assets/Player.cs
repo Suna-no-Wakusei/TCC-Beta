@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
 {
     private BoxCollider2D boxCollider;
 
-    private Vector3 moveDelta;
+    private Vector2 moveDelta;
+    private Rigidbody2D rb;
 
     public float moveSpeed = 5f;
 
@@ -21,19 +22,14 @@ public class Player : MonoBehaviour
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        //Reset moveDelta
-        moveDelta = new Vector3(x, y, 0);
-
-        //Movement
-        transform.Translate(moveDelta * Time.fixedDeltaTime * moveSpeed);
+        moveDelta.x = Input.GetAxisRaw("Horizontal");
+        moveDelta.y = Input.GetAxisRaw("Vertical");
 
         //Animation
         animator.SetFloat("Horizontal", moveDelta.x);
@@ -74,5 +70,15 @@ public class Player : MonoBehaviour
             animator.SetFloat("IdleHorizontal", LastMoveHorizontal);
         }
 
+    }
+
+    private void FixedUpdate()
+    {
+        //check for diagonal movement
+        if(moveDelta.x != 0 && moveDelta.y != 0)
+        {
+            moveDelta *= 0.7f;
+        }
+        rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
     }
 }
