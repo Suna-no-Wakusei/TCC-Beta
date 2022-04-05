@@ -1,0 +1,5424 @@
+fileFormatVersion: 2
+guid: 27875604ebc8dc041a8fa33a9cc0227b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8514651943142615349
+    second: Alltiles1_0
+  - first:
+      213: 3867111035871550790
+    second: Alltiles1_1
+  - first:
+      213: 5353646427480170992
+    second: Alltiles1_2
+  - first:
+      213: 5965104791163289072
+    second: Alltiles1_3
+  - first:
+      213: -6627252630458481386
+    second: Alltiles1_4
+  - first:
+      213: -7892422736541610566
+    second: Alltiles1_5
+  - first:
+      213: -227686900186871362
+    second: Alltiles1_6
+  - first:
+      213: 1184576040408925893
+    second: Alltiles1_7
+  - first:
+      213: -6131666576061980419
+    second: Alltiles1_8
+  - first:
+      213: 6454292340847549189
+    second: Alltiles1_9
+  - first:
+      213: -2120929136024227094
+    second: Alltiles1_10
+  - first:
+      213: 2320237782555061980
+    second: Alltiles1_11
+  - first:
+      213: 2207385065260742978
+    second: Alltiles1_12
+  - first:
+      213: 5388757834001516380
+    second: Alltiles1_13
+  - first:
+      213: 5090353692319210189
+    second: Alltiles1_14
+  - first:
+      213: -9220793820377918328
+    second: Alltiles1_15
+  - first:
+      213: -5442232340005736837
+    second: Alltiles1_16
+  - first:
+      213: 7425533601380554880
+    second: Alltiles1_17
+  - first:
+      213: 1018888964083817137
+    second: Alltiles1_18
+  - first:
+      213: 4391647990711924725
+    second: Alltiles1_19
+  - first:
+      213: -1176443091893083214
+    second: Alltiles1_20
+  - first:
+      213: -6102373452411172239
+    second: Alltiles1_21
+  - first:
+      213: 3851245183800069352
+    second: Alltiles1_22
+  - first:
+      213: 7545992106466523912
+    second: Alltiles1_23
+  - first:
+      213: 4236947322597287014
+    second: Alltiles1_24
+  - first:
+      213: -2188950752975000537
+    second: Alltiles1_25
+  - first:
+      213: 3589738160571452240
+    second: Alltiles1_26
+  - first:
+      213: -6984772903172385806
+    second: Alltiles1_27
+  - first:
+      213: -4193656036999420651
+    second: Alltiles1_28
+  - first:
+      213: 9044846201874304938
+    second: Alltiles1_29
+  - first:
+      213: 6977014335172553551
+    second: Alltiles1_30
+  - first:
+      213: 560041417184084889
+    second: Alltiles1_31
+  - first:
+      213: 2941021851068935078
+    second: Alltiles1_32
+  - first:
+      213: -8779701840556472794
+    second: Alltiles1_33
+  - first:
+      213: 1921834936089750002
+    second: Alltiles1_34
+  - first:
+      213: 8919809486656363379
+    second: Alltiles1_35
+  - first:
+      213: -547574027118753976
+    second: Alltiles1_36
+  - first:
+      213: -7148489739150378387
+    second: Alltiles1_37
+  - first:
+      213: -1323114607780911574
+    second: Alltiles1_38
+  - first:
+      213: -5085377539489145175
+    second: Alltiles1_39
+  - first:
+      213: 7782622291295689846
+    second: Alltiles1_40
+  - first:
+      213: -5308280832943209630
+    second: Alltiles1_41
+  - first:
+      213: 373826668237684260
+    second: Alltiles1_42
+  - first:
+      213: 1149946475788769433
+    second: Alltiles1_43
+  - first:
+      213: -7736307360946578533
+    second: Alltiles1_44
+  - first:
+      213: 2961635434046398512
+    second: Alltiles1_45
+  - first:
+      213: -2691417378237589691
+    second: Alltiles1_46
+  - first:
+      213: -2424820771068557249
+    second: Alltiles1_47
+  - first:
+      213: -2035406567684393633
+    second: Alltiles1_48
+  - first:
+      213: 4237117305124204610
+    second: Alltiles1_49
+  - first:
+      213: -6672056898217489056
+    second: Alltiles1_50
+  - first:
+      213: -7237871592808404445
+    second: Alltiles1_51
+  - first:
+      213: -2325184255840584845
+    second: Alltiles1_52
+  - first:
+      213: -3109318467038716785
+    second: Alltiles1_53
+  - first:
+      213: -8343564165505241078
+    second: Alltiles1_54
+  - first:
+      213: -4402748208237648944
+    second: Alltiles1_55
+  - first:
+      213: 8686541221762855224
+    second: Alltiles1_56
+  - first:
+      213: -5355165362222937712
+    second: Alltiles1_57
+  - first:
+      213: -2840963878108086708
+    second: Alltiles1_58
+  - first:
+      213: 1575814956489583758
+    second: Alltiles1_59
+  - first:
+      213: -5355901269506819711
+    second: Alltiles1_60
+  - first:
+      213: 3439681378148898959
+    second: Alltiles1_61
+  - first:
+      213: -1481679311903210074
+    second: Alltiles1_62
+  - first:
+      213: -5109290815061087370
+    second: Alltiles1_63
+  - first:
+      213: -3430954698158437329
+    second: Alltiles1_64
+  - first:
+      213: -1634207109609599394
+    second: Alltiles1_65
+  - first:
+      213: 3469746811880811401
+    second: Alltiles1_66
+  - first:
+      213: 3039725247118812967
+    second: Alltiles1_67
+  - first:
+      213: 4357409591313681908
+    second: Alltiles1_68
+  - first:
+      213: 5390718420423068618
+    second: Alltiles1_69
+  - first:
+      213: 7450897823668133446
+    second: Alltiles1_70
+  - first:
+      213: -2299932795507803909
+    second: Alltiles1_71
+  - first:
+      213: 8470792747598236603
+    second: Alltiles1_72
+  - first:
+      213: -9024978110778365375
+    second: Alltiles1_73
+  - first:
+      213: 525935531611593846
+    second: Alltiles1_74
+  - first:
+      213: -3437366458481589036
+    second: Alltiles1_75
+  - first:
+      213: 5896565077809833377
+    second: Alltiles1_76
+  - first:
+      213: 7096507690185007466
+    second: Alltiles1_77
+  - first:
+      213: 860638385981369701
+    second: Alltiles1_78
+  - first:
+      213: 9024017262670812470
+    second: Alltiles1_79
+  - first:
+      213: 976904349406266446
+    second: Alltiles1_80
+  - first:
+      213: 2077766547124235980
+    second: Alltiles1_81
+  - first:
+      213: 1569910258353027947
+    second: Alltiles1_82
+  - first:
+      213: 2929388483005828458
+    second: Alltiles1_83
+  - first:
+      213: -120489695110752575
+    second: Alltiles1_84
+  - first:
+      213: -8955130894506681920
+    second: Alltiles1_85
+  - first:
+      213: -2249598647775987269
+    second: Alltiles1_86
+  - first:
+      213: 4037107477057640447
+    second: Alltiles1_87
+  - first:
+      213: 4347046356571751460
+    second: Alltiles1_88
+  - first:
+      213: -7421941942988594417
+    second: Alltiles1_89
+  - first:
+      213: 1619088097560410746
+    second: Alltiles1_90
+  - first:
+      213: 7824494772430844268
+    second: Alltiles1_91
+  - first:
+      213: 7107688065399832411
+    second: Alltiles1_92
+  - first:
+      213: -8271783966912501620
+    second: Alltiles1_93
+  - first:
+      213: -6565161256435353710
+    second: Alltiles1_94
+  - first:
+      213: -8808927818271031502
+    second: Alltiles1_95
+  - first:
+      213: -3892677959181878211
+    second: Alltiles1_96
+  - first:
+      213: -7323305986950451244
+    second: Alltiles1_97
+  - first:
+      213: -93489690987356178
+    second: Alltiles1_98
+  - first:
+      213: -7880641937830473137
+    second: Alltiles1_99
+  - first:
+      213: -5114383903680639251
+    second: Alltiles1_100
+  - first:
+      213: -2278837642630159977
+    second: Alltiles1_101
+  - first:
+      213: 7780570872944365865
+    second: Alltiles1_102
+  - first:
+      213: -2837084196877727898
+    second: Alltiles1_103
+  - first:
+      213: 7369202590237073019
+    second: Alltiles1_104
+  - first:
+      213: 5776865210446097566
+    second: Alltiles1_105
+  - first:
+      213: 1134068833739158023
+    second: Alltiles1_106
+  - first:
+      213: -4523107545004954520
+    second: Alltiles1_107
+  - first:
+      213: -2011988099974220881
+    second: Alltiles1_108
+  - first:
+      213: 5982142927253097906
+    second: Alltiles1_109
+  - first:
+      213: 1954018447364711433
+    second: Alltiles1_110
+  - first:
+      213: -4851651958892193877
+    second: Alltiles1_111
+  - first:
+      213: 5696497565083704438
+    second: Alltiles1_112
+  - first:
+      213: 5869481180527780977
+    second: Alltiles1_113
+  - first:
+      213: 8606527771519820493
+    second: Alltiles1_114
+  - first:
+      213: -4496503824422559890
+    second: Alltiles1_115
+  - first:
+      213: 6475950397211549627
+    second: Alltiles1_116
+  - first:
+      213: 2710661216587547828
+    second: Alltiles1_117
+  - first:
+      213: -2010594540827682848
+    second: Alltiles1_118
+  - first:
+      213: 8546008194343497903
+    second: Alltiles1_119
+  - first:
+      213: -2666406036674756377
+    second: Alltiles1_120
+  - first:
+      213: 1184999834649137480
+    second: Alltiles1_121
+  - first:
+      213: -1001435479646262295
+    second: Alltiles1_122
+  - first:
+      213: 8853435275788416087
+    second: Alltiles1_123
+  - first:
+      213: -2038259727912942093
+    second: Alltiles1_124
+  - first:
+      213: 8164270944559201786
+    second: Alltiles1_125
+  - first:
+      213: -9179796717096035060
+    second: Alltiles1_126
+  - first:
+      213: 2935487003971938554
+    second: Alltiles1_127
+  - first:
+      213: 6646692948802652948
+    second: Alltiles1_128
+  - first:
+      213: -108771640643301958
+    second: Alltiles1_129
+  - first:
+      213: -5013249550045327735
+    second: Alltiles1_130
+  - first:
+      213: -2681111585834401295
+    second: Alltiles1_131
+  - first:
+      213: 7557929540637066041
+    second: Alltiles1_132
+  - first:
+      213: -8341465756117387484
+    second: Alltiles1_133
+  - first:
+      213: 4649782451694652408
+    second: Alltiles1_134
+  - first:
+      213: -1236387858503607455
+    second: Alltiles1_135
+  - first:
+      213: -8489379504680772252
+    second: Alltiles1_136
+  - first:
+      213: 6166160743409402152
+    second: Alltiles1_137
+  - first:
+      213: -7403622887904834576
+    second: Alltiles1_138
+  - first:
+      213: -53686548592037224
+    second: Alltiles1_139
+  - first:
+      213: -446454417117799484
+    second: Alltiles1_140
+  - first:
+      213: 2091489058489605890
+    second: Alltiles1_141
+  - first:
+      213: -8963733444111760731
+    second: Alltiles1_142
+  - first:
+      213: -35756161583001956
+    second: Alltiles1_143
+  - first:
+      213: -6650158587712289774
+    second: Alltiles1_144
+  - first:
+      213: -1474435307187931292
+    second: Alltiles1_145
+  - first:
+      213: -3815055187318403736
+    second: Alltiles1_146
+  - first:
+      213: -7345523876814816999
+    second: Alltiles1_147
+  - first:
+      213: -8139710851724020710
+    second: Alltiles1_148
+  - first:
+      213: -8589230044503932508
+    second: Alltiles1_149
+  - first:
+      213: -811920874998657128
+    second: Alltiles1_150
+  - first:
+      213: -5411053809697016968
+    second: Alltiles1_151
+  - first:
+      213: 3096114107336238366
+    second: Alltiles1_152
+  - first:
+      213: 3432411105415934844
+    second: Alltiles1_153
+  - first:
+      213: -268101175043174365
+    second: Alltiles1_154
+  - first:
+      213: -3553610078184048348
+    second: Alltiles1_155
+  - first:
+      213: -7505579351824128306
+    second: Alltiles1_156
+  - first:
+      213: 6346675199768823377
+    second: Alltiles1_157
+  - first:
+      213: -8641742915944670772
+    second: Alltiles1_158
+  - first:
+      213: 765944178170867502
+    second: Alltiles1_159
+  - first:
+      213: -8514533737008387956
+    second: Alltiles1_160
+  - first:
+      213: -4538994610636787490
+    second: Alltiles1_161
+  - first:
+      213: -9180281843375979339
+    second: Alltiles1_162
+  - first:
+      213: 6563933155512776300
+    second: Alltiles1_163
+  - first:
+      213: 990779576945266002
+    second: Alltiles1_164
+  - first:
+      213: -7564837264551733665
+    second: Alltiles1_165
+  - first:
+      213: -3956846772873903649
+    second: Alltiles1_166
+  - first:
+      213: -158180330826530740
+    second: Alltiles1_167
+  - first:
+      213: -7157458384545231879
+    second: Alltiles1_168
+  - first:
+      213: 3826107444885539945
+    second: Alltiles1_169
+  - first:
+      213: -6793573822462239109
+    second: Alltiles1_170
+  - first:
+      213: 8515144874890397579
+    second: Alltiles1_171
+  - first:
+      213: -5300184148936798267
+    second: Alltiles1_172
+  - first:
+      213: -8013394252758691340
+    second: Alltiles1_173
+  - first:
+      213: 1254928802428284904
+    second: Alltiles1_174
+  - first:
+      213: -1861007008081603790
+    second: Alltiles1_175
+  - first:
+      213: 3538937322878457006
+    second: Alltiles1_176
+  - first:
+      213: -2254008671698297325
+    second: Alltiles1_177
+  - first:
+      213: 3749884402567848813
+    second: Alltiles1_178
+  - first:
+      213: 5322014775835071299
+    second: Alltiles1_179
+  - first:
+      213: -3242847316985572243
+    second: Alltiles1_180
+  - first:
+      213: 7467072931432253539
+    second: Alltiles1_181
+  - first:
+      213: 7868906359042926675
+    second: Alltiles1_182
+  - first:
+      213: -4964406927420959695
+    second: Alltiles1_183
+  - first:
+      213: -4014693384868403035
+    second: Alltiles1_184
+  - first:
+      213: 6380527799695899523
+    second: Alltiles1_185
+  - first:
+      213: -6698330300515442188
+    second: Alltiles1_186
+  - first:
+      213: 7160124881036080238
+    second: Alltiles1_187
+  - first:
+      213: 2307736570281417126
+    second: Alltiles1_188
+  - first:
+      213: 6081593342604548936
+    second: Alltiles1_189
+  - first:
+      213: 6339993030054223771
+    second: Alltiles1_190
+  - first:
+      213: -256700293116131627
+    second: Alltiles1_191
+  - first:
+      213: -2013166104565891246
+    second: Alltiles1_192
+  - first:
+      213: -1069794751402293736
+    second: Alltiles1_193
+  - first:
+      213: -2444372208605172065
+    second: Alltiles1_194
+  - first:
+      213: 5696964125593125612
+    second: Alltiles1_195
+  - first:
+      213: -2588341554975424082
+    second: Alltiles1_196
+  - first:
+      213: 8367190650440687416
+    second: Alltiles1_197
+  - first:
+      213: 8038790265638219519
+    second: Alltiles1_198
+  - first:
+      213: 8693342648773964855
+    second: Alltiles1_199
+  - first:
+      213: 4686952661015950800
+    second: Alltiles1_200
+  - first:
+      213: 4821694529165178039
+    second: Alltiles1_201
+  - first:
+      213: 3587560439495786890
+    second: Alltiles1_202
+  - first:
+      213: -8717540215271889277
+    second: Alltiles1_203
+  - first:
+      213: 8568170690168678243
+    second: Alltiles1_204
+  - first:
+      213: 5162194131314297509
+    second: Alltiles1_205
+  - first:
+      213: -2276557838339390598
+    second: Alltiles1_206
+  - first:
+      213: -7417881942785800498
+    second: Alltiles1_207
+  - first:
+      213: -4617692164059195301
+    second: Alltiles1_208
+  - first:
+      213: 2957773052478991453
+    second: Alltiles1_209
+  - first:
+      213: 4341701494279615820
+    second: Alltiles1_210
+  - first:
+      213: -6660326954169317868
+    second: Alltiles1_211
+  - first:
+      213: 7997391493234797660
+    second: Alltiles1_212
+  - first:
+      213: -8981997244744002363
+    second: Alltiles1_213
+  - first:
+      213: -4266466315489862723
+    second: Alltiles1_214
+  - first:
+      213: -8102465364705872400
+    second: Alltiles1_215
+  - first:
+      213: -8737636800051922117
+    second: Alltiles1_216
+  - first:
+      213: 5679966080252338818
+    second: Alltiles1_217
+  - first:
+      213: -585137808719409141
+    second: Alltiles1_218
+  - first:
+      213: -3125472542413892321
+    second: Alltiles1_219
+  - first:
+      213: -5724702464183040673
+    second: Alltiles1_220
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Alltiles1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc615e69b21e5d980800000000000000
+      internalID: -8514651943142615349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ddd109ffcbaa530800000000000000
+      internalID: 3867111035871550790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1aefa9f09fb4a40800000000000000
+      internalID: 5353646427480170992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdb44df33f48c250800000000000000
+      internalID: 5965104791163289072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615cfb468d44704a0800000000000000
+      internalID: -6627252630458481386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd8833465b787290800000000000000
+      internalID: -7892422736541610566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb90a5a78f717dcf0800000000000000
+      internalID: -227686900186871362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c64302f1a5707010800000000000000
+      internalID: 1184576040408925893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0a0bc6cb1f7eaa0800000000000000
+      internalID: -6131666576061980419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b1ebc00b0429950800000000000000
+      internalID: 6454292340847549189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_10
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2ff7d1032f092e0800000000000000
+      internalID: -2120929136024227094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde62a758f3233020800000000000000
+      internalID: 2320237782555061980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_12
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2497e59850532ae10800000000000000
+      internalID: 2207385065260742978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 884
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57834cf2b6b8ca40800000000000000
+      internalID: 5388757834001516380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcad8cb96b194a640800000000000000
+      internalID: 5090353692319210189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884d14dcfd8290080800000000000000
+      internalID: -9220793820377918328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ea0dc558e4974b0800000000000000
+      internalID: -5442232340005736837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088d302e77bcc0760800000000000000
+      internalID: 7425533601380554880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba18c15d12d32e00800000000000000
+      internalID: 1018888964083817137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_19
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f731f0649442fc30800000000000000
+      internalID: 4391647990711924725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b32041bd3f6cafe0800000000000000
+      internalID: -1176443091893083214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_21
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a02424da3005ba0800000000000000
+      internalID: -6102373452411172239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_22
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec4653071f527530800000000000000
+      internalID: 3851245183800069352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bb6d727dfb8b860800000000000000
+      internalID: 7545992106466523912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_24
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664247f3429acca30800000000000000
+      internalID: 4236947322597287014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 868
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ce91243e84f91e0800000000000000
+      internalID: -2188950752975000537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b868976df41d130800000000000000
+      internalID: 3589738160571452240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3d2ad2d0a111f90800000000000000
+      internalID: -6984772903172385806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5152a74ad042dc5c0800000000000000
+      internalID: -4193656036999420651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_29
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf42cee2bfb58d70800000000000000
+      internalID: 9044846201874304938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ba4c0729553d060800000000000000
+      internalID: 6977014335172553551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_31
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99383c2a3baa5c700800000000000000
+      internalID: 560041417184084889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab20a59acb90d820800000000000000
+      internalID: 2941021851068935078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_33
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626c9cf51bb382680800000000000000
+      internalID: -8779701840556472794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_34
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9a09a21babbaa10800000000000000
+      internalID: 1921834936089750002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bdf4c087789cb70800000000000000
+      internalID: 8919809486656363379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_36
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8474b51d250a668f0800000000000000
+      internalID: -547574027118753976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6aba61e4767bcc90800000000000000
+      internalID: -7148489739150378387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_38
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26a61e364a53ade0800000000000000
+      internalID: -1323114607780911574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_39
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aedff1421c1d69b0800000000000000
+      internalID: -5085377539489145175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_40
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c57b56dbd610c60800000000000000
+      internalID: 7782622291295689846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_41
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263c768f4b23556b0800000000000000
+      internalID: -5308280832943209630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_42
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42effd7cf59103500800000000000000
+      internalID: 373826668237684260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9981a102a3e65ff00800000000000000
+      internalID: 1149946475788769433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_44
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b1a85a17d13a490800000000000000
+      internalID: -7736307360946578533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_45
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 852
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030ab806cb7d91920800000000000000
+      internalID: 2961635434046398512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547d5db772a26aad0800000000000000
+      internalID: -2691417378237589691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3848702b5e495ed0800000000000000
+      internalID: -2424820771068557249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_48
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55bcafb288c0c3e0800000000000000
+      internalID: -2035406567684393633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_49
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240b6936db34dca30800000000000000
+      internalID: 4237117305124204610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d4d84e9971863a0800000000000000
+      internalID: -6672056898217489056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_51
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32aa3cc522aed8b90800000000000000
+      internalID: -7237871592808404445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b7a491d394bbfd0800000000000000
+      internalID: -2325184255840584845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_53
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c589ef35b79d4d0800000000000000
+      internalID: -3109318467038716785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_54
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00b16af894b53c80800000000000000
+      internalID: -8343564165505241078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_55
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3e184d4db46e2c0800000000000000
+      internalID: -4402748208237648944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_56
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83176f9c73bcc8870800000000000000
+      internalID: 8686541221762855224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099c937d971aea5b0800000000000000
+      internalID: -5355165362222937712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_58
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4eb6a9a76ed298d0800000000000000
+      internalID: -2840963878108086708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_59
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c2f499a5b6ed510800000000000000
+      internalID: 1575814956489583758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_60
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1897bf21c240ca5b0800000000000000
+      internalID: -5355901269506819711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_61
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88571d3df33cbf20800000000000000
+      internalID: 3439681378148898959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_62
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5c6fe1484007be0800000000000000
+      internalID: -1481679311903210074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b2e1ae2172819b0800000000000000
+      internalID: -5109290815061087370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_64
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c0fc741ecc260d0800000000000000
+      internalID: -3430954698158437329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_65
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 836
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e4d4eca412259e0800000000000000
+      internalID: -1634207109609599394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_66
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b23b68754072030800000000000000
+      internalID: 3469746811880811401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_67
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727ad41d1064f2a20800000000000000
+      internalID: 3039725247118812967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_68
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdc12fcfe0a87c30800000000000000
+      internalID: 4357409591313681908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_69
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbc87597ddafca40800000000000000
+      internalID: 5390718420423068618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_70
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e58751818e66760800000000000000
+      internalID: 7450897823668133446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_71
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf87c7cde4ff410e0800000000000000
+      internalID: -2299932795507803909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_72
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb4c8eaf1d4e8570800000000000000
+      internalID: 8470792747598236603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_73
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a21618936d0c280800000000000000
+      internalID: -9024978110778365375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_74
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c1778549f7c4700800000000000000
+      internalID: 525935531611593846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_75
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4cc5ffa650c40d0800000000000000
+      internalID: -3437366458481589036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_76
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a524d962bec4d150800000000000000
+      internalID: 5896565077809833377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_77
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a612e43352cdb7260800000000000000
+      internalID: 7096507690185007466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_78
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d2c7c5d0a91fb00800000000000000
+      internalID: 860638385981369701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_79
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6359c7c93efbb3d70800000000000000
+      internalID: 9024017262670812470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_80
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4405e57459ae8d00800000000000000
+      internalID: 976904349406266446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_81
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 820
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccea7878aa5b5dc10800000000000000
+      internalID: 2077766547124235980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_82
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 804
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bbf5eef0179c510800000000000000
+      internalID: 1569910258353027947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_83
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 804
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6dcea20e4747a820800000000000000
+      internalID: 2929388483005828458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_84
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 804
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c614dbb24fe35ef0800000000000000
+      internalID: -120489695110752575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c99dc3d5ebf8b380800000000000000
+      internalID: -8955130894506681920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_86
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9fc10e2f1d7c0e0800000000000000
+      internalID: -2249598647775987269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_87
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff718126cdfa60830800000000000000
+      internalID: 4037107477057640447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_88
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4248d9131afc35c30800000000000000
+      internalID: 4347046356571751460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03a7904027fff890800000000000000
+      internalID: -7421941942988594417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_90
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ab623eb08287610800000000000000
+      internalID: 1619088097560410746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_91
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6134a12a80369c60800000000000000
+      internalID: 7824494772430844268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_92
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fb07823a493a260800000000000000
+      internalID: 7107688065399832411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_93
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88a861de48b43d80800000000000000
+      internalID: -8271783966912501620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_94
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2977309fe9cd3e4a0800000000000000
+      internalID: -6565161256435353710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_95
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ff5eb22d660c580800000000000000
+      internalID: -8808927818271031502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_96
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cb8f9350e6af9c0800000000000000
+      internalID: -3892677959181878211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_97
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfa35261046e5a90800000000000000
+      internalID: -7323305986950451244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_98
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef99821f9bd3bef0800000000000000
+      internalID: -93489690987356178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_99
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42919539e552a290800000000000000
+      internalID: -7880641937830473137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_100
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deec320dfee0609b0800000000000000
+      internalID: -5114383903680639251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_101
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791ad32ec31ff50e0800000000000000
+      internalID: -2278837642630159977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_102
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92199975cf32afb60800000000000000
+      internalID: 7780570872944365865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_103
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6678a3754f6a0a8d0800000000000000
+      internalID: -2837084196877727898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_104
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e18fc46baa44660800000000000000
+      internalID: 7369202590237073019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_105
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ca3ff3d4c8b2050800000000000000
+      internalID: 5776865210446097566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_106
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7023dd188950dbf00800000000000000
+      internalID: 1134068833739158023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_107
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c271bf6a1ba31c0800000000000000
+      internalID: -4523107545004954520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_108
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 788
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa339b8ab7bf314e0800000000000000
+      internalID: -2011988099974220881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_109
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd498e2c47d40350800000000000000
+      internalID: 5982142927253097906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_110
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904ebbfcc611e1b10800000000000000
+      internalID: 1954018447364711433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_111
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba71760af387bacb0800000000000000
+      internalID: -4851651958892193877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_112
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c11b6aa560e0f40800000000000000
+      internalID: 5696497565083704438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_113
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174e23d2906947150800000000000000
+      internalID: 5869481180527780977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_114
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc229faa867807770800000000000000
+      internalID: 8606527771519820493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_115
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f9b1e58953991c0800000000000000
+      internalID: -4496503824422559890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_116
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf18d043923fd950800000000000000
+      internalID: 6475950397211549627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_117
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b40129c3043e9520800000000000000
+      internalID: 2710661216587547828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_118
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e750aeeaeee814e0800000000000000
+      internalID: -2010594540827682848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_119
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0fb6f8c25899670800000000000000
+      internalID: 8546008194343497903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_120
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e04b0d36d50ffad0800000000000000
+      internalID: -2666406036674756377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_121
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841982b3217f17010800000000000000
+      internalID: 1184999834649137480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_122
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb2632bcbf2a12f0800000000000000
+      internalID: -1001435479646262295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_123
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754f74fc978bdda70800000000000000
+      internalID: 8853435275788416087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_124
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5c3cd9395a6b3e0800000000000000
+      internalID: -2038259727912942093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_125
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd7e7cfa215d4170800000000000000
+      internalID: 8164270944559201786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_126
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d913fb58fca9080800000000000000
+      internalID: -9179796717096035060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_127
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8e58290e1fcb820800000000000000
+      internalID: 2935487003971938554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_128
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bc970750ccd3c50800000000000000
+      internalID: 6646692948802652948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_129
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdc1d5e4c09d7ef0800000000000000
+      internalID: -108771640643301958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_130
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 772
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e4927781c5d6ab0800000000000000
+      internalID: -5013249550045327735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_131
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f10823c737cacad0800000000000000
+      internalID: -2681111585834401295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_132
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9338a13afd823e860800000000000000
+      internalID: 7557929540637066041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_133
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427b98cf6192d3c80800000000000000
+      internalID: -8341465756117387484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_134
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbca141188578040800000000000000
+      internalID: 4649782451694652408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_135
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b59491bc777dee0800000000000000
+      internalID: -1236387858503607455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_136
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d5504b15aaf2a80800000000000000
+      internalID: -8489379504680772252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_137
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82140e2c68a929550800000000000000
+      internalID: 6166160743409402152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_138
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb0b73a53c014990800000000000000
+      internalID: -7403622887904834576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_139
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89274f55e54414ff0800000000000000
+      internalID: -53686548592037224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_140
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb1a43b210edc9f0800000000000000
+      internalID: -446454417117799484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_141
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f93eea736760d10800000000000000
+      internalID: 2091489058489605890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_142
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a20e6aaceb6a9380800000000000000
+      internalID: -8963733444111760731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_143
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e4052e5f7f08ff0800000000000000
+      internalID: -35756161583001956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_144
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214456f9ff3e5b3a0800000000000000
+      internalID: -6650158587712289774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_145
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467f4c666e0c98be0800000000000000
+      internalID: -1474435307187931292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_146
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d006925833e0bc0800000000000000
+      internalID: -3815055187318403736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_147
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9197d49c3f47f0a90800000000000000
+      internalID: -7345523876814816999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_148
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14f89c3b10f90f80800000000000000
+      internalID: -8139710851724020710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_149
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a10b3f38ccecc880800000000000000
+      internalID: -8589230044503932508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_150
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f0bf3144a7bb4f0800000000000000
+      internalID: -811920874998657128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_151
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8733c74aa3318e4b0800000000000000
+      internalID: -5411053809697016968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_152
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 756
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e152adf606b97fa20800000000000000
+      internalID: 3096114107336238366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_153
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c733c65f6bf52af20800000000000000
+      internalID: 3432411105415934844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_154
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320dfa9d663874cf0800000000000000
+      internalID: -268101175043174365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_155
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4297793367a0faec0800000000000000
+      internalID: -3553610078184048348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_156
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec624058853d6d790800000000000000
+      internalID: -7505579351824128306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_157
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1568003d77be31850800000000000000
+      internalID: 6346675199768823377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_158
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc99ed69a9c521880800000000000000
+      internalID: -8641742915944670772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_159
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f27a10c2e21aa00800000000000000
+      internalID: 765944178170867502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_160
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8829899dac46d980800000000000000
+      internalID: -8514533737008387956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_161
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0f49343704201c0800000000000000
+      internalID: -4538994610636787490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_162
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b44b9b7d46199080800000000000000
+      internalID: -9180281843375979339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_163
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c667fbf7d66c71b50800000000000000
+      internalID: 6563933155512776300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_164
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dc88e96c4ffbd00800000000000000
+      internalID: 990779576945266002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_165
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5691ce869c440790800000000000000
+      internalID: -7564837264551733665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_166
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1433803d47619c0800000000000000
+      internalID: -3956846772873903649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_167
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4081a2c3d70ecdf0800000000000000
+      internalID: -158180330826530740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_168
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb4a8665899bac90800000000000000
+      internalID: -7157458384545231879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_169
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c41e41370191530800000000000000
+      internalID: 3826107444885539945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_170
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7edeb43a9068b1a0800000000000000
+      internalID: -6793573822462239109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_171
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8784d6062fdb2670800000000000000
+      internalID: 8515144874890397579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_172
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 740
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf477e1996f176b0800000000000000
+      internalID: -5300184148936798267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_173
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f159274264bac090800000000000000
+      internalID: -8013394252758691340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_174
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efe42fc8176a6110800000000000000
+      internalID: 1254928802428284904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_175
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23398c67cff5c26e0800000000000000
+      internalID: -1861007008081603790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_176
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4da8cbeb4dc1130800000000000000
+      internalID: 3538937322878457006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_177
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ed5ca2e0728b0e0800000000000000
+      internalID: -2254008671698297325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_178
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63a5d31ff34a0430800000000000000
+      internalID: 3749884402567848813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_179
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343970bcd389bd940800000000000000
+      internalID: 5322014775835071299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_180
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d641f3aeb871ff2d0800000000000000
+      internalID: -3242847316985572243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_181
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36844f5d44f50a760800000000000000
+      internalID: 7467072931432253539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_182
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358e09d64a8f33d60800000000000000
+      internalID: 7868906359042926675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_183
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134d59ab332ea1bb0800000000000000
+      internalID: -4964406927420959695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_184
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8eec023a1f848c0800000000000000
+      internalID: -4014693384868403035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_185
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bf0647a303c8850800000000000000
+      internalID: 6380527799695899523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_186
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1aa89b410ca03a0800000000000000
+      internalID: -6698330300515442188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_187
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e647791b4afdd5360800000000000000
+      internalID: 7160124881036080238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_188
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a95dca0f2ab60020800000000000000
+      internalID: 2307736570281417126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_189
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b13566ce8266450800000000000000
+      internalID: 6081593342604548936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_190
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f95d2f11e2cf750800000000000000
+      internalID: 6339993030054223771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_191
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d603178174007cf0800000000000000
+      internalID: -256700293116131627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_192
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f3e77181ccf04e0800000000000000
+      internalID: -2013166104565891246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_193
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816c61477535721f0800000000000000
+      internalID: -1069794751402293736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_194
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e60475d68d31ed0800000000000000
+      internalID: -2444372208605172065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_195
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce24f1c30beaf0f40800000000000000
+      internalID: 5696964125593125612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_196
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 724
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1ce42c11d541cd0800000000000000
+      internalID: -2588341554975424082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_197
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f9c77b09b3e1470800000000000000
+      internalID: 8367190650440687416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_198
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffeeb3fb7258f8f60800000000000000
+      internalID: 8038790265638219519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_199
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734fcea6415f4a870800000000000000
+      internalID: 8693342648773964855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_200
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d57de6dc966b0140800000000000000
+      internalID: 4686952661015950800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_201
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4b55ab0a91ae240800000000000000
+      internalID: 4821694529165178039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_202
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a810466463399c130800000000000000
+      internalID: 3587560439495786890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_203
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38669899c53150780800000000000000
+      internalID: -8717540215271889277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_204
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367ea6ab8d148e670800000000000000
+      internalID: 8568170690168678243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_205
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa4892463cc3a740800000000000000
+      internalID: 5162194131314297509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_206
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73462f25ba0860e0800000000000000
+      internalID: -2276557838339390598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_207
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6c776bca36e0990800000000000000
+      internalID: -7417881942785800498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_208
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58952f3179aaefb0800000000000000
+      internalID: -4617692164059195301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_209
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5cab379bee1c0920800000000000000
+      internalID: 2957773052478991453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_210
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45b1577182d04c30800000000000000
+      internalID: 4341701494279615820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_211
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41647c05ce3c193a0800000000000000
+      internalID: -6660326954169317868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_212
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cadfbe0317cfe60800000000000000
+      internalID: 7997391493234797660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_213
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 708
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c41f753819895380800000000000000
+      internalID: -8981997244744002363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_214
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 692
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb9e03ad777ac4c0800000000000000
+      internalID: -4266466315489862723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_215
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 692
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5fcc3fda24e8f80800000000000000
+      internalID: -8102465364705872400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_216
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 692
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b3684df9dadb680800000000000000
+      internalID: -8737636800051922117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_217
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 692
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28265b56e0b43de40800000000000000
+      internalID: 5679966080252338818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_218
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 676
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0011ae534c21e7f0800000000000000
+      internalID: -585137808719409141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_219
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 676
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15de2a384710a4d0800000000000000
+      internalID: -3125472542413892321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alltiles1_220
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 676
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5501998075cd80b0800000000000000
+      internalID: -5724702464183040673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
