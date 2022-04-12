@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum GameState {FreeRoam, Dialog};
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    GameState state;
 
     private void Awake()
     {
@@ -29,10 +33,17 @@ public class GameManager : MonoBehaviour
     // References
     public Player hero;
     //public weapon weapon...
+    public FloatingTextManager floatingTextManager;
 
     // Logic
     public int coins;
     public int experience;
+
+    //Floating text
+    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    {
+        floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
+    }
 
     //Save State
     public void SaveState()
@@ -64,5 +75,31 @@ public class GameManager : MonoBehaviour
         coins = int.Parse(data[1]);
         experience = int.Parse(data[2]);
         //Change weapon level
+    }
+
+    private void Start()
+    {
+        DialogueManager.Instance.OnShowDialog += () =>
+        {
+            state = GameState.Dialog;
+        };
+
+        DialogueManager.Instance.OnCloseDialog += () =>
+        {
+            if(state == GameState.Dialog)
+                state = GameState.FreeRoam;
+        };
+    }
+
+    private void Update()
+    {
+        if(state == GameState.FreeRoam)
+        {
+            hero.HandleUpdate();
+        }
+        else if(state == GameState.Dialog)
+        {
+            DialogueManager.Instance.HandleUpdate();
+        }
     }
 }

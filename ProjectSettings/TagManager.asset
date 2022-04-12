@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Blocking
   - Actor
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Front_walls
     uniqueID: 3529361227
+    locked: 0
+  - name: Interactive
+    uniqueID: 3260200551
     locked: 0
