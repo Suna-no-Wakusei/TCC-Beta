@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class NPC : MonoBehaviour, Collectable
+public class NPC : Collidable, Collectable
 {
     public int coins;
 
     [SerializeField] DialogueText dialog;
+
+    protected override void OnCollide(Collider2D coll)
+    {
+        GameManager.instance.ShowText("Press E", 8, Color.white, transform.position + new Vector3(3,0,0), Vector3.zero, 0);
+    }
 
     public void Collect()
     {

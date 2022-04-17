@@ -1,0 +1,1272 @@
+fileFormatVersion: 2
+guid: c53365fb3a6c6b64ba6935607e75cda4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 678385365673225583
+    second: Upgrade_Grama_0
+  - first:
+      213: 3562437283725138351
+    second: Upgrade_Grama_1
+  - first:
+      213: -6914943199209087231
+    second: Upgrade_Grama_2
+  - first:
+      213: -7721350565653836672
+    second: Upgrade_Grama_3
+  - first:
+      213: 2820883382608579561
+    second: Upgrade_Grama_4
+  - first:
+      213: 5939070709366131325
+    second: Upgrade_Grama_5
+  - first:
+      213: 8418909207815480611
+    second: Upgrade_Grama_6
+  - first:
+      213: 402909281939682850
+    second: Upgrade_Grama_7
+  - first:
+      213: -6216267950887775650
+    second: Upgrade_Grama_8
+  - first:
+      213: 448160121596856690
+    second: Upgrade_Grama_9
+  - first:
+      213: 3753594550597443338
+    second: Upgrade_Grama_10
+  - first:
+      213: -1071536986980704374
+    second: Upgrade_Grama_11
+  - first:
+      213: 1149410315849309228
+    second: Upgrade_Grama_12
+  - first:
+      213: 7266145670537574552
+    second: Upgrade_Grama_13
+  - first:
+      213: 947032761983904958
+    second: Upgrade_Grama_14
+  - first:
+      213: -6030475230150386987
+    second: Upgrade_Grama_15
+  - first:
+      213: 2692284431381172162
+    second: Upgrade_Grama_16
+  - first:
+      213: -6232196258441318516
+    second: Upgrade_Grama_17
+  - first:
+      213: -8692450028220743173
+    second: Upgrade_Grama_18
+  - first:
+      213: -7668854978657063336
+    second: Upgrade_Grama_19
+  - first:
+      213: -4227038315210186604
+    second: Upgrade_Grama_20
+  - first:
+      213: -338928948930593794
+    second: Upgrade_Grama_21
+  - first:
+      213: 1684125485206576241
+    second: Upgrade_Grama_22
+  - first:
+      213: 7144800581841769217
+    second: Upgrade_Grama_23
+  - first:
+      213: 7206338325340371239
+    second: Upgrade_Grama_24
+  - first:
+      213: -4505390005471463383
+    second: Upgrade_Grama_25
+  - first:
+      213: 3030292509627260506
+    second: Upgrade_Grama_26
+  - first:
+      213: 1672331254252183229
+    second: Upgrade_Grama_27
+  - first:
+      213: 3816756540596479148
+    second: Upgrade_Grama_28
+  - first:
+      213: 2575462990696426889
+    second: Upgrade_Grama_29
+  - first:
+      213: 6740244160731849881
+    second: Upgrade_Grama_30
+  - first:
+      213: 6844151950993837113
+    second: Upgrade_Grama_31
+  - first:
+      213: 4866883769099531525
+    second: Upgrade_Grama_32
+  - first:
+      213: 6580690952615464868
+    second: Upgrade_Grama_33
+  - first:
+      213: -1430647342256267074
+    second: Upgrade_Grama_34
+  - first:
+      213: -2263336337427229468
+    second: Upgrade_Grama_35
+  - first:
+      213: 7700009463144747284
+    second: Upgrade_Grama_36
+  - first:
+      213: 3797204941864046694
+    second: Upgrade_Grama_37
+  - first:
+      213: 8391831075755589973
+    second: Upgrade_Grama_38
+  - first:
+      213: -5943990044375493601
+    second: Upgrade_Grama_39
+  - first:
+      213: -291207155057616630
+    second: Upgrade_Grama_40
+  - first:
+      213: 8373607903598767816
+    second: Upgrade_Grama_41
+  - first:
+      213: 9176163412317380483
+    second: Upgrade_Grama_42
+  - first:
+      213: -5054662849703461864
+    second: Upgrade_Grama_43
+  - first:
+      213: -4832135786337289485
+    second: Upgrade_Grama_44
+  - first:
+      213: -4588175082091212436
+    second: Upgrade_Grama_45
+  - first:
+      213: -572576152896684392
+    second: Upgrade_Grama_46
+  - first:
+      213: -6997873964091397220
+    second: Upgrade_Grama_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Upgrade_Grama_0
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6da6c555eb1a6900800000000000000
+      internalID: 678385365673225583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_1
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa95b0fb5d1507130800000000000000
+      internalID: 3562437283725138351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f93291ccf2900a0800000000000000
+      internalID: -6914943199209087231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c01fbe19048d490800000000000000
+      internalID: -7721350565653836672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebcf25ad7ac52720800000000000000
+      internalID: 2820883382608579561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_5
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a02b7f751db6250800000000000000
+      internalID: 5939070709366131325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3256b18b159f5d470800000000000000
+      internalID: 8418909207815480611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 856
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226f8b27bdb679500800000000000000
+      internalID: 402909281939682850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_8
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5250bedb316bb9a0800000000000000
+      internalID: -6216267950887775650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279c642914f283600800000000000000
+      internalID: 448160121596856690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_10
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fd33b3b52771430800000000000000
+      internalID: 3753594550597443338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f925f99c22121f0800000000000000
+      internalID: -1071536986980704374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c1e59a79683ff00800000000000000
+      internalID: 1149410315849309228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_13
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89872aa5df886d460800000000000000
+      internalID: 7266145670537574552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_14
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc25b88749842d00800000000000000
+      internalID: 947032761983904958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_15
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da1810aab27f4ca0800000000000000
+      internalID: -6030475230150386987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_16
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf0ace0d6aec5520800000000000000
+      internalID: 2692284431381172162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f2615c58ac289a0800000000000000
+      internalID: -6232196258441318516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_18
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1811001c63e5780800000000000000
+      internalID: -8692450028220743173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ee82b3701c29590800000000000000
+      internalID: -7668854978657063336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4906ee15c0b8655c0800000000000000
+      internalID: -4227038315210186604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_21
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb35eaaae1eb4bf0800000000000000
+      internalID: -338928948930593794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_22
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c9be6b4373f5710800000000000000
+      internalID: 1684125485206576241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_23
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 808
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103deaf364e672360800000000000000
+      internalID: 7144800581841769217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_24
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729323da68e020460800000000000000
+      internalID: 7206338325340371239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_25
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928374d19a3a971c0800000000000000
+      internalID: -4505390005471463383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_26
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e1cd97bf2cd0a20800000000000000
+      internalID: 3030292509627260506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_27
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe1c745a60553710800000000000000
+      internalID: 1672331254252183229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4e6640ad7d7f430800000000000000
+      internalID: 3816756540596479148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_29
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d20a4d1f1edb320800000000000000
+      internalID: 2575462990696426889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_30
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994a2d35a582a8d50800000000000000
+      internalID: 6740244160731849881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_31
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 792
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93cc8c300ff4bfe50800000000000000
+      internalID: 6844151950993837113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_32
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505ba4c8005aa8340800000000000000
+      internalID: 4866883769099531525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af854f2e8f435b50800000000000000
+      internalID: 6580690952615464868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_34
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb065f572d1552ce0800000000000000
+      internalID: -1430647342256267074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_35
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e49a60c7930790e0800000000000000
+      internalID: -2263336337427229468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41193e17fcdebda60800000000000000
+      internalID: 7700009463144747284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_37
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6601a23b6c162b430800000000000000
+      internalID: 3797204941864046694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_38
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5510f7dc6e5c57470800000000000000
+      internalID: 8391831075755589973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_39
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 760
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f145a881c84b28da0800000000000000
+      internalID: -5943990044375493601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_40
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a091db6a2ac65fbf0800000000000000
+      internalID: -291207155057616630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_41
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce6866e508053470800000000000000
+      internalID: 8373607903598767816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_42
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f1d109108485f70800000000000000
+      internalID: 9176163412317380483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_43
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cbf004bea3ad9b0800000000000000
+      internalID: -5054662849703461864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fab9e4aa1ec0fcb0800000000000000
+      internalID: -4832135786337289485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_45
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6197a072178350c0800000000000000
+      internalID: -4588175082091212436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_46
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ebbb7c50dcd08f0800000000000000
+      internalID: -572576152896684392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_Grama_47
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 744
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ba06bb4be82ee90800000000000000
+      internalID: -6997873964091397220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -2,24 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Fighter
 {
+
     private BoxCollider2D boxCollider;
 
-    private Vector2 moveDelta;
+    public CircleCollider2D circleColliderAttack;
+
     private Rigidbody2D rb;
+    private Vector2 moveDelta;
+    public float fireballSpeed = 6f;
 
     public float moveSpeed = 5f;
-
-    private bool isMoving;
+    public float attackRange = 0.5f;
 
     private float LastMoveVertical;
     private float LastMoveHorizontal;
-
     private bool MoveX, MoveY;
 
     public LayerMask Interactable;
-
     public Animator animator;
 
     // Start is called before the first frame update
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -80,7 +83,14 @@ public class Player : MonoBehaviour
             moveDelta *= 0.7f;
         }
         rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
-        
+
+        //Combat
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            StartCoroutine(Attaque());
+        }
+
+        //Collect/Interact
         if (Input.GetKeyDown(KeyCode.E))
         {
             Collect();
@@ -96,4 +106,17 @@ public class Player : MonoBehaviour
         if (collider != null)
             collider.GetComponent<Collectable>()?.Collect();
     }
+
+    IEnumerator Attaque()
+    {
+        //animator.SetTrigger("Attack");
+        //talvez mudar o collider de um circulo pra alguma outra forma / botar animação para arma e variações de armas e magias
+        Vector3 diferencia = Camera.main.ScreenToWorldPoint(Input.mousePosition) - circleColliderAttack.gameObject.transform.position;
+        float angulo = Mathf.Atan2(diferencia.y, diferencia.x) * Mathf.Rad2Deg;
+        circleColliderAttack.gameObject.transform.rotation = Quaternion.Euler(0, 0, angulo);
+        circleColliderAttack.enabled = true;
+        yield return new WaitForSeconds(.1f);
+        circleColliderAttack.enabled = false;
+    }
+
 }

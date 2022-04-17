@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hittable
   layers:
   - Default
   - TransparentFX
@@ -14,9 +15,9 @@ TagManager:
   - Blocking
   - Actor
   - Interactable
-  - 
-  - 
-  - 
+  - Enemy
+  - Attack
+  - Background
   - 
   - 
   - 
@@ -41,18 +42,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2991927317
+    locked: 0
   - name: Floor
     uniqueID: 3308596059
     locked: 0
   - name: Design
     uniqueID: 4074056343
     locked: 0
+  - name: Attacks
+    uniqueID: 2932624597
+    locked: 0
   - name: Entities
     uniqueID: 3374578291
     locked: 0
-  - name: Front_walls
-    uniqueID: 3529361227
-    locked: 0
   - name: Interactive
     uniqueID: 3260200551
+    locked: 0
+  - name: FrontDesign
+    uniqueID: 3529361227
     locked: 0

@@ -7,6 +7,7 @@ public class SpriteAnimator
     SpriteRenderer spriteRenderer;
     List<Sprite> frames;
     float frameRate;
+    public bool animated;
 
     int currentFrame;
     float timer;
@@ -27,6 +28,7 @@ public class SpriteAnimator
 
     public void HandleUpdate()
     {
+        animated = false;
         timer += Time.deltaTime;
         if(timer > frameRate)
         {
@@ -34,6 +36,7 @@ public class SpriteAnimator
             spriteRenderer.sprite = frames[currentFrame];
             timer -= frameRate;
         }
+        animated = true;
     }
 
     public List<Sprite> Frames
