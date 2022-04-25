@@ -8,7 +8,7 @@ public class Enemy : Fighter
     public int xpValue = 1;
 
     //Logic
-    public float triggerLenght;
+    public float attackRange;
     public float chaseLenght;
     public bool chasing;
     public bool collidingWithPlayer;
@@ -16,12 +16,10 @@ public class Enemy : Fighter
     private Vector3 startingPosition;
     private Rigidbody2D rb;
     private Vector2 moveDelta;
-    public float moveSpeed = 3f;
+    public float moveSpeed = 5f;
+    private float startingSpeed;
 
     //Animation
-    private float LastMoveVertical;
-    private float LastMoveHorizontal;
-    private bool MoveX, MoveY;
     public Animator animator;
 
     //Fireball
@@ -36,18 +34,25 @@ public class Enemy : Fighter
         playerTransform = GameManager.instance.hero.transform;
         startingPosition = transform.position;
         hitbox = GetComponent<BoxCollider2D>();
+        startingSpeed = moveSpeed;
     }
 
     private void FixedUpdate()
     {
         if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLenght)
-        {
             chasing = true;
-        }
 
         if(chasing){
-            StartCoroutine(EnemyAttack());
-            MoveEnemy(playerTransform.position + new Vector3(3,0) - transform.position);
+            MoveEnemy(playerTransform.position - transform.position);
+            if (Vector3.Distance(playerTransform.position, transform.position) <= attackRange)
+            {
+                moveSpeed = 0;
+                StartCoroutine(EnemyAttack());
+            }
+            else
+            {
+                moveSpeed = startingSpeed;
+            }
         }
     }
 
@@ -56,7 +61,7 @@ public class Enemy : Fighter
         if (!fireball.fireballRunning)
             fireball.EnemyFireball();
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
     }
 
     private void MoveEnemy(Vector3 toMove)
@@ -65,47 +70,37 @@ public class Enemy : Fighter
 
         //Animation
         animator.SetFloat("Horizontal", moveDelta.x);
-        if (animator.GetFloat("Horizontal") != 0)
-        {
-            LastMoveHorizontal = animator.GetFloat("Horizontal");
-            MoveX = true;
-        }
-
         animator.SetFloat("Vertical", moveDelta.y);
-        if (animator.GetFloat("Vertical") != 0)
+        
+        if (playerTransform.position.y > transform.position.y)
         {
-            LastMoveVertical = animator.GetFloat("Vertical");
-            MoveY = true;
+            if (playerTransform.position.x > transform.position.x && (2 > playerTransform.position.y - transform.position.y && playerTransform.position.y - transform.position.y > -2))
+            {
+                animator.SetFloat("IdleHorizontal", 1);
+                animator.SetFloat("IdleVertical", 0);
+                return;
+            }
+            animator.SetFloat("IdleVertical", 1);
         }
-        //idle animation
-        if (MoveX == true)
+        else if (playerTransform.position.y < transform.position.y)
         {
-            animator.SetFloat("IdleVertical", 0);
-            LastMoveVertical = 0;
-            MoveX = false;
-        }
-        else
-        {
-            animator.SetFloat("IdleVertical", LastMoveVertical);
-        }
-        if (MoveY == true)
-        {
-            animator.SetFloat("IdleHorizontal", 0);
-            LastMoveHorizontal = 0;
-            MoveY = false;
-        }
-        else
-        {
-            animator.SetFloat("IdleHorizontal", LastMoveHorizontal);
+            if (playerTransform.position.x < transform.position.x && (2 > playerTransform.position.y - transform.position.y || playerTransform.position.y - transform.position.y > -2))
+            {
+                animator.SetFloat("IdleHorizontal", -1);
+                animator.SetFloat("IdleVertical", 0);
+                return;
+            }
+            animator.SetFloat("IdleVertical", -1);
         }
 
-        animator.SetFloat("Speed", moveDelta.sqrMagnitude);
+        animator.SetFloat("Speed", moveSpeed);
 
         //check for diagonal movement
         if (moveDelta.x != 0 && moveDelta.y != 0)
         {
             moveDelta *= 0.7f;
         }
+
         //move the enemy
         rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
     }

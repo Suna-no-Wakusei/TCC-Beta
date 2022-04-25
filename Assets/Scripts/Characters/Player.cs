@@ -10,11 +10,13 @@ public class Player : Fighter
     public CircleCollider2D circleColliderAttack;
 
     private Rigidbody2D rb;
+    private float colliderY;
     private Vector2 moveDelta;
     public float fireballSpeed = 6f;
 
     public float moveSpeed = 5f;
     public float attackRange = 0.5f;
+    bool dodgeUp = false;
 
     private float LastMoveVertical;
     private float LastMoveHorizontal;
@@ -28,6 +30,7 @@ public class Player : Fighter
     {
         boxCollider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        colliderY = boxCollider.size.y;
 
         DontDestroyOnLoad(gameObject);
     }
@@ -95,6 +98,28 @@ public class Player : Fighter
         {
             Collect();
         }
+
+        //Dodge
+        if(Input.GetKeyDown(KeyCode.LeftShift) && dodgeUp == false && moveDelta != Vector2.zero)
+            StartCoroutine(PlayerDodge());
+    }
+
+    IEnumerator PlayerDodge()
+    {
+        dodgeUp = true;
+        boxCollider.size = new Vector2(boxCollider.size.x, 0.3f);
+        animator.SetTrigger("Dodge");
+        moveSpeed *= 1.5f;
+
+        yield return new WaitForSeconds(0.25f);
+
+        moveSpeed /= 1.5f;
+        animator.SetTrigger("Dodge");
+        boxCollider.size = new Vector2(boxCollider.size.x, colliderY);
+
+        yield return new WaitForSeconds(1f);
+
+        dodgeUp = false;
     }
 
     void Collect()

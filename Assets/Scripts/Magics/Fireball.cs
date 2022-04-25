@@ -27,7 +27,7 @@ public class Fireball : MonoBehaviour
     public void EnemyFireball()
     {
         startingPos = gameObject.transform.position;
-        lastFireball = StartCoroutine(FireballPlay(GameManager.instance.hero.transform.position - new Vector3(0,2)));
+        lastFireball = StartCoroutine(FireballPlay(GameManager.instance.hero.transform.position));
     }
 
     public IEnumerator FireballPlay(Vector3 pointVector)
