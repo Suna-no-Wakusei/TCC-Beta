@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -751,6 +752,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Upgrade 1_99: 6579057125901876213
+      Upgrade 1_116: -3236166762119404924
+      Upgrade 1_9: -4817278109567836626
+      Upgrade 1_5: 3058835895566969024
+      Upgrade 1_81: -2799561651173238081
+      Upgrade 1_100: -2811296961038043371
+      Upgrade 1_86: -4024027819045575486
+      Upgrade 1_117: 8926423104656543406
+      Wood3: -1067325469061838591
+      Upgrade 1_7: 2108845958553604071
+      FinalTree: 5273044833420594069
+      Upgrade 1_120: -1790085689811489394
+      Upgrade 1_80: -8821589886445319360
+      Upgrade 1_101: 7522965882504048414
+      Upgrade 1_4: 8107377174507334351
+      Upgrade 1_79: -807274019000169171
+      Upgrade 1_84: 5836240190613095180
+      FrontTrees: 786685496853818044
+      Upgrade 1_129: -6351085878357487121
+      Wood1: 7742242550973663882
+      Upgrade 1_3: -1417842164699714843
+      Wood2: 1709057293547183879
+      Upgrade 1_8: -704605403396031101
+      Upgrade 1_83: 5745105439764337724
+      Upgrade 1_11: -8700060130341889914
+      Upgrade 1_85: 5796446114512068286
+      Upgrade 1_6: 6192933282943492999
+      Upgrade 1_82: 8621052819496748862
+      Upgrade 1_98: -1417875645206491179
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

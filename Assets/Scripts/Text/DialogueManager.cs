@@ -24,12 +24,6 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
-    public void Start()
-    {
-
-        DontDestroyOnLoad(gameObject);
-    }
-
     int currentLine = 0;
     DialogueText dialog;
 

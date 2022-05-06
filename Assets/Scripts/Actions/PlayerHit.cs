@@ -20,7 +20,7 @@ public class PlayerHit : MonoBehaviour
                 origin = transform.position
             };
 
-            collision.SendMessage("ReceiveDamage", dmg);
+            collision.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
         }
     }
 }

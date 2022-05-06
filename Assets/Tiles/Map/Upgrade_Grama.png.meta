@@ -168,6 +168,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1264,6 +1265,55 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Upgrade_Grama_27: 1672331254252183229
+      Upgrade_Grama_42: 9176163412317380483
+      Upgrade_Grama_5: 5939070709366131325
+      Upgrade_Grama_14: 947032761983904958
+      Upgrade_Grama_34: -1430647342256267074
+      Upgrade_Grama_37: 3797204941864046694
+      Upgrade_Grama_7: 402909281939682850
+      Upgrade_Grama_22: 1684125485206576241
+      Upgrade_Grama_31: 6844151950993837113
+      Upgrade_Grama_2: -6914943199209087231
+      Upgrade_Grama_30: 6740244160731849881
+      Upgrade_Grama_19: -7668854978657063336
+      Upgrade_Grama_40: -291207155057616630
+      Upgrade_Grama_9: 448160121596856690
+      Upgrade_Grama_17: -6232196258441318516
+      Upgrade_Grama_35: -2263336337427229468
+      Upgrade_Grama_16: 2692284431381172162
+      Upgrade_Grama_41: 8373607903598767816
+      Upgrade_Grama_45: -4588175082091212436
+      Upgrade_Grama_46: -572576152896684392
+      Upgrade_Grama_12: 1149410315849309228
+      Upgrade_Grama_33: 6580690952615464868
+      Upgrade_Grama_39: -5943990044375493601
+      Upgrade_Grama_36: 7700009463144747284
+      Upgrade_Grama_25: -4505390005471463383
+      Upgrade_Grama_4: 2820883382608579561
+      Upgrade_Grama_23: 7144800581841769217
+      Upgrade_Grama_6: 8418909207815480611
+      Upgrade_Grama_29: 2575462990696426889
+      Upgrade_Grama_0: 678385365673225583
+      Upgrade_Grama_8: -6216267950887775650
+      Upgrade_Grama_43: -5054662849703461864
+      Upgrade_Grama_28: 3816756540596479148
+      Upgrade_Grama_10: 3753594550597443338
+      Upgrade_Grama_15: -6030475230150386987
+      Upgrade_Grama_24: 7206338325340371239
+      Upgrade_Grama_32: 4866883769099531525
+      Upgrade_Grama_47: -6997873964091397220
+      Upgrade_Grama_1: 3562437283725138351
+      Upgrade_Grama_20: -4227038315210186604
+      Upgrade_Grama_13: 7266145670537574552
+      Upgrade_Grama_3: -7721350565653836672
+      Upgrade_Grama_38: 8391831075755589973
+      Upgrade_Grama_18: -8692450028220743173
+      Upgrade_Grama_11: -1071536986980704374
+      Upgrade_Grama_21: -338928948930593794
+      Upgrade_Grama_26: 3030292509627260506
+      Upgrade_Grama_44: -4832135786337289485
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

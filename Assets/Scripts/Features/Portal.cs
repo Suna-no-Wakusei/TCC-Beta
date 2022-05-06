@@ -19,6 +19,7 @@ public class Portal : Collidable
             string sceneName = sceneNames[Random.Range(0, sceneNames.Length)];
 
             Teleport.initialValue = playerPosition;
+            GameManager.instance.actualScene = sceneName;
             SceneManager.LoadScene(sceneName);
         }
     }

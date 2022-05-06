@@ -13,7 +13,7 @@ public class FireballHit : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.tag == "Hittable" || collision.gameObject.tag == "Player") && collision.gameObject.layer != gameObject.layer)
+        if (collision.gameObject.tag == "Hittable" && collision.gameObject.layer != gameObject.layer)
         {
             Damage dmg = new Damage
             {
@@ -22,7 +22,7 @@ public class FireballHit : MonoBehaviour
                 origin = transform.position
             };
 
-            collision.SendMessage("ReceiveDamage", dmg);
+            collision.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
             StartCoroutine(Colisor());
         }
         else if (collision.gameObject.layer != gameObject.layer)

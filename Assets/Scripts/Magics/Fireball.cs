@@ -17,19 +17,11 @@ public class Fireball : MonoBehaviour
     {
         Rigidbody2D fireballRb = fireball.GetComponent<Rigidbody2D>();
     }
-
     public void PlayFireball()
     {
         startingPos = GameObject.Find("Hero").transform.position;
         lastFireball = StartCoroutine(FireballPlay(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
     }
-
-    public void EnemyFireball()
-    {
-        startingPos = gameObject.transform.position;
-        lastFireball = StartCoroutine(FireballPlay(GameManager.instance.hero.transform.position));
-    }
-
     public IEnumerator FireballPlay(Vector3 pointVector)
     {
         fireballRunning = true;

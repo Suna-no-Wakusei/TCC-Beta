@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : Fighter
 {
     //Experience
-    public int xpValue = 1;
+    public int xpValue = 10;
 
     //Logic
     public float attackRange;
@@ -16,14 +16,12 @@ public class Enemy : Fighter
     private Vector3 startingPosition;
     private Rigidbody2D rb;
     private Vector2 moveDelta;
-    public float moveSpeed = 5f;
-    private float startingSpeed;
+    public float moveSpeed = 2f;
+
+    public CircleCollider2D circleEnemyAttack;
 
     //Animation
     public Animator animator;
-
-    //Fireball
-    public Fireball fireball;
 
     //Hitbox
     private BoxCollider2D hitbox;
@@ -34,7 +32,9 @@ public class Enemy : Fighter
         playerTransform = GameManager.instance.hero.transform;
         startingPosition = transform.position;
         hitbox = GetComponent<BoxCollider2D>();
-        startingSpeed = moveSpeed;
+
+        hp = 10;
+        maxHP = 10;
     }
 
     private void FixedUpdate()
@@ -46,52 +46,32 @@ public class Enemy : Fighter
             MoveEnemy(playerTransform.position - transform.position);
             if (Vector3.Distance(playerTransform.position, transform.position) <= attackRange)
             {
-                moveSpeed = 0;
                 StartCoroutine(EnemyAttack());
-            }
-            else
-            {
-                moveSpeed = startingSpeed;
             }
         }
     }
 
     IEnumerator EnemyAttack()
     {
-        if (!fireball.fireballRunning)
-            fireball.EnemyFireball();
+        Vector3 diferencia = playerTransform.position - circleEnemyAttack.gameObject.transform.position;
+        float angulo = Mathf.Atan2(diferencia.y, diferencia.x) * Mathf.Rad2Deg;
+        circleEnemyAttack.gameObject.transform.rotation = Quaternion.Euler(0, 0, angulo);
+        circleEnemyAttack.enabled = true;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(.1f);
+
+        circleEnemyAttack.enabled = false;
+
+        yield return new WaitForSeconds(5f);
     }
 
     private void MoveEnemy(Vector3 toMove)
     {
-        moveDelta = (toMove).normalized;
+        moveDelta = toMove.normalized;
 
         //Animation
         animator.SetFloat("Horizontal", moveDelta.x);
         animator.SetFloat("Vertical", moveDelta.y);
-        
-        if (playerTransform.position.y > transform.position.y)
-        {
-            if (playerTransform.position.x > transform.position.x && (2 > playerTransform.position.y - transform.position.y && playerTransform.position.y - transform.position.y > -2))
-            {
-                animator.SetFloat("IdleHorizontal", 1);
-                animator.SetFloat("IdleVertical", 0);
-                return;
-            }
-            animator.SetFloat("IdleVertical", 1);
-        }
-        else if (playerTransform.position.y < transform.position.y)
-        {
-            if (playerTransform.position.x < transform.position.x && (2 > playerTransform.position.y - transform.position.y || playerTransform.position.y - transform.position.y > -2))
-            {
-                animator.SetFloat("IdleHorizontal", -1);
-                animator.SetFloat("IdleVertical", 0);
-                return;
-            }
-            animator.SetFloat("IdleVertical", -1);
-        }
 
         animator.SetFloat("Speed", moveSpeed);
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Fighter
 {
@@ -32,7 +33,8 @@ public class Player : Fighter
         rb = GetComponent<Rigidbody2D>();
         colliderY = boxCollider.size.y;
 
-        DontDestroyOnLoad(gameObject);
+        hp = GameManager.instance.health;
+        maxHP = GameManager.instance.maxHP;
     }
 
     // Update is called once per frame
@@ -144,4 +146,8 @@ public class Player : Fighter
         circleColliderAttack.enabled = false;
     }
 
+    protected override void Death()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
 }
