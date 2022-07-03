@@ -7,22 +7,20 @@ public class FireballHit : MonoBehaviour
     public Fireball fireball;
 
     public int damagePoint;
-    public float pushForce = 2f;
 
     public int FireballLevel = 0;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Hittable" && collision.gameObject.layer != gameObject.layer)
+        if (collision.gameObject.CompareTag("Hittable") && collision.gameObject.layer != gameObject.layer)
         {
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
-                pushForce = pushForce,
                 origin = transform.position
             };
 
-            collision.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
+            collision.transform.parent.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
             StartCoroutine(Colisor());
         }
         else if (collision.gameObject.layer != gameObject.layer)

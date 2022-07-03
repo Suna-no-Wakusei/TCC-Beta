@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29025629}
   - component: {fileID: 29025630}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 67376714}
   - component: {fileID: 67376713}
   - component: {fileID: 67376712}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 126620141}
   - component: {fileID: 126620142}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 202073700}
   - component: {fileID: 202073699}
   - component: {fileID: 202073698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Casa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230364110}
   - component: {fileID: 230364111}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 239285870}
   - component: {fileID: 239285871}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,7 +1285,7 @@ GameObject:
   - component: {fileID: 305749039}
   - component: {fileID: 305749041}
   - component: {fileID: 305749040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FinalTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373893895}
   - component: {fileID: 373893896}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1835,7 +1835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510571273}
   - component: {fileID: 510571274}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2171,7 +2171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 542820200}
   - component: {fileID: 542820201}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2589,7 +2589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571873749}
   - component: {fileID: 571873750}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3602,6 +3602,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1279218353993043901, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: thrust
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279218353993043901, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: knockTime
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5085937750725321475, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
       propertyPath: manaSlider
       value: 
@@ -3650,9 +3658,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5085937750725321479, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: thrust
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085937750725321479, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: knockTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085937750725321479, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: knockPower
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085937750725321481, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5085937750725321482, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
       propertyPath: m_Name
       value: Hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085937751365747499, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: knockPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085937751365747499, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: damagePoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085937751365747499, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
+      propertyPath: knockDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5085937751365747501, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
       propertyPath: m_Enabled
@@ -3687,6 +3723,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5085937750725321476, guid: 1b5dbe95d730de44d98ec7fe5035a8e8, type: 3}
   m_PrefabInstance: {fileID: 676413914}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &677080499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677080501}
+  - component: {fileID: 677080500}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &677080500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677080499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACon+upWRRRcwIAACoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxiQnQW+sQ0kMCE9rJxRfZWmMNsuSR5PCR4b93JdvYpVyQ39uPt09rfxEuTQWZVXqtOXtVDMj3EXFn8m3Uky9wonsld/wCXcwHZ7ZwQdTHvFPLFeKhSzOqBKt59kPuhQsOEKwlz5UuV2wPsTLWIJxTYQAprazLlgh9jcgJ/8ZLl3LG03TuThc8LYPRFY8ZSAt6EBpMoqX/RW1K2CaEk/liEUZhNF+Ng7lPrmUmaFkBc5P0NaJ5m/oQ+TCJM7YRrlimhOCmFUjsufIGxLQyNY6HAYxTHNirCicPCBTA94V18ofpmzw3YFs/ND0/cY3ONXXJT9XYWVJzaJR9UlG7To+NqKbm63/0OPR0rlX50rUNA9fCFjw7vNNzRo0d2D2EnwbKvT9HKg40FfBRgHxTa61qyZC0unaptYHpU/94mywuIDv0eCP1Dqyr3vDudru7dTNc/fCnWPAyddQkaoCdUN5wvxKg8Wp+oWC/MKYtgahT8cfAb7ofblZLPHNtLFLtlNLJS1WtXShZec/cNLWNlZbg4VZ0BZIKe95iGXt/g3fcoO0d80zdO9Q2b7nu1bhL8XAfHwR31FYdb5dlCnV8BVNsaiu4hF60I97Qp1hJ2SzY0JMubVfrnGaDtH3N2b+rRZYRTWE+yxczOsuzx+n4MZ3BYsayKSxYGgUp8bvHJc5JxbYR2tqDtyb74hL3rPu0jNaaVn7ZmabHNb+UamA5l7naZRpAbpoKN+GgsQm+lmzFOBq0A2u59PdNvhIiVHYAltwKJX7S1clqmvRVElLxT2UdkpDYf0sS4uDbLm81fHI4uuZdsSu5/gVQSwMEFAAACAgAAKif69a4FIttAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJKlSWJSqrlpmoVpomlaspmRrlmSaaqFaUqyUapFSpKJQZJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAKif66lZFFFzAgAAKgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAKif69a4FIttAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &677080501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677080499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &686659784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4932,7 +5055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776025688}
   - component: {fileID: 776025689}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FrontTrees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5033,7 +5156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786477232}
   - component: {fileID: 786477233}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5627,9 +5750,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1797031165496413203, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2320537626741736825, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
       propertyPath: m_Name
       value: Treant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320537626741736825, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320537626741736826, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320537626741736829, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: thrust
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320537626741736829, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: knockTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2320537626741736831, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
       propertyPath: m_RootOrder
@@ -5675,8 +5818,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5203369513616071261, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 6875889254999620216, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 676413917}
+    - target: {fileID: 8688418536693155422, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9954424
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688418536693155422, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.41736317
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688418536693155422, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5691,7 +5846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 881641804}
   - component: {fileID: 881641805}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5989,7 +6144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954394505}
   - component: {fileID: 954394506}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wood1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6560,7 +6715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121495436}
   - component: {fileID: 1121495437}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8478,7 +8633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298160989}
   - component: {fileID: 1298160990}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8998,7 +9153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398298535}
   - component: {fileID: 1398298536}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26777,7 +26932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1858602714}
   - component: {fileID: 1858602715}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27029,7 +27184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1892251567}
   - component: {fileID: 1892251568}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27197,7 +27352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2038346298}
   - component: {fileID: 2038346299}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wood3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27281,7 +27436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2086190111}
   - component: {fileID: 2086190112}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27509,7 +27664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141546614}
   - component: {fileID: 2141546615}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Upgrade 1_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}

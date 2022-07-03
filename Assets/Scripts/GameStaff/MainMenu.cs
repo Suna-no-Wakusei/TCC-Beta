@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void NewGame()
     {
+        GameManager.instance.teleport.initialValue = new Vector2(-2,1);
         SceneManager.LoadScene("Casa");
     }
 
@@ -15,7 +16,9 @@ public class MainMenu : MonoBehaviour
         if (GameManager.instance.actualScene == null)
             NewGame();
         else
+        {
             SceneManager.LoadScene(GameManager.instance.actualScene);
+        }
     }
 
     public void Quit()

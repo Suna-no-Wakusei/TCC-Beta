@@ -150,4 +150,5 @@ public class Player : Fighter
     {
         SceneManager.LoadScene("StartMenu");
     }
+
 }

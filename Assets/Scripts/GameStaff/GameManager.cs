@@ -9,21 +9,12 @@ public enum GameState {FreeRoam, Dialog};
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private static bool started;
-    private static bool started1;
+    public static bool started;
 
     GameState state;
 
     private void Awake()
     {
-        if (!started1)
-        {
-            //Player position
-            teleport.initialValue = new Vector2(2, -1);
-
-            started1 = true;
-        }
-
         instance = this;
         actualScene = SceneManager.GetActiveScene().name;
         SceneManager.sceneLoaded += LoadState;
@@ -210,13 +201,12 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        if (experience == maxExp)
+        if (experience >= maxExp)
         {
             if (level == 7)
                 return;
+            experience -= maxExp;
             level++;
-            health += 25;
-            experience = 0;
         }
     }
 }

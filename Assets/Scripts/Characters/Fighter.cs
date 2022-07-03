@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Fighter : MonoBehaviour
 {
     //Public fields
     public float hp;
     public float maxHP;
-    public float pushRecoverySpeed = 0.2f;
+    public float thrust;
+    public float knockTime;
+
+    //Private fields
+    private Rigidbody2D rb1;
+    private Vector2 difference;
+    private bool kinematico;
 
     //Immunity
-    protected float immuneTime = 1.0f;
+    protected float immuneTime = 2.0f;
     protected float lastImmune;
-
-    //Push
-    protected Vector3 pushDirection;
 
     //All fighters can hit / die
     protected virtual void ReceiveDamage(Damage dmg)
@@ -23,7 +27,6 @@ public class Fighter : MonoBehaviour
         {
             lastImmune = Time.time;
             hp -= dmg.damageAmount;
-            pushDirection = (transform.position - dmg.origin).normalized * dmg.pushForce;
 
             GameManager.instance.ShowText(dmg.damageAmount.ToString(),8,Color.red,transform.position, Vector3.up * 25, 0.5f);
 
@@ -32,6 +35,13 @@ public class Fighter : MonoBehaviour
                 hp = 0;
                 Death();
             }
+
+            //Knockback
+
+            rb1 = this.GetComponent<Rigidbody2D>();
+                
+            difference = rb1.transform.position - dmg.origin;
+            rb1.transform.position = new Vector2(rb1.transform.position.x + difference.x, rb1.transform.position.y + difference.y);
         }
     }
 

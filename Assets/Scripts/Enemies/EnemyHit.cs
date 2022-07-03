@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyHit : MonoBehaviour
 {
     public int damagePoint = 5;
-    public float pushForce = 2f;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +13,6 @@ public class EnemyHit : MonoBehaviour
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
-                pushForce = pushForce,
                 origin = transform.position
             };
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy : Fighter
 {
@@ -10,13 +11,18 @@ public class Enemy : Fighter
     //Logic
     public float attackRange;
     public float chaseLenght;
-    public bool chasing;
+    private bool chasing;
+    private bool attackBool;
     public bool collidingWithPlayer;
     private Transform playerTransform;
     private Vector3 startingPosition;
     private Rigidbody2D rb;
     private Vector2 moveDelta;
-    public float moveSpeed = 2f;
+    private bool MoveX, MoveY;
+    private float LastMoveVertical;
+    private float LastMoveHorizontal;
+    private Vector2 oldpos;
+    bool attackReady;
 
     public CircleCollider2D circleEnemyAttack;
 
@@ -24,30 +30,64 @@ public class Enemy : Fighter
     public Animator animator;
 
     //Hitbox
-    private BoxCollider2D hitbox;
+    public BoxCollider2D hitbox;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerTransform = GameManager.instance.hero.transform;
         startingPosition = transform.position;
-        hitbox = GetComponent<BoxCollider2D>();
 
+        //velocity
+        oldpos = transform.position;
+
+        //health
         hp = 10;
         maxHP = 10;
     }
 
     private void FixedUpdate()
     {
-        if(Vector3.Distance(playerTransform.position, startingPosition) < chaseLenght)
-            chasing = true;
+        //velocity
+        float lastMoveVertical = 0;
+        float lastMoveHorizontal = 0;
 
-        if(chasing){
-            MoveEnemy(playerTransform.position - transform.position);
-            if (Vector3.Distance(playerTransform.position, transform.position) <= attackRange)
-            {
+        Vector2 newpos = transform.position;
+        var media = (newpos - oldpos);
+        Vector2 velocity = media / Time.deltaTime;
+
+        if(media != Vector2.zero)
+        {
+            lastMoveHorizontal = velocity.x;
+            lastMoveVertical = velocity.y;
+        }
+
+        oldpos = newpos;
+        newpos = transform.position;
+
+        //Animation
+        animator.SetFloat("Horizontal", velocity.x);
+        animator.SetFloat("Vertical", velocity.y);
+
+        animator.SetFloat("IdleHorizontal", lastMoveHorizontal);
+        animator.SetFloat("IdleVertical", lastMoveVertical);
+
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x + velocity.y));
+
+        //Stating Machine
+        if (Vector3.Distance(playerTransform.position, transform.position) > attackRange)
+        {
+            attackBool = true;
+            attackReady = true;
+        }
+        else
+            attackBool = false;
+
+        if (!attackBool)
+        {
+            GetComponent<IAstarAI>().canMove = false;
+            if (attackReady)
                 StartCoroutine(EnemyAttack());
-            }
         }
     }
 
@@ -57,32 +97,15 @@ public class Enemy : Fighter
         float angulo = Mathf.Atan2(diferencia.y, diferencia.x) * Mathf.Rad2Deg;
         circleEnemyAttack.gameObject.transform.rotation = Quaternion.Euler(0, 0, angulo);
         circleEnemyAttack.enabled = true;
+        attackReady = false;
 
         yield return new WaitForSeconds(.1f);
 
         circleEnemyAttack.enabled = false;
 
-        yield return new WaitForSeconds(5f);
-    }
-
-    private void MoveEnemy(Vector3 toMove)
-    {
-        moveDelta = toMove.normalized;
-
-        //Animation
-        animator.SetFloat("Horizontal", moveDelta.x);
-        animator.SetFloat("Vertical", moveDelta.y);
-
-        animator.SetFloat("Speed", moveSpeed);
-
-        //check for diagonal movement
-        if (moveDelta.x != 0 && moveDelta.y != 0)
-        {
-            moveDelta *= 0.7f;
-        }
-
-        //move the enemy
-        rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
+        yield return new WaitForSeconds(.5f);
+        attackReady = true;
+        GetComponent<IAstarAI>().canMove = true;
     }
 
     protected override void Death()

@@ -104,7 +104,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030359626, y: -0.52271}
+  m_Offset: {x: -0.017198443, y: -0.5674461}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -115,7 +115,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4400499, y: 0.5818604}
+  m_Size: {x: 0.46637225, y: 0.4923883}
   m_EdgeRadius: 0
 --- !u!50 &5085937750725321480
 Rigidbody2D:
@@ -136,7 +136,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &5085937750725321481
 Animator:
@@ -172,7 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   maxHP: 10
-  pushRecoverySpeed: 0.2
+  thrust: 0
+  knockTime: 0
   circleColliderAttack: {fileID: 5085937751365747501}
   fireballSpeed: 6
   moveSpeed: 5
@@ -257,8 +258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePoint: 5
-  pushForce: 2
-  FireballLevel: 0
 --- !u!1 &5085937751958133784
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireball: {fileID: 5085937752123735011}
   damagePoint: 1
-  pushForce: 0
   FireballLevel: 0
 --- !u!1 &5085937752123735013
 GameObject:
