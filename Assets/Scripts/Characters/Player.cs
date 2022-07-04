@@ -8,7 +8,7 @@ public class Player : Fighter
 
     private BoxCollider2D boxCollider;
 
-    public CircleCollider2D circleColliderAttack;
+    public PolygonCollider2D colliderAttack;
 
     private Rigidbody2D rb;
     private float colliderY;
@@ -17,7 +17,9 @@ public class Player : Fighter
 
     public float moveSpeed = 5f;
     public float attackRange = 0.5f;
-    bool dodgeUp = false;
+    public float attackCooldown = 1f;
+    private bool attackReady = true;
+    private bool dodgeUp = false;
 
     private float LastMoveVertical;
     private float LastMoveHorizontal;
@@ -25,6 +27,7 @@ public class Player : Fighter
 
     public LayerMask Interactable;
     public Animator animator;
+    public Animator attackAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -90,7 +93,7 @@ public class Player : Fighter
         rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
 
         //Combat
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackReady)
         {
             StartCoroutine(Attaque());
         }
@@ -134,16 +137,27 @@ public class Player : Fighter
             collider.GetComponent<Collectable>()?.Collect();
     }
 
+    //ARRUMAR QUARTENIAL DO ATAQUE
+
     IEnumerator Attaque()
     {
-        //animator.SetTrigger("Attack");
+        attackAnimator.SetTrigger("Attack");
+        colliderAttack.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         //talvez mudar o collider de um circulo pra alguma outra forma / botar animação para arma e variações de armas e magias
-        Vector3 diferencia = Camera.main.ScreenToWorldPoint(Input.mousePosition) - circleColliderAttack.gameObject.transform.position;
+        attackReady = false;
+
+        Vector3 diferencia = Camera.main.ScreenToWorldPoint(Input.mousePosition) - colliderAttack.gameObject.transform.position;
         float angulo = Mathf.Atan2(diferencia.y, diferencia.x) * Mathf.Rad2Deg;
-        circleColliderAttack.gameObject.transform.rotation = Quaternion.Euler(0, 0, angulo);
-        circleColliderAttack.enabled = true;
+        colliderAttack.gameObject.transform.parent.rotation = Quaternion.Euler(0, 0, angulo + 75);
+        colliderAttack.enabled = true;
         yield return new WaitForSeconds(.1f);
-        circleColliderAttack.enabled = false;
+        colliderAttack.enabled = false;
+
+        yield return new WaitForSeconds(attackCooldown);
+
+        attackAnimator.SetTrigger("Attack");
+        colliderAttack.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        attackReady = true;
     }
 
     protected override void Death()

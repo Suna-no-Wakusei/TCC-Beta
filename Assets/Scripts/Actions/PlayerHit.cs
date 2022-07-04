@@ -6,8 +6,6 @@ public class PlayerHit : MonoBehaviour
 {
     public int damagePoint = 1;
 
-    private Vector2 direction;
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Hittable"))

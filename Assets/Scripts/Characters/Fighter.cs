@@ -14,16 +14,21 @@ public class Fighter : MonoBehaviour
     //Private fields
     private Rigidbody2D rb1;
     private Vector2 difference;
-    private bool kinematico;
 
     //Immunity
     protected float immuneTime = 2.0f;
+    protected float immuneEnemyTime = 0.5f;
     protected float lastImmune;
+    protected float lastEnemyImmune;
+
+    bool immune;
 
     //All fighters can hit / die
+
     protected virtual void ReceiveDamage(Damage dmg)
     {
-        if (Time.time - lastImmune > immuneTime)
+        //Player taking damage
+        if ((Time.time - lastImmune > immuneTime) && transform.tag == "Player")
         {
             lastImmune = Time.time;
             hp -= dmg.damageAmount;
@@ -38,10 +43,41 @@ public class Fighter : MonoBehaviour
 
             //Knockback
 
-            rb1 = this.GetComponent<Rigidbody2D>();
-                
-            difference = rb1.transform.position - dmg.origin;
-            rb1.transform.position = new Vector2(rb1.transform.position.x + difference.x, rb1.transform.position.y + difference.y);
+            difference = transform.position - dmg.origin;
+            transform.position = new Vector2(transform.position.x + difference.x, transform.position.y + difference.y);
+
+            //Blinking Immunity Effect
+
+            StartCoroutine(BlinkingImmune());
+        }
+        //Enemy taking damage
+        else if ((Time.time - lastEnemyImmune > immuneEnemyTime) && transform.tag != "Player"){
+            lastEnemyImmune = Time.time;
+            hp -= dmg.damageAmount;
+
+            GameManager.instance.ShowText(dmg.damageAmount.ToString(), 8, Color.red, transform.position, Vector3.up * 25, 0.5f);
+
+            if (hp <= 0)
+            {
+                hp = 0;
+                Death();
+            }
+
+            //Knockback
+
+            difference = transform.position - dmg.origin;
+            transform.position = new Vector2(transform.position.x + difference.x, transform.position.y + difference.y);
+        }
+    }
+
+    IEnumerator BlinkingImmune()
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.2f);
+            GetComponent<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(0.2f);
         }
     }
 

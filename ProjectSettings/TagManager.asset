@@ -51,11 +51,11 @@ TagManager:
   - name: Design
     uniqueID: 4074056343
     locked: 0
-  - name: Attacks
-    uniqueID: 2932624597
-    locked: 0
   - name: Entities
     uniqueID: 3374578291
+    locked: 0
+  - name: Attacks
+    uniqueID: 2932624597
     locked: 0
   - name: Interactive
     uniqueID: 3260200551
