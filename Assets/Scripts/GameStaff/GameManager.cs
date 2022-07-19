@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum GameState {FreeRoam, Dialog};
+public enum GameState {FreeRoam, Dialog, Paused};
 
 public class GameManager : MonoBehaviour
 {
@@ -17,10 +17,11 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         actualScene = SceneManager.GetActiveScene().name;
+
         SceneManager.sceneLoaded += LoadState;
     }
 
-    // Ressources
+    // Resources
     public List<Sprite> playerSprites;
     public List<Sprite> weaponSprites;
     public List<int> weaponPrices;
@@ -29,6 +30,9 @@ public class GameManager : MonoBehaviour
     // References
     public Player hero;
     public SuperClassMagic allMagics;
+    public Inventory inventory;
+    public InventoryUI uiInventory;
+
     //public weapon weapon...
     public FloatingTextManager floatingTextManager;
     public TeleportPoint teleport;
@@ -52,6 +56,23 @@ public class GameManager : MonoBehaviour
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
+    }
+
+    //Using items
+    private void UseItem(Item item)
+    {
+        switch (item.itemType)
+        {
+            case Item.ItemType.HealthPotion:
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+                break;
+            case Item.ItemType.ManaPotion:
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
+                break;
+            case Item.ItemType.Axe:
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.Axe, amount = 1 });
+                break;
+        }
     }
 
     //Save State
@@ -78,8 +99,47 @@ public class GameManager : MonoBehaviour
         s += health.ToString() + "|";
         s += "0";
 
+        SaveInventory();
+
         PlayerPrefs.SetString("SaveState", s);
     }
+
+    public void SaveInventory()
+    {
+        //Saving the inventory items on PlayerPrefs
+
+        string j = "";
+
+        for (int i = 0; i < inventory.GetItemList().Length; i++)
+        {
+            Item item = inventory.GetItemList()[i];
+
+            if(item == null)
+            {
+                if (i != 14)
+                {
+                    j += "null" + "|";
+                    continue;
+                }
+                else
+                {
+                    j += "null";
+                    continue;
+                }
+            }
+
+            if (i == 14)
+            {
+                j += item.itemType + "/" + item.amount.ToString();
+                continue;
+            }
+
+            j += item.itemType.ToString() + "/" + item.amount.ToString() + "|";
+        }
+
+        PlayerPrefs.SetString("SaveInventory", j);
+    }
+
     private void Start()
     {
         if (!started)
@@ -94,6 +154,8 @@ public class GameManager : MonoBehaviour
 
             started = true;
         }
+        //Inventory UI
+        uiInventory.SetInventory(inventory);
         //Mana Slider
         manaSlider.value = currentMana;
         manaSlider.maxValue = maxMana;
@@ -112,6 +174,27 @@ public class GameManager : MonoBehaviour
         DialogueManager.Instance.OnCloseDialog += () =>
         {
             if (state == GameState.Dialog)
+                state = GameState.FreeRoam;
+        };
+
+        hero.OnAttack += () =>
+        {
+            state = GameState.Paused;
+        };
+
+        hero.OnEndAttack += () =>
+        {
+            if (state == GameState.Paused)
+                state = GameState.FreeRoam;
+        };
+        InventoryManager.Instance.OnPause += () =>
+        {
+            state = GameState.Paused;
+        };
+
+        InventoryManager.Instance.OnEndPause += () =>
+        {
+            if (state == GameState.Paused)
                 state = GameState.FreeRoam;
         };
     }
@@ -136,6 +219,41 @@ public class GameManager : MonoBehaviour
         manaSlider.value = currentMana;
         hpSlider.value = health;
         GameObject.Find("Hero").transform.position = teleport.initialValue;
+        LoadInventory();
+    }
+
+    public void LoadInventory()
+    {
+        if (!PlayerPrefs.HasKey("SaveInventory"))
+            return;
+
+        string[] data = PlayerPrefs.GetString("SaveInventory").Split('|');
+
+        Item[] tempItemList;
+        tempItemList = new Item[15];
+
+        inventory = new Inventory(UseItem);
+
+        for (int i = 0; i < inventory.GetItemList().Length; i++)
+        {
+            if (data[i] == "null")
+            {
+                continue;
+            }
+
+            string[] itemPart = data[i].Split('/');
+
+            Item.ItemType itemTypeItem = (Item.ItemType)System.Enum.Parse(typeof(Item.ItemType), itemPart[0]);
+            int amountItem = int.Parse(itemPart[1]);
+
+            Item itemTemp = new Item();
+            itemTemp.amount = amountItem;
+            itemTemp.itemType = itemTypeItem;
+
+            tempItemList[i] = itemTemp;
+        }
+
+        inventory.SetItemList(tempItemList);
     }
 
     private void Update()
@@ -144,11 +262,17 @@ public class GameManager : MonoBehaviour
 
         if(state == GameState.FreeRoam)
         {
+            hero.timeRunning = true;
             hero.HandleUpdate();
         }
         else if(state == GameState.Dialog)
         {
+            hero.timeRunning = false;
             DialogueManager.Instance.HandleUpdate();
+        }
+        else if (state == GameState.Paused)
+        {
+            hero.timeRunning = false;
         }
 
         //Player Mana

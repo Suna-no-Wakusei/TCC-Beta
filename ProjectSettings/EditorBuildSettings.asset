@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Projeto.unity
     guid: 0ed8ee58e37f99b4d9350d81af320f27
-  - enabled: 1
-    path: Assets/Scenes/Casa1.unity
-    guid: b0a70a1495d128844a9fd27aaf543ee4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Teste1.unity
     guid: eec70a0026f00034dab10200db04adb3

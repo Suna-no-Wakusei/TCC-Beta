@@ -22,15 +22,18 @@ public class SuperClassMagic : MonoBehaviour
             ManaRegen();
 
         //Running Magics
-        if (GameManager.instance.selectedMagic == 1)
+        if(GameManager.instance.hero.timeRunning == true)
         {
-            manaCost = 3f;
-            if (GameManager.instance.currentMana >= manaCost)
+            if (GameManager.instance.selectedMagic == 1)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse1) && !fireball.fireballRunning)
+                manaCost = 3f;
+                if (GameManager.instance.currentMana >= manaCost)
                 {
-                    fireball.PlayFireball();
-                    DecreaseMana();
+                    if (Input.GetKeyDown(KeyCode.Mouse1) && !fireball.fireballRunning)
+                    {
+                        fireball.PlayFireball();
+                        DecreaseMana();
+                    }
                 }
             }
         }

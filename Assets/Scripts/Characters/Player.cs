@@ -1,12 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player : Fighter
 {
+    public bool timeRunning = true;
 
     private BoxCollider2D boxCollider;
+
+    public event Action OnAttack;
+    public event Action OnEndAttack;
 
     public PolygonCollider2D colliderAttack;
 
@@ -16,8 +22,7 @@ public class Player : Fighter
     public float fireballSpeed = 6f;
 
     public float moveSpeed = 5f;
-    public float attackRange = 0.5f;
-    public float attackCooldown = 1f;
+    public float attackCooldown;
     private bool attackReady = true;
     private bool dodgeUp = false;
 
@@ -27,7 +32,30 @@ public class Player : Fighter
 
     public LayerMask Interactable;
     public Animator animator;
-    public Animator attackAnimator;
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
+        if (itemWorld != null)
+        {
+            Item item = itemWorld.GetItem();
+            if (item.IsStackable() && GameManager.instance.inventory.ItemAlreadyInInventory(item))
+            {
+                if (!GameManager.instance.inventory.ItemFull(item))
+                {
+                    //When Player touch the item
+                    GameManager.instance.inventory.AddItem(item);
+                    itemWorld.DestroySelf();
+                }
+            }
+            else if(!GameManager.instance.inventory.IsArrayFull())
+            {
+                //When Player touch the item
+                GameManager.instance.inventory.AddItem(item);
+                itemWorld.DestroySelf();
+            }
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -43,70 +71,73 @@ public class Player : Fighter
     // Update is called once per frame
     public void HandleUpdate()
     {
-        moveDelta.x = Input.GetAxisRaw("Horizontal");
-        moveDelta.y = Input.GetAxisRaw("Vertical");
+        if (timeRunning)
+        {
+            moveDelta.x = Input.GetAxisRaw("Horizontal");
+            moveDelta.y = Input.GetAxisRaw("Vertical");
 
-        //Animation
-        animator.SetFloat("Horizontal", moveDelta.x);
-        if (animator.GetFloat("Horizontal") != 0)
-        {
-            LastMoveHorizontal = animator.GetFloat("Horizontal");
-            MoveX = true;
-        }
+            //Animation
+            animator.SetFloat("Horizontal", moveDelta.x);
+            if (animator.GetFloat("Horizontal") != 0)
+            {
+                LastMoveHorizontal = animator.GetFloat("Horizontal");
+                MoveX = true;
+            }
 
-        animator.SetFloat("Vertical", moveDelta.y);
-        if (animator.GetFloat("Vertical") != 0)
-        {
-            LastMoveVertical = animator.GetFloat("Vertical");
-            MoveY = true;
-        }
+            animator.SetFloat("Vertical", moveDelta.y);
+            if (animator.GetFloat("Vertical") != 0)
+            {
+                LastMoveVertical = animator.GetFloat("Vertical");
+                MoveY = true;
+            }
 
-        animator.SetFloat("Speed", moveDelta.sqrMagnitude);
+            animator.SetFloat("Speed", moveDelta.sqrMagnitude);
 
-        //idle
-        if (MoveX == true)
-        {
-            animator.SetFloat("IdleVertical", 0);
-            LastMoveVertical = 0;
-            MoveX = false;
-        }
-        else
-        {
-            animator.SetFloat("IdleVertical", LastMoveVertical);
-        }
-        if (MoveY == true)
-        {
-            animator.SetFloat("IdleHorizontal", 0);
-            LastMoveHorizontal = 0;
-            MoveY = false;
-        }
-        else
-        {
-            animator.SetFloat("IdleHorizontal", LastMoveHorizontal);
-        }
+            //idle
+            if (MoveX == true)
+            {
+                animator.SetFloat("IdleVertical", 0);
+                LastMoveVertical = 0;
+                MoveX = false;
+            }
+            else
+            {
+                animator.SetFloat("IdleVertical", LastMoveVertical);
+            }
+            if (MoveY == true)
+            {
+                animator.SetFloat("IdleHorizontal", 0);
+                LastMoveHorizontal = 0;
+                MoveY = false;
+            }
+            else
+            {
+                animator.SetFloat("IdleHorizontal", LastMoveHorizontal);
+            }
 
-        //check for diagonal movement
-        if (moveDelta.x != 0 && moveDelta.y != 0)
-        {
-            moveDelta *= 0.7f;
-        }
-        rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
+            //check for diagonal movement
+            if (moveDelta.x != 0 && moveDelta.y != 0)
+            {
+                moveDelta *= 0.7f;
+            }
+            rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
 
-        //Combat
-        if (Input.GetKeyDown(KeyCode.Mouse0) && attackReady)
-        {
-            StartCoroutine(Attaque());
-        }
+            //Combat
+            if (Input.GetKeyDown(KeyCode.Mouse0) && attackReady)
+            {
+                StartCoroutine(Attaque());
+            }
 
-        //Collect/Interact
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Collect();
-        }
+            //Collect/Interact
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Collect();
+            }
 
-        //Dodge
-        if(Input.GetKeyDown(KeyCode.LeftShift) && dodgeUp == false && moveDelta != Vector2.zero)
-            StartCoroutine(PlayerDodge());
+            //Dodge
+            if (Input.GetKeyDown(KeyCode.LeftShift) && dodgeUp == false && moveDelta != Vector2.zero)
+                StartCoroutine(PlayerDodge());
+        }
     }
 
     IEnumerator PlayerDodge()
@@ -134,30 +165,28 @@ public class Player : Fighter
 
         var collider = Physics2D.OverlapCircle(interactPos, 0.3f, Interactable);
         if (collider != null)
-            collider.GetComponent<Collectable>()?.Collect();
+            collider.GetComponent<ICollectable>()?.Collect();
     }
 
     //ARRUMAR QUARTENIAL DO ATAQUE
 
     IEnumerator Attaque()
     {
-        attackAnimator.SetTrigger("Attack");
-        colliderAttack.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        //talvez mudar o collider de um circulo pra alguma outra forma / botar animação para arma e variações de armas e magias
+        OnAttack?.Invoke();
+
         attackReady = false;
 
-        Vector3 diferencia = Camera.main.ScreenToWorldPoint(Input.mousePosition) - colliderAttack.gameObject.transform.position;
-        float angulo = Mathf.Atan2(diferencia.y, diferencia.x) * Mathf.Rad2Deg;
-        colliderAttack.gameObject.transform.parent.rotation = Quaternion.Euler(0, 0, angulo + 75);
-        colliderAttack.enabled = true;
-        yield return new WaitForSeconds(.1f);
-        colliderAttack.enabled = false;
+        animator.SetBool("Attack", true);
+
+        yield return null;
+
+        animator.SetBool("Attack", false);
 
         yield return new WaitForSeconds(attackCooldown);
 
-        attackAnimator.SetTrigger("Attack");
-        colliderAttack.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         attackReady = true;
+
+        OnEndAttack?.Invoke();
     }
 
     protected override void Death()

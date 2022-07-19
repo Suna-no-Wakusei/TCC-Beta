@@ -43,54 +43,13 @@ SpriteAtlas:
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 2800000, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
+    packables: []
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: 6122202754802203312, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 124195746265640043, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -53872791473767319, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 3843628272119101353, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 5566573518861003982, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 6995251512645567409, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 8875816647717327832, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -8915824818066711188, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 3269533283312278057, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -7490883140908223441, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -8129954244820912506, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 1923470656040883225, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -5626690666428934045, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 1995547736100923033, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 5272653747578486897, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -6352931355898386082, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 8729863995209820868, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -423432925921277779, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: -8525912858952668271, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  - {fileID: 1869694353981706245, guid: 6056491adebf3b545ac7a97a340b0faa, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - TilesCasa_8
-  - TilesCasa_3
-  - TilesCasa_4
-  - Oxes
-  - Cadeira
-  - Tapete
-  - TilesCasa_29
-  - TilesCasa_28
-  - Mesa
-  - TilesCasa_23
-  - TilesCasa_22
-  - TilesCasa_21
-  - TilesCasa_20
-  - TilesCasa_27
-  - TilesCasa_26
-  - Cama
-  - TilesCasa_25
-  - TilesCasa_24
-  - Fornalha
-  - Urso
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
   m_Tag: Casa
   m_IsVariant: 0

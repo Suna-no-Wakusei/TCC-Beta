@@ -22,7 +22,6 @@ public class PauseManager : MonoBehaviour
         {
             ChangePause();
         }
-        
     }
 
     public void ChangePause()
@@ -31,11 +30,13 @@ public class PauseManager : MonoBehaviour
         if (isPaused)
         {
             pausePanel.SetActive(true);
+            GameManager.instance.hero.timeRunning = false;
             Time.timeScale = 0f;
         }
         else
         {
             pausePanel.SetActive(false);
+            GameManager.instance.hero.timeRunning = true;
             Time.timeScale = 1f;
         }
     }
