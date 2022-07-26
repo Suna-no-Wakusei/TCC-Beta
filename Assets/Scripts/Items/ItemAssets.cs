@@ -13,8 +13,14 @@ public class ItemAssets : MonoBehaviour
 
     public Transform pfItemWorld;
     public Transform pfItemUI;
+    public Transform pfItemDescUI;
 
-    public Sprite axeSprite;
-    public Sprite healthPotionSprite;
-    public Sprite manaPotionSprite;
+    public Sprite largeHealthPotionSprite;
+    public Sprite mediumHealthPotionSprite;
+    public Sprite smallHealthPotionSprite;
+    public Sprite largeManaPotionSprite;
+    public Sprite mediumManaPotionSprite;
+    public Sprite smallManaPotionSprite;
+    public Sprite greyKeySprite;
+    public Sprite goldenKeySprite;
 }

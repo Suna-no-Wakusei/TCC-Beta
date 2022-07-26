@@ -1,27 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class NPC : Collidable, ICollectable
 {
-    public int coins;
-
-    [SerializeField] DialogueText dialog;
-
-    protected override void OnCollide(Collider2D coll)
-    {
-        GameManager.instance.ShowText("Press E", 15, Color.white, transform.position + new Vector3(3,0,0), Vector3.zero, 0);
-    }
+    public ScriptableDialog dialog;
 
     public void Collect()
     {
+        if (dialog.dialogAlreadyPlayed == false)
+        {
+            if (DialogueManager.Instance.dialogRunning == false)
+            {
+                StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.dialogText));
 
-        GameManager.instance.ShowText("+" + coins + " Coins", 15, Color.yellow, transform.position, Vector3.up * 25, 1.0f);
+                dialog.dialogStarted = true;
+            }
+        }
+        else if (dialog.afterDialogText.Lines.Count != 0)
+        {
+            StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.afterDialogText));
+        }
+    }
 
-        if(DialogueManager.Instance.dialogRunning == false)
-            StartCoroutine(DialogueManager.Instance.ShowDialog(dialog));
-
+    protected override void Update()
+    {
+        if (dialog.dialogStarted)
+        {
+            if (DialogueManager.Instance.dialogIsOver)
+            {
+                if(this.GetComponent<ChangeObjective>() != null)
+                {
+                    this.GetComponent<ChangeObjective>().HandleUpdate();
+                    dialog.dialogStarted = false;
+                    
+                }
+                dialog.dialogAlreadyPlayed = true;
+            }
+        }
     }
 
 }

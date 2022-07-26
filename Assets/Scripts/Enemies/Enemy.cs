@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
+using CodeMonkey.Utils;
 
 public class Enemy : Fighter
 {
@@ -10,17 +10,16 @@ public class Enemy : Fighter
 
     //Logic
     public float attackRange;
-    public float chaseLenght;
-    private bool chasing;
+    public float chasingRange;
     private bool attackBool;
-    public bool collidingWithPlayer;
-    private Transform playerTransform;
+    private Transform target;
+
+    public float speed = 1f;
+
     private Vector3 startingPosition;
+    private Vector3 roamPosition;
+
     private Rigidbody2D rb;
-    private Vector2 moveDelta;
-    private bool MoveX, MoveY;
-    private float LastMoveVertical;
-    private float LastMoveHorizontal;
     private Vector2 oldpos;
     bool attackReady;
 
@@ -35,7 +34,7 @@ public class Enemy : Fighter
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerTransform = GameManager.instance.hero.transform;
+        target = GameManager.instance.hero.transform;
         startingPosition = transform.position;
 
         //velocity
@@ -46,8 +45,10 @@ public class Enemy : Fighter
         maxHP = 10;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
+        CheckDistance();
+
         //velocity
         float lastMoveVertical = 0;
         float lastMoveHorizontal = 0;
@@ -56,7 +57,7 @@ public class Enemy : Fighter
         var media = (newpos - oldpos);
         Vector2 velocity = media / Time.deltaTime;
 
-        if(media != Vector2.zero)
+        if (media != Vector2.zero)
         {
             lastMoveHorizontal = velocity.x;
             lastMoveVertical = velocity.y;
@@ -65,35 +66,61 @@ public class Enemy : Fighter
         oldpos = newpos;
         newpos = transform.position;
 
-        //Animation
-        animator.SetFloat("Horizontal", velocity.x);
-        animator.SetFloat("Vertical", velocity.y);
-
         animator.SetFloat("IdleHorizontal", lastMoveHorizontal);
         animator.SetFloat("IdleVertical", lastMoveVertical);
 
         animator.SetFloat("Speed", Mathf.Abs(velocity.x + velocity.y));
+    }
 
-        //Stating Machine
-        if (Vector3.Distance(playerTransform.position, transform.position) > attackRange)
+    void CheckDistance()
+    {
+        if(Vector3.Distance(target.position, transform.position) <= chasingRange && Vector3.Distance(target.position, transform.position) >= attackRange)
         {
-            attackBool = true;
-            attackReady = true;
-        }
-        else
-            attackBool = false;
+            Vector3 temp = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
-        if (!attackBool)
-        {
-            GetComponent<IAstarAI>().canMove = false;
-            if (attackReady)
+            changeAnim(transform.position - temp);
+
+            transform.position = temp;
+
+            if (Vector3.Distance(target.position, transform.position) == attackRange && attackReady)
                 StartCoroutine(EnemyAttack());
+        }
+    }
+
+    private void SetAnimFloat(Vector2 setVector)
+    {
+        animator.SetFloat("Horizontal", setVector.x);
+        animator.SetFloat("Vertical", setVector.y);
+    }
+
+    private void changeAnim(Vector2 direction)
+    {
+        if(Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            if(direction.x > 0)
+            {
+                SetAnimFloat(Vector2.left);
+            }else if(direction.x < 0)
+            {
+                SetAnimFloat(Vector2.right);
+            }
+        }else if(Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
+        {
+            if (direction.y > 0)
+            {
+                SetAnimFloat(Vector2.down);
+            }
+            else if (direction.y < 0)
+            {
+                SetAnimFloat(Vector2.up);
+            }
         }
     }
 
     IEnumerator EnemyAttack()
     {
-        Vector3 diferencia = playerTransform.position - circleEnemyAttack.gameObject.transform.position;
+        yield return new WaitForSeconds(.4f);
+        Vector3 diferencia = target.position - circleEnemyAttack.gameObject.transform.position;
         float angulo = Mathf.Atan2(diferencia.y, diferencia.x) * Mathf.Rad2Deg;
         circleEnemyAttack.gameObject.transform.rotation = Quaternion.Euler(0, 0, angulo);
         circleEnemyAttack.enabled = true;
@@ -105,7 +132,6 @@ public class Enemy : Fighter
 
         yield return new WaitForSeconds(.5f);
         attackReady = true;
-        GetComponent<IAstarAI>().canMove = true;
     }
 
     protected override void Death()

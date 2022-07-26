@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.IO;
 
 public enum GameState {FreeRoam, Dialog, Paused};
 
@@ -11,40 +12,52 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static bool started;
 
-    GameState state;
+    public GameState state;
 
     private void Awake()
     {
         instance = this;
-        actualScene = SceneManager.GetActiveScene().name;
 
-        SceneManager.sceneLoaded += LoadState;
+        inventory = new Inventory(UseItem);
+        spellBook = new SpellBook(UseSpell);
+        objectiveManager = new ObjectiveManager();
+
+        SaveSystem.LoadState();
+        hero.transform.position = playerPos;
+
+        actualScene = SceneManager.GetActiveScene().name;
     }
 
     // Resources
-    public List<Sprite> playerSprites;
-    public List<Sprite> weaponSprites;
-    public List<int> weaponPrices;
-    public List<int> Magics;
+    public List<ScriptableDialog> scriptableDialogs;
 
     // References
     public Player hero;
     public SuperClassMagic allMagics;
+    public Vector2 nextScenePos;
+    public Vector2 playerPos;
     public Inventory inventory;
     public InventoryUI uiInventory;
+    public SpellBook spellBook;
+    public SpellBarUI spellBarUI;
+    public ObjectiveManager objectiveManager;
+    public ObjectivePanel objectiveUI;
 
     //public weapon weapon...
     public FloatingTextManager floatingTextManager;
     public TeleportPoint teleport;
-    public Slider manaSlider, expSlider, hpSlider;
+    public Slider expSlider;
+    public SlicedFilledImage manaSlider, hpSlider;
+    public RectTransform maxHPUI, maxManaUI;
 
     //Actual scene
-    public string actualScene = null;
+    public string actualScene;
 
     // Logic
     public int coins;
     public float experience;
-    public int maxExp;
+    public int xpPoints;
+    public int maxExp = 50;
     public int level;
     public int selectedMagic;
     public float health;
@@ -59,112 +72,73 @@ public class GameManager : MonoBehaviour
     }
 
     //Using items
-    private void UseItem(Item item)
+    public void UseItem(Item item)
     {
         switch (item.itemType)
         {
-            case Item.ItemType.HealthPotion:
-                inventory.RemoveItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+            case Item.ItemType.LargeHealthPotion:
+                hero.hp += maxHP / 2;
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.LargeHealthPotion, amount = 1 });
                 break;
-            case Item.ItemType.ManaPotion:
-                inventory.RemoveItem(new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
+            case Item.ItemType.MediumHealthPotion:
+                hero.hp += 75;
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.MediumHealthPotion, amount = 1 });
                 break;
-            case Item.ItemType.Axe:
-                inventory.RemoveItem(new Item { itemType = Item.ItemType.Axe, amount = 1 });
+            case Item.ItemType.SmallHealthPotion:
+                hero.hp += 50;
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.SmallHealthPotion, amount = 1 });
+                break;
+            case Item.ItemType.LargeManaPotion:
+                currentMana = maxMana;
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.LargeManaPotion, amount = 1 });
+                break;
+            case Item.ItemType.MediumManaPotion:
+                currentMana += maxMana * 75/100;
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.MediumManaPotion, amount = 1 });
+                break;
+            case Item.ItemType.SmallManaPotion:
+                currentMana += maxMana / 2;
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.SmallManaPotion, amount = 1 });
+                break;
+            case Item.ItemType.GreyKey:
+                break;
+            case Item.ItemType.GoldenKey:
                 break;
         }
     }
 
-    //Save State
-    public void SaveState()
+    //Using spells
+    public void UseSpell(Spell spell)
     {
-        string s = "";
-
-        /* INT PreferedSkin
-         * INT Coins
-         * FLOAT Experience
-         * INT Level
-         * INT Magic selected
-         * FLOAT Current mana
-         * FLOAT HP
-         * INT WeaponExperience
-         */
-
-        s += "0" + "|";
-        s += coins.ToString() + "|";
-        s += experience.ToString() + "|";
-        s += level.ToString() + "|";
-        s += selectedMagic.ToString() + "|";
-        s += currentMana.ToString() + "|";
-        s += health.ToString() + "|";
-        s += "0";
-
-        SaveInventory();
-
-        PlayerPrefs.SetString("SaveState", s);
-    }
-
-    public void SaveInventory()
-    {
-        //Saving the inventory items on PlayerPrefs
-
-        string j = "";
-
-        for (int i = 0; i < inventory.GetItemList().Length; i++)
+        switch (spell.spellType)
         {
-            Item item = inventory.GetItemList()[i];
-
-            if(item == null)
-            {
-                if (i != 14)
-                {
-                    j += "null" + "|";
-                    continue;
-                }
-                else
-                {
-                    j += "null";
-                    continue;
-                }
-            }
-
-            if (i == 14)
-            {
-                j += item.itemType + "/" + item.amount.ToString();
-                continue;
-            }
-
-            j += item.itemType.ToString() + "/" + item.amount.ToString() + "|";
+            case Spell.SpellType.Fireball:
+                selectedMagic = 1;
+                break;
+            case Spell.SpellType.Zap:
+                selectedMagic = 2;
+                break;
+            case Spell.SpellType.Waterball:
+                selectedMagic = 3;
+                break;
         }
-
-        PlayerPrefs.SetString("SaveInventory", j);
     }
 
     private void Start()
     {
-        if (!started)
-        {
-            //Player level
-            level = 0;
-            experience = 0;
-            //Mana
-            currentMana = instance.maxMana;
-            //HP
-            health = instance.maxHP;
-
-            started = true;
-        }
+        selectedMagic = 0;
+        objectiveUI.SetObjective(objectiveManager);
         //Inventory UI
         uiInventory.SetInventory(inventory);
+        //Spell Bar UI
+        spellBarUI.SetSpellBook(spellBook);
         //Mana Slider
-        manaSlider.value = currentMana;
-        manaSlider.maxValue = maxMana;
+        manaSlider.fillAmount = currentMana/maxMana;
         //Experience Slider
         expSlider.value = experience;
         expSlider.maxValue = maxExp;
         //HP Slider
-        hpSlider.value = health;
-        hpSlider.maxValue = maxHP;
+        hpSlider.fillAmount = health/maxHP;
         //Player States
         DialogueManager.Instance.OnShowDialog += () =>
         {
@@ -197,63 +171,16 @@ public class GameManager : MonoBehaviour
             if (state == GameState.Paused)
                 state = GameState.FreeRoam;
         };
-    }
-    public void LoadState(Scene s, LoadSceneMode mode)
-    {
-        if(!PlayerPrefs.HasKey("SaveState"))
-            return;
-
-        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
-
-        //Change player skin
-        coins = int.Parse(data[1]);
-        experience = float.Parse(data[2]);
-        level = int.Parse(data[3]);
-        selectedMagic = int.Parse(data[4]);
-        currentMana = float.Parse(data[5]);
-        health = float.Parse(data[6]);
-        //Change weapon level
-
-        //Update things
-        expSlider.value = experience;
-        manaSlider.value = currentMana;
-        hpSlider.value = health;
-        GameObject.Find("Hero").transform.position = teleport.initialValue;
-        LoadInventory();
-    }
-
-    public void LoadInventory()
-    {
-        if (!PlayerPrefs.HasKey("SaveInventory"))
-            return;
-
-        string[] data = PlayerPrefs.GetString("SaveInventory").Split('|');
-
-        Item[] tempItemList;
-        tempItemList = new Item[15];
-
-        inventory = new Inventory(UseItem);
-
-        for (int i = 0; i < inventory.GetItemList().Length; i++)
+        SpellManager.Instance.OnPause += () =>
         {
-            if (data[i] == "null")
-            {
-                continue;
-            }
+            state = GameState.Paused;
+        };
 
-            string[] itemPart = data[i].Split('/');
-
-            Item.ItemType itemTypeItem = (Item.ItemType)System.Enum.Parse(typeof(Item.ItemType), itemPart[0]);
-            int amountItem = int.Parse(itemPart[1]);
-
-            Item itemTemp = new Item();
-            itemTemp.amount = amountItem;
-            itemTemp.itemType = itemTypeItem;
-
-            tempItemList[i] = itemTemp;
-        }
-
-        inventory.SetItemList(tempItemList);
+        SpellManager.Instance.OnEndPause += () =>
+        {
+            if (state == GameState.Paused)
+                state = GameState.FreeRoam;
+        };
     }
 
     private void Update()
@@ -262,75 +189,131 @@ public class GameManager : MonoBehaviour
 
         if(state == GameState.FreeRoam)
         {
+            hero.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             hero.timeRunning = true;
             hero.HandleUpdate();
         }
         else if(state == GameState.Dialog)
         {
+            hero.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             hero.timeRunning = false;
             DialogueManager.Instance.HandleUpdate();
         }
         else if (state == GameState.Paused)
         {
+            hero.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             hero.timeRunning = false;
         }
 
         //Player Mana
-        manaSlider.value = currentMana;
+        if (currentMana > maxMana)
+        {
+            currentMana = maxMana;
+        }
+
+        manaSlider.fillAmount = currentMana/maxMana;
 
         //Player Health
-        hpSlider.value = health;
-        hpSlider.maxValue = maxHP;
+        if (hero.hp > maxHP)
+        {
+            hero.hp = maxHP;
+        }
 
-        health = hero.hp;
         hero.maxHP = maxHP;
+        health = hero.hp;
+
+        hpSlider.fillAmount = health/maxHP;
+
+        //Player Position
+        playerPos = hero.transform.position;
 
         //Player Level
         expSlider.value = experience;
         expSlider.maxValue = maxExp;
 
+        //Using Items by Shortcuts
+        for(int i = 1; i <= 5; i++)
+        {
+            string key = "f" + i.ToString();
+            if (Input.GetKeyDown(key))
+            {
+                if(inventory.GetItemList()[i - 1] != null)
+                    UseItem(inventory.GetItemList()[i - 1]);
+            }
+        }
+        
+
         switch (level)
         {
             case 0:
                 maxExp = 50;
-                maxHP = 100;
+                maxMana = 10;
+
+                manaSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(200, manaSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxManaUI.sizeDelta = new Vector2(200, maxManaUI.sizeDelta.y);
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(200, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(200, maxHPUI.sizeDelta.y);
                 break;
             case 1:
                 maxExp = 100;
-                maxHP = 150;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(240, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(240, maxHPUI.sizeDelta.y);
                 break;
             case 2:
                 maxExp = 200;
-                maxHP = 200;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(280, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(280, maxHPUI.sizeDelta.y);
                 break;
             case 3:
                 maxExp = 400;
-                maxHP = 350;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(320, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(320, maxHPUI.sizeDelta.y);
                 break;
             case 4:
                 maxExp = 800;
-                maxHP = 400;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(360, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(360, maxHPUI.sizeDelta.y);
                 break;
             case 5:
                 maxExp = 1600;
-                maxHP = 450;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(400, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(400, maxHPUI.sizeDelta.y);
                 break;
             case 6:
                 maxExp = 3200;
-                maxHP = 500;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(440, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(440, maxHPUI.sizeDelta.y);
                 break;
             case 7:
-                maxExp = 6400;
-                maxHP = 600;
+                experience = maxExp;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(480, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(480, maxHPUI.sizeDelta.y);
+                break;
+            case 8:
+                experience = maxExp;
+
+                hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(520, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
+                maxHPUI.sizeDelta = new Vector2(520, maxHPUI.sizeDelta.y);
                 break;
         }
 
         if (experience >= maxExp)
         {
-            if (level == 7)
+            if (level == 8)
                 return;
             experience -= maxExp;
             level++;
+            maxHP += 100;
+            hero.hp += 100;
+            xpPoints++;
         }
     }
 }

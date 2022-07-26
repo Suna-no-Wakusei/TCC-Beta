@@ -28,7 +28,8 @@ public class InventoryManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            OpenIt();
+            if (GameManager.instance.state != GameState.Dialog)
+                OpenIt();
         }
     }
 

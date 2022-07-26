@@ -33,30 +33,6 @@ public class Player : Fighter
     public LayerMask Interactable;
     public Animator animator;
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
-        if (itemWorld != null)
-        {
-            Item item = itemWorld.GetItem();
-            if (item.IsStackable() && GameManager.instance.inventory.ItemAlreadyInInventory(item))
-            {
-                if (!GameManager.instance.inventory.ItemFull(item))
-                {
-                    //When Player touch the item
-                    GameManager.instance.inventory.AddItem(item);
-                    itemWorld.DestroySelf();
-                }
-            }
-            else if(!GameManager.instance.inventory.IsArrayFull())
-            {
-                //When Player touch the item
-                GameManager.instance.inventory.AddItem(item);
-                itemWorld.DestroySelf();
-            }
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {

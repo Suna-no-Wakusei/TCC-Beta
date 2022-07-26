@@ -9,9 +9,14 @@ public class Item
     
     public enum ItemType
     {
-        Axe,
-        HealthPotion,
-        ManaPotion,
+        LargeHealthPotion,
+        MediumHealthPotion,
+        SmallHealthPotion,
+        LargeManaPotion,
+        MediumManaPotion,
+        SmallManaPotion,
+        GreyKey,
+        GoldenKey,
     }
 
 
@@ -24,9 +29,46 @@ public class Item
         switch (itemType)
         {
             default:
-            case ItemType.Axe:          return ItemAssets.Instance.axeSprite;
-            case ItemType.HealthPotion: return ItemAssets.Instance.healthPotionSprite;
-            case ItemType.ManaPotion:   return ItemAssets.Instance.manaPotionSprite;
+            case ItemType.LargeHealthPotion: return ItemAssets.Instance.largeHealthPotionSprite;
+            case ItemType.MediumHealthPotion:   return ItemAssets.Instance.mediumHealthPotionSprite;
+            case ItemType.SmallHealthPotion: return ItemAssets.Instance.smallHealthPotionSprite;
+            case ItemType.LargeManaPotion: return ItemAssets.Instance.largeManaPotionSprite;
+            case ItemType.MediumManaPotion: return ItemAssets.Instance.mediumManaPotionSprite;
+            case ItemType.SmallManaPotion: return ItemAssets.Instance.smallManaPotionSprite;
+            case ItemType.GreyKey: return ItemAssets.Instance.greyKeySprite;
+            case ItemType.GoldenKey: return ItemAssets.Instance.goldenKeySprite;
+        }
+    }
+
+    public string ItemName()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.LargeHealthPotion: return "Poção de Cura Grande";
+            case ItemType.MediumHealthPotion: return "Poção de Cura Média";
+            case ItemType.SmallHealthPotion: return "Poção de Cura Pequena";
+            case ItemType.LargeManaPotion: return "Poção de Mana Grande";
+            case ItemType.MediumManaPotion: return "Poção de Mana Média";
+            case ItemType.SmallManaPotion: return "Poção de Mana Pequena";
+            case ItemType.GreyKey: return "Chave Cinza";
+            case ItemType.GoldenKey: return "Chave Dourada";
+        }
+    }
+
+    public string ItemDesc()
+    {
+        switch (itemType)
+        {
+            default:
+            case ItemType.LargeHealthPotion: return "Essa poção cura 50% do seu HP máximo";
+            case ItemType.MediumHealthPotion: return "Essa poção cura 75HP";
+            case ItemType.SmallHealthPotion: return "Essa poção cura 50HP";
+            case ItemType.LargeManaPotion: return "Essa poção restaura 100% da sua mana";
+            case ItemType.MediumManaPotion: return "Essa poção restaura 75% da sua mana";
+            case ItemType.SmallManaPotion: return "Essa poção restaura 50% da sua mana";
+            case ItemType.GreyKey: return "Uma chave cinza";
+            case ItemType.GoldenKey: return "Uma chave dourada";
         }
     }
 
@@ -35,10 +77,15 @@ public class Item
         switch (itemType)
         {
             default:
-            case ItemType.Axe:
+            case ItemType.GreyKey:
+            case ItemType.GoldenKey:
                 return false;
-            case ItemType.HealthPotion:
-            case ItemType.ManaPotion:   
+            case ItemType.LargeHealthPotion:
+            case ItemType.MediumHealthPotion:
+            case ItemType.SmallHealthPotion:
+            case ItemType.LargeManaPotion:   
+            case ItemType.MediumManaPotion:
+            case ItemType.SmallManaPotion:
                 return true;
         }
     }

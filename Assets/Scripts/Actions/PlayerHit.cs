@@ -13,7 +13,8 @@ public class PlayerHit : MonoBehaviour
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
-                origin = transform.position
+                origin = transform.position,
+                dmgType = Damage.DmgType.physicalDamage
             };
 
             collision.transform.parent.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);

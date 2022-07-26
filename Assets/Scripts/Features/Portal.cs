@@ -28,11 +28,11 @@ public class Portal : Collidable
         //teleport the player
         if(coll.name == "Hero")
         {
-            GameManager.instance.SaveState();
             sceneName = sceneNames[Random.Range(0, sceneNames.Length)];
-
-            Teleport.initialValue = playerPosition;
             GameManager.instance.actualScene = sceneName;
+
+            GameManager.instance.nextScenePos = playerPosition;
+            SaveSystem.SaveState();
             StartCoroutine(FadeCo());
         }
     }

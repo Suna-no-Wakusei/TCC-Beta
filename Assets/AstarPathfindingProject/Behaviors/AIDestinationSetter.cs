@@ -16,10 +16,19 @@ namespace Pathfinding {
 	public class AIDestinationSetter : VersionedMonoBehaviour {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
+		public float enemyRange = 6f;
 		IAstarAI ai;
+		private Vector3 aiPosition;
+		private Vector3 startPosition;
+
+		void Start()
+        {
+			startPosition = GetComponent<Transform>().position;
+		}
 
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
+			aiPosition = GetComponent<Transform>().position;
 			// Update the destination right before searching for a path as well.
 			// This is enough in theory, but this script will also update the destination every
 			// frame as the destination is used for debugging and may be used for other things by other
@@ -33,7 +42,18 @@ namespace Pathfinding {
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
-			if (target != null && ai != null) ai.destination = target.position;
+			if(ai != null)
+				aiPosition = GetComponent<Transform>().position;
+
+			if (target != null && ai != null)
+            {
+				if(Vector3.Distance(target.position, aiPosition) < enemyRange)
+					ai.destination = target.position;
+                else
+                {
+					ai.destination = startPosition;
+                }
+			}
 		}
 	}
 }

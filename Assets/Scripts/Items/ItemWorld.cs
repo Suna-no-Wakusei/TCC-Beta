@@ -4,8 +4,32 @@ using UnityEngine;
 using TMPro;
 using CodeMonkey.Utils;
 
-public class ItemWorld : MonoBehaviour
+public class ItemWorld : MonoBehaviour, ICollectable
 {
+
+    public void Collect()
+    {
+        ItemWorld itemWorld = GetComponent<BoxCollider2D>().GetComponent<ItemWorld>();
+        if (itemWorld != null)
+        {
+            Item item = itemWorld.GetItem();
+            if (item.IsStackable() && GameManager.instance.inventory.ItemAlreadyInInventory(item))
+            {
+                if (!GameManager.instance.inventory.ItemFull(item))
+                {
+                    //When Player touch the item
+                    GameManager.instance.inventory.AddItem(item);
+                    itemWorld.DestroySelf();
+                }
+            }
+            else if (!GameManager.instance.inventory.IsArrayFull())
+            {
+                //When Player touch the item
+                GameManager.instance.inventory.AddItem(item);
+                itemWorld.DestroySelf();
+            }
+        }
+    }
 
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
     {

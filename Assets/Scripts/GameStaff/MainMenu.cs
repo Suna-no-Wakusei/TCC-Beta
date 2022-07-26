@@ -2,23 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject optionScreen;
+
     public void NewGame()
     {
-        GameManager.instance.teleport.initialValue = new Vector2(-2,1);
+        if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))
+        {
+            File.Delete(Application.persistentDataPath + "/JSONData.sus");
+        }
+        
         SceneManager.LoadScene("Casa");
     }
 
     public void Continue()
     {
-        if (GameManager.instance.actualScene == null)
-            NewGame();
+        if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))
+        {
+            SaveSystem.LoadState();
+            SaveSystem.LoadSavedScene();
+        }
         else
         {
-            SceneManager.LoadScene(GameManager.instance.actualScene);
+            NewGame();
         }
+    }
+
+    public void OpenOptions()
+    {
+        optionScreen.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        optionScreen.SetActive(false);
     }
 
     public void Quit()

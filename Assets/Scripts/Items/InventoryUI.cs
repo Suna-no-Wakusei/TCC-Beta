@@ -26,6 +26,24 @@ public class InventoryUI : MonoBehaviour
         InventoryVerify();
     }
 
+    public void UseSelectedItem()
+    {
+        Item item = new Item();
+
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if (itemSlot[i].GetComponent<ItemSlotUI>().slotSelected)
+            {
+                item = inventory.GetItemList()[i];
+            }
+        }
+
+        if (item != null)
+            GameManager.instance.UseItem(item);
+
+        RefreshInventoryItems();
+    }
+
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
@@ -55,12 +73,17 @@ public class InventoryUI : MonoBehaviour
 
         for (int i = 0; i < inventory.GetItemList().Length; i++)
         {
-            if (inventory.GetItemList()[i] == null) continue;
-
             Item item = inventory.GetItemList()[i];
 
             if (itemSlot[i].transform.childCount >= 3)
             {
+                if (item == null)
+                {
+                    Destroy(itemSlot[i].transform.Find("ItemUIpf(Clone)").gameObject);
+
+                    continue;
+                }
+
                 if (item.amount == 1 && textMeshPro[i] != null)
                 {
                     textMeshPro[i].SetText("");
@@ -71,6 +94,8 @@ public class InventoryUI : MonoBehaviour
                 }
                 continue;
             }
+
+            if (inventory.GetItemList()[i] == null) continue;
 
             ItemUI.CatchItem(itemSlot[i].transform.position, item, i.ToString());
         }

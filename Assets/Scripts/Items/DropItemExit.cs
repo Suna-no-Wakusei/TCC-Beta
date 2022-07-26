@@ -14,7 +14,7 @@ public class DropItemExit : MonoBehaviour, IDropHandler
         List<GameObject> hoveredList = eventData.hovered;
         foreach (var GO in hoveredList)
         {
-            if (GO.name == "DropCatcher")
+            if (GO.name == this.name)
             {
                 thisItem = eventData.pointerDrag.gameObject;
                 itemUI = thisItem.GetComponent<ItemUI>();

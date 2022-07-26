@@ -6,14 +6,11 @@ using UnityEngine.UI;
 public class SuperClassMagic : MonoBehaviour
 {
     public Fireball fireball;
+    public Zap zap;
+    public Waterball waterball;
 
     public float regenRate = 0.25f;
     private float manaCost;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -24,17 +21,41 @@ public class SuperClassMagic : MonoBehaviour
         //Running Magics
         if(GameManager.instance.hero.timeRunning == true)
         {
-            if (GameManager.instance.selectedMagic == 1)
+            switch (GameManager.instance.selectedMagic)
             {
-                manaCost = 3f;
-                if (GameManager.instance.currentMana >= manaCost)
-                {
-                    if (Input.GetKeyDown(KeyCode.Mouse1) && !fireball.fireballRunning)
+                case 1:
+                    manaCost = 1;
+                    if (GameManager.instance.currentMana >= manaCost)
                     {
-                        fireball.PlayFireball();
-                        DecreaseMana();
+                        if (Input.GetKeyDown(KeyCode.Mouse1) && !fireball.fireballRunning)
+                        {
+                            fireball.PlayFireball();
+                            DecreaseMana();
+                        }
                     }
-                }
+                    break;
+                case 2:
+                    manaCost = 1;
+                    if (GameManager.instance.currentMana >= manaCost)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse1) && !zap.zapRunning)
+                        {
+                            zap.PlayZap();
+                            DecreaseMana();
+                        }
+                    }
+                    break;
+                case 3:
+                    manaCost = 1;
+                    if (GameManager.instance.currentMana >= manaCost)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse1) && !waterball.waterballRunning)
+                        {
+                            waterball.PlayWaterball();
+                            DecreaseMana();
+                        }
+                    }
+                    break;
             }
         }
     }
@@ -42,17 +63,17 @@ public class SuperClassMagic : MonoBehaviour
     public void ManaRegen()
     {
         GameManager.instance.currentMana = Mathf.Min(GameManager.instance.currentMana + regenRate * Time.deltaTime, GameManager.instance.maxMana);
-        GameManager.instance.manaSlider.value = Mathf.Min(GameManager.instance.manaSlider.value + regenRate * Time.deltaTime, GameManager.instance.manaSlider.maxValue);
+        GameManager.instance.manaSlider.fillAmount = Mathf.Min(GameManager.instance.manaSlider.fillAmount + (regenRate / GameManager.instance.maxMana) * Time.deltaTime, 1);
     }
 
     public void DecreaseMana()
     {
-        if (GameManager.instance.manaSlider.value < 0)
+        if (GameManager.instance.manaSlider.fillAmount < 0)
         {
-            GameManager.instance.manaSlider.value = 0;
+            GameManager.instance.manaSlider.fillAmount = 0;
             GameManager.instance.currentMana = 0;
         }
-        GameManager.instance.manaSlider.value -= manaCost;
+        GameManager.instance.manaSlider.fillAmount -= manaCost/ GameManager.instance.maxMana;
         GameManager.instance.currentMana -= manaCost;
     }
 }

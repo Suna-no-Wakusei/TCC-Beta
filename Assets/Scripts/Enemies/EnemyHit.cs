@@ -13,7 +13,8 @@ public class EnemyHit : MonoBehaviour
             Damage dmg = new Damage
             {
                 damageAmount = damagePoint,
-                origin = transform.position
+                origin = transform.position,
+                dmgType = Damage.DmgType.physicalDamage
             };
 
             collision.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);

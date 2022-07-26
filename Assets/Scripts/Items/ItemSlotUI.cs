@@ -2,9 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ItemSlotUI : MonoBehaviour, IDropHandler
+public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
 {
+    public bool slotSelected;
+    private GameObject[] itemSlot;
+    private int thisSlot;
+
+    public void Awake()
+    {
+        itemSlot = GameObject.FindGameObjectsWithTag("ItemSlot");
+
+        thisSlot = int.Parse(gameObject.name);
+
+        if (thisSlot == 0)
+            slotSelected = true;
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -24,5 +39,50 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.gameObject.transform.position = eventData.pointerDrag.gameObject.transform.parent.position;
             }
         }
+    }
+
+    private void Update()
+    {
+        if (!slotSelected)
+        {
+            Image[] image = new Image[transform.childCount];
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                image[i] = transform.GetChild(i).GetComponent<Image>();
+            }
+
+            image[1].color = new Color32(255, 255, 255, 255);
+        }
+        else
+        {
+            Image[] image = new Image[transform.childCount];
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                image[i] = transform.GetChild(i).GetComponent<Image>();
+            }
+
+            image[1].color = new Color32(114, 119, 255, 255);
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if (itemSlot[i].GetComponent<ItemSlotUI>().slotSelected)
+            {
+                itemSlot[i].GetComponent<ItemSlotUI>().slotSelected = false;
+            }
+        }
+
+        slotSelected = true;
+
+        Image[] image = new Image[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            image[i] = transform.GetChild(i).GetComponent<Image>();
+        }
+
+        image[1].color = new Color32(114, 119, 255, 255);
     }
 }

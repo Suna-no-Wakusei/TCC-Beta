@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private Canvas canvas;
     public static ItemUI instance { get; private set; }
@@ -69,6 +69,9 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(ItemDescUI.instance != null)
+            ItemDescUI.instance.DestroyDescBox();
+
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
     }
@@ -80,9 +83,20 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if(GameObject.Find("ItemBox(Clone)") == null)
+            ItemDescUI.ShowItemDescription(this.rectTransform.position - new Vector3(0,50,0), item);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if(GameObject.Find("ItemBox(Clone)") != null)
+            Destroy(GameObject.Find("ItemBox(Clone)"));
     }
 
 }
