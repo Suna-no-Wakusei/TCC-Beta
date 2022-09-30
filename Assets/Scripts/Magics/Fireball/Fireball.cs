@@ -63,6 +63,8 @@ public class Fireball : MonoBehaviour
 
         animator.SetTrigger("Collide");
 
+        yield return new WaitForSeconds(0.3f);
+
         fireball.gameObject.SetActive(false);
         
         fireballRunning = false;
@@ -70,6 +72,7 @@ public class Fireball : MonoBehaviour
 
     public void StopFireball()
     {
-        StopCoroutine(lastFireball);
+        if(lastFireball != null)
+            StopCoroutine(lastFireball);
     }
 }

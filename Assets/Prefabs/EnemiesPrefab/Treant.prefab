@@ -253,12 +253,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   maxHP: 4
-  thrust: 60
-  knockTime: 1
   xpValue: 10
+  state: 0
   attackRange: 2
   chasingRange: 8
-  speed: 2.5
+  speed: 1600
+  nextWaypointDistance: 1
   circleEnemyAttack: {fileID: 5203369513616071261}
   animator: {fileID: 2320537626741736826}
   hitbox: {fileID: 8688418536693155422}
@@ -270,13 +270,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2320537626741736825}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 10
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0

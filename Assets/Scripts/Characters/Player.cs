@@ -123,6 +123,8 @@ public class Player : Fighter
         animator.SetTrigger("Dodge");
         moveSpeed *= 1.5f;
 
+        CameraShake.Shake(0.25f, 0.05f);
+
         yield return new WaitForSeconds(0.25f);
 
         moveSpeed /= 1.5f;
@@ -153,6 +155,8 @@ public class Player : Fighter
         attackReady = false;
 
         animator.SetBool("Attack", true);
+
+        CameraShake.Shake(0.25f, 0.05f);
 
         yield return null;
 

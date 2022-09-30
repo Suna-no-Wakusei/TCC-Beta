@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     // References
     public Player hero;
+    public Enemy[] enemies;
     public SuperClassMagic allMagics;
     public Vector2 nextScenePos;
     public Vector2 playerPos;
@@ -121,6 +122,15 @@ public class GameManager : MonoBehaviour
             case Spell.SpellType.Waterball:
                 selectedMagic = 3;
                 break;
+            case Spell.SpellType.IceShard:
+                selectedMagic = 4;
+                break;
+            case Spell.SpellType.StoneCannon:
+                selectedMagic = 5;
+                break;
+            case Spell.SpellType.Speed:
+                selectedMagic = 6;
+                break;
         }
     }
 
@@ -139,6 +149,7 @@ public class GameManager : MonoBehaviour
         expSlider.maxValue = maxExp;
         //HP Slider
         hpSlider.fillAmount = health/maxHP;
+
         //Player States
         DialogueManager.Instance.OnShowDialog += () =>
         {

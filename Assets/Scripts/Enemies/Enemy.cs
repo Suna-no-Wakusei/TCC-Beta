@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using Pathfinding;
 
 public class Enemy : Fighter
 {
@@ -9,19 +10,36 @@ public class Enemy : Fighter
     public int xpValue = 10;
 
     //Logic
+    public enum GameState
+    {
+        Roaming,
+        ChasingTarget,
+        Attacking,
+        GoBackToStart
+    }
+
+    public GameState state;
+
     public float attackRange;
     public float chasingRange;
-    private bool attackBool;
     private Transform target;
-
-    public float speed = 1f;
-
-    private Vector3 startingPosition;
     private Vector3 roamPosition;
+    private Vector3 startingPosition;
+    private bool stopMoving = false;
+    public bool enemyAlive = true;
+
+    public float speed = 1200f;
+    public float nextWaypointDistance = 0.5f;
+
+    Path path;
+    int currentWaypoint = 0;
+    bool reachedEndOfPath = true;
+
+    Seeker seeker;
 
     private Rigidbody2D rb;
     private Vector2 oldpos;
-    bool attackReady;
+    bool attackReady = true;
 
     public CircleCollider2D circleEnemyAttack;
 
@@ -34,22 +52,144 @@ public class Enemy : Fighter
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        seeker = GetComponent<Seeker>();
         target = GameManager.instance.hero.transform;
-        startingPosition = transform.position;
 
         //velocity
+        startingPosition = transform.position;
         oldpos = transform.position;
+
+        //Updating Pathfinding
+        InvokeRepeating("UpdatePath", 0f, 1f);
 
         //health
         hp = 10;
         maxHP = 10;
     }
 
-    private void Update()
+    void UpdatePath()
     {
-        CheckDistance();
+        Vector3 targetPathFinal = Vector3.zero;
+        switch (state)
+        {
+            default:
+            case GameState.Roaming:
+                if (seeker.IsDone())
+                    seeker.StartPath(rb.position, GetRoamingPosition(), OnPathComplete);
 
-        //velocity
+                float reachedPositionDistance = 5f;
+                if(Vector3.Distance(transform.position, roamPosition) < reachedPositionDistance)
+                {
+                    roamPosition = GetRoamingPosition();
+                }
+
+                FindTarget();
+                break;
+            case GameState.ChasingTarget:
+                if (Vector3.Distance(transform.position, target.position) >= attackRange - 0.25f)
+                {
+                    if (seeker.IsDone())
+                        seeker.StartPath(rb.position, target.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)), OnPathComplete);
+                }
+
+                if(Vector3.Distance(transform.position, target.position) <= attackRange && attackReady)
+                {
+                    path = null;
+                    stopMoving = true;
+                    state = GameState.Attacking;
+                    StartCoroutine(EnemyAttack());
+                }
+
+                float stopChasing = 10f;
+                if(Vector3.Distance(transform.position, target.position) > stopChasing)
+                {
+                    state = GameState.Roaming;
+                }
+                break;
+            case GameState.Attacking:
+                break;
+            case GameState.GoBackToStart:
+                if (seeker.IsDone())
+                    seeker.StartPath(rb.position, startingPosition, OnPathComplete);
+
+                reachedPositionDistance = 5f;
+                if (Vector3.Distance(transform.position, roamPosition) < reachedPositionDistance)
+                {
+                    state = GameState.Roaming;
+                }
+                break;
+        }
+
+        if(path != null)
+        {
+            if (currentWaypoint >= path.vectorPath.Count)
+            {
+                reachedEndOfPath = true;
+                targetPathFinal = target.position;
+            }
+            else
+            {
+                reachedEndOfPath = false;
+            }
+        }
+    }
+
+    void OnPathComplete(Path p)
+    {
+        if (!p.error)
+        {
+            path = p;
+            currentWaypoint = 0;
+        }
+    }
+
+    private Vector3 GetRoamingPosition()
+    {
+        return startingPosition + UtilsClass.GetRandomDir() * Random.Range(-4f, 4f);
+    }
+
+    private void FindTarget()
+    {
+        //Chasing target
+        if (Vector2.Distance(transform.position, target.position) < chasingRange)
+            state = GameState.ChasingTarget;
+    }
+
+    private void FixedUpdate()
+    {
+        if(path == null) return;
+
+        if (!stopMoving)
+        {
+            try
+            {
+                Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+
+                Vector2 force = direction * speed * Time.deltaTime;
+
+                rb.AddForce(force);
+
+                float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+                if (distance < nextWaypointDistance)
+                {
+                    currentWaypoint++;
+                }
+
+                //velocity
+                animator.SetFloat("Horizontal", force.x);
+                animator.SetFloat("Vertical", force.y);
+            }
+            catch
+            {
+                //velocity
+                animator.SetFloat("Horizontal", rb.velocity.x);
+                animator.SetFloat("Vertical", rb.velocity.y);
+            }
+        }
+
+        
+
         float lastMoveVertical = 0;
         float lastMoveHorizontal = 0;
 
@@ -72,51 +212,6 @@ public class Enemy : Fighter
         animator.SetFloat("Speed", Mathf.Abs(velocity.x + velocity.y));
     }
 
-    void CheckDistance()
-    {
-        if(Vector3.Distance(target.position, transform.position) <= chasingRange && Vector3.Distance(target.position, transform.position) >= attackRange)
-        {
-            Vector3 temp = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-
-            changeAnim(transform.position - temp);
-
-            transform.position = temp;
-
-            if (Vector3.Distance(target.position, transform.position) == attackRange && attackReady)
-                StartCoroutine(EnemyAttack());
-        }
-    }
-
-    private void SetAnimFloat(Vector2 setVector)
-    {
-        animator.SetFloat("Horizontal", setVector.x);
-        animator.SetFloat("Vertical", setVector.y);
-    }
-
-    private void changeAnim(Vector2 direction)
-    {
-        if(Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-        {
-            if(direction.x > 0)
-            {
-                SetAnimFloat(Vector2.left);
-            }else if(direction.x < 0)
-            {
-                SetAnimFloat(Vector2.right);
-            }
-        }else if(Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
-        {
-            if (direction.y > 0)
-            {
-                SetAnimFloat(Vector2.down);
-            }
-            else if (direction.y < 0)
-            {
-                SetAnimFloat(Vector2.up);
-            }
-        }
-    }
-
     IEnumerator EnemyAttack()
     {
         yield return new WaitForSeconds(.4f);
@@ -130,13 +225,20 @@ public class Enemy : Fighter
 
         circleEnemyAttack.enabled = false;
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(0.5f);
+
+        rb.AddForce(diferencia * -500, ForceMode2D.Force);
         attackReady = true;
+
+        state = GameState.ChasingTarget;
+
+        stopMoving = false;
     }
 
     protected override void Death()
     {
         Destroy(gameObject);
+        enemyAlive = false;
         GameManager.instance.experience += xpValue;
         GameManager.instance.ShowText("+"+xpValue+" XP", 8, Color.green, transform.position, Vector3.up * 35, 0.5f);
     }

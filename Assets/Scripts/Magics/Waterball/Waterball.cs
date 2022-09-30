@@ -51,7 +51,7 @@ public class Waterball : MonoBehaviour
         waterball.transform.rotation = Quaternion.Euler(0, 0, angulo);
         waterball.transform.localPosition = waterball.transform.right + new Vector3((float)0.2, 0, 0);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         GameManager.instance.state = GameState.FreeRoam;
 
@@ -63,6 +63,8 @@ public class Waterball : MonoBehaviour
 
         animator.SetTrigger("Collide");
 
+        yield return new WaitForSeconds(0.3f);
+
         waterball.gameObject.SetActive(false);
 
         waterballRunning = false;
@@ -70,6 +72,7 @@ public class Waterball : MonoBehaviour
 
     public void StopWaterball()
     {
-        StopCoroutine(lastWaterball);
+        if(lastWaterball != null)
+            StopCoroutine(lastWaterball);
     }
 }

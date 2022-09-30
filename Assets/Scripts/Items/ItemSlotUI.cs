@@ -9,6 +9,8 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
     public bool slotSelected;
     private GameObject[] itemSlot;
     private int thisSlot;
+    public Sprite selector;
+    public Sprite emptySlot;
 
     public void Awake()
     {
@@ -51,7 +53,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
                 image[i] = transform.GetChild(i).GetComponent<Image>();
             }
 
-            image[1].color = new Color32(255, 255, 255, 255);
+            image[1].sprite = emptySlot;
         }
         else
         {
@@ -61,7 +63,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
                 image[i] = transform.GetChild(i).GetComponent<Image>();
             }
 
-            image[1].color = new Color32(114, 119, 255, 255);
+            image[1].sprite = selector;
         }
     }
 
@@ -83,6 +85,6 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
             image[i] = transform.GetChild(i).GetComponent<Image>();
         }
 
-        image[1].color = new Color32(114, 119, 255, 255);
+        image[1].sprite = selector;
     }
 }

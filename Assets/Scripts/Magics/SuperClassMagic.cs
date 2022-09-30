@@ -8,6 +8,9 @@ public class SuperClassMagic : MonoBehaviour
     public Fireball fireball;
     public Zap zap;
     public Waterball waterball;
+    public IceShard iceShard;
+    public StoneCannon stoneCannon;
+    public Speed speed;
 
     public float regenRate = 0.25f;
     private float manaCost;
@@ -25,6 +28,8 @@ public class SuperClassMagic : MonoBehaviour
             {
                 case 1:
                     manaCost = 1;
+                    speed.speedEffect.Stop();
+                    GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse1) && !fireball.fireballRunning)
@@ -36,6 +41,8 @@ public class SuperClassMagic : MonoBehaviour
                     break;
                 case 2:
                     manaCost = 1;
+                    speed.speedEffect.Stop();
+                    GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse1) && !zap.zapRunning)
@@ -47,6 +54,8 @@ public class SuperClassMagic : MonoBehaviour
                     break;
                 case 3:
                     manaCost = 1;
+                    speed.speedEffect.Stop();
+                    GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse1) && !waterball.waterballRunning)
@@ -54,6 +63,57 @@ public class SuperClassMagic : MonoBehaviour
                             waterball.PlayWaterball();
                             DecreaseMana();
                         }
+                    }
+                    break;
+                case 4:
+                    manaCost = 1;
+                    speed.speedEffect.Stop();
+                    GameManager.instance.hero.moveSpeed = 5f;
+                    if (GameManager.instance.currentMana >= manaCost)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse1) && !iceShard.iceShardRunning)
+                        {
+                            iceShard.PlayIceShard();
+                            DecreaseMana();
+                        }
+                    }
+                    break;
+                case 5:
+                    manaCost = 1;
+                    speed.speedEffect.Stop();
+                    GameManager.instance.hero.moveSpeed = 5f;
+                    if (GameManager.instance.currentMana >= manaCost)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse1) && !stoneCannon.stoneCannonRunning)
+                        {
+                            stoneCannon.PlayStoneCannon();
+                            DecreaseMana();
+                        }
+                    }
+                    break;
+                case 6:
+                    manaCost = 0.0025f;
+                    if (Input.GetKey(KeyCode.Mouse1))
+                    {
+                        if (GameManager.instance.currentMana >= manaCost)
+                        {
+                            GameManager.instance.hero.moveSpeed = 10f;
+                            DecreaseMana();
+                        }
+                        else
+                        {
+                            speed.speedEffect.Stop();
+                            GameManager.instance.hero.moveSpeed = 5f;
+                        }
+                    }
+                    else
+                    {
+                        speed.speedEffect.Stop();
+                        GameManager.instance.hero.moveSpeed = 5f;
+                    }
+                    if (Input.GetKeyDown(KeyCode.Mouse1))
+                    {
+                        speed.PlayEffect();
                     }
                     break;
             }

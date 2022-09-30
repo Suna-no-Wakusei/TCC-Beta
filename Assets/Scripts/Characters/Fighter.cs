@@ -7,8 +7,6 @@ public class Fighter : MonoBehaviour
     //Public fields
     public float hp;
     public float maxHP;
-    public float thrust;
-    public float knockTime;
 
     //Private fields
     private Rigidbody2D rb1;
@@ -37,6 +35,8 @@ public class Fighter : MonoBehaviour
             lastImmune = Time.time;
             hp -= dmg.damageAmount;
 
+            CameraShake.Shake(0.25f, 0.25f);
+
             GameManager.instance.ShowText(dmg.damageAmount.ToString(),20,Color.red,transform.position, Vector3.up * 25, 0.5f);
 
             if(hp <= 0)
@@ -57,6 +57,8 @@ public class Fighter : MonoBehaviour
         else if ((Time.time - lastEnemyImmune > immuneEnemyTime) && transform.tag != "Player"){
             lastEnemyImmune = Time.time;
             hp -= dmg.damageAmount;
+
+            CameraShake.Shake(0.25f, 0.25f);
 
             GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, Color.red, transform.position, Vector3.up * 25, 0.5f);
 
@@ -97,7 +99,7 @@ public class Fighter : MonoBehaviour
         if (rb1.isKinematic)
         {
             rb1.isKinematic = false;
-            rb1.AddForce(difference * 15f, ForceMode2D.Impulse);
+            rb1.AddForce(difference * 30f, ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(0.3f);
 
@@ -106,7 +108,7 @@ public class Fighter : MonoBehaviour
         }
         else
         {
-            rb1.AddForce(difference * 15f, ForceMode2D.Impulse);
+            rb1.AddForce(difference * 30f, ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(1f);
 
@@ -116,16 +118,11 @@ public class Fighter : MonoBehaviour
 
     IEnumerator EnemyMagicKnockback()
     {
-        if (rb1.isKinematic)
-        {
-            rb1.isKinematic = false;
-            rb1.AddForce(difference * 6f, ForceMode2D.Impulse);
+        rb1.AddForce(difference * 6f, ForceMode2D.Impulse);
 
-            yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
 
-            rb1.isKinematic = true;
-            rb1.velocity = Vector2.zero;
-        }
+        rb1.velocity = Vector2.zero;
     }
 
     protected virtual void Death()

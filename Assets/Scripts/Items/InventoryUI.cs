@@ -10,7 +10,7 @@ public class InventoryUI : MonoBehaviour
     private Inventory inventory;
     private GameObject[] itemSlot;
     private TextMeshProUGUI[] textMeshPro;
-    private GameObject[] itemPF;
+    private GameObject[] itemPF; 
 
     private void Awake()
     {

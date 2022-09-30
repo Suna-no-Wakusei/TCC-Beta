@@ -31,9 +31,11 @@ public class WaterballHit : MonoBehaviour
 
     IEnumerator Colisor()
     {
+        waterball.animator.SetTrigger("Collide");
+
         waterball.waterballRb.velocity = Vector3.zero;
         waterball.StopWaterball();
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
 
         waterball.waterballRunning = false;

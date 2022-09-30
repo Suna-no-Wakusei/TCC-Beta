@@ -35,7 +35,7 @@ public class FireballHit : MonoBehaviour
 
         fireball.fireballRb.velocity = Vector3.zero;
         fireball.StopFireball();
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
 
         fireball.fireballRunning = false;
