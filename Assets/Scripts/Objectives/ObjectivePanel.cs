@@ -23,11 +23,13 @@ public class ObjectivePanel : MonoBehaviour
 
     private void DisableObject()
     {
+        GameManager.instance.nullObjective.SetActive(true);
         GameManager.instance.objectiveUI.gameObject.SetActive(false);
     }
 
     private void EnableObject()
     {
+        GameManager.instance.nullObjective.SetActive(false);
         GameManager.instance.objectiveUI.gameObject.SetActive(true);
 
         objective = GameManager.instance.objectiveManager.GetObjective();

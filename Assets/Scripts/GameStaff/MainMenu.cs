@@ -9,6 +9,11 @@ public class MainMenu : MonoBehaviour
 
     public GameObject optionScreen;
 
+    public void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void NewGame()
     {
         if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))

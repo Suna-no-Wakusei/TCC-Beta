@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class SuperClassMagic : MonoBehaviour
@@ -15,14 +16,10 @@ public class SuperClassMagic : MonoBehaviour
     public float regenRate = 0.25f;
     private float manaCost;
 
-    void Update()
+    public void UseSpell(InputAction.CallbackContext ctx)
     {
-        //Mana regen
-        if(GameManager.instance.currentMana < GameManager.instance.maxMana)
-            ManaRegen();
-
         //Running Magics
-        if(GameManager.instance.hero.timeRunning == true)
+        if (GameManager.instance.hero.timeRunning == true)
         {
             switch (GameManager.instance.selectedMagic)
             {
@@ -32,7 +29,7 @@ public class SuperClassMagic : MonoBehaviour
                     GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
-                        if (Input.GetKeyDown(KeyCode.Mouse1) && !fireball.fireballRunning)
+                        if (!fireball.fireballRunning)
                         {
                             fireball.PlayFireball();
                             DecreaseMana();
@@ -45,7 +42,7 @@ public class SuperClassMagic : MonoBehaviour
                     GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
-                        if (Input.GetKeyDown(KeyCode.Mouse1) && !zap.zapRunning)
+                        if (!zap.zapRunning)
                         {
                             zap.PlayZap();
                             DecreaseMana();
@@ -58,7 +55,7 @@ public class SuperClassMagic : MonoBehaviour
                     GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
-                        if (Input.GetKeyDown(KeyCode.Mouse1) && !waterball.waterballRunning)
+                        if (!waterball.waterballRunning)
                         {
                             waterball.PlayWaterball();
                             DecreaseMana();
@@ -71,7 +68,7 @@ public class SuperClassMagic : MonoBehaviour
                     GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
-                        if (Input.GetKeyDown(KeyCode.Mouse1) && !iceShard.iceShardRunning)
+                        if (!iceShard.iceShardRunning)
                         {
                             iceShard.PlayIceShard();
                             DecreaseMana();
@@ -84,7 +81,7 @@ public class SuperClassMagic : MonoBehaviour
                     GameManager.instance.hero.moveSpeed = 5f;
                     if (GameManager.instance.currentMana >= manaCost)
                     {
-                        if (Input.GetKeyDown(KeyCode.Mouse1) && !stoneCannon.stoneCannonRunning)
+                        if (!stoneCannon.stoneCannonRunning)
                         {
                             stoneCannon.PlayStoneCannon();
                             DecreaseMana();
@@ -93,31 +90,28 @@ public class SuperClassMagic : MonoBehaviour
                     break;
                 case 6:
                     manaCost = 0.0025f;
-                    if (Input.GetKey(KeyCode.Mouse1))
+                    if (GameManager.instance.currentMana >= manaCost)
                     {
-                        if (GameManager.instance.currentMana >= manaCost)
-                        {
-                            GameManager.instance.hero.moveSpeed = 10f;
-                            DecreaseMana();
-                        }
-                        else
-                        {
-                            speed.speedEffect.Stop();
-                            GameManager.instance.hero.moveSpeed = 5f;
-                        }
+                        GameManager.instance.hero.moveSpeed = 10f;
+                        DecreaseMana();
                     }
                     else
                     {
                         speed.speedEffect.Stop();
                         GameManager.instance.hero.moveSpeed = 5f;
                     }
-                    if (Input.GetKeyDown(KeyCode.Mouse1))
-                    {
-                        speed.PlayEffect();
-                    }
+
+                    speed.PlayEffect();
                     break;
             }
         }
+    }
+
+    void Update()
+    {
+        //Mana regen
+        if(GameManager.instance.currentMana < GameManager.instance.maxMana)
+            ManaRegen();
     }
 
     public void ManaRegen()

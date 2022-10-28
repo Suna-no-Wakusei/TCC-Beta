@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -44,7 +45,17 @@ public class DialogueManager : MonoBehaviour
 
     public void HandleUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        var keyboard = Keyboard.current;
+        if (keyboard == null)
+            return; // No gamepad connected.
+        var mouse = Mouse.current;
+        if (mouse == null)
+            return;
+
+        if(dialogIsOver)
+            return;
+
+        if (keyboard.enterKey.wasPressedThisFrame || mouse.leftButton.wasPressedThisFrame)
         {
             if (!isTyping)
             {

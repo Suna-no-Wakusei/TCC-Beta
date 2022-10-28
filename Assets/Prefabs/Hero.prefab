@@ -2058,6 +2058,7 @@ GameObject:
   - component: {fileID: 5085937750725321481}
   - component: {fileID: 5085937750725321479}
   - component: {fileID: 5085937750725321475}
+  - component: {fileID: 2359152146987293108}
   m_Layer: 7
   m_Name: Hero
   m_TagString: Player
@@ -2217,9 +2218,12 @@ MonoBehaviour:
   maxHP: 10
   timeRunning: 0
   colliderAttack: {fileID: 854096060108923026}
+  playerInput: {fileID: 0}
+  controller: {fileID: 0}
   fireballSpeed: 6
   moveSpeed: 4
   attackCooldown: 0.6
+  attackDamage: 0
   Interactable:
     serializedVersion: 2
     m_Bits: 256
@@ -2243,6 +2247,236 @@ MonoBehaviour:
   stoneCannon: {fileID: 3271409622264249044}
   speed: {fileID: 8991109933711995506}
   regenRate: 0.015
+--- !u!114 &2359152146987293108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085937750725321482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9ab24073add7b7c429b13d9b23c8fa64, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5085937750725321479}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0e0ee2d8-9192-45b5-accb-b37545cae212
+    m_ActionName: Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5085937750725321479}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Dodge
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 38eca65c-e850-4497-a981-2f8817eda7b3
+    m_ActionName: Gameplay/Dodge[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5085937750725321479}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fe0ebe18-7a23-439a-b035-1912f5a7ce8d
+    m_ActionName: Gameplay/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5085937750725321479}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Collect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1b12ef32-d51f-4b7f-bf4d-d86db347e37d
+    m_ActionName: Gameplay/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayerMode
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4af527ea-cc39-4c3e-b72f-bc3315c2711f
+    m_ActionName: Gameplay/PlayerMode[/Keyboard/leftCtrl]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OpenIt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8f4bcc61-58be-426d-b6af-60369f43b7fe
+    m_ActionName: Menu/Inventory[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OpenIt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 27d310ce-a48e-4eba-9298-5512c2b3c973
+    m_ActionName: Menu/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OpenIt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4b4046ad-c01a-4c8e-8feb-6dcc833579cd
+    m_ActionName: Menu/SpellBook[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UseFItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c60a126e-8c5e-4478-95c3-75f6fa161a5a
+    m_ActionName: Gameplay/UseItem[/Keyboard/f1,/Keyboard/f2,/Keyboard/f3,/Keyboard/f4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3683f6ff-06e3-4c8f-9352-9b6532f6f07d
+    m_ActionName: Gameplay/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SpellBarUI, Assembly-CSharp
+        m_MethodName: UseSelectedSpell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e4c3701f-c3d5-4442-9138-13cc29977b18
+    m_ActionName: Gameplay/SpellSelect[/Keyboard/1,/Keyboard/2,/Keyboard/3,/Keyboard/4,/Keyboard/5,/Keyboard/6,/Keyboard/7,/Keyboard/8]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 
+    m_ActionName: 
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &5085937751365747502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,7 +2522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80a154d9904acd4f91dfaf8b3612b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePoint: 5
 --- !u!60 &854096060108923026
 PolygonCollider2D:
   m_ObjectHideFlags: 0

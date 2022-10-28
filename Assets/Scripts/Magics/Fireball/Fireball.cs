@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Fireball : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Fireball : MonoBehaviour
     public void PlayFireball()
     {
         startingPos = GameObject.Find("Hero").transform.position;
-        lastFireball = StartCoroutine(FireballPlay(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        lastFireball = StartCoroutine(FireballPlay(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
     }
 
     public IEnumerator FireballPlay(Vector3 pointVector)

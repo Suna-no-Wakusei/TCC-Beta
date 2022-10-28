@@ -10,13 +10,16 @@ public class InventoryUI : MonoBehaviour
     private Inventory inventory;
     private GameObject[] itemSlot;
     private TextMeshProUGUI[] textMeshPro;
-    private GameObject[] itemPF; 
+    private GameObject[] itemPF;
+
+    [SerializeField] private TMP_Text coins, fragments, level, attackDamage;
+    [SerializeField] private Sprite weapon;
 
     private void Awake()
     {
-        itemSlot = new GameObject[15];
-        textMeshPro = new TextMeshProUGUI[15];
-        itemPF = new GameObject[15];
+        itemSlot = new GameObject[20];
+        textMeshPro = new TextMeshProUGUI[20];
+        itemPF = new GameObject[20];
 
         itemSlot = GameObject.FindGameObjectsWithTag("ItemSlot");
     }
@@ -24,6 +27,11 @@ public class InventoryUI : MonoBehaviour
     private void Update()
     {
         InventoryVerify();
+
+        coins.text = GameManager.instance.coins.ToString();
+        fragments.text = GameManager.instance.fragments.ToString();
+        level.text = GameManager.instance.level.ToString();
+        attackDamage.text = (GameManager.instance.hero.attackDamage * GameManager.instance.attackFactor).ToString();
     }
 
     public void UseSelectedItem()
@@ -75,7 +83,7 @@ public class InventoryUI : MonoBehaviour
         {
             Item item = inventory.GetItemList()[i];
 
-            if (itemSlot[i].transform.childCount >= 3)
+            if (itemSlot[i].transform.childCount >= 1)
             {
                 if (item == null)
                 {
@@ -108,13 +116,13 @@ public class InventoryUI : MonoBehaviour
 
         for (int i = 0; i < inventory.GetItemList().Length; i++)
         {
-            if (itemSlot[i].transform.childCount >= 3)
+            if (itemSlot[i].transform.childCount >= 1)
             {
                 if(inventory.GetItemList()[i] == null)
                 {
                     for (int y = 0; y < inventory.GetItemList().Length; y++)
                     {
-                        if((itemSlot[y].transform.childCount <= 2))
+                        if((itemSlot[y].transform.childCount <= 0))
                         {
                             if (inventory.GetItemList()[y] != null)
                             {

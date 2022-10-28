@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Waterball : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Waterball : MonoBehaviour
     public void PlayWaterball()
     {
         startingPos = GameObject.Find("Hero").transform.position;
-        lastWaterball = StartCoroutine(WaterballPlay(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        lastWaterball = StartCoroutine(WaterballPlay(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
     }
 
     public IEnumerator WaterballPlay(Vector3 pointVector)

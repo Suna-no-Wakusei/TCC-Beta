@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 
 public class Zap : MonoBehaviour
@@ -24,7 +25,7 @@ public class Zap : MonoBehaviour
     public void PlayZap()
     {
         startingPos = GameObject.Find("Hero").transform.position;
-        lastZap = StartCoroutine(ZapPlay(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        lastZap = StartCoroutine(ZapPlay(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
     }
 
     public IEnumerator ZapPlay(Vector3 pointVector)

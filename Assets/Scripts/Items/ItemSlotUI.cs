@@ -11,6 +11,7 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
     private int thisSlot;
     public Sprite selector;
     public Sprite emptySlot;
+    private Image image;
 
     public void Awake()
     {
@@ -20,6 +21,8 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
 
         if (thisSlot == 0)
             slotSelected = true;
+
+        image = this.GetComponent<Image>();
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -47,23 +50,11 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
     {
         if (!slotSelected)
         {
-            Image[] image = new Image[transform.childCount];
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                image[i] = transform.GetChild(i).GetComponent<Image>();
-            }
-
-            image[1].sprite = emptySlot;
+            image.sprite = emptySlot;
         }
         else
         {
-            Image[] image = new Image[transform.childCount];
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                image[i] = transform.GetChild(i).GetComponent<Image>();
-            }
-
-            image[1].sprite = selector;
+            image.sprite = selector;
         }
     }
 
@@ -79,12 +70,6 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
 
         slotSelected = true;
 
-        Image[] image = new Image[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            image[i] = transform.GetChild(i).GetComponent<Image>();
-        }
-
-        image[1].sprite = selector;
+        image.sprite = selector;
     }
 }

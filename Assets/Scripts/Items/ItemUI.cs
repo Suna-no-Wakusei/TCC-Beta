@@ -22,7 +22,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
     {
         instance = this;
 
-        GameObject tempObject = GameObject.Find("InventoryCanvas");
+        GameObject tempObject = GameObject.Find("MenuCanvas");
         if (tempObject != null)
         {
             canvas = tempObject.GetComponent<Canvas>();
@@ -78,7 +78,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        this.transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)

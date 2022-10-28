@@ -14,7 +14,7 @@ public class IceShardHit : MonoBehaviour
         {
             Damage dmg = new Damage
             {
-                damageAmount = damagePoint,
+                damageAmount = damagePoint * GameManager.instance.magicFactor,
                 origin = transform.position,
                 dmgType = Damage.DmgType.magicDamage
             };

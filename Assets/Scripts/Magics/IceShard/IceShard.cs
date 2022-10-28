@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class IceShard : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class IceShard : MonoBehaviour
     public void PlayIceShard()
     {
         startingPos = GameObject.Find("Hero").transform.position;
-        lastIceShard = StartCoroutine(IceShardPlay(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        lastIceShard = StartCoroutine(IceShardPlay(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
     }
 
     public IEnumerator IceShardPlay(Vector3 pointVector)

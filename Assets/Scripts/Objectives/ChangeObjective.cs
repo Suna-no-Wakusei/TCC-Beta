@@ -38,12 +38,11 @@ public class ChangeObjective : MonoBehaviour
 
     private IEnumerator ObjectiveNofitication()
     {
-        Transform transform = Instantiate(ObjectiveAssets.Instance.pfQuestNot, new Vector2((float)563.9, (float)179.9), Quaternion.identity);
+        Transform transform = Instantiate(ObjectiveAssets.Instance.pfQuestNot, new Vector2((float)950, (float)293), Quaternion.identity);
 
-        transform.SetParent(GameObject.Find("InventoryCanvas").transform);
+        transform.SetParent(GameObject.Find("HUD").transform);
 
-        transform.GetComponent<RectTransform>().anchoredPosition = new Vector2((float)563.9, (float)179.9);
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.GetComponent<RectTransform>().anchoredPosition = new Vector2((float)950, (float)293);
 
         transform.Find("QuestTitle").GetComponent<TextMeshProUGUI>().SetText(GameManager.instance.objectiveManager.GetObjective().title);
 
@@ -54,12 +53,11 @@ public class ChangeObjective : MonoBehaviour
 
     private IEnumerator CompletedNofitication()
     {
-        Transform transform = Instantiate(ObjectiveAssets.Instance.pfQuestNot, new Vector2((float)563.9, (float)179.9), Quaternion.identity);
+        Transform transform = Instantiate(ObjectiveAssets.Instance.pfQuestNot, new Vector2((float)950, (float)293), Quaternion.identity);
 
-        transform.SetParent(GameObject.Find("InventoryCanvas").transform);
+        transform.SetParent(GameObject.Find("HUD").transform);
 
-        transform.GetComponent<RectTransform>().anchoredPosition = new Vector2((float)563.9, (float)179.9);
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.GetComponent<RectTransform>().anchoredPosition = new Vector2((float)950, (float)293);
 
         transform.Find("QuestTitle").GetComponent<TextMeshProUGUI>().SetText("Quest completada");
 

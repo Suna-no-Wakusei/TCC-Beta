@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
-    public int damagePoint = 1;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,7 +11,7 @@ public class PlayerHit : MonoBehaviour
         {
             Damage dmg = new Damage
             {
-                damageAmount = damagePoint,
+                damageAmount = GameManager.instance.hero.attackDamage * GameManager.instance.attackFactor,
                 origin = transform.position,
                 dmgType = Damage.DmgType.physicalDamage
             };

@@ -4,30 +4,47 @@ using UnityEngine;
 using TMPro;
 using CodeMonkey.Utils;
 
-public class ItemWorld : MonoBehaviour, ICollectable
+public class ItemWorld : MonoBehaviour
 {
 
-    public void Collect()
+    Rigidbody2D rb;
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        ItemWorld itemWorld = GetComponent<BoxCollider2D>().GetComponent<ItemWorld>();
-        if (itemWorld != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Item item = itemWorld.GetItem();
-            if (item.IsStackable() && GameManager.instance.inventory.ItemAlreadyInInventory(item))
+            ItemWorld itemWorld = GetComponent<BoxCollider2D>().GetComponent<ItemWorld>();
+            if (itemWorld != null)
             {
-                if (!GameManager.instance.inventory.ItemFull(item))
+                Item item = itemWorld.GetItem();
+                if (item.IsStackable() && GameManager.instance.inventory.ItemAlreadyInInventory(item))
+                {
+                    if (!GameManager.instance.inventory.ItemFull(item))
+                    {
+                        //When Player touch the item
+                        GameManager.instance.inventory.AddItem(item);
+                        itemWorld.DestroySelf();
+                    }
+                }
+                else if (!GameManager.instance.inventory.IsArrayFull())
                 {
                     //When Player touch the item
                     GameManager.instance.inventory.AddItem(item);
                     itemWorld.DestroySelf();
                 }
             }
-            else if (!GameManager.instance.inventory.IsArrayFull())
-            {
-                //When Player touch the item
-                GameManager.instance.inventory.AddItem(item);
-                itemWorld.DestroySelf();
-            }
+        }
+    }
+
+    public void FixedUpdate()
+    {
+        float distanceChecker = Vector2.Distance(GameManager.instance.hero.transform.position, transform.position);
+        Vector2 velocity = (GameManager.instance.hero.transform.position - transform.position).normalized;
+
+        if(distanceChecker <= 2)
+        {
+            
+            rb.AddForce(velocity * 2, ForceMode2D.Impulse);
         }
     }
 
@@ -44,8 +61,8 @@ public class ItemWorld : MonoBehaviour, ICollectable
     public static ItemWorld DropItem(Vector3 dropPosition, Item item)
     {
         Vector3 randomDir = UtilsClass.GetRandomDir();
-        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 1.5f, item);
-        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 1.5f, ForceMode2D.Impulse);
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 2.5f, item);
+        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 2.5f, ForceMode2D.Impulse);
         return itemWorld;
     }
 
@@ -56,7 +73,7 @@ public class ItemWorld : MonoBehaviour, ICollectable
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        rb = GetComponent<Rigidbody2D>();
         textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
     }
 

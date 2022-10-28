@@ -10,6 +10,7 @@ public class Save
 
     //Saving Player Stats
     public int coins;
+    public int fragments;
     public float experience;
     public int level;
     public int xpPoints;
@@ -21,8 +22,8 @@ public class Save
     public float playerPosY;
 
     //Saving Player Inventory
-    public int[] savedItemAmount = new int[15];
-    public string[] savedItemType = new string[15];
+    public int[] savedItemAmount = new int[20];
+    public string[] savedItemType = new string[20];
 
     //Saving Current Quest
     public string questTitle;
@@ -31,6 +32,9 @@ public class Save
 
     //Saving Dialog State
     public List<bool> dialogPlayed = new List<bool>();
+
+    //Saving Chest State
+    public List<bool> chestOpened = new List<bool>();
 
     //Saving Spell Book
     public string[] savedSpellType = new string[8];

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,25 @@ public class DropItemExit : MonoBehaviour, IDropHandler
         List<GameObject> hoveredList = eventData.hovered;
         foreach (var GO in hoveredList)
         {
-            if (GO.name == this.name)
+            try
+            {
+                if (GO.name == this.name)
+                {
+                    thisItem = eventData.pointerDrag.gameObject;
+                    itemUI = thisItem.GetComponent<ItemUI>();
+
+                    item = itemUI.item;
+
+                    // Drop Item
+                    Destroy(thisItem);
+
+                    Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+                    GameManager.instance.inventory.RemoveItem(item);
+                    ItemWorld.DropItem(GameObject.Find("Hero").transform.position, duplicateItem);
+
+                }
+            }
+            catch
             {
                 thisItem = eventData.pointerDrag.gameObject;
                 itemUI = thisItem.GetComponent<ItemUI>();
@@ -27,7 +46,6 @@ public class DropItemExit : MonoBehaviour, IDropHandler
                 Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
                 GameManager.instance.inventory.RemoveItem(item);
                 ItemWorld.DropItem(GameObject.Find("Hero").transform.position, duplicateItem);
-
             }
         }
     }

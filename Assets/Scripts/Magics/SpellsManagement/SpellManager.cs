@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SpellManager : MonoBehaviour
 {
@@ -23,28 +24,21 @@ public class SpellManager : MonoBehaviour
         isOpen = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenIt(InputAction.CallbackContext ctx)
     {
-        if (Input.GetButtonDown("SpellBook"))
+        if (GameManager.instance.state != GameState.Dialog)
         {
-            if (GameManager.instance.state != GameState.Dialog)
-                OpenIt();
-        }
-    }
-
-    public void OpenIt()
-    {
-        isOpen = !isOpen;
-        if (isOpen)
-        {
-            inventoryPanel.SetActive(true);
-            OnPause?.Invoke();
-        }
-        else
-        {
-            inventoryPanel.SetActive(false);
-            OnEndPause?.Invoke();
+            isOpen = !isOpen;
+            if (isOpen)
+            {
+                inventoryPanel.SetActive(true);
+                OnPause?.Invoke();
+            }
+            else
+            {
+                inventoryPanel.SetActive(false);
+                OnEndPause?.Invoke();
+            }
         }
     }
 }

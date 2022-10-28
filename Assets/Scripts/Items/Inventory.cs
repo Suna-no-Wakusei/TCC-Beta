@@ -13,7 +13,7 @@ public class Inventory
     public Inventory(Action<Item> useItemAction)
     {
         this.useItemAction = useItemAction;
-        itemList = new Item[15];
+        itemList = new Item[20];
     }
 
     public bool IsArrayEmpty()

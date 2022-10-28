@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using System.IO;
 
 public class Player : Fighter
 {
@@ -16,6 +18,11 @@ public class Player : Fighter
 
     public PolygonCollider2D colliderAttack;
 
+    public PlayerInput playerInput;
+
+    private Vector2 inputMovement;
+    public PlayerInput PlayerInput => playerInput;
+
     private Rigidbody2D rb;
     private float colliderY;
     private Vector2 moveDelta;
@@ -23,12 +30,13 @@ public class Player : Fighter
 
     public float moveSpeed = 5f;
     public float attackCooldown;
-    private bool attackReady = true;
+    public int attackDamage;
     private bool dodgeUp = false;
 
     private float LastMoveVertical;
     private float LastMoveHorizontal;
     private bool MoveX, MoveY;
+    private Vector2 facingDir;
 
     public LayerMask Interactable;
     public Animator animator;
@@ -49,25 +57,24 @@ public class Player : Fighter
     {
         if (timeRunning)
         {
-            moveDelta.x = Input.GetAxisRaw("Horizontal");
-            moveDelta.y = Input.GetAxisRaw("Vertical");
+            rb.velocity = inputMovement * moveSpeed;
 
             //Animation
-            animator.SetFloat("Horizontal", moveDelta.x);
+            animator.SetFloat("Horizontal", rb.velocity.x);
             if (animator.GetFloat("Horizontal") != 0)
             {
                 LastMoveHorizontal = animator.GetFloat("Horizontal");
                 MoveX = true;
             }
 
-            animator.SetFloat("Vertical", moveDelta.y);
+            animator.SetFloat("Vertical", rb.velocity.y);
             if (animator.GetFloat("Vertical") != 0)
             {
                 LastMoveVertical = animator.GetFloat("Vertical");
                 MoveY = true;
             }
 
-            animator.SetFloat("Speed", moveDelta.sqrMagnitude);
+            animator.SetFloat("Speed", rb.velocity.sqrMagnitude);
 
             //idle
             if (MoveX == true)
@@ -92,28 +99,48 @@ public class Player : Fighter
             }
 
             //check for diagonal movement
-            if (moveDelta.x != 0 && moveDelta.y != 0)
+            if (rb.velocity.x != 0 && rb.velocity.y != 0)
             {
-                moveDelta *= 0.7f;
-            }
-            rb.MovePosition(rb.position + moveDelta * Time.fixedDeltaTime * moveSpeed);
-
-            //Combat
-            if (Input.GetKeyDown(KeyCode.Mouse0) && attackReady)
-            {
-                StartCoroutine(Attaque());
+                rb.velocity = rb.velocity/new Vector3((float)1.4, (float)1.4);
             }
 
-            //Collect/Interact
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Collect();
-            }
-
-            //Dodge
-            if (Input.GetKeyDown(KeyCode.LeftShift) && dodgeUp == false && moveDelta != Vector2.zero)
-                StartCoroutine(PlayerDodge());
+            facingDir = new Vector3(animator.GetFloat("Horizontal"), animator.GetFloat("Vertical"));
         }
+    }
+
+    public void Move(InputAction.CallbackContext ctx)
+    {
+        var inputValue = ctx.ReadValue<Vector2>();
+
+        if(timeRunning)
+            inputMovement = inputValue;
+    }
+
+    public void Attack(InputAction.CallbackContext ctx)
+    {
+        if(!ctx.performed) { return; }
+
+        if (timeRunning)
+            StartCoroutine(Attaque());
+
+        inputMovement = Vector2.zero;
+    }
+
+    public void Collect(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) { return; }
+
+        if (timeRunning)
+            Collect();
+    }
+
+    public void Dodge(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) { return; }
+
+        if (timeRunning)
+            if(dodgeUp)
+                StartCoroutine(PlayerDodge());
     }
 
     IEnumerator PlayerDodge()
@@ -121,17 +148,16 @@ public class Player : Fighter
         dodgeUp = true;
         boxCollider.size = new Vector2(boxCollider.size.x, 0.3f);
         animator.SetTrigger("Dodge");
-        moveSpeed *= 1.5f;
-
-        CameraShake.Shake(0.25f, 0.05f);
+        rb.AddForce(facingDir * 10, ForceMode2D.Force);
 
         yield return new WaitForSeconds(0.25f);
 
-        moveSpeed /= 1.5f;
         animator.SetTrigger("Dodge");
         boxCollider.size = new Vector2(boxCollider.size.x, colliderY);
 
         yield return new WaitForSeconds(1f);
+
+        Debug.Log("Desvia");
 
         dodgeUp = false;
     }
@@ -150,28 +176,37 @@ public class Player : Fighter
 
     IEnumerator Attaque()
     {
-        OnAttack?.Invoke();
+        if(GameManager.instance.weaponLevel == 1)
+        {
+            OnAttack?.Invoke();
 
-        attackReady = false;
+            animator.SetBool("Attack", true);
 
-        animator.SetBool("Attack", true);
+            yield return null;
 
-        CameraShake.Shake(0.25f, 0.05f);
+            animator.SetBool("Attack", false);
 
-        yield return null;
+            yield return new WaitForSeconds(attackCooldown);
 
-        animator.SetBool("Attack", false);
-
-        yield return new WaitForSeconds(attackCooldown);
-
-        attackReady = true;
-
-        OnEndAttack?.Invoke();
+            OnEndAttack?.Invoke();
+        }
     }
 
     protected override void Death()
     {
-        SceneManager.LoadScene("StartMenu");
+        Time.timeScale = 0f;
+        timeRunning = false;
+        GameManager.instance.deathScreen.SetActive(true);
     }
 
+
+    public void Respawn()
+    {
+        if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))
+        {
+            SaveSystem.LoadState();
+            SaveSystem.LoadSavedScene();
+            Time.timeScale = 1f;
+        }
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StoneCannon : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class StoneCannon : MonoBehaviour
     public void PlayStoneCannon()
     {
         startingPos = GameObject.Find("Hero").transform.position;
-        lastStoneCannon = StartCoroutine(StoneCannonPlay(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
+        lastStoneCannon = StartCoroutine(StoneCannonPlay(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue())));
     }
 
     public IEnumerator StoneCannonPlay(Vector3 pointVector)

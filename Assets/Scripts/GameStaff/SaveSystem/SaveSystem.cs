@@ -15,6 +15,7 @@ public static class SaveSystem
         Save save = new Save();
 
         save.coins = GameManager.instance.coins;
+        save.fragments = GameManager.instance.fragments;
         save.health = GameManager.instance.health;
         save.currentMana = GameManager.instance.currentMana;
         save.experience = GameManager.instance.experience;
@@ -52,8 +53,6 @@ public static class SaveSystem
         }
         else
         {
-            Debug.Log("Tá nulo");
-
             save.questTitle = "";
             save.questDescription = "";
             save.questReward = 0;
@@ -63,6 +62,12 @@ public static class SaveSystem
         for(int i = 0; i < GameManager.instance.scriptableDialogs.Count; i++)
         {
             save.dialogPlayed.Add(GameManager.instance.scriptableDialogs[i].dialogAlreadyPlayed);
+        }
+
+        //Saving Chest State
+        for (int i = 0; i < GameManager.instance.scriptableChests.Count; i++)
+        {
+            save.chestOpened.Add(GameManager.instance.scriptableChests[i].chestAlreadyOpened);
         }
 
         //Saving Spells
@@ -113,6 +118,7 @@ public static class SaveSystem
             {
                 //Loading Data
                 GameManager.instance.coins = save.coins;
+                GameManager.instance.fragments = save.fragments;
                 GameManager.instance.experience = save.experience;
                 GameManager.instance.xpPoints = save.xpPoints;
                 GameManager.instance.level = save.level;
@@ -124,7 +130,7 @@ public static class SaveSystem
 
                 //Loading Inventory Items
                 Item[] tempItemList;
-                tempItemList = new Item[15];
+                tempItemList = new Item[20];
 
                 GameManager.instance.inventory = new Inventory(GameManager.instance.UseItem);
 
@@ -164,6 +170,12 @@ public static class SaveSystem
                 for (int i = 0; i < GameManager.instance.scriptableDialogs.Count; i++)
                 {
                     GameManager.instance.scriptableDialogs[i].dialogAlreadyPlayed = save.dialogPlayed[i];
+                }
+
+                //Loading Chest States
+                for (int i = 0; i < GameManager.instance.scriptableChests.Count; i++)
+                {
+                    GameManager.instance.scriptableChests[i].chestAlreadyOpened = save.chestOpened[i];
                 }
 
                 //Loading Spells

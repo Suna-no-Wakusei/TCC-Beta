@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public enum GameState {FreeRoam, Dialog, Paused};
 
@@ -30,6 +32,10 @@ public class GameManager : MonoBehaviour
 
     // Resources
     public List<ScriptableDialog> scriptableDialogs;
+    public List<ScriptableChest> scriptableChests;
+
+    //UI
+    public Texture2D cursorDefault;
 
     // References
     public Player hero;
@@ -43,6 +49,11 @@ public class GameManager : MonoBehaviour
     public SpellBarUI spellBarUI;
     public ObjectiveManager objectiveManager;
     public ObjectivePanel objectiveUI;
+    public GameObject nullObjective;
+    public GameObject deathScreen;
+    public int playerMode;
+    public Sprite akemiMode, tamakiMode;
+    public Image playerModeHolder;
 
     //public weapon weapon...
     public FloatingTextManager floatingTextManager;
@@ -56,15 +67,19 @@ public class GameManager : MonoBehaviour
 
     // Logic
     public int coins;
+    public int fragments;
     public float experience;
     public int xpPoints;
     public int maxExp = 50;
     public int level;
+    public int weaponLevel;
     public int selectedMagic;
     public float health;
     public float maxHP;
     public float maxMana;
     public float currentMana;
+    public int magicFactor;
+    public int attackFactor;
 
     //Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -136,6 +151,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        string rebinds = PlayerPrefs.GetString("rebinds", string.Empty);
+
+        if (string.IsNullOrEmpty(rebinds)) { return; }
+
+        hero.PlayerInput.actions.LoadBindingOverridesFromJson(rebinds);
+
+        //UI
+        Cursor.SetCursor(cursorDefault, Vector2.zero, CursorMode.Auto);
+
         selectedMagic = 0;
         objectiveUI.SetObjective(objectiveManager);
         //Inventory UI
@@ -168,6 +192,15 @@ public class GameManager : MonoBehaviour
         };
 
         hero.OnEndAttack += () =>
+        {
+            if (state == GameState.Paused)
+                state = GameState.FreeRoam;
+        };
+        ChestOpen.instance.OnPause += () =>
+        {
+            state = GameState.Paused;
+        };
+        ChestOpen.instance.OnEndPause += () =>
         {
             if (state == GameState.Paused)
                 state = GameState.FreeRoam;
@@ -242,15 +275,36 @@ public class GameManager : MonoBehaviour
         expSlider.value = experience;
         expSlider.maxValue = maxExp;
 
-        //Using Items by Shortcuts
-        for(int i = 1; i <= 5; i++)
+        switch (playerMode)
         {
-            string key = "f" + i.ToString();
-            if (Input.GetKeyDown(key))
-            {
-                if(inventory.GetItemList()[i - 1] != null)
-                    UseItem(inventory.GetItemList()[i - 1]);
-            }
+            case 0:
+                playerModeHolder.sprite = tamakiMode;
+                attackFactor = 2;
+                magicFactor = 1;
+                break;
+            case 1:
+                playerModeHolder.sprite = akemiMode;
+                attackFactor = 1;
+                magicFactor = 2;
+                break;
+        }
+
+        switch (weaponLevel)
+        {
+            case 0:
+                break;
+            case 1:
+                hero.attackDamage = 1;
+                break;
+            case 2:
+                hero.attackDamage = 5;
+                break;
+            case 3:
+                hero.attackDamage = 10;
+                break;
+            case 4:
+                hero.attackDamage = 20;
+                break;
         }
         
 
@@ -326,5 +380,25 @@ public class GameManager : MonoBehaviour
             hero.hp += 100;
             xpPoints++;
         }
+    }
+
+    public void PlayerMode(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) { return; }
+
+        if (playerMode == 0)
+            playerMode = 1;
+        else
+            playerMode = 0;
+    }
+
+    public void UseFItem(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) { return; }
+
+        string pressedButton = ((KeyControl)ctx.control).keyCode.ToString().Substring(1);
+
+        if (inventory.GetItemList()[int.Parse(pressedButton)] != null)
+            UseItem(inventory.GetItemList()[int.Parse(pressedButton)]);
     }
 }

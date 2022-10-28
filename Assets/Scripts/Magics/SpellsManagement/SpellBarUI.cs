@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class SpellBarUI : MonoBehaviour
 {
@@ -20,6 +22,30 @@ public class SpellBarUI : MonoBehaviour
     void Update()
     {
         UseSelectedSpell();
+    }
+
+    public void SpellBarSelect(InputAction.CallbackContext ctx)
+    {
+        int spellNumber = 0;
+
+        for (int i = 0; i < spellSlot.Length; i++)
+        {
+            if (spellSlot[i].GetComponent<SpellSlotUI>().slotSelected)
+            {
+                spellSlot[i].GetComponent<SpellSlotUI>().slotSelected = false;
+            }
+        }
+
+        for(int i = 0; i < ctx.action.controls.ToArray().Length; i++)
+        {
+            if (ctx.control == ctx.action.controls[i])
+            {
+                spellNumber = i;
+                continue;
+            }
+        }
+
+        spellSlot[spellNumber].GetComponent<SpellSlotUI>().slotSelected = true;
     }
 
     public void UseSelectedSpell()
