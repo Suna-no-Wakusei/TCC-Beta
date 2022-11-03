@@ -37,6 +37,7 @@ public class Player : Fighter
     private float LastMoveHorizontal;
     private bool MoveX, MoveY;
     private Vector2 facingDir;
+    private Vector2 facingDirIdle;
 
     public LayerMask Interactable;
     public Animator animator;
@@ -48,13 +49,15 @@ public class Player : Fighter
         rb = GetComponent<Rigidbody2D>();
         colliderY = boxCollider.size.y;
 
-        hp = GameManager.instance.health;
-        maxHP = GameManager.instance.maxHP;
+        dodgeUp = true;
     }
 
     // Update is called once per frame
     public void HandleUpdate()
     {
+        if (characterUnableToMove)
+            return;
+
         if (timeRunning)
         {
             rb.velocity = inputMovement * moveSpeed;
@@ -101,29 +104,109 @@ public class Player : Fighter
             //check for diagonal movement
             if (rb.velocity.x != 0 && rb.velocity.y != 0)
             {
-                rb.velocity = rb.velocity/new Vector3((float)1.4, (float)1.4);
+                rb.velocity = rb.velocity * 0.9f;
             }
 
             facingDir = new Vector3(animator.GetFloat("Horizontal"), animator.GetFloat("Vertical"));
+            facingDirIdle = new Vector3(animator.GetFloat("IdleHorizontal"), animator.GetFloat("IdleVertical"));
         }
+
+        if(rb.velocity == Vector2.zero)
+        {
+            GameManager.instance.sfxManager.StopShortGrass();
+            GameManager.instance.sfxManager.StopFootstepWood();
+            GameManager.instance.sfxManager.StopLongGrass();
+            GameManager.instance.sfxManager.StopEarthStep();
+        }
+            
     }
 
     public void Move(InputAction.CallbackContext ctx)
     {
         var inputValue = ctx.ReadValue<Vector2>();
 
-        if(timeRunning)
+        if (timeRunning)
+        {
+            if (GameManager.instance.hero.gameObject.activeSelf)
+            {
+                switch (GameManager.instance.floorType)
+                {
+                    case GameManager.FloorType.Grass:
+                        if (!GameManager.instance.sfxManager.shortGrass.isPlaying)
+                            StartCoroutine(playShort());
+
+                        GameManager.instance.sfxManager.StopFootstepWood();
+                        GameManager.instance.sfxManager.StopLongGrass();
+                        GameManager.instance.sfxManager.StopEarthStep();
+                        break;
+                    case GameManager.FloorType.Wood:
+                        if (!GameManager.instance.sfxManager.footstepWood.isPlaying)
+                            StartCoroutine(playWood());
+
+                        GameManager.instance.sfxManager.StopShortGrass();
+                        GameManager.instance.sfxManager.StopLongGrass();
+                        GameManager.instance.sfxManager.StopEarthStep();
+                        break;
+                    case GameManager.FloorType.TallGrass:
+                        if (!GameManager.instance.sfxManager.longGrass.isPlaying)
+                            StartCoroutine(playTall());
+
+                        GameManager.instance.sfxManager.StopShortGrass();
+                        GameManager.instance.sfxManager.StopFootstepWood();
+                        GameManager.instance.sfxManager.StopEarthStep();
+                        break;
+                    case GameManager.FloorType.Earth:
+                        if (!GameManager.instance.sfxManager.earthStep.isPlaying)
+                            StartCoroutine(playEarth());
+
+                        GameManager.instance.sfxManager.StopShortGrass();
+                        GameManager.instance.sfxManager.StopFootstepWood();
+                        GameManager.instance.sfxManager.StopLongGrass();
+                        break;
+                }
+            }
+            
+            
             inputMovement = inputValue;
+        }
+        else
+            inputMovement = Vector2.zero;
+    }
+
+    IEnumerator playShort()
+    {
+        GameManager.instance.sfxManager.PlayShortGrass();
+        yield return new WaitForSeconds(GameManager.instance.sfxManager.shortGrass.clip.length);
+    }
+
+    IEnumerator playTall()
+    {
+        GameManager.instance.sfxManager.PlayLongGrass();
+        yield return new WaitForSeconds(GameManager.instance.sfxManager.longGrass.clip.length);
+    }
+
+    IEnumerator playWood()
+    {
+        GameManager.instance.sfxManager.PlayFootstepWood();
+        yield return new WaitForSeconds(GameManager.instance.sfxManager.footstepWood.clip.length);
+    }
+
+    IEnumerator playEarth()
+    {
+        GameManager.instance.sfxManager.PlayEarthStep();
+        yield return new WaitForSeconds(GameManager.instance.sfxManager.earthStep.clip.length);
     }
 
     public void Attack(InputAction.CallbackContext ctx)
     {
         if(!ctx.performed) { return; }
 
+        if(characterUnableToMove) { return; }
+
+        if(Time.deltaTime == 0) { return; }
+
         if (timeRunning)
             StartCoroutine(Attaque());
-
-        inputMovement = Vector2.zero;
     }
 
     public void Collect(InputAction.CallbackContext ctx)
@@ -145,21 +228,26 @@ public class Player : Fighter
 
     IEnumerator PlayerDodge()
     {
-        dodgeUp = true;
+        characterUnableToMove = true;
+
+        dodgeUp = false;
         boxCollider.size = new Vector2(boxCollider.size.x, 0.3f);
-        animator.SetTrigger("Dodge");
-        rb.AddForce(facingDir * 10, ForceMode2D.Force);
+        if (facingDir == Vector2.zero)
+            rb.AddForce(facingDirIdle * 3f, ForceMode2D.Impulse);
+        else
+            rb.AddForce(facingDir * 3f, ForceMode2D.Impulse);
+        animator.SetBool("Dodge", true);
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.3f);
 
-        animator.SetTrigger("Dodge");
+        animator.SetBool("Dodge", false);
         boxCollider.size = new Vector2(boxCollider.size.x, colliderY);
+
+        characterUnableToMove = false;
 
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("Desvia");
-
-        dodgeUp = false;
+        dodgeUp = true;
     }
 
     void Collect()
@@ -181,6 +269,8 @@ public class Player : Fighter
             OnAttack?.Invoke();
 
             animator.SetBool("Attack", true);
+
+            GameManager.instance.sfxManager.PlaySwordSwing();
 
             yield return null;
 

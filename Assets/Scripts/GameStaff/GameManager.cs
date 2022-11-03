@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using System.IO;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.Rendering;
 
 public enum GameState {FreeRoam, Dialog, Paused};
 
@@ -23,23 +24,46 @@ public class GameManager : MonoBehaviour
         inventory = new Inventory(UseItem);
         spellBook = new SpellBook(UseSpell);
         objectiveManager = new ObjectiveManager();
+        sfxManager = GameObject.FindWithTag("SFX").GetComponent<SFXManager>();
+
+        if (sfxManager == null)
+            sfxManager = new SFXManager();
 
         SaveSystem.LoadState();
         hero.transform.position = playerPos;
 
         actualScene = SceneManager.GetActiveScene().name;
+
+        if (actualScene == "Projeto")
+            sfxManager.PlayAmbient();
+        else
+            sfxManager.StopAmbient();
+
+        StartCoroutine(FadeStart());
+    }
+
+    public IEnumerator FadeStart()
+    {
+        if (fadeInPanel != null)
+        {
+            Transform transform = Instantiate(fadeInPanel, Vector3.zero, Quaternion.identity);
+            yield return new WaitForSeconds(1f);
+            Destroy(transform.gameObject);
+        }
+        
     }
 
     // Resources
     public List<ScriptableDialog> scriptableDialogs;
     public List<ScriptableChest> scriptableChests;
+    public List<ScriptableEnemy> scriptableEnemies;
 
     //UI
     public Texture2D cursorDefault;
+    public Transform fadeInPanel;
 
     // References
     public Player hero;
-    public Enemy[] enemies;
     public SuperClassMagic allMagics;
     public Vector2 nextScenePos;
     public Vector2 playerPos;
@@ -50,10 +74,24 @@ public class GameManager : MonoBehaviour
     public ObjectiveManager objectiveManager;
     public ObjectivePanel objectiveUI;
     public GameObject nullObjective;
+    public GameObject nullSpells;
+    public GameObject spellBookUI;
     public GameObject deathScreen;
     public int playerMode;
     public Sprite akemiMode, tamakiMode;
     public Image playerModeHolder;
+    public Volume globalVolume;
+    public VolumeProfile tamakiProfile, akemiProfile;
+    public SFXManager sfxManager;
+
+    //Sounds
+    public enum FloorType
+    {
+        Grass, TallGrass, Wood, Earth
+    }
+
+    public FloorType floorType;
+    public FloorType levelType;
 
     //public weapon weapon...
     public FloatingTextManager floatingTextManager;
@@ -72,7 +110,7 @@ public class GameManager : MonoBehaviour
     public int xpPoints;
     public int maxExp = 50;
     public int level;
-    public int weaponLevel;
+    public int weaponLevel = 0;
     public int selectedMagic;
     public float health;
     public float maxHP;
@@ -80,6 +118,7 @@ public class GameManager : MonoBehaviour
     public float currentMana;
     public int magicFactor;
     public int attackFactor;
+    public int magicProficiency = 0;
 
     //Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -90,29 +129,37 @@ public class GameManager : MonoBehaviour
     //Using items
     public void UseItem(Item item)
     {
+        GameManager.instance.sfxManager.PlayItem();
+
         switch (item.itemType)
         {
             case Item.ItemType.LargeHealthPotion:
-                hero.hp += maxHP / 2;
+                if (health == maxHP) return;
+                health += maxHP / 2;
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.LargeHealthPotion, amount = 1 });
                 break;
             case Item.ItemType.MediumHealthPotion:
-                hero.hp += 75;
+                if (health == maxHP) return;
+                health += 75;
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.MediumHealthPotion, amount = 1 });
                 break;
             case Item.ItemType.SmallHealthPotion:
-                hero.hp += 50;
+                if (health == maxHP) return;
+                health += 50;
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.SmallHealthPotion, amount = 1 });
                 break;
             case Item.ItemType.LargeManaPotion:
+                if (currentMana == maxMana) return;
                 currentMana = maxMana;
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.LargeManaPotion, amount = 1 });
                 break;
             case Item.ItemType.MediumManaPotion:
+                if (currentMana == maxMana) return;
                 currentMana += maxMana * 75/100;
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.MediumManaPotion, amount = 1 });
                 break;
             case Item.ItemType.SmallManaPotion:
+                if (currentMana == maxMana) return;
                 currentMana += maxMana / 2;
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.SmallManaPotion, amount = 1 });
                 break;
@@ -151,6 +198,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //Loading binds
         string rebinds = PlayerPrefs.GetString("rebinds", string.Empty);
 
         if (string.IsNullOrEmpty(rebinds)) { return; }
@@ -159,6 +207,7 @@ public class GameManager : MonoBehaviour
 
         //UI
         Cursor.SetCursor(cursorDefault, Vector2.zero, CursorMode.Auto);
+        Cursor.lockState = CursorLockMode.Confined;
 
         selectedMagic = 0;
         objectiveUI.SetObjective(objectiveManager);
@@ -196,15 +245,6 @@ public class GameManager : MonoBehaviour
             if (state == GameState.Paused)
                 state = GameState.FreeRoam;
         };
-        ChestOpen.instance.OnPause += () =>
-        {
-            state = GameState.Paused;
-        };
-        ChestOpen.instance.OnEndPause += () =>
-        {
-            if (state == GameState.Paused)
-                state = GameState.FreeRoam;
-        };
         InventoryManager.Instance.OnPause += () =>
         {
             state = GameState.Paused;
@@ -215,33 +255,38 @@ public class GameManager : MonoBehaviour
             if (state == GameState.Paused)
                 state = GameState.FreeRoam;
         };
-        SpellManager.Instance.OnPause += () =>
-        {
-            state = GameState.Paused;
-        };
-
-        SpellManager.Instance.OnEndPause += () =>
-        {
-            if (state == GameState.Paused)
-                state = GameState.FreeRoam;
-        };
     }
 
     private void Update()
     {
-        //Player States
+        if (state == GameState.Dialog)
+        {
+            hero.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            hero.timeRunning = false;
+            DialogueManager.Instance.HandleUpdate();
+        }
 
+        //SpellManager
+        if(magicProficiency == 0)
+        {
+            spellBookUI.SetActive(false);
+            nullSpells.SetActive(true);
+        }
+        else
+        {
+            spellBookUI.SetActive(true);
+            nullSpells.SetActive(false);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //Player States
         if(state == GameState.FreeRoam)
         {
             hero.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             hero.timeRunning = true;
             hero.HandleUpdate();
-        }
-        else if(state == GameState.Dialog)
-        {
-            hero.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            hero.timeRunning = false;
-            DialogueManager.Instance.HandleUpdate();
         }
         else if (state == GameState.Paused)
         {
@@ -256,15 +301,6 @@ public class GameManager : MonoBehaviour
         }
 
         manaSlider.fillAmount = currentMana/maxMana;
-
-        //Player Health
-        if (hero.hp > maxHP)
-        {
-            hero.hp = maxHP;
-        }
-
-        hero.maxHP = maxHP;
-        health = hero.hp;
 
         hpSlider.fillAmount = health/maxHP;
 
@@ -313,6 +349,7 @@ public class GameManager : MonoBehaviour
             case 0:
                 maxExp = 50;
                 maxMana = 10;
+                maxHP = 100;
 
                 manaSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(200, manaSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxManaUI.sizeDelta = new Vector2(200, maxManaUI.sizeDelta.y);
@@ -322,48 +359,56 @@ public class GameManager : MonoBehaviour
                 break;
             case 1:
                 maxExp = 100;
+                maxHP = 200;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(240, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(240, maxHPUI.sizeDelta.y);
                 break;
             case 2:
                 maxExp = 200;
+                maxHP = 300;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(280, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(280, maxHPUI.sizeDelta.y);
                 break;
             case 3:
                 maxExp = 400;
+                maxHP = 400;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(320, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(320, maxHPUI.sizeDelta.y);
                 break;
             case 4:
                 maxExp = 800;
+                maxHP = 500;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(360, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(360, maxHPUI.sizeDelta.y);
                 break;
             case 5:
                 maxExp = 1600;
+                maxHP = 600;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(400, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(400, maxHPUI.sizeDelta.y);
                 break;
             case 6:
                 maxExp = 3200;
+                maxHP = 700;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(440, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(440, maxHPUI.sizeDelta.y);
                 break;
             case 7:
                 experience = maxExp;
+                maxHP = 800;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(480, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(480, maxHPUI.sizeDelta.y);
                 break;
             case 8:
                 experience = maxExp;
+                maxHP = 900;
 
                 hpSlider.GetComponent<RectTransform>().sizeDelta = new Vector2(520, hpSlider.GetComponent<RectTransform>().sizeDelta.y);
                 maxHPUI.sizeDelta = new Vector2(520, maxHPUI.sizeDelta.y);
@@ -374,11 +419,17 @@ public class GameManager : MonoBehaviour
         {
             if (level == 8)
                 return;
-            experience -= maxExp;
-            level++;
             maxHP += 100;
-            hero.hp += 100;
+            health += 100;
             xpPoints++;
+            level++;
+            experience -= maxExp;
+        }
+
+        //Player Health
+        if (health > maxHP)
+        {
+            health = maxHP;
         }
     }
 
@@ -386,10 +437,25 @@ public class GameManager : MonoBehaviour
     {
         if (!ctx.performed) { return; }
 
+        if(!hero.timeRunning) { return; }
+
         if (playerMode == 0)
+        {
+            sfxManager.StopAmbient();
+            sfxManager.PlayMagicAmbient();
             playerMode = 1;
+            //Loading Global Volume
+            globalVolume.profile = akemiProfile; 
+        }
         else
+        {
+            sfxManager.StopMagicAmbient();
+            if(actualScene == "Projeto")
+                sfxManager.PlayAmbient();
             playerMode = 0;
+            //Loading Global Volume
+            globalVolume.profile = tamakiProfile;
+        }
     }
 
     public void UseFItem(InputAction.CallbackContext ctx)
@@ -398,7 +464,7 @@ public class GameManager : MonoBehaviour
 
         string pressedButton = ((KeyControl)ctx.control).keyCode.ToString().Substring(1);
 
-        if (inventory.GetItemList()[int.Parse(pressedButton)] != null)
-            UseItem(inventory.GetItemList()[int.Parse(pressedButton)]);
+        if (inventory.GetItemList()[int.Parse(pressedButton) - 1] != null)
+            UseItem(inventory.GetItemList()[int.Parse(pressedButton) - 1]);
     }
 }

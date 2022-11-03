@@ -29,7 +29,9 @@ public class ItemSlotUI : MonoBehaviour, IDropHandler, IPointerDownHandler
     {
         if (eventData.pointerDrag != null)
         {
-            if(gameObject.transform.Find("ItemUIpf(Clone)") == null)
+            GameManager.instance.sfxManager.PlayDropItem();
+
+            if (gameObject.transform.Find("ItemUIpf(Clone)") == null)
             {
                 eventData.pointerDrag.gameObject.transform.SetParent(gameObject.transform);
                 eventData.pointerDrag.GetComponent<Transform>().position = GetComponent<Transform>().position;

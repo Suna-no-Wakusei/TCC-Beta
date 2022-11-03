@@ -19,10 +19,13 @@ public class ChestOpen : MonoBehaviour, ICollectable
 
     void Start()
     {
-        if (chest.chestAlreadyOpened)
-            chest.animator.SetBool("Opened", true);
-        else
-            chest.animator.SetBool("Opened", false);
+        if (chest.animator != null)
+        {
+            if (chest.chestAlreadyOpened)
+                chest.animator.SetBool("Opened", true);
+            else
+                chest.animator.SetBool("Opened", false);
+        }  
     }
 
     private bool IsThereGoldenKey()
@@ -65,12 +68,15 @@ public class ChestOpen : MonoBehaviour, ICollectable
     {
         if (!chest.chestAlreadyOpened)
         {
+            GameManager.instance.sfxManager.PlayChestOpening();
             double n = 1;
-            chest.animator.SetTrigger("Opening");
+            if(chest.animator != null)
+                chest.animator.SetTrigger("Opening");
 
             if (chest.weapon)
             {
-                StartCoroutine(GettingWeapon());
+                if (chest.animator != null)
+                    StartCoroutine(GettingWeapon());
                 GameManager.instance.weaponLevel = chest.weaponLevel;
             }
             foreach (var item in chest.items)

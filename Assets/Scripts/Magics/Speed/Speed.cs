@@ -9,6 +9,7 @@ public class Speed : MonoBehaviour
     public void PlayEffect()
     {
         speedEffect.Play();
+        GameManager.instance.sfxManager.PlayWind();
     }
 
 }

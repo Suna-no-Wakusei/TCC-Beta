@@ -6,6 +6,9 @@ using Pathfinding;
 
 public class Enemy : Fighter
 {
+    //Savement
+    public ScriptableEnemy enemy;
+
     //Experience
     public int xpValue = 10;
 
@@ -26,7 +29,6 @@ public class Enemy : Fighter
     private Vector3 roamPosition;
     private Vector3 startingPosition;
     private bool stopMoving = false;
-    public bool enemyAlive = true;
 
     public float speed = 1200f;
     public float nextWaypointDistance = 0.5f;
@@ -66,6 +68,8 @@ public class Enemy : Fighter
 
     void UpdatePath()
     {
+        if (characterUnableToMove) return;
+
         Vector3 targetPathFinal = Vector3.zero;
         switch (state)
         {
@@ -147,8 +151,16 @@ public class Enemy : Fighter
             state = GameState.ChasingTarget;
     }
 
+    private void Update()
+    {
+        if (!enemy.alive)
+            Destroy(this.gameObject);
+    }
+
     private void FixedUpdate()
     {
+        if (characterUnableToMove) return;
+
         if (path == null) return;
 
         if (!stopMoving)
@@ -169,8 +181,8 @@ public class Enemy : Fighter
                 }
 
                 //velocity
-                animator.SetFloat("Horizontal", force.x);
-                animator.SetFloat("Vertical", force.y);
+                animator.SetFloat("Horizontal", rb.velocity.x);
+                animator.SetFloat("Vertical", rb.velocity.y);
             }
             catch
             {
@@ -206,6 +218,8 @@ public class Enemy : Fighter
     {
         animator.SetBool("Attack", true);
 
+        GameManager.instance.sfxManager.PlayWoodAttack();
+
         animator.SetFloat("AttackHorizontal", target.position.x - rb.position.x);
         animator.SetFloat("AttackVertical", target.position.y - rb.position.y);
 
@@ -224,9 +238,12 @@ public class Enemy : Fighter
 
     protected override void Death()
     {
+        if(enemy.alive)
+            GameManager.instance.sfxManager.PlayTreantHurt();
+
+        enemy.alive = false;
         Destroy(gameObject);
-        enemyAlive = false;
         GameManager.instance.experience += xpValue;
-        GameManager.instance.ShowText("+"+xpValue+" XP", 8, Color.green, transform.position, Vector3.up * 35, 0.5f);
+        GameManager.instance.ShowText("+"+xpValue+" XP", 12, Color.green, transform.position, Vector3.up * 35, 0.5f);
     }
 }

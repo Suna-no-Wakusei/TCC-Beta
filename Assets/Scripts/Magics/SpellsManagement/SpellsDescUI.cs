@@ -25,7 +25,7 @@ public class SpellsDescUI : MonoBehaviour
     public static SpellsDescUI ShowItemDescription(Vector2 position, Spell spell)
     {
         Transform transform = Instantiate(SpellAssets.Instance.pfSpellDescUI, position, Quaternion.identity);
-        transform.SetParent(GameObject.Find("SpellManager").transform);
+        transform.SetParent(GameObject.Find("SpellsPanel").transform);
 
         SpellsDescUI spellsDescUI = transform.GetComponent<SpellsDescUI>();
         spellsDescUI.SetSpellDesc(spell);

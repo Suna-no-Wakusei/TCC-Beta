@@ -14,9 +14,11 @@ public class Save
     public float experience;
     public int level;
     public int xpPoints;
+    public int magicProficiency;
     public int selectedMagic;
     public float currentMana;
     public float health;
+    public int weaponLevel;
 
     public float playerPosX;
     public float playerPosY;
@@ -35,6 +37,9 @@ public class Save
 
     //Saving Chest State
     public List<bool> chestOpened = new List<bool>();
+
+    //Saving Enemy State
+    public List<bool> enemyAlive = new List<bool>();
 
     //Saving Spell Book
     public string[] savedSpellType = new string[8];

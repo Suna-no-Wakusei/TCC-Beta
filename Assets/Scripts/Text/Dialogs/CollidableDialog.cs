@@ -6,20 +6,23 @@ public class CollidableDialog : Collidable
 {
     public ScriptableDialog dialog;
 
-    public void OnCollide()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (dialog.dialogAlreadyPlayed == false)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (DialogueManager.Instance.dialogRunning == false)
+            if (dialog.dialogAlreadyPlayed == false)
             {
-                StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.dialogText));
+                if (DialogueManager.Instance.dialogRunning == false)
+                {
+                    StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.dialogText));
 
-                dialog.dialogStarted = true;
+                    dialog.dialogStarted = true;
+                }
             }
-        }
-        else if (dialog.afterDialogText.Lines.Count != 0)
-        {
-            StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.afterDialogText));
+            else if (dialog.afterDialogText.Lines.Count != 0)
+            {
+                StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.afterDialogText));
+            }
         }
     }
 

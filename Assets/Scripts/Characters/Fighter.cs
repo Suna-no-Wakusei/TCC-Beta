@@ -18,6 +18,8 @@ public class Fighter : MonoBehaviour
     protected float lastImmune;
     protected float lastEnemyImmune;
 
+    public bool characterUnableToMove = false;
+
     bool immune;
 
     //All fighters can hit / die
@@ -33,15 +35,15 @@ public class Fighter : MonoBehaviour
         if ((Time.time - lastImmune > immuneTime) && transform.tag == "Player")
         {
             lastImmune = Time.time;
-            hp -= dmg.damageAmount;
+            GameManager.instance.health -= dmg.damageAmount;
 
             CameraShake.Shake(0.25f, 0.25f);
 
             GameManager.instance.ShowText(dmg.damageAmount.ToString(),20,Color.red,transform.position, Vector3.up * 25, 0.5f);
 
-            if(hp <= 0)
+            if(GameManager.instance.health <= 0)
             {
-                hp = 0;
+                GameManager.instance.health = 0;
                 Death();
             }
 
@@ -52,6 +54,8 @@ public class Fighter : MonoBehaviour
             //Blinking Immunity Effect
 
             StartCoroutine(BlinkingImmune());
+
+            GameManager.instance.sfxManager.PlayHumanHurt();
         }
         //Enemy taking damage
         else if ((Time.time - lastEnemyImmune > immuneEnemyTime) && transform.tag != "Player"){
@@ -67,6 +71,8 @@ public class Fighter : MonoBehaviour
                 hp = 0;
                 Death();
             }
+
+            GameManager.instance.sfxManager.PlayMobHit();
 
             if (dmg.dmgType == Damage.DmgType.physicalDamage)
             {
@@ -108,11 +114,13 @@ public class Fighter : MonoBehaviour
         }
         else
         {
-            rb1.AddForce(difference * 30f, ForceMode2D.Impulse);
+            characterUnableToMove = true;
 
-            yield return new WaitForSeconds(1f);
+            rb1.AddForce(difference * 10f, ForceMode2D.Impulse);
 
-            rb1.velocity = Vector2.zero;
+            yield return new WaitForSeconds(0.3f);
+
+            characterUnableToMove = false;
         }   
     }
 

@@ -28,7 +28,9 @@ public class StoneCannon : MonoBehaviour
     public IEnumerator StoneCannonPlay(Vector3 pointVector)
     {
         stoneCannonRunning = true;
-        GameManager.instance.state = GameState.Paused;
+        GameManager.instance.hero.characterUnableToMove = true;
+
+        GameManager.instance.sfxManager.PlayCastingEarth();
 
         //Getting the mouse direction
         stoneCannon.transform.position = startingPos;
@@ -54,7 +56,7 @@ public class StoneCannon : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
 
-        GameManager.instance.state = GameState.FreeRoam;
+        GameManager.instance.hero.characterUnableToMove = true;
 
         animator.SetTrigger("Created");
 
@@ -63,6 +65,8 @@ public class StoneCannon : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         animator.SetTrigger("Collide");
+
+        GameManager.instance.sfxManager.PlayEarthImpact();
 
         yield return new WaitForSeconds(0.3f);
 
@@ -74,6 +78,10 @@ public class StoneCannon : MonoBehaviour
     public void StopStoneCannon()
     {
         if(lastStoneCannon != null)
+        {
+            GameManager.instance.sfxManager.PlayEarthImpact();
             StopCoroutine(lastStoneCannon);
+        }
+            
     }
 }

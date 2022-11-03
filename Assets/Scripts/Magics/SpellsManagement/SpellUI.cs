@@ -26,7 +26,7 @@ public class SpellUI : MonoBehaviour
         Transform transform = Instantiate(SpellAssets.Instance.pfSpellUI, position, Quaternion.identity);
         transform.SetParent(GameObject.Find("Slot" + slotNumber.ToString()).transform);
 
-        transform.localScale = new Vector3((float)0.977, (float)0.977, (float)0.977);
+        transform.localScale = new Vector3((float)0.875, (float)0.975, 1);
 
         SpellUI spellUI = transform.GetComponent<SpellUI>();
         spellUI.SetSpell(spell);

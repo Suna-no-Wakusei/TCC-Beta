@@ -15,7 +15,6 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Sprite invIcon, spellsIcon, missionsIcon, configsIcon;
     [SerializeField] private Sprite invIconSelected, spellsIconSelected, missionsIconSelected, configsIconSelected;
 
-
     public static InventoryManager Instance { get; private set; }
 
     void Awake()
@@ -85,6 +84,7 @@ public class InventoryManager : MonoBehaviour
 
             if (isOpen)
             {
+                menuState = 0;
                 inventoryPanel.SetActive(true);
                 OnPause?.Invoke();
                 Time.timeScale = 0f;
@@ -98,6 +98,21 @@ public class InventoryManager : MonoBehaviour
 
     public void CloseIt()
     {
+        if (GameObject.Find("ItemBox(Clone)") != null)
+            Destroy(GameObject.Find("ItemBox(Clone)"));
+
+        if (GameObject.Find("SpellBox(Clone)") != null)
+            Destroy(GameObject.Find("SpellBox(Clone)"));
+
+        if (iconConfigs.GetComponent<IconDesc>().iconDesc.activeSelf)
+            iconConfigs.GetComponent<IconDesc>().iconDesc.SetActive(false);
+        else if(iconInventory.GetComponent<IconDesc>().iconDesc.activeSelf)
+            iconInventory.GetComponent<IconDesc>().iconDesc.SetActive(false);
+        else if (iconMissions.GetComponent<IconDesc>().iconDesc.activeSelf)
+            iconMissions.GetComponent<IconDesc>().iconDesc.SetActive(false);
+        else if (iconSpells.GetComponent<IconDesc>().iconDesc.activeSelf)
+            iconSpells.GetComponent<IconDesc>().iconDesc.SetActive(false);
+
         inventoryPanel.SetActive(false);
         OnEndPause?.Invoke();
         Time.timeScale = 1f;

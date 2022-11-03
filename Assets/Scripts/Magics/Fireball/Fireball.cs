@@ -28,7 +28,7 @@ public class Fireball : MonoBehaviour
     public IEnumerator FireballPlay(Vector3 pointVector)
     {
         fireballRunning = true;
-        GameManager.instance.state = GameState.Paused;
+        GameManager.instance.hero.characterUnableToMove = true;
 
         //Getting the mouse direction
         fireball.transform.position = startingPos;
@@ -41,6 +41,9 @@ public class Fireball : MonoBehaviour
         //Setting the Spell Casting animation direction
         GameManager.instance.hero.animator.SetFloat("SpellDirectionHorizontal", diferencia.x);
         GameManager.instance.hero.animator.SetFloat("SpellDirectionVertical", diferencia.y);
+
+        GameManager.instance.sfxManager.PlayCastingFire();
+
         GameManager.instance.hero.animator.SetBool("SpellCast", true);
 
         yield return null;
@@ -54,7 +57,7 @@ public class Fireball : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        GameManager.instance.state = GameState.FreeRoam;
+        GameManager.instance.hero.characterUnableToMove = false;
 
         animator.SetTrigger("Created");
 
@@ -63,6 +66,8 @@ public class Fireball : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         animator.SetTrigger("Collide");
+
+        GameManager.instance.sfxManager.PlayFireImpact();
 
         yield return new WaitForSeconds(0.3f);
 
@@ -74,6 +79,9 @@ public class Fireball : MonoBehaviour
     public void StopFireball()
     {
         if(lastFireball != null)
+        {
+            GameManager.instance.sfxManager.PlayFireImpact();
             StopCoroutine(lastFireball);
+        }
     }
 }

@@ -22,7 +22,7 @@ public class IceShardHit : MonoBehaviour
             collision.transform.parent.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
             StartCoroutine(Colisor());
         }
-        else if (collision.gameObject.layer != gameObject.layer)
+        else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.tag != "NotSolid")
         {
             if (collision.gameObject.layer != 8)
                 StartCoroutine(Colisor());
@@ -31,10 +31,13 @@ public class IceShardHit : MonoBehaviour
 
     IEnumerator Colisor()
     {
+        GameManager.instance.hero.characterUnableToMove = false;
+        iceShard.StopIceShard();
+
         iceShard.animator.SetTrigger("Collide");
 
         iceShard.iceShardRb.velocity = Vector3.zero;
-        iceShard.StopIceShard();
+        
         yield return new WaitForSeconds(0.4f);
         gameObject.SetActive(false);
 

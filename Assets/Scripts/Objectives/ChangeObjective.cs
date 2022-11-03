@@ -38,6 +38,8 @@ public class ChangeObjective : MonoBehaviour
 
     private IEnumerator ObjectiveNofitication()
     {
+        GameManager.instance.sfxManager.PlayPaper();
+
         Transform transform = Instantiate(ObjectiveAssets.Instance.pfQuestNot, new Vector2((float)950, (float)293), Quaternion.identity);
 
         transform.SetParent(GameObject.Find("HUD").transform);
@@ -53,6 +55,8 @@ public class ChangeObjective : MonoBehaviour
 
     private IEnumerator CompletedNofitication()
     {
+        GameManager.instance.sfxManager.PlayPaper();
+
         Transform transform = Instantiate(ObjectiveAssets.Instance.pfQuestNot, new Vector2((float)950, (float)293), Quaternion.identity);
 
         transform.SetParent(GameObject.Find("HUD").transform);

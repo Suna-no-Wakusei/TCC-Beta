@@ -28,7 +28,9 @@ public class Waterball : MonoBehaviour
     public IEnumerator WaterballPlay(Vector3 pointVector)
     {
         waterballRunning = true;
-        GameManager.instance.state = GameState.Paused;
+        GameManager.instance.hero.characterUnableToMove = true;
+
+        GameManager.instance.sfxManager.PlayCastingWater();
 
         //Getting the mouse direction
         waterball.transform.position = startingPos;
@@ -54,7 +56,7 @@ public class Waterball : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        GameManager.instance.state = GameState.FreeRoam;
+        GameManager.instance.hero.characterUnableToMove = false;
 
         animator.SetTrigger("Created");
 
@@ -63,6 +65,8 @@ public class Waterball : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         animator.SetTrigger("Collide");
+
+        GameManager.instance.sfxManager.PlayWaterImpact();
 
         yield return new WaitForSeconds(0.3f);
 
@@ -74,6 +78,9 @@ public class Waterball : MonoBehaviour
     public void StopWaterball()
     {
         if(lastWaterball != null)
+        {
             StopCoroutine(lastWaterball);
+            GameManager.instance.sfxManager.PlayWaterImpact();
+        }
     }
 }

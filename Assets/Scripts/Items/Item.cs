@@ -77,8 +77,8 @@ public class Item
         switch (itemType)
         {
             default:
-            case ItemType.GreyKey:
             case ItemType.GoldenKey:
+            case ItemType.GreyKey:
                 return false;
             case ItemType.LargeHealthPotion:
             case ItemType.MediumHealthPotion:

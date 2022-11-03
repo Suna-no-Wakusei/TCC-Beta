@@ -6,20 +6,23 @@ public class Axe : MonoBehaviour, ICollectable
 {
     public ScriptableDialog dialog;
 
+    public void Start()
+    {
+        if(GameManager.instance.weaponLevel == 1)
+            Destroy(gameObject);
+    }
+
     public void Collect()
     {
         if (dialog.dialogAlreadyPlayed == false)
         {
+            GameManager.instance.weaponLevel = 1;
             if (DialogueManager.Instance.dialogRunning == false)
             {
                 StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.dialogText));
 
                 dialog.dialogStarted = true;
             }
-        }
-        else
-        {
-            Destroy(this.gameObject);
         }
     }
 
@@ -30,11 +33,8 @@ public class Axe : MonoBehaviour, ICollectable
             if (DialogueManager.Instance.dialogIsOver)
             {
                 dialog.dialogAlreadyPlayed = true;
+                Destroy(this.gameObject);
             }
-        }
-        if (dialog.dialogAlreadyPlayed)
-        {
-            Destroy(this.gameObject);
         }
     }
 }

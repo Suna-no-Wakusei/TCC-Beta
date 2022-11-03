@@ -31,7 +31,9 @@ public class Zap : MonoBehaviour
     public IEnumerator ZapPlay(Vector3 pointVector)
     {
         zapRunning = true;
-        GameManager.instance.state = GameState.Paused;
+        GameManager.instance.hero.characterUnableToMove = true;
+
+        GameManager.instance.sfxManager.PlayThunder();
 
         zap.transform.position = startingPos;
         zap.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -66,7 +68,7 @@ public class Zap : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         zap.gameObject.SetActive(false);
 
-        GameManager.instance.state = GameState.FreeRoam;
+        GameManager.instance.hero.characterUnableToMove = false;
 
         yield return new WaitForSeconds(1f);
 

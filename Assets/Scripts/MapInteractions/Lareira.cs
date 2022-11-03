@@ -26,11 +26,13 @@ public class Lareira : MonoBehaviour, ICollectable
     {
         if (go.activeSelf)
         {
+            GameManager.instance.sfxManager.PlayFireImpact();
             go.SetActive(false);
             chimneyActive = false;
         }
         else
         {
+            GameManager.instance.sfxManager.PlayCastingFire();
             go.SetActive(true);
             chimneyActive = true;
         }

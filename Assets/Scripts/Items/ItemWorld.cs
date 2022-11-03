@@ -13,6 +13,8 @@ public class ItemWorld : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameManager.instance.sfxManager.PlayPickupItem();
+
             ItemWorld itemWorld = GetComponent<BoxCollider2D>().GetComponent<ItemWorld>();
             if (itemWorld != null)
             {
@@ -23,14 +25,14 @@ public class ItemWorld : MonoBehaviour
                     {
                         //When Player touch the item
                         GameManager.instance.inventory.AddItem(item);
-                        itemWorld.DestroySelf();
+                        Destroy(this.gameObject);
                     }
                 }
                 else if (!GameManager.instance.inventory.IsArrayFull())
                 {
                     //When Player touch the item
                     GameManager.instance.inventory.AddItem(item);
-                    itemWorld.DestroySelf();
+                    Destroy(this.gameObject);
                 }
             }
         }
@@ -43,7 +45,6 @@ public class ItemWorld : MonoBehaviour
 
         if(distanceChecker <= 2)
         {
-            
             rb.AddForce(velocity * 2, ForceMode2D.Impulse);
         }
     }
@@ -60,6 +61,7 @@ public class ItemWorld : MonoBehaviour
 
     public static ItemWorld DropItem(Vector3 dropPosition, Item item)
     {
+        GameManager.instance.sfxManager.PlayDropItem();
         Vector3 randomDir = UtilsClass.GetRandomDir();
         ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 2.5f, item);
         itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 2.5f, ForceMode2D.Impulse);
@@ -95,10 +97,5 @@ public class ItemWorld : MonoBehaviour
     public Item GetItem()
     {
         return item;
-    }
-
-    public void DestroySelf()
-    {
-        Destroy(gameObject);
     }
 }

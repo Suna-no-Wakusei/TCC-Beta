@@ -22,7 +22,7 @@ public class WaterballHit : MonoBehaviour
             collision.transform.parent.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
             StartCoroutine(Colisor());
         }
-        else if (collision.gameObject.layer != gameObject.layer)
+        else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.tag != "NotSolid")
         {
             if (collision.gameObject.layer != 8)
                 StartCoroutine(Colisor());
@@ -31,10 +31,14 @@ public class WaterballHit : MonoBehaviour
 
     IEnumerator Colisor()
     {
+        GameManager.instance.hero.characterUnableToMove = false;
+
+        waterball.StopWaterball();
+
         waterball.animator.SetTrigger("Collide");
 
         waterball.waterballRb.velocity = Vector3.zero;
-        waterball.StopWaterball();
+
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
 

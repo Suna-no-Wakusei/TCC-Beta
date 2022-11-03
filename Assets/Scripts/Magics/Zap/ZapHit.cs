@@ -29,7 +29,7 @@ public class ZapHit : MonoBehaviour
             zapSR.size = new Vector2(Vector2.Distance(collisionPos, zapSR.transform.position), (float)0.6875);
             zapLight.localScale = new Vector2(0.3f * Vector2.Distance(collisionPos, zapSR.transform.position), zapLight.localScale.y);
         }
-        else if (coll.gameObject.layer != gameObject.layer)
+        else if (coll.gameObject.layer != gameObject.layer && coll.gameObject.tag != "NotSolid")
         {
             if (coll.gameObject.layer != 8)
             {

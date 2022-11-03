@@ -32,7 +32,7 @@ public class SpellBook
         {
             for (int i = 0; i < spellList.Length; i++)
             {
-                if (spell.SpellRank() == 1)
+                if (spell.SpellRank() == 1 && GameManager.instance.magicProficiency == 1)
                     return true;
 
                 if (spellList[i] == null)
@@ -40,7 +40,7 @@ public class SpellBook
 
                 if (spell.SpellElement() == spellList[i].SpellElement())
                 {
-                    if (spell.SpellRank() == spellList[i].SpellRank() + 1)
+                    if (spell.SpellRank() == spellList[i].SpellRank() + 1 && GameManager.instance.magicProficiency == spell.SpellRank())
                         return true;
                 }
             }

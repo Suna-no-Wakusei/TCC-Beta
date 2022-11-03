@@ -20,8 +20,10 @@ public static class SaveSystem
         save.currentMana = GameManager.instance.currentMana;
         save.experience = GameManager.instance.experience;
         save.xpPoints = GameManager.instance.xpPoints;
+        save.magicProficiency = GameManager.instance.magicProficiency;
         save.level = GameManager.instance.level;
         save.selectedMagic = GameManager.instance.selectedMagic;
+        save.weaponLevel = GameManager.instance.weaponLevel;
 
         save.sceneName = GameManager.instance.actualScene;
 
@@ -68,6 +70,12 @@ public static class SaveSystem
         for (int i = 0; i < GameManager.instance.scriptableChests.Count; i++)
         {
             save.chestOpened.Add(GameManager.instance.scriptableChests[i].chestAlreadyOpened);
+        }
+
+        //Saving Enemy State
+        for(int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
+        {
+            save.enemyAlive.Add(GameManager.instance.scriptableEnemies[i].alive);
         }
 
         //Saving Spells
@@ -121,10 +129,12 @@ public static class SaveSystem
                 GameManager.instance.fragments = save.fragments;
                 GameManager.instance.experience = save.experience;
                 GameManager.instance.xpPoints = save.xpPoints;
+                GameManager.instance.magicProficiency = save.magicProficiency;
                 GameManager.instance.level = save.level;
                 GameManager.instance.selectedMagic = save.selectedMagic;
                 GameManager.instance.currentMana = save.currentMana;
                 GameManager.instance.health = save.health;
+                GameManager.instance.weaponLevel = save.weaponLevel;
 
                 GameManager.instance.playerPos = new Vector2(save.playerPosX, save.playerPosY);
 
@@ -178,6 +188,12 @@ public static class SaveSystem
                     GameManager.instance.scriptableChests[i].chestAlreadyOpened = save.chestOpened[i];
                 }
 
+                //Loading Enemy State
+                for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
+                {
+                    GameManager.instance.scriptableEnemies[i].alive = save.enemyAlive[i];
+                }
+
                 //Loading Spells
                 Spell[] tempSpellList;
                 tempSpellList = new Spell[8];
@@ -219,6 +235,18 @@ public static class SaveSystem
             for (int i = 0; i < GameManager.instance.scriptableDialogs.Count; i++)
             {
                 GameManager.instance.scriptableDialogs[i].dialogAlreadyPlayed = false;
+            }
+            for (int i = 0; i < GameManager.instance.scriptableDialogs.Count; i++)
+            {
+                GameManager.instance.scriptableDialogs[i].dialogStarted = false;
+            }
+            for (int i = 0; i < GameManager.instance.scriptableChests.Count; i++)
+            {
+                GameManager.instance.scriptableChests[i].chestAlreadyOpened = false;
+            }
+            for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
+            {
+                GameManager.instance.scriptableEnemies[i].alive = true;
             }
         }
     }

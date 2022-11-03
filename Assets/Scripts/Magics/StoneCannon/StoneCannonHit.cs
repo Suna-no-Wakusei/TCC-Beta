@@ -22,7 +22,7 @@ public class StoneCannonHit : MonoBehaviour
             collision.transform.parent.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
             StartCoroutine(Colisor());
         }
-        else if (collision.gameObject.layer != gameObject.layer)
+        else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.tag != "NotSolid")
         {
             if (collision.gameObject.layer != 8)
                 StartCoroutine(Colisor());
@@ -31,10 +31,13 @@ public class StoneCannonHit : MonoBehaviour
 
     IEnumerator Colisor()
     {
+        GameManager.instance.hero.characterUnableToMove = false;
+        stoneCannon.StopStoneCannon();
+
         stoneCannon.animator.SetTrigger("Collide");
 
         stoneCannon.stoneCannonRb.velocity = Vector3.zero;
-        stoneCannon.StopStoneCannon();
+        
         yield return new WaitForSeconds(0.4f);
         gameObject.SetActive(false);
 

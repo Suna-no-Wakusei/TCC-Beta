@@ -7,10 +7,12 @@ using TMPro;
 public class SpellBookUI : MonoBehaviour
 {
     public TextMeshProUGUI xpPoints;
+    public TextMeshProUGUI proficiency;
 
     void Update()
     {
         xpPoints.SetText(GameManager.instance.xpPoints.ToString());
+        proficiency.SetText(GameManager.instance.magicProficiency.ToString());
 
         foreach (Transform transform in this.transform)
         {

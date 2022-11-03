@@ -30,7 +30,6 @@ public class DropItemExit : MonoBehaviour, IDropHandler
                     Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
                     GameManager.instance.inventory.RemoveItem(item);
                     ItemWorld.DropItem(GameObject.Find("Hero").transform.position, duplicateItem);
-
                 }
             }
             catch

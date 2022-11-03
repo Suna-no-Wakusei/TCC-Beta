@@ -22,7 +22,7 @@ public class FireballHit : MonoBehaviour
             collision.transform.parent.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
             StartCoroutine(Colisor());
         }
-        else if (collision.gameObject.layer != gameObject.layer)
+        else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.tag != "NotSolid")
         {
             if(collision.gameObject.layer != 8)
                 StartCoroutine(Colisor());
@@ -31,10 +31,14 @@ public class FireballHit : MonoBehaviour
 
     IEnumerator Colisor()
     {
+        GameManager.instance.hero.characterUnableToMove = false;
+
+        fireball.StopFireball();
+
         fireball.animator.SetTrigger("Collide");
 
         fireball.fireballRb.velocity = Vector3.zero;
-        fireball.StopFireball();
+        
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
 

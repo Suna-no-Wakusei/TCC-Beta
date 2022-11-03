@@ -13,11 +13,16 @@ public class SuperClassMagic : MonoBehaviour
     public StoneCannon stoneCannon;
     public Speed speed;
 
+    private bool decreasingMana;
+    private bool speeding = true;
+
     public float regenRate = 0.25f;
     private float manaCost;
 
     public void UseSpell(InputAction.CallbackContext ctx)
     {
+        if (!ctx.performed) { return; }
+
         //Running Magics
         if (GameManager.instance.hero.timeRunning == true)
         {
@@ -89,19 +94,22 @@ public class SuperClassMagic : MonoBehaviour
                     }
                     break;
                 case 6:
-                    manaCost = 0.0025f;
-                    if (GameManager.instance.currentMana >= manaCost)
+                    manaCost = 0.005f;
+                    if (GameManager.instance.currentMana >= manaCost && speeding == true)
                     {
+                        speeding = false;
                         GameManager.instance.hero.moveSpeed = 10f;
-                        DecreaseMana();
+                        DecreaseSpeedMana();
+                        speed.PlayEffect();
                     }
                     else
                     {
+                        speeding = true;
                         speed.speedEffect.Stop();
+                        decreasingMana = false;
                         GameManager.instance.hero.moveSpeed = 5f;
+                        GameManager.instance.sfxManager.StopWind();
                     }
-
-                    speed.PlayEffect();
                     break;
             }
         }
@@ -112,12 +120,29 @@ public class SuperClassMagic : MonoBehaviour
         //Mana regen
         if(GameManager.instance.currentMana < GameManager.instance.maxMana)
             ManaRegen();
+
+        //Mana decrease
+        if (decreasingMana)
+            DecreaseMana();
+
+        if(GameManager.instance.currentMana <= 0.025f)
+        {
+            speed.speedEffect.Stop();
+            decreasingMana = false;
+            GameManager.instance.hero.moveSpeed = 5f;
+            GameManager.instance.sfxManager.StopWind();
+        }
     }
 
     public void ManaRegen()
     {
         GameManager.instance.currentMana = Mathf.Min(GameManager.instance.currentMana + regenRate * Time.deltaTime, GameManager.instance.maxMana);
         GameManager.instance.manaSlider.fillAmount = Mathf.Min(GameManager.instance.manaSlider.fillAmount + (regenRate / GameManager.instance.maxMana) * Time.deltaTime, 1);
+    }
+
+    private void DecreaseSpeedMana()
+    {
+        decreasingMana = true;
     }
 
     public void DecreaseMana()

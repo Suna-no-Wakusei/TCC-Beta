@@ -28,7 +28,9 @@ public class IceShard : MonoBehaviour
     public IEnumerator IceShardPlay(Vector3 pointVector)
     {
         iceShardRunning = true;
-        GameManager.instance.state = GameState.Paused;
+        GameManager.instance.hero.characterUnableToMove = true;
+
+        GameManager.instance.sfxManager.PlayCastingIce();
 
         //Getting the mouse direction
         iceShard.transform.position = startingPos;
@@ -54,7 +56,7 @@ public class IceShard : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
 
-        GameManager.instance.state = GameState.FreeRoam;
+        GameManager.instance.hero.characterUnableToMove = false;
 
         animator.SetTrigger("Created");
 
@@ -63,6 +65,8 @@ public class IceShard : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         animator.SetTrigger("Collide");
+
+        GameManager.instance.sfxManager.PlayIceImpact();
 
         yield return new WaitForSeconds(0.3f);
 
@@ -74,6 +78,9 @@ public class IceShard : MonoBehaviour
     public void StopIceShard()
     {
         if(lastIceShard != null)
+        {
+            GameManager.instance.sfxManager.PlayIceImpact();
             StopCoroutine(lastIceShard);
+        } 
     }
 }

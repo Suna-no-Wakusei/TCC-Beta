@@ -33,7 +33,6 @@ public class NPC : Collidable, ICollectable
                 {
                     this.GetComponent<ChangeObjective>().HandleUpdate();
                     dialog.dialogStarted = false;
-                    
                 }
                 dialog.dialogAlreadyPlayed = true;
             }

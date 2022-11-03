@@ -9,18 +9,18 @@
                     "name": "Move",
                     "type": "PassThrough",
                     "id": "0e0ee2d8-9192-45b5-accb-b37545cae212",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
                     "name": "Dodge",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "38eca65c-e850-4497-a981-2f8817eda7b3",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 },
                 {
@@ -29,12 +29,12 @@
                     "id": "fe0ebe18-7a23-439a-b035-1912f5a7ce8d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
                 },
                 {
                     "name": "Interact",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "1b12ef32-d51f-4b7f-bf4d-d86db347e37d",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -65,8 +65,8 @@
                     "id": "c34b6b87-c4ea-4663-9b8b-21c3158ea07a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "SpellSelect",
@@ -83,7 +83,7 @@
                     "id": "86ba5d36-a392-442f-b15e-98a312dcf1ad",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 }
             ],
@@ -169,7 +169,7 @@
                     "name": "",
                     "id": "ae03bef6-299a-461c-a53c-e9816dffbf10",
                     "path": "<Keyboard>/e",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
@@ -248,7 +248,7 @@
                     "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -259,7 +259,7 @@
                     "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -270,7 +270,7 @@
                     "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -281,7 +281,7 @@
                     "path": "<Keyboard>/4",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -292,7 +292,7 @@
                     "path": "<Keyboard>/5",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -303,7 +303,7 @@
                     "path": "<Keyboard>/6",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -314,7 +314,7 @@
                     "path": "<Keyboard>/7",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -325,7 +325,7 @@
                     "path": "<Keyboard>/8",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "SpellSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -336,7 +336,7 @@
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Control_Scheme",
+                    "groups": "",
                     "action": "UseSpell",
                     "isComposite": false,
                     "isPartOfComposite": false

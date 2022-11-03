@@ -8,15 +8,12 @@ using UnityEngine.InputSystem.Controls;
 public class SpellBarUI : MonoBehaviour
 {
     private SpellBook spellBook;
-    private GameObject[] spellSlot;
+    public GameObject[] spellSlot = new GameObject[8];
     private GameObject[] spellPF;
 
     private void Awake()
     {
-        spellSlot = new GameObject[8];
         spellPF = new GameObject[8];
-
-        spellSlot = GameObject.FindGameObjectsWithTag("SpellSlot");
     }
 
     void Update()

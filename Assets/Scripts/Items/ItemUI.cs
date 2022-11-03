@@ -14,6 +14,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
     private Inventory inventory;
     private Image image;
     private TextMeshProUGUI textMeshPro;
+    private GameObject[] itemSlot;
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -27,6 +28,8 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
         {
             canvas = tempObject.GetComponent<Canvas>();
         }
+
+        itemSlot = GameObject.FindGameObjectsWithTag("ItemSlot");
 
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
@@ -84,6 +87,19 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
+
+        List<GameObject> hoveredList = eventData.hovered;
+
+        if(hoveredList.Count == 0)
+        {
+            // Drop Item
+            Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+            GameManager.instance.inventory.RemoveItem(this.item);
+            ItemWorld.DropItem(GameObject.Find("Hero").transform.position, duplicateItem);
+
+            Destroy(this.gameObject);
+        }
+        
         canvasGroup.blocksRaycasts = true;
     }
 
@@ -98,5 +114,4 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
         if(GameObject.Find("ItemBox(Clone)") != null)
             Destroy(GameObject.Find("ItemBox(Clone)"));
     }
-
 }

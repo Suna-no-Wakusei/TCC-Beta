@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogBox;
     [SerializeField] Text dialogText;
+    [SerializeField] Image imageDialog;
     [SerializeField] int letterPerSecond;
 
     public event Action OnShowDialog;
@@ -38,31 +39,24 @@ public class DialogueManager : MonoBehaviour
         OnShowDialog?.Invoke();
 
         this.dialog = dialog;
-        dialogBox.SetActive(true);
-        lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[0]));
 
+        dialogBox.SetActive(true);
+        lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[0], dialog.Icons[0]));
     }
 
     public void HandleUpdate()
     {
-        var keyboard = Keyboard.current;
-        if (keyboard == null)
-            return; // No gamepad connected.
-        var mouse = Mouse.current;
-        if (mouse == null)
-            return;
-
         if(dialogIsOver)
             return;
 
-        if (keyboard.enterKey.wasPressedThisFrame || mouse.leftButton.wasPressedThisFrame)
+        if (Keyboard.current.enterKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
         {
             if (!isTyping)
             {
                 ++currentLine;
                 if (currentLine < dialog.Lines.Count)
                 {
-                    lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine]));
+                    lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine], dialog.Icons[currentLine]));
                 }
                 else
                 {
@@ -75,6 +69,9 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
+                GameManager.instance.sfxManager.dialogSound.Stop();
+                GameManager.instance.sfxManager.dialogSound1.Stop();
+                GameManager.instance.sfxManager.dialogSound2.Stop();
                 StopCoroutine(lastRoutine);
                 dialogText.text = dialog.Lines[currentLine];
                 isTyping = false;
@@ -83,15 +80,34 @@ public class DialogueManager : MonoBehaviour
             
     }
 
-    public IEnumerator TypeDialog(string line)
+    public IEnumerator TypeDialog(string line, Sprite icon)
     {
+        int i = UnityEngine.Random.Range(0, 2);
+
         isTyping = true;
         dialogText.text = "";
-        foreach(var letter in line.ToCharArray())
+        imageDialog.sprite = icon;
+        foreach (var letter in line.ToCharArray())
         {
+            switch (i)
+            {
+                case 0:
+                    GameManager.instance.sfxManager.PlayDialogSound();
+                    break;
+                case 1:
+                    GameManager.instance.sfxManager.PlayDialogSound1();
+                    break;
+                case 2:
+                    GameManager.instance.sfxManager.PlayDialogSound2();
+                    break;
+            }
+            
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / letterPerSecond);
         }
+        GameManager.instance.sfxManager.dialogSound.Stop();
+        GameManager.instance.sfxManager.dialogSound1.Stop();
+        GameManager.instance.sfxManager.dialogSound2.Stop();
         isTyping = false;
     }
 }

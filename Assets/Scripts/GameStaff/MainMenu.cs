@@ -6,12 +6,10 @@ using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
-
-    public GameObject optionScreen;
-
     public void Start()
     {
         Time.timeScale = 1f;
+        StopAllCoroutines();
     }
 
     public void NewGame()
@@ -26,25 +24,22 @@ public class MainMenu : MonoBehaviour
 
     public void Continue()
     {
-        if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))
+        try
         {
-            SaveSystem.LoadState();
-            SaveSystem.LoadSavedScene();
+            if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))
+            {
+                SaveSystem.LoadState();
+                SaveSystem.LoadSavedScene();
+            }
+            else
+            {
+                NewGame();
+            }
         }
-        else
+        catch
         {
-            NewGame();
+            SceneManager.LoadScene("Casa");
         }
-    }
-
-    public void OpenOptions()
-    {
-        optionScreen.SetActive(true);
-    }
-
-    public void CloseOptions()
-    {
-        optionScreen.SetActive(false);
     }
 
     public void Quit()
