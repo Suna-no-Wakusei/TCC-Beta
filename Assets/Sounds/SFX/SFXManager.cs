@@ -6,7 +6,7 @@ public class SFXManager : MonoBehaviour
 {
     public AudioSource ambient, button, castingEarth, castingFire, castingWater, castingIce, fireImpact, iceImpact, earthImpact, waterImpact, 
         wind, item, punchHit, footstepWood, shortGrass, longGrass, treantHurt, humanHurt, thunder, 
-        woodAttack, dialogSound, dialogSound1, dialogSound2, earthStep, swordHit, peopleTalkingAmbient, swordSwing, dropItem, paper, pickupItem, mobHit, magicAmbient, chestOpening, door;
+        woodAttack, dialogSound, dialogSound1, dialogSound2, earthStep, swordHit, peopleTalkingAmbient, swordSwing, dropItem, paper, pickupItem, mobHit, magicAmbient, chestOpening, door, dash;
 
     public static SFXManager instance;
 
@@ -248,6 +248,11 @@ public class SFXManager : MonoBehaviour
     public void PlayDoor()
     {
         door.Play();
+    }
+
+    public void PlayDash()
+    {
+        dash.Play();
     }
 
     public void Update()

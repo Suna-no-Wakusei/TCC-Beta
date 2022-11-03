@@ -11,6 +11,7 @@ public class MainMusic : MonoBehaviour
     void Start()
     {
         audioSource.Play();
+        audioSource.ignoreListenerPause = true;
         DontDestroyOnLoad(gameObject);
 
         DontDestroyOnLoad(this.gameObject);

@@ -231,17 +231,17 @@ public class Player : Fighter
         characterUnableToMove = true;
 
         dodgeUp = false;
-        boxCollider.size = new Vector2(boxCollider.size.x, 0.3f);
+        GameManager.instance.sfxManager.PlayDash();
+
         if (facingDir == Vector2.zero)
-            rb.AddForce(facingDirIdle * 3f, ForceMode2D.Impulse);
+            rb.AddForce(facingDirIdle * 5f, ForceMode2D.Impulse);
         else
-            rb.AddForce(facingDir * 3f, ForceMode2D.Impulse);
+            rb.AddForce(facingDir * 5f, ForceMode2D.Impulse);
         animator.SetBool("Dodge", true);
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         animator.SetBool("Dodge", false);
-        boxCollider.size = new Vector2(boxCollider.size.x, colliderY);
 
         characterUnableToMove = false;
 
