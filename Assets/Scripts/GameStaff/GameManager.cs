@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     public Image playerModeHolder;
     public Volume globalVolume;
     public VolumeProfile tamakiProfile, akemiProfile;
+    public List<VolumeProfile> akemiAnim;
     public SFXManager sfxManager;
 
     //Sounds
@@ -445,6 +446,7 @@ public class GameManager : MonoBehaviour
             sfxManager.PlayMagicAmbient();
             playerMode = 1;
             //Loading Global Volume
+            StartCoroutine(ChangeModeAnim());
             globalVolume.profile = akemiProfile; 
         }
         else
@@ -455,6 +457,15 @@ public class GameManager : MonoBehaviour
             playerMode = 0;
             //Loading Global Volume
             globalVolume.profile = tamakiProfile;
+        }
+    }
+
+    IEnumerator ChangeModeAnim()
+    {
+        for(int i = 1; i < akemiAnim.Count; i++)
+        {
+            globalVolume.profile = akemiAnim[i];
+            yield return new WaitForSeconds(0.03f);
         }
     }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5212445875434460250}
   - component: {fileID: 5212445875434460253}
   - component: {fileID: 6517687360588596760}
-  - component: {fileID: 1757721448558450717}
+  - component: {fileID: -7125064012213653981}
   m_Layer: 5
   m_Name: MagicSpellIcon
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spell:
     spellType: 0
---- !u!223 &1757721448558450717
+--- !u!223 &-7125064012213653981
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

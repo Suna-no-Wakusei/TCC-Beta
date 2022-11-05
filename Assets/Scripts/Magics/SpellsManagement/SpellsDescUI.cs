@@ -27,6 +27,8 @@ public class SpellsDescUI : MonoBehaviour
         Transform transform = Instantiate(SpellAssets.Instance.pfSpellDescUI, position, Quaternion.identity);
         transform.SetParent(GameObject.Find("SpellsPanel").transform);
 
+        transform.localScale = new Vector3((float)0.46079, (float)0.46079, 1);
+
         SpellsDescUI spellsDescUI = transform.GetComponent<SpellsDescUI>();
         spellsDescUI.SetSpellDesc(spell);
 

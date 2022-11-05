@@ -44,11 +44,18 @@ public class Zap : MonoBehaviour
         //Setting the Spell Casting animation direction
         GameManager.instance.hero.animator.SetFloat("SpellDirectionHorizontal", diferencia.x);
         GameManager.instance.hero.animator.SetFloat("SpellDirectionVertical", diferencia.y);
-        GameManager.instance.hero.animator.SetBool("SpellCast", true);
+
+        if(GameManager.instance.playerMode == 0)
+            GameManager.instance.hero.animator.SetBool("SpellCast", true);
+        else
+            GameManager.instance.hero.animator.SetBool("SpellAkemi", true);
 
         yield return null;
 
-        GameManager.instance.hero.animator.SetBool("SpellCast", false);
+        if (GameManager.instance.playerMode == 0)
+            GameManager.instance.hero.animator.SetBool("SpellCast", false);
+        else
+            GameManager.instance.hero.animator.SetBool("SpellAkemi", false);
 
         zapSR.enabled = false;
         zapLight.GetComponent<Light2D>().enabled = false;

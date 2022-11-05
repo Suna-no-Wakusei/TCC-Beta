@@ -45,6 +45,7 @@ public class ChangeObjective : MonoBehaviour
         transform.SetParent(GameObject.Find("HUD").transform);
 
         transform.GetComponent<RectTransform>().anchoredPosition = new Vector2((float)950, (float)293);
+        transform.localScale = new Vector3(0.827901f, 0.827901f, 0.827901f);
 
         transform.Find("QuestTitle").GetComponent<TextMeshProUGUI>().SetText(GameManager.instance.objectiveManager.GetObjective().title);
 
@@ -62,6 +63,7 @@ public class ChangeObjective : MonoBehaviour
         transform.SetParent(GameObject.Find("HUD").transform);
 
         transform.GetComponent<RectTransform>().anchoredPosition = new Vector2((float)950, (float)293);
+        transform.localScale = new Vector3(0.827901f, 0.827901f, 0.827901f);
 
         transform.Find("QuestTitle").GetComponent<TextMeshProUGUI>().SetText("Quest completada");
 

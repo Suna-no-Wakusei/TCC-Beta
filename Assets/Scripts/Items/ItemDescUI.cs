@@ -28,6 +28,8 @@ public class ItemDescUI : MonoBehaviour
         Transform transform = Instantiate(ItemAssets.Instance.pfItemDescUI, position, Quaternion.identity);
         transform.SetParent(GameObject.Find("InventoryManager").transform);
 
+        transform.localScale = new Vector3((float)0.9076802, (float)0.9076802, 1);
+
         ItemDescUI itemDescUI = transform.GetComponent<ItemDescUI>();
         itemDescUI.SetItemDesc(item);
 

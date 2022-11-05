@@ -264,11 +264,11 @@ MonoBehaviour:
   hp: 4
   maxHP: 4
   characterUnableToMove: 0
+  enemy: {fileID: 0}
   xpValue: 10
   state: 0
   attackRange: 1.8
   chasingRange: 10
-  enemyAlive: 1
   speed: 1000
   nextWaypointDistance: 1
   animator: {fileID: 2320537626741736826}

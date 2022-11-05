@@ -229,6 +229,7 @@ public class Player : Fighter
     IEnumerator PlayerDodge()
     {
         characterUnableToMove = true;
+        GameManager.instance.hero.timeRunning = false;
 
         dodgeUp = false;
         GameManager.instance.sfxManager.PlayDash();
@@ -243,7 +244,10 @@ public class Player : Fighter
 
         animator.SetBool("Dodge", false);
 
+        yield return new WaitForSeconds(0.15f);
+
         characterUnableToMove = false;
+        GameManager.instance.hero.timeRunning = true;
 
         yield return new WaitForSeconds(1f);
 

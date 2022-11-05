@@ -106,7 +106,7 @@ public class ItemUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHa
     public void OnPointerEnter(PointerEventData eventData)
     {
         if(GameObject.Find("ItemBox(Clone)") == null)
-            ItemDescUI.ShowItemDescription(this.rectTransform.position - new Vector3(-200,70,0), item);
+            ItemDescUI.ShowItemDescription(this.rectTransform.position - this.transform.TransformVector(new Vector3(-60,50,0)), item);
     }
 
     public void OnPointerExit(PointerEventData eventData)

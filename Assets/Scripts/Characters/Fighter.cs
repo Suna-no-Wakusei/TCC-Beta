@@ -64,7 +64,7 @@ public class Fighter : MonoBehaviour
 
             CameraShake.Shake(0.25f, 0.25f);
 
-            GameManager.instance.ShowText(dmg.damageAmount.ToString(), 20, Color.red, transform.position, Vector3.up * 25, 0.5f);
+            GameManager.instance.ShowText(dmg.damageAmount.ToString(), 18, Color.red, transform.position, Vector3.up * 25, 0.5f);
 
             if (hp <= 0)
             {
@@ -126,11 +126,15 @@ public class Fighter : MonoBehaviour
 
     IEnumerator EnemyMagicKnockback()
     {
+        characterUnableToMove = true;
+
         rb1.AddForce(difference * 6f, ForceMode2D.Impulse);
 
         yield return new WaitForSeconds(1f);
 
         rb1.velocity = Vector2.zero;
+
+        characterUnableToMove = false;
     }
 
     protected virtual void Death()

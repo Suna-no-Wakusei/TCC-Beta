@@ -44,11 +44,17 @@ public class Fireball : MonoBehaviour
 
         GameManager.instance.sfxManager.PlayCastingFire();
 
-        GameManager.instance.hero.animator.SetBool("SpellCast", true);
+        if (GameManager.instance.playerMode == 0)
+            GameManager.instance.hero.animator.SetBool("SpellCast", true);
+        else
+            GameManager.instance.hero.animator.SetBool("SpellAkemi", true);
 
         yield return null;
 
-        GameManager.instance.hero.animator.SetBool("SpellCast", false);
+        if (GameManager.instance.playerMode == 0)
+            GameManager.instance.hero.animator.SetBool("SpellCast", false);
+        else
+            GameManager.instance.hero.animator.SetBool("SpellAkemi", false);
 
         fireball.gameObject.SetActive(true);
 

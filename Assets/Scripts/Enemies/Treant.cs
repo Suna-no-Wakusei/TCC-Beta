@@ -4,7 +4,7 @@ using UnityEngine;
 using CodeMonkey.Utils;
 using Pathfinding;
 
-public class Enemy : Fighter
+public class Treant : Fighter
 {
     //Savement
     public ScriptableEnemy enemy;
@@ -241,9 +241,17 @@ public class Enemy : Fighter
         if(enemy.alive)
             GameManager.instance.sfxManager.PlayTreantHurt();
 
+        StartCoroutine(DeathAnimation());
+        GameManager.instance.experience += xpValue;
+        GameManager.instance.ShowText("+"+xpValue+" XP", 18, Color.green, transform.position, Vector3.up * 35, 0.5f);
+    }
+
+    IEnumerator DeathAnimation()
+    {
+        animator.SetBool("Death", true);
+        yield return new WaitForSeconds(0.45f);
+        animator.SetBool("Death", false);
         enemy.alive = false;
         Destroy(gameObject);
-        GameManager.instance.experience += xpValue;
-        GameManager.instance.ShowText("+"+xpValue+" XP", 12, Color.green, transform.position, Vector3.up * 35, 0.5f);
     }
 }

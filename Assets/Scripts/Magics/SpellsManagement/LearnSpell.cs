@@ -11,7 +11,7 @@ public class LearnSpell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (GameObject.Find("SpellBox(Clone)") == null)
-            SpellsDescUI.ShowItemDescription(this.transform.GetComponent<RectTransform>().position - new Vector3(-250, 130, 0), spell);
+            SpellsDescUI.ShowItemDescription(this.transform.position - this.transform.TransformVector(new Vector3(-100, 60, 0)), spell);
     }
 
     public void OnPointerExit(PointerEventData eventData)
