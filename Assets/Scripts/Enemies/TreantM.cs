@@ -92,7 +92,18 @@ public class TreantM : Fighter
                     path = null;
                     stopMoving = true;
                     state = GameState.Attacking;
-                    StartCoroutine(EnemyAttack());
+                    Coroutine lastAttack = StartCoroutine(EnemyAttack());
+                    if (damaged)
+                    {
+                        StopCoroutine(lastAttack);
+
+                        animator.SetBool("Attack", false);
+
+                        rootAttack.SetActive(false);
+
+                        stopMoving = false;
+                        state = GameState.ChasingTarget;
+                    }
                 }
 
                 float stopChasing = 10f;
@@ -230,9 +241,9 @@ public class TreantM : Fighter
 
         animator.SetBool("Attack", false);
 
-        rootAttack.SetActive(false);
+        yield return new WaitForSeconds(1);
 
-        yield return new WaitForSeconds(1f);
+        rootAttack.SetActive(false);
 
         state = GameState.ChasingTarget;
 
@@ -251,6 +262,7 @@ public class TreantM : Fighter
 
     IEnumerator DeathAnimation()
     {
+        rootAttack.SetActive(false);
         animator.SetBool("Death", true);
         yield return new WaitForSeconds(0.45f);
         animator.SetBool("Death", false);

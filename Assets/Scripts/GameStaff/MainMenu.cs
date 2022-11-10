@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         StopAllCoroutines();
+        AudioListener.pause = true;
     }
 
     public void NewGame()
@@ -18,7 +19,9 @@ public class MainMenu : MonoBehaviour
         {
             File.Delete(Application.persistentDataPath + "/JSONData.sus");
         }
-        
+
+        AudioListener.pause = false;
+
         SceneManager.LoadScene("Casa");
     }
 
@@ -30,6 +33,7 @@ public class MainMenu : MonoBehaviour
             {
                 SaveSystem.LoadState();
                 SaveSystem.LoadSavedScene();
+                AudioListener.pause = false;
             }
             else
             {

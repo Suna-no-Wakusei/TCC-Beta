@@ -14,23 +14,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText:
     lines:
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum
-      risus ut dictum pulvinar. Phasellus maximus enim hendrerit lacus tempus, vel
-      posuere massa pellentesque.
-    - Vivamus semper interdum purus, a tempus ante dictum cursus. Interdum et malesuada
-      fames ac ante ipsum primis in faucibus. Morbi consectetur dui nec erat lacinia,
-      eget lobortis quam porta.
-    - Phasellus et elementum nisl, in blandit elit. Morbi eget quam mauris. Curabitur
-      tempus lorem sed risus ornare, sed tempor nisl suscipit.
+    - "Est\xE1 atrasado! De novo!"
+    - "Bom dia pra voc\xEA tamb\xE9m, vov\xF4"
+    - "Se n\xE3o fosse pelo combinado que eu fiz com o seu pai e o fato de voc\xEA
+      ser minimamente competente"
+    - "Eu com certeza j\xE1 teria te mandado embora faz muito tempo"
+    - "Pode falar, eu sou o seu melhor lenhador, n\xE3o \xE9?"
+    - "O \xFAnico tamb\xE9m"
+    - "Esqueceu do que eu tinha te falado no come\xE7o da semana?"
+    - "Eeeh... Eu sei mas... teria s\xF3 como voc\xEA me lembrar um pouco?"
+    - "Francamente, Tamaki, voc\xEA n\xE3o leva jeito"
+    - "Amanh\xE3 tem um carregamento para a constru\xE7\xE3o de alguns m\xF3veis
+      de uma fam\xEDlia nobre que se mudou para os arredores"
+    - "Como vou estar muito ocupado com os problemas com o banco, eu n\xE3o tive
+      escolha e tive que deixar voc\xEA encarregado disso"
+    - "A madeira que eles querem \xE9 de alt\xEDssima qualidade, essas \xE1rvores
+      t\xEAm mais de dois mil anos de exist\xEAncia"
+    - "E era para voc\xEA ter ido cortar elas de manh\xE3, ent\xE3o me entregue tudo
+      at\xE9 o fim do dia!"
+    - "Tudo bem, tudo bem. Eu j\xE1 entendi"
+    - "N\xE3o tem com o que se preocupar, consigo cortar tudo hoje e ainda voltar
+      a tempo para o jantar"
+    - "Voc\xEA consegue me tirar do s\xE9rio, esse \xE9 provavelmente o trabalho
+      mais importante da sua vida, ent\xE3o n\xE3o se atreva a errar!"
+    - "A \xE1rvore que voc\xEA precisa cortar se encontra na por\xE7\xE3o sudoeste
+      da floresta, s\xE3o carvalhos mais escuros e r\xEDgidos, ent\xE3o tome muito
+      cuidado"
+    - "Se falhar, ou n\xE3o voltar a tempo, voc\xEA nunca mais pisa aqui!"
+    - "J\xE1 disse que n\xE3o precisa esquentar a cabe\xE7a, vou voltar t\xE3o r\xE1pido
+      que nem vai dar tempo de voc\xEA sentir saudade"
+    - "At\xE9 mais, vov\xF4!"
     icons:
     - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
   afterDialogText:
     lines:
-    - Sed vitae est justo. Etiam eleifend, urna sed ultrices sollicitudin, justo
-      risus pharetra arcu, hendrerit luctus sem neque a ipsum.
+    - "T\xE1 fazendo o que aqui? Vai logo cortar a \xE1rvore e volta logo"
     icons:
     - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
   dialogAlreadyPlayed: 0
   dialogStarted: 0
+  lateDialog: 1
+  lateDialogText:
+    lines:
+    - "Esse Tamaki.. \xE0s vezes ele me d\xE1 nos nervos"
+    - "Eu n\xE3o tenho mais idade pra isso"
+    - "Ele \xE9 um rapaz muito talentoso e dedicado, s\xF3 precisa ser mais organizado"
+    - "Acabou n\xE3o herdando isso do pai"
+    - Quando ele amadurecer, vai acabar se tornando um lenhador muito melhor do que
+      eu fui no passado
+    - "Talvez at\xE9 bem mais do que isso"
+    icons:
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+  camFocus: {x: -15.69, y: -1.39, z: -10}

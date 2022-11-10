@@ -144,8 +144,9 @@ GameObject:
   - component: {fileID: 2320537626741736829}
   - component: {fileID: 2320537626741736828}
   - component: {fileID: 2320537626741736827}
+  - component: {fileID: 229805735699071072}
   - component: {fileID: 2320537626741736826}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Treant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +237,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -920389005
-  m_SortingLayer: 6
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2baf1d4c9121a5c4c87de6acaf5477b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -264,11 +265,12 @@ MonoBehaviour:
   hp: 4
   maxHP: 4
   characterUnableToMove: 0
-  enemy: {fileID: 0}
+  enemy: {fileID: 11400000, guid: f91ca10132da4d947aa0950cfb100482, type: 2}
   xpValue: 10
   state: 0
   attackRange: 1.8
-  chasingRange: 10
+  chasingRange: 5
+  target: {fileID: 0}
   speed: 1000
   nextWaypointDistance: 1
   animator: {fileID: 2320537626741736826}
@@ -320,6 +322,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.66427803, y: 0.5260706}
   m_EdgeRadius: 0
+--- !u!114 &229805735699071072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320537626741736825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fd9ecb16ed2c347a18ec9f6c9f8d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: 0
+  runOnlyOnce: 0
 --- !u!95 &2320537626741736826
 Animator:
   serializedVersion: 4

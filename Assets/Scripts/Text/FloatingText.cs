@@ -28,8 +28,9 @@ public class FloatingText
         if (!active)
             return;
 
-        if (Time.time - lastShown > duration)
-            Hide();
+        if(duration > 0)
+            if (Time.time - lastShown > duration)
+                Hide();
 
         go.transform.position += motion * Time.deltaTime;
     }

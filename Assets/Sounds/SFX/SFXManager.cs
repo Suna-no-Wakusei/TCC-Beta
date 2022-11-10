@@ -257,6 +257,9 @@ public class SFXManager : MonoBehaviour
 
     public void Update()
     {
+        dialogSound.ignoreListenerPause = true;
+        dialogSound1.ignoreListenerPause = true;
+        dialogSound2.ignoreListenerPause = true;
         button.ignoreListenerPause = true;
         dropItem.ignoreListenerPause = true;
 

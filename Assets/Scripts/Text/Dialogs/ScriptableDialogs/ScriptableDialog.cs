@@ -10,4 +10,7 @@ public class ScriptableDialog : ScriptableObject
     public DialogueText afterDialogText;
     public bool dialogAlreadyPlayed = false;
     public bool dialogStarted = false;
+    public bool lateDialog = false;
+    public DialogueText lateDialogText;
+    public Vector3 camFocus;
 }

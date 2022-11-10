@@ -18,7 +18,8 @@ public class SpellBarUI : MonoBehaviour
 
     void Update()
     {
-        UseSelectedSpell();
+        if(spellBook != null)
+            UseSelectedSpell();
     }
 
     public void SpellBarSelect(InputAction.CallbackContext ctx)
@@ -48,7 +49,6 @@ public class SpellBarUI : MonoBehaviour
     public void UseSelectedSpell()
     {
         Spell spell = new Spell();
-        spell = null;
 
         for (int i = 0; i < spellSlot.Length; i++)
         {

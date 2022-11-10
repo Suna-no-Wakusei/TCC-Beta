@@ -114,7 +114,7 @@ public class InventoryUI : MonoBehaviour
         if (itemSlot == null)
             return;
 
-        for (int i = 0; i < inventory.GetItemList().Length; i++)
+        for (int i = 0; i < GameManager.instance.inventory.GetItemList().Length; i++)
         {
             if (itemSlot[i].transform.childCount >= 1)
             {

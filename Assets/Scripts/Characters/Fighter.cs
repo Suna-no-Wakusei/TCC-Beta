@@ -18,15 +18,21 @@ public class Fighter : MonoBehaviour
     protected float lastImmune;
     protected float lastEnemyImmune;
 
+    private Shader shaderGUItext;
+    private Shader shaderSpritesDefault;
+
     public bool characterUnableToMove = false;
 
-    bool immune;
+    protected bool immune;
+    protected bool damaged;
 
     //All fighters can hit / die
 
     private void Awake()
     {
         rb1 = GetComponent<Rigidbody2D>();
+        shaderGUItext = Shader.Find("GUI/Text Shader");
+        shaderSpritesDefault = Shader.Find("Sprites/Default");
     }
 
     protected virtual void ReceiveDamage(Damage dmg)
@@ -61,6 +67,7 @@ public class Fighter : MonoBehaviour
         else if ((Time.time - lastEnemyImmune > immuneEnemyTime) && transform.tag != "Player"){
             lastEnemyImmune = Time.time;
             hp -= dmg.damageAmount;
+            StartCoroutine(BlinkingDamage());
 
             CameraShake.Shake(0.25f, 0.25f);
 
@@ -89,30 +96,32 @@ public class Fighter : MonoBehaviour
         }
     }
 
+    IEnumerator BlinkingDamage()
+    {
+        damaged = true;
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        damaged = false;
+    }
+
     IEnumerator BlinkingImmune()
     {
-        for(int i = 0; i < 5; i++)
+        immune = true;
+        for (int i = 0; i < 5; i++)
         {
             GetComponent<SpriteRenderer>().enabled = false;
             yield return new WaitForSeconds(0.1f);
             GetComponent<SpriteRenderer>().enabled = true;
             yield return new WaitForSeconds(0.1f);
         }
+        immune = false;
     }
 
     IEnumerator Knockback()
     {
-        if (rb1.isKinematic)
-        {
-            rb1.isKinematic = false;
-            rb1.AddForce(difference * 30f, ForceMode2D.Impulse);
-
-            yield return new WaitForSeconds(0.3f);
-
-            rb1.isKinematic = true;
-            rb1.velocity = Vector2.zero;
-        }
-        else
+        if (rb1 != null)
         {
             characterUnableToMove = true;
 
@@ -121,20 +130,23 @@ public class Fighter : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
 
             characterUnableToMove = false;
-        }   
+        }
     }
 
     IEnumerator EnemyMagicKnockback()
     {
-        characterUnableToMove = true;
+        if (rb1 != null)
+        {
+            characterUnableToMove = true;
 
-        rb1.AddForce(difference * 6f, ForceMode2D.Impulse);
+            rb1.AddForce(difference * 6f, ForceMode2D.Impulse);
 
-        yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1f);
 
-        rb1.velocity = Vector2.zero;
+            rb1.velocity = Vector2.zero;
 
-        characterUnableToMove = false;
+            characterUnableToMove = false;
+        }
     }
 
     protected virtual void Death()

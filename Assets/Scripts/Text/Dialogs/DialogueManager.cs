@@ -34,9 +34,12 @@ public class DialogueManager : MonoBehaviour
     {
         dialogIsOver = false;
         dialogRunning = true;
+        GameManager.instance.hero.characterUnableToMove = true;
         yield return new WaitForEndOfFrame();
         
         OnShowDialog?.Invoke();
+        GameManager.instance.hero.animator.SetFloat("Speed", 0);
+        Time.timeScale = 0f;
 
         this.dialog = dialog;
 
@@ -44,40 +47,42 @@ public class DialogueManager : MonoBehaviour
         lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[0], dialog.Icons[0]));
     }
 
-    public void HandleUpdate()
+    public void PassDialog(InputAction.CallbackContext ctx)
     {
-        if(dialogIsOver)
+        if (!ctx.performed) { return; }
+
+        if(!dialogRunning) { return; }
+
+        if (dialogIsOver)
             return;
 
-        if (Keyboard.current.enterKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
+        if (!isTyping)
         {
-            if (!isTyping)
+            ++currentLine;
+            if (currentLine < dialog.Lines.Count)
             {
-                ++currentLine;
-                if (currentLine < dialog.Lines.Count)
-                {
-                    lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine], dialog.Icons[currentLine]));
-                }
-                else
-                {
-                    currentLine = 0;
-                    dialogBox.SetActive(false);
-                    dialogRunning = false;
-                    OnCloseDialog?.Invoke();
-                    dialogIsOver = true;
-                }
+                lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine], dialog.Icons[currentLine]));
             }
             else
             {
-                GameManager.instance.sfxManager.dialogSound.Stop();
-                GameManager.instance.sfxManager.dialogSound1.Stop();
-                GameManager.instance.sfxManager.dialogSound2.Stop();
-                StopCoroutine(lastRoutine);
-                dialogText.text = dialog.Lines[currentLine];
-                isTyping = false;
+                currentLine = 0;
+                dialogBox.SetActive(false);
+                dialogRunning = false;
+                OnCloseDialog?.Invoke();
+                dialogIsOver = true;
+                GameManager.instance.hero.characterUnableToMove = false;
+                Time.timeScale = 1f;
             }
         }
-            
+        else
+        {
+            GameManager.instance.sfxManager.dialogSound.Stop();
+            GameManager.instance.sfxManager.dialogSound1.Stop();
+            GameManager.instance.sfxManager.dialogSound2.Stop();
+            StopCoroutine(lastRoutine);
+            dialogText.text = dialog.Lines[currentLine];
+            isTyping = false;
+        }
     }
 
     public IEnumerator TypeDialog(string line, Sprite icon)
@@ -103,7 +108,7 @@ public class DialogueManager : MonoBehaviour
             }
             
             dialogText.text += letter;
-            yield return new WaitForSeconds(1f / letterPerSecond);
+            yield return new WaitForSecondsRealtime(1f / letterPerSecond);
         }
         GameManager.instance.sfxManager.dialogSound.Stop();
         GameManager.instance.sfxManager.dialogSound1.Stop();

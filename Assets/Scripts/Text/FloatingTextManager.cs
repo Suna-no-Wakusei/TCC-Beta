@@ -41,6 +41,7 @@ public class FloatingTextManager : MonoBehaviour
             txt.go = Instantiate(textPrefab);
             txt.go.transform.SetParent(textContainer.transform);
             txt.txt = txt.go.GetComponent<Text>();
+            txt.go.transform.localScale = new Vector3(1, 1, 1);
 
             floatingTexts.Add(txt);
         }

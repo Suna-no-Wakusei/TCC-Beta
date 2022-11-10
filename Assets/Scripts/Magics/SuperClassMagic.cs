@@ -23,6 +23,8 @@ public class SuperClassMagic : MonoBehaviour
     {
         if (!ctx.performed) { return; }
 
+        if (GameManager.instance.hero.characterUnableToMove) return;
+
         //Running Magics
         if (GameManager.instance.hero.timeRunning == true)
         {

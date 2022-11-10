@@ -16,4 +16,11 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
     }
+
+    public void SaveAndQuit()
+    {
+        SaveSystem.SaveState();
+        SceneManager.LoadScene(mainMenu);
+        Time.timeScale = 1f;
+    }
 }

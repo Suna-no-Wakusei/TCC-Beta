@@ -10,18 +10,7 @@ public class Portal : Collidable
     private string sceneName;
     public Vector2 playerPosition;
     public TeleportPoint Teleport;
-    public GameObject fadeInPanel;
-    public GameObject fadeOutPanel;
     public float fadeWait;
-
-    public void Awake()
-    {
-        if(fadeInPanel != null)
-        {
-            GameObject panel = Instantiate(fadeInPanel, Vector3.zero, Quaternion.identity) as GameObject;
-            Destroy(panel, 1);
-        }
-    }
 
     protected override void OnCollide(Collider2D coll)
     {
@@ -39,9 +28,9 @@ public class Portal : Collidable
 
     public IEnumerator FadeCo()
     {
-        if(fadeOutPanel != null)
+        if(GameManager.instance.fadeOutPanel != null)
         {
-            Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
+            Instantiate(GameManager.instance.fadeOutPanel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
         SceneManager.LoadScene(sceneName);

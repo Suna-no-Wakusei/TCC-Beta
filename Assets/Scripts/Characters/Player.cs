@@ -10,11 +10,9 @@ using System.IO;
 public class Player : Fighter
 {
     public bool timeRunning = true;
+    public bool availableToInteract = true;
 
     private BoxCollider2D boxCollider;
-
-    public event Action OnAttack;
-    public event Action OnEndAttack;
 
     public PolygonCollider2D colliderAttack;
 
@@ -52,14 +50,43 @@ public class Player : Fighter
         dodgeUp = true;
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 8)
+        { 
+            if(collision.gameObject.GetComponent<ChestOpen>() != null)
+            {
+                if (!collision.gameObject.GetComponent<ChestOpen>().chest.chestAlreadyOpened)
+                    GameManager.instance.InteractButton.SetActive(true);
+            }
+            else
+            {
+                GameManager.instance.InteractButton.SetActive(true);
+            }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            GameManager.instance.InteractButton.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     public void HandleUpdate()
     {
         if (characterUnableToMove)
+        {
+            animator.SetFloat("Speed", 0);
             return;
+        }
+            
 
         if (timeRunning)
         {
+            //Movement
             rb.velocity = inputMovement * moveSpeed;
 
             //Animation
@@ -131,6 +158,12 @@ public class Player : Fighter
             {
                 switch (GameManager.instance.floorType)
                 {
+                    case GameManager.FloorType.Null:
+                        GameManager.instance.sfxManager.StopFootstepWood();
+                        GameManager.instance.sfxManager.StopLongGrass();
+                        GameManager.instance.sfxManager.StopEarthStep();
+                        GameManager.instance.sfxManager.StopShortGrass();
+                        break;
                     case GameManager.FloorType.Grass:
                         if (!GameManager.instance.sfxManager.shortGrass.isPlaying)
                             StartCoroutine(playShort());
@@ -201,6 +234,8 @@ public class Player : Fighter
     {
         if(!ctx.performed) { return; }
 
+        if (immune) return;
+
         if(characterUnableToMove) { return; }
 
         if(Time.deltaTime == 0) { return; }
@@ -213,6 +248,10 @@ public class Player : Fighter
     {
         if (!ctx.performed) { return; }
 
+        if (!availableToInteract) return;
+
+        if (characterUnableToMove) return;
+
         if (timeRunning)
             Collect();
     }
@@ -220,6 +259,8 @@ public class Player : Fighter
     public void Dodge(InputAction.CallbackContext ctx)
     {
         if (!ctx.performed) { return; }
+
+        if (characterUnableToMove) return;
 
         if (timeRunning)
             if(dodgeUp)
@@ -235,9 +276,18 @@ public class Player : Fighter
         GameManager.instance.sfxManager.PlayDash();
 
         if (facingDir == Vector2.zero)
+        {
+            animator.SetFloat("DashHorizontal", LastMoveHorizontal);
+            animator.SetFloat("DashVertical", LastMoveVertical);
             rb.AddForce(facingDirIdle * 5f, ForceMode2D.Impulse);
+        }
         else
+        {
+            animator.SetFloat("DashHorizontal", rb.velocity.x);
+            animator.SetFloat("DashVertical", rb.velocity.y);
             rb.AddForce(facingDir * 5f, ForceMode2D.Impulse);
+        }
+            
         animator.SetBool("Dodge", true);
 
         yield return new WaitForSeconds(0.5f);
@@ -254,14 +304,15 @@ public class Player : Fighter
         dodgeUp = true;
     }
 
-    void Collect()
+    public void Collect()
     {
-        var facingDir = new Vector3(animator.GetFloat("Horizontal"), animator.GetFloat("Vertical"));
-        var interactPos = transform.position + facingDir;
+        var interactPos = transform.position;
 
         var collider = Physics2D.OverlapCircle(interactPos, 0.3f, Interactable);
         if (collider != null)
+        {
             collider.GetComponent<ICollectable>()?.Collect();
+        }
     }
 
     //ARRUMAR QUARTENIAL DO ATAQUE
@@ -270,7 +321,7 @@ public class Player : Fighter
     {
         if(GameManager.instance.weaponLevel == 1)
         {
-            OnAttack?.Invoke();
+            characterUnableToMove = true;
 
             animator.SetBool("Attack", true);
 
@@ -282,7 +333,7 @@ public class Player : Fighter
 
             yield return new WaitForSeconds(attackCooldown);
 
-            OnEndAttack?.Invoke();
+            characterUnableToMove = false;
         }
     }
 
@@ -291,8 +342,8 @@ public class Player : Fighter
         Time.timeScale = 0f;
         timeRunning = false;
         GameManager.instance.deathScreen.SetActive(true);
+        AudioListener.pause = true;
     }
-
 
     public void Respawn()
     {
@@ -301,6 +352,7 @@ public class Player : Fighter
             SaveSystem.LoadState();
             SaveSystem.LoadSavedScene();
             Time.timeScale = 1f;
+            AudioListener.pause = false;
         }
     }
 }

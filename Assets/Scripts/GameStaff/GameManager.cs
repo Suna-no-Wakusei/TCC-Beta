@@ -30,7 +30,10 @@ public class GameManager : MonoBehaviour
             sfxManager = new SFXManager();
 
         SaveSystem.LoadState();
-        hero.transform.position = playerPos;
+        if (playerPos != Vector2.zero)
+            hero.transform.position = playerPos;
+        else
+            hero.transform.position = thisScenePos;
 
         actualScene = SceneManager.GetActiveScene().name;
 
@@ -48,7 +51,7 @@ public class GameManager : MonoBehaviour
         {
             Transform transform = Instantiate(fadeInPanel, Vector3.zero, Quaternion.identity);
             yield return new WaitForSeconds(1f);
-            Destroy(transform.gameObject);
+            fadeInPanel.gameObject.SetActive(false);
         }
         
     }
@@ -61,11 +64,13 @@ public class GameManager : MonoBehaviour
     //UI
     public Texture2D cursorDefault;
     public Transform fadeInPanel;
+    public Transform fadeOutPanel;
 
     // References
     public Player hero;
     public SuperClassMagic allMagics;
     public Vector2 nextScenePos;
+    public Vector2 thisScenePos;
     public Vector2 playerPos;
     public Inventory inventory;
     public InventoryUI uiInventory;
@@ -84,11 +89,12 @@ public class GameManager : MonoBehaviour
     public VolumeProfile tamakiProfile, akemiProfile;
     public List<VolumeProfile> akemiAnim;
     public SFXManager sfxManager;
+    public GameObject InteractButton;
 
     //Sounds
     public enum FloorType
     {
-        Grass, TallGrass, Wood, Earth
+        Null, Grass, TallGrass, Wood, Earth
     }
 
     public FloorType floorType;
@@ -199,6 +205,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //UI
+        objectiveUI.SetObjective(objectiveManager);
+        //Inventory UI
+        uiInventory.SetInventory(inventory);
         //Loading binds
         string rebinds = PlayerPrefs.GetString("rebinds", string.Empty);
 
@@ -206,16 +216,10 @@ public class GameManager : MonoBehaviour
 
         hero.PlayerInput.actions.LoadBindingOverridesFromJson(rebinds);
 
-        //UI
         Cursor.SetCursor(cursorDefault, Vector2.zero, CursorMode.Auto);
         Cursor.lockState = CursorLockMode.Confined;
 
         selectedMagic = 0;
-        objectiveUI.SetObjective(objectiveManager);
-        //Inventory UI
-        uiInventory.SetInventory(inventory);
-        //Spell Bar UI
-        spellBarUI.SetSpellBook(spellBook);
         //Mana Slider
         manaSlider.fillAmount = currentMana/maxMana;
         //Experience Slider
@@ -236,16 +240,6 @@ public class GameManager : MonoBehaviour
                 state = GameState.FreeRoam;
         };
 
-        hero.OnAttack += () =>
-        {
-            state = GameState.Paused;
-        };
-
-        hero.OnEndAttack += () =>
-        {
-            if (state == GameState.Paused)
-                state = GameState.FreeRoam;
-        };
         InventoryManager.Instance.OnPause += () =>
         {
             state = GameState.Paused;
@@ -260,11 +254,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        //Spell Bar UI
+        spellBarUI.SetSpellBook(spellBook);
+
         if (state == GameState.Dialog)
         {
             hero.transform.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             hero.timeRunning = false;
-            DialogueManager.Instance.HandleUpdate();
         }
 
         //SpellManager
@@ -282,6 +278,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         //Player States
         if(state == GameState.FreeRoam)
         {
@@ -436,8 +433,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayerMode(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed) { return; }
-
         if(!hero.timeRunning) { return; }
 
         if (playerMode == 0)
@@ -452,7 +447,7 @@ public class GameManager : MonoBehaviour
         else
         {
             sfxManager.StopMagicAmbient();
-            if(actualScene == "Projeto")
+            if(levelType == FloorType.Grass)
                 sfxManager.PlayAmbient();
             playerMode = 0;
             //Loading Global Volume
@@ -460,7 +455,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator ChangeModeAnim()
+    public IEnumerator ChangeModeAnim()
     {
         for(int i = 1; i < akemiAnim.Count; i++)
         {

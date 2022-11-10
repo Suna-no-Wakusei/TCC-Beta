@@ -19,7 +19,5 @@ MonoBehaviour:
   items:
   - itemType: 4
     amount: 1
-  - itemType: 5
-    amount: 2
   weaponLevel: 1
   typeKey: 1

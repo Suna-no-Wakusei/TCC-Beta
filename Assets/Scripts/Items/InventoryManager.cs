@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     public event Action OnPause;
     public event Action OnEndPause;
     private int menuState;
-    [SerializeField] private GameObject inventoryPanel, inventoryMenu, spellsMenu, missionsMenu, configsMenu, iconInventory, iconSpells, iconMissions, iconConfigs;
+    [SerializeField] private GameObject inventoryPanel, inventoryMenu, spellsMenu, missionsMenu, configsMenu, iconInventory, iconSpells, iconMissions, iconConfigs, quitMenu;
     [SerializeField] private Sprite invIcon, spellsIcon, missionsIcon, configsIcon;
     [SerializeField] private Sprite invIconSelected, spellsIconSelected, missionsIconSelected, configsIconSelected;
 
@@ -76,8 +76,22 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void OpenMenuQuit()
+    {
+        quitMenu.SetActive(true);
+    }
+
+    public void CloseMenuQuit()
+    {
+        quitMenu.SetActive(false);
+    }
+
     public void OpenIt(InputAction.CallbackContext ctx)
     {
+        if (quitMenu.activeSelf) return;
+
+        if (!GameManager.instance.hero.timeRunning) return;
+
         if (GameManager.instance.state != GameState.Dialog)
         {
             isOpen = !isOpen;

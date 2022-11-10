@@ -442,7 +442,7 @@
                     "name": "",
                     "id": "125f388c-2ae0-497f-a27b-9c7922e3e348",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "Control_Scheme",
                     "action": "Click",

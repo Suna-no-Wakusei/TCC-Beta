@@ -87,7 +87,7 @@ public class ChestOpen : MonoBehaviour, ICollectable
                     {
                         //When Player touch the item
                         GameManager.instance.inventory.AddItem(item);
-                        GameManager.instance.ShowText("+" + item.amount + " " + item.ItemName(), 35, Color.white, transform.position + new Vector3(0, (float)n), Vector3.up * 35, 1f);
+                        GameManager.instance.ShowText("+" + item.amount + " " + item.ItemName(), 20, Color.white, transform.position + new Vector3(0, (float)n), Vector3.up * 35, 1f);
                         n = n + 0.4;
                     }
                 }
@@ -95,7 +95,7 @@ public class ChestOpen : MonoBehaviour, ICollectable
                 {
                     //When Player touch the item
                     GameManager.instance.inventory.AddItem(item);
-                    GameManager.instance.ShowText("+" + item.amount + " " + item.ItemName(), 35, Color.white, transform.position + new Vector3(0, (float)n), Vector3.up * 35, 1f);
+                    GameManager.instance.ShowText("+" + item.amount + " " + item.ItemName(), 20, Color.white, transform.position + new Vector3(0, (float)n), Vector3.up * 35, 1f);
                     n = n + 0.4;
                 }
             }

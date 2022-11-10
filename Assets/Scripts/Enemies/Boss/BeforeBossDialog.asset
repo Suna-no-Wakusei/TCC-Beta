@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: BeforeBossDialog
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - AAAAAAAAAAAAAAAAAAAAH! O que foi isso???
+    - "Que dor de cabe\xE7a, foi como se um raio tivesse passado pelo meu corpo,
+      fazendo eu perder o controle dele por alguns intantes"
+    - "O que? Raio? Quem est\xE1 a\xED?"
+    - "Ai! Minha cabe\xE7a... o que t\xE1 acontecendo???"
+    - "(Quem \xE9 voc\xEA? Onde estamos?)"
+    - "Calma, isso tudo t\xE1 vindo de dentro da minha cabe\xE7a? Como isso \xE9
+      poss\xEDvel?"
+    - "Preciso sair daqui r\xE1pido"
+    - "Uhm? N\xE3o consigo mais controlar o meu corpo"
+    - "Interessante, ent\xE3o isso deve ter sido resultado de algum feiti\xE7o de
+      fus\xE3o de mentes, proporcionado por esse artefato m\xE1gico"
+    - "Parece que est\xE1 faltando peda\xE7os nele"
+    - "T\xE1 bom, j\xE1 chega disso, eu quero sair daqui"
+    - "T\xF4 conseguindo me mexer de novo"
+    - Ai! isso incomoda bastante
+    - "Afinal, quem \xE9 voc\xEA? E o que t\xE1 fazendo dentro do meu corpo? Isso
+      \xE9 estranho demais pra mim"
+    - "Quem sou eu? Eu... Eu... N\xE3o me lembro"
+    - "N\xE3o se lembra? A prop\xF3sito, como sabe tanto de magia?"
+    - "Por algum motivo eu sei de tudo isso, mas n\xE3o consigo me lembrar quem eu
+      sou"
+    - "Que \xF3timo, agora mais isso pra eu ter que lidar"
+    - "Olha, eu tenho que levar toda essa madeira pro meu chefe at\xE9 do fim do
+      dia sen\xE3o eu t\xF4 na rua"
+    - "Ent\xE3o se puder fazer o favor de n\xE3o falar nada durante esse per\xEDodo,
+      eu agrade\xE7o"
+    - Estamos sendo atacados!
+    - "De novo n\xE3o!"
+    - "O que s\xE3o essas coisas?"
+    - "Treants, criaturas que s\xE3o como \xE1rvores vivas, mas por algum motivo
+      esses s\xE3o diferentes"
+    - "A estrutura do corpo deles est\xE1 envolta por um tipo de magia que eu n\xE3o
+      consigo identificar"
+    - "Arvores vivas m\xE1gicas do mal? T\xE1 bom, pra mim n\xE3o d\xE1, eu quero
+      dar um fora daqui!"
+    - "N\xE3o se preocupe, por serem feitos de madeira s\xE3o muito vuner\xE1veis
+      a magias de fogo"
+    - "Vou cuidar disso r\xE1pido. Agora!"
+    - "Espera... N\xE3o consigo usar minha magia"
+    - Mais essa agora, pra melhorar
+    - "Seu corpo n\xE3o \xE9 apto para o uso de magia? Nesse caso, vou ter fazer
+      isso agora manualmente"
+    - "O que? Parece que o corpo ainda n\xE3o se acostumou com o consumo de mana"
+    - "Se esse \xE9 o caso ent\xE3o, deixa que eu assumo daqui!"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  afterDialogText:
+    lines: []
+    icons: []
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 7.77, y: -23.38, z: -10}

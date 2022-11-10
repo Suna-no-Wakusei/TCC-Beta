@@ -11,7 +11,7 @@ public class HPShowing : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        hpText.text = GameManager.instance.health + " / " + GameManager.instance.health;
+        hpText.text = GameManager.instance.health + " / " + GameManager.instance.maxHP;
         hpShowing.SetActive(true);
     }
 
@@ -22,6 +22,6 @@ public class HPShowing : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     private void Update()
     {
-        hpText.text = GameManager.instance.health + " / " + GameManager.instance.health;
+        hpText.text = GameManager.instance.health + " / " + GameManager.instance.maxHP;
     }
 }

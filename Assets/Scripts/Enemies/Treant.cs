@@ -25,7 +25,7 @@ public class Treant : Fighter
 
     public float attackRange;
     public float chasingRange;
-    private Transform target;
+    public Transform target;
     private Vector3 roamPosition;
     private Vector3 startingPosition;
     private bool stopMoving = false;
@@ -98,7 +98,16 @@ public class Treant : Fighter
                     path = null;
                     stopMoving = true;
                     state = GameState.Attacking;
-                    StartCoroutine(EnemyAttack());
+                    Coroutine lastAttack = StartCoroutine(EnemyAttack());
+                    if (damaged)
+                    {
+                        StopCoroutine(lastAttack);
+
+                        animator.SetBool("Attack", false);
+
+                        stopMoving = false;
+                        state = GameState.ChasingTarget;
+                    }
                 }
 
                 float stopChasing = 10f;
