@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
         spellBook = new SpellBook(UseSpell);
         objectiveManager = new ObjectiveManager();
         sfxManager = GameObject.FindWithTag("SFX").GetComponent<SFXManager>();
+        hero = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
+        allMagics = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<SuperClassMagic>();
 
         if (sfxManager == null)
             sfxManager = new SFXManager();
@@ -169,6 +171,11 @@ public class GameManager : MonoBehaviour
                 if (currentMana == maxMana) return;
                 currentMana += maxMana / 2;
                 inventory.RemoveItem(new Item { itemType = Item.ItemType.SmallManaPotion, amount = 1 });
+                break;
+            case Item.ItemType.Cookie:
+                if (health == maxHP) return;
+                health += 20;
+                inventory.RemoveItem(new Item { itemType = Item.ItemType.Cookie, amount = 1 });
                 break;
             case Item.ItemType.GreyKey:
                 break;
@@ -460,7 +467,7 @@ public class GameManager : MonoBehaviour
         for(int i = 1; i < akemiAnim.Count; i++)
         {
             globalVolume.profile = akemiAnim[i];
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSecondsRealtime(0.03f);
         }
     }
 

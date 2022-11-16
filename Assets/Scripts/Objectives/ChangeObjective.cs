@@ -5,35 +5,31 @@ using TMPro;
 
 public class ChangeObjective : MonoBehaviour
 {
-    [SerializeField] private bool addNewObjective;
-    [SerializeField] private bool completeActiveObjective;
+    public bool addNewObjective;
+    public bool completeActiveObjective;
+    public int objectiveID;
     public string objectiveTitle;
 
     public string objectiveDescription;
     public int objectiveReward;
 
-    public void HandleUpdate()
-    {
-        if(addNewObjective)
-            AddingObjectives();
-        else if (completeActiveObjective)
-        {
-            if(GameManager.instance.objectiveManager.GetObjective() != null)
-                FinishingObjectives();
-        }
-    }
+    public Coroutine addingCoroutine;
+    public Coroutine completingCoroutine;
 
     public void AddingObjectives()
     {
+        if (!addNewObjective) return;
+
         Objective objective = new Objective();
 
+        objective.id = objectiveID;
         objective.title = objectiveTitle;
         objective.description = objectiveDescription;
         objective.reward = objectiveReward;
 
         GameManager.instance.objectiveManager.AddObjective(objective);
 
-        StartCoroutine(ObjectiveNofitication());
+        addingCoroutine = StartCoroutine(ObjectiveNofitication());
     }
 
     private IEnumerator ObjectiveNofitication()
@@ -74,8 +70,10 @@ public class ChangeObjective : MonoBehaviour
 
     public void FinishingObjectives()
     {
+        if (!completeActiveObjective) return;
+
         GameManager.instance.objectiveManager.CompleteObjective();
 
-        StartCoroutine(CompletedNofitication());
+        completingCoroutine = StartCoroutine(CompletedNofitication());
     }
 }

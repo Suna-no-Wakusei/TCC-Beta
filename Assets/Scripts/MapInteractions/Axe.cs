@@ -32,7 +32,13 @@ public class Axe : MonoBehaviour, ICollectable
         {
             if (DialogueManager.Instance.dialogIsOver)
             {
+                if (this.GetComponent<ChangeObjective>() != null)
+                {
+                    this.GetComponent<ChangeObjective>().AddingObjectives();
+                    dialog.dialogStarted = false;
+                }
                 dialog.dialogAlreadyPlayed = true;
+
                 Destroy(this.gameObject);
             }
         }

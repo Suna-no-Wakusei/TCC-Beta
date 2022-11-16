@@ -2367,6 +2367,7 @@ MonoBehaviour:
   maxHP: 100
   characterUnableToMove: 0
   timeRunning: 0
+  availableToInteract: 1
   colliderAttack: {fileID: 854096060108923026}
   playerInput: {fileID: 2359152146987293108}
   fireballSpeed: 6

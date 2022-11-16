@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needKey: 0
   weapon: 0
-  chestAlreadyOpened: 0
+  chestAlreadyOpened: 1
   animator: {fileID: 0}
   items:
   - itemType: 4

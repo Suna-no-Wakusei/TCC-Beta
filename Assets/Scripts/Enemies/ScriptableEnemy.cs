@@ -6,5 +6,6 @@ using UnityEngine;
 public class ScriptableEnemy : ScriptableObject
 {
     public bool alive;
+    public bool canMove;
     public enum EnemyType { TreantMini, TreantNormal }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861059615913800976}
   - component: {fileID: 267552655755073115}
+  - component: {fileID: 4304666437498538960}
   - component: {fileID: 861059615913800977}
   - component: {fileID: 861059615913800979}
   - component: {fileID: 861059615913800980}
@@ -66,6 +67,21 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &4304666437498538960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861059615913800982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fd9ecb16ed2c347a18ec9f6c9f8d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -2
+  runOnlyOnce: 0
 --- !u!212 &861059615913800977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -201,10 +217,10 @@ MonoBehaviour:
   maxHP: 6
   characterUnableToMove: 0
   enemy: {fileID: 11400000, guid: 25df4957d20b849418d3514d3530b37d, type: 2}
-  xpValue: 10
+  xpValue: 20
   state: 0
-  attackRange: 4
-  chasingRange: 7
+  attackRange: 5
+  chasingRange: 10
   rootAttack: {fileID: 0}
   speed: 1200
   nextWaypointDistance: 0.5

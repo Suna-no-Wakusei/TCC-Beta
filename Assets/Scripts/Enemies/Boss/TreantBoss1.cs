@@ -17,6 +17,10 @@ public class TreantBoss1 : Fighter
     [SerializeField] GameObject TreantBoss2;
     [SerializeField] BoxCollider2D hitbox;
 
+    public GameObject treantPF;
+    public Vector2 posSpawn;
+    private bool spawnEnemies = false;
+
     public bool dialogRunning = false;
     public bool dialogIsOver;
     bool isTyping;
@@ -34,7 +38,9 @@ public class TreantBoss1 : Fighter
         dialogRunning = true;
         yield return new WaitForEndOfFrame();
         GameManager.instance.hero.animator.SetFloat("Speed", 0);
-        Time.timeScale = 0f;
+
+        for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
+            GameManager.instance.scriptableEnemies[i].canMove = false;
 
         GameManager.instance.state = GameState.Paused;
 
@@ -107,6 +113,11 @@ public class TreantBoss1 : Fighter
                     dialogIsOver = true;
                     Time.timeScale = 1f;
 
+                    for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
+                        GameManager.instance.scriptableEnemies[i].canMove = true;
+
+                    spawnEnemies = true;
+
                     GameManager.instance.playerMode = 0;
                     SFXManager.instance.StopMagicAmbient();
                     SFXManager.instance.PlayAmbient();
@@ -167,9 +178,26 @@ public class TreantBoss1 : Fighter
         Camera.main.transform.position = pos2;
     }
 
+    private void SpawnEnemies()
+    {
+        if (!spawnEnemies) return;
+
+        GameObject treantGO = Instantiate(treantPF, posSpawn, Quaternion.identity);
+        Treant treant = treantGO.GetComponent<Treant>();
+
+        treant.enemy = (ScriptableEnemy)ScriptableObject.CreateInstance("ScriptableEnemy");
+
+        treant.xpValue = 0;
+
+        treant.enemy.alive = true;
+        treant.enemy.canMove = true;
+    }
+
     private void Awake()
     {
         StartCoroutine(ShowDialog(dialogScript.dialogText));
+
+        InvokeRepeating("SpawnEnemies", 2f, 10f);
 
         animator = GetComponent<Animator>();
     }
@@ -181,6 +209,7 @@ public class TreantBoss1 : Fighter
 
     IEnumerator DeathAnimation()
     {
+        GameManager.instance.sfxManager.PlayBossTreantDamage();
         hitbox.gameObject.SetActive(false);
         yield return null;
         StartCoroutine(FadeCo());

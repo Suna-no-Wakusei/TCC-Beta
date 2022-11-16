@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: FamilyPhoto1
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - "(Quem s\xE3o essas pessoas?)"
+    - "Esses s\xE3o os meus pais e a minha irm\xE3zinha Sayuri"
+    - "J\xE1 faz um bom tempo desde que eu vi eles pela \xFAltima vez"
+    - Depois que a gente resolver isso tudo eu quero poder ir me encontrar com eles
+      de novo
+    - "(E esse garotinho aqui no meio \xE9 voc\xEA? Que fofinho)"
+    - "Essa foto \xE9 de bastante tempo atr\xE1s, a Sayuri mesmo j\xE1 t\xE1 bem
+      mais crescida"
+    - "(Queria poder me lembrar da minha fam\xEDlia)"
+    - "(N\xE3o conseguir saber quem eu sou \xE9 algo que est\xE1 mexendo bastante
+      comigo)"
+    - "N\xE3o precisa se preocupar, eu vou achar um jeito de fazer voc\xEA voltar
+      ao normal"
+    - "N\xF3s dois vamos, juntos!"
+    - "(Voc\xEA tem um grande cora\xE7\xE3o, Tamaki)"
+    - "(Tenho certeza que seus pais e amigos sentem muito orgulho de voc\xEA)"
+    icons:
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+  afterDialogText:
+    lines: []
+    icons: []
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  timeRunningDialog: 0
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

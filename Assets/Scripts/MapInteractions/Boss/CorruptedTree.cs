@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CorruptedTree : MonoBehaviour, ICollectable
 {
     public ScriptableDialog dialog;
+    public Vector2 bossPlayerPos;
 
     public void Collect()
     {
@@ -36,7 +37,7 @@ public class CorruptedTree : MonoBehaviour, ICollectable
             {
                 GameManager.instance.actualScene = "Boss";
 
-                GameManager.instance.nextScenePos = new Vector2(14.23f, -8.56f);
+                GameManager.instance.nextScenePos = bossPlayerPos;
                 SaveSystem.SaveState();
 
                 StartCoroutine(FadeCo());

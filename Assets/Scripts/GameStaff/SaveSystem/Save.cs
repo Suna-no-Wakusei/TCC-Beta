@@ -28,6 +28,7 @@ public class Save
     public string[] savedItemType = new string[20];
 
     //Saving Current Quest
+    public int questID;
     public string questTitle;
     public string questDescription;
     public int questReward;

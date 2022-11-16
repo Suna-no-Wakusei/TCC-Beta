@@ -159,6 +159,11 @@ public class TreantM : Fighter
     {
         if (!enemy.alive)
             Destroy(this.gameObject);
+
+        if (!enemy.canMove)
+            characterUnableToMove = true;
+        else
+            characterUnableToMove = false;
     }
 
     private void FixedUpdate()
@@ -222,7 +227,7 @@ public class TreantM : Fighter
     {
         animator.SetBool("Attack", true);
 
-        GameManager.instance.sfxManager.PlayWoodAttack();
+        GameManager.instance.sfxManager.PlayRootAttack2();
 
         animator.SetFloat("AttackHorizontal", target.position.x - rb.position.x);
         animator.SetFloat("AttackVertical", target.position.y - rb.position.y);
@@ -241,7 +246,7 @@ public class TreantM : Fighter
 
         animator.SetBool("Attack", false);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
 
         rootAttack.SetActive(false);
 

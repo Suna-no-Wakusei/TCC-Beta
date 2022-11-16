@@ -6,8 +6,10 @@ using CodeMonkey.Utils;
 
 public class ItemWorld : MonoBehaviour
 {
+    public static ItemWorld instance;
 
-    Rigidbody2D rb;
+    private bool itemCollectable;
+    private Rigidbody2D rb;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,12 +42,20 @@ public class ItemWorld : MonoBehaviour
 
     public void FixedUpdate()
     {
-        float distanceChecker = Vector2.Distance(GameManager.instance.hero.transform.position, transform.position);
-        Vector2 velocity = (GameManager.instance.hero.transform.position - transform.position).normalized;
+        if(InventoryManager.Instance.isOpen)
+            itemCollectable = false;
+        else
+            itemCollectable = true;
 
-        if(distanceChecker <= 2)
+        if (itemCollectable)
         {
-            rb.AddForce(velocity * 2, ForceMode2D.Impulse);
+            float distanceChecker = Vector2.Distance(GameManager.instance.hero.transform.position, transform.position);
+            Vector2 velocity = (GameManager.instance.hero.transform.position - transform.position).normalized;
+
+            if (distanceChecker <= 2)
+            {
+                rb.AddForce(velocity * 2, ForceMode2D.Impulse);
+            }
         }
     }
 
@@ -63,8 +73,8 @@ public class ItemWorld : MonoBehaviour
     {
         GameManager.instance.sfxManager.PlayDropItem();
         Vector3 randomDir = UtilsClass.GetRandomDir();
-        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 2.5f, item);
-        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 2.5f, ForceMode2D.Impulse);
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 1.1f, item);
+        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 6f, ForceMode2D.Impulse);
         return itemWorld;
     }
 
@@ -74,6 +84,7 @@ public class ItemWorld : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();

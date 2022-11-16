@@ -265,11 +265,11 @@ MonoBehaviour:
   hp: 4
   maxHP: 4
   characterUnableToMove: 0
-  enemy: {fileID: 11400000, guid: f91ca10132da4d947aa0950cfb100482, type: 2}
+  enemy: {fileID: 11400000, guid: ec9b12da3416a8149b34d9502ab79bba, type: 2}
   xpValue: 10
   state: 0
   attackRange: 1.8
-  chasingRange: 5
+  chasingRange: 10
   target: {fileID: 0}
   speed: 1000
   nextWaypointDistance: 1

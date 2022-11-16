@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Elga_1
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - Bom dia, Tamaki
+    - "O c\xE9u est\xE1 lindo hoje, voc\xEA n\xE3o acha?"
+    - Bom dia, senhora Elga
+    - "(Por algum motivo, sempre que eu passo por ela, ela me d\xE1 bom dia)"
+    - "(Independente do hor\xE1rio)"
+    - "Voc\xEA gosta bastante de admirar o c\xE9u, n\xE3o \xE9?"
+    - Fica bastante tempo aqui do lado de fora
+    - "Sabe... quando eu era mais jovem, eu e o meu falecido marido ficavamos deitados
+      no meio do campo admirando o c\xE9u"
+    - E mesmo depois que ele se foi, eu continuo vindo aqui todos os dias e fico
+      observando as nuvens e as estrelas
+    - Nesses momentos eu sinto como se ele ainda estivesse aqui do meu lado...
+    - "S\xF3 a saudade dos meus parentes e amigos de Bingus j\xE1 \xE9 bem alta"
+    - "N\xE3o sei como a senhora consegue passar por isso tudo sozinha"
+    - "Ora meu filho, n\xE3o se pode ficar se apegando muito ao passado"
+    - "\xC9 melhor ser feliz pelas boas lembran\xE7as que restaram do que se lamentar
+      pelas que n\xE3o viveu"
+    - "Tenho minhas filhas Pharmie e Brenda ao meu lado, voc\xEA e todos os moradores
+      do vilarejo que sempre me ajudam"
+    - "Por mais que pare\xE7a, voc\xEA nunca est\xE1 sozinho"
+    - Pode acreditar que agora eu entendo isso bem
+    - "(At\xE9 mais do que voc\xEA imagina)"
+    icons:
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  afterDialogText:
+    lines:
+    - Bom dia, Tamaki
+    - "O c\xE9u est\xE1 ainda mais bonito hoje"
+    - "Gostaria de entrar para tomar um ch\xE1?"
+    - "Obrigado, vov\xF3, mas agora eu tenho algumas coisas pra fazer"
+    - Sem problemas, na proxima vez irei fazer biscoitos para acompanhar
+    icons:
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

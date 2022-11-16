@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Marcel_1
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - "Sauda\xE7\xF5es, Tamaki"
+    - "Como voc\xEA est\xE1?"
+    - Oi, padre Marcel
+    - "T\xF4 s\xF3 seguindo em mais um dia de trabalho"
+    - "Trabalho \xE9 sempre bom, \xE9 importante ser grato por ele e dar sempre o
+      seu melhor"
+    - "Mas nunca se esque\xE7a de separar um dia para descan\xE7ar e aproveitar as
+      grandiosas maravilhas do nosso mundo"
+    - Disso eu com certeza vou me lembrar
+    icons:
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  afterDialogText:
+    lines:
+    - "J\xE1 te contei a hist\xF3ria de como eu vim parar aqui no vilarejo?"
+    - Algumas vezes, talvez
+    - "Faz tanto tempo, eu era mais novo do que voc\xEA quando tudo aconteceu"
+    - "E voc\xEA vai contar ela mais uma vez n\xE3o \xE9..."
+    - Quando eu tinha dezesseis anos, o reino de Hipolitus estava passando por uma
+      crise devastadora
+    - "Eu j\xE1 tinha perdido meus pais para a Peste dos Cristais Rubricos"
+    - "Uma peste que assolou toda a regi\xE3o m\xE1gica de Mentia"
+    - "Tinha sido descoberta uma bact\xE9ria que quando entrava em contato com os
+      cristais dos portais de teletransporte se espalhava de uma forma absurdamente
+      r\xE1pida"
+    - "Ao contaminar uma pessoa, cristais de tom rubrico come\xE7avam a brotar por
+      toda a pele"
+    - "At\xE9 que em um momento eles come\xE7am a brotar nos tecidos dos \xF3rg\xE3os
+      internos"
+    - "Nascendo cristais nos pulm\xF5es, no cora\xE7\xE3o, no c\xE9rebro, at\xE9
+      que eventualmente o infectado vem \xE0 fal\xEAncia"
+    - Sempre fico arrepiado quando chega nessa parte
+    - "Quando meus pais foram contaminados, ainda n\xE3o tinha sido descoberta uma
+      cura"
+    - Nem por meio da medicina nem com o uso da magia
+    - Eu estava sozinho, sem mais nenhum parente no reino
+    - "Estava acima do peso e n\xE3o conseguia lucrar quase nada nas vendas das colheitas
+      das planta\xE7\xF5es de vegetais dos meus pais"
+    - "J\xE1 que por decorr\xEAncia da peste, a pobreza tamb\xE9m se espalhou na
+      regi\xE3o"
+    - "Deve ter sido muito dif\xEDcil passar por isso tudo"
+    - "O pior ainda n\xE3o foi isso, depois de um tempo eu tamb\xE9m fui contaminado
+      pela peste"
+    - "Perdi muito peso, os cristais se espalharam por toda a minha pele e n\xE3o
+      paravam de co\xE7ar"
+    - "N\xE3o tinha mais nenhum dinheiro e tive que abandonar minha casa, como eu
+      n\xE3o conseguia mais pagar os impostos"
+    - Fiquei vagando pela costa do lago Amogius por dias, sem nenhum pertence e sem
+      ter o que comer
+    - "At\xE9 que chegou o momento em que eu j\xE1 n\xE3o tinha mais nada, estava
+      completamente sozinho e os cristais come\xE7aram a brotar nos meus \xF3rg\xE3os
+      internos"
+    - "Eu sabia que estava morrendo, e que n\xE3o havia nada que podia ser feito"
+    - "J\xE1 n\xE3o tinha mais for\xE7as se quer para me levantar do ch\xE3o"
+    - "Me rendi \xE0 peste e fiquei aguardando pelo meu destino final"
+    - "Ca\xEDdo em uma caverna perto do lago Amogius"
+    - "Ela era \xFAmida, era fria, silenciosa"
+    - "Um sil\xEAncio ensurdecedor que me artomentava de dia e de noite"
+    - "At\xE9 que em um momento, eu fechei meus olhos e senti que ia morrer"
+    - Nessa hora, uma luz surgiu na minha frente
+    - "Ela era t\xE3o forte que eu n\xE3o conseguia nem abrir os olhos"
+    - "Um calor come\xE7ou a cobrir todo o meu corpo"
+    - E quando eu dei por mim, os cristais e todas as minhas feridas haviam desaparecido
+    - "\xC9 nessa parte da hist\xF3ria que eu come\xE7o a me perder"
+    - "Assim que eu abri meus olhos, uma uma bela mo\xE7a estava na minha frente"
+    - Ela tinha orelhas pontudas, olhos claros, cabelos longos e loiros
+    - Sua pele brilhava em uma cor dourada e ela usava um grande vestido branco
+    - "Lembro at\xE9 hoje as palavras que ela me disse"
+    - "'Alegre-se, pequenino, o Sol brilhar\xE1 para voc\xEA mais um dia'"
+    - "'Encontre seu caminho e fa\xE7a seu melhor para que esta paz permane\xE7a'"
+    - Antes que eu pudesse falar qualquer coisa
+    - "Uma luz muito forte come\xE7ou a emanar dela e meus olhos foram cegados"
+    - Depois disso, eu acordei com o nascer do Sol e segui andando pela costa do
+      Lago Amogius
+    - "Acabei saindo em uma trilha e passando por ela eu cheguei at\xE9 uma pequena
+      vila"
+    - O vilarejo Tsuyu
+    - "A hist\xF3ria desse vilarejo \xE9 muito interessante"
+    - "Ele \xE9 muito antigo, foi fundado ap\xF3s o fim da Guerra do Babacchi"
+    - "Um soldado de Bingus eliminou sozinho um batalh\xE3o inteiro dephilim, sendo
+      apenas um humano campon\xEAs"
+    - "As pessoas que ele salvou foram levadas at\xE9 essa regi\xE3o, onde come\xE7aram
+      a construir seu novo lar"
+    - "Acho que voc\xEA j\xE1 t\xE1 come\xE7ando a se perder um pouco na hist\xF3ria"
+    - "Voc\xEA tem um ponto"
+    - Onde eu estava mesmo?
+    - "Quando voc\xEA chegou ao vilarejo"
+    - Ah, sim
+    - Depois que cheguei aqui, eu fiquei um tempo numa pequena capela
+    - "Ela estava abandonada, e s\xF3 era usada como dep\xF3sito"
+    - Nela tinham muitos livros, e halteres que eram usados antigamente no treinamento
+      dos soldados de Bingus
+    - "Passei meus dias a partir de ent\xE3o buscando meu caminho e procurando manter
+      a paz, como aquela mo\xE7a tinha dito para mim"
+    - "Ent\xE3o, me dediquei \xE0 muscula\xE7\xE3o e ao estudo dos livros que estavam
+      na capela"
+    - "Para n\xE3o morrer de fome, eu trabalhava na planta\xE7\xE3o do pai da senhora
+      Elga"
+    - "Como pagamento, eu recebia algumas moedas de prata, p\xE3es e ovos"
+    - "Depois de alguns anos trabalhando, eu acumulei dinheiro o suficiente para
+      poder comprar um peda\xE7o do terreno da fazenda"
+    - "Fiquei com um f\xEDsico mais evolu\xEDdo depois de passar anos comendo p\xE3o
+      com ovo, trabalhando nas planta\xE7\xF5es e me exercitando com os halteres
+      do dep\xF3sito"
+    - "J\xE1 tinha me esquecido um pouco do quanto voc\xEA \xE9 detalhista"
+    - "Por fim, quando j\xE1 estava com uma vida est\xE1vel, eu reabri a capela para
+      poder continuar mantendo a paz no vilarejo"
+    - "E desde ent\xE3o eu continuo fazendo as missas tr\xEAs vezes por semana, me
+      exercitando e estudando todos os dias"
+    - "Desde que eu vim morar aqui, eu percebi que os dias aqui s\xE3o sempre bem
+      tranquilos"
+    - "Voc\xEA faz um bom trabalho por aqui, padre Marcel"
+    - "Fico feliz em ouvir isso de voc\xEA, Tamaki"
+    - "Espero que tamb\xE9m encontre aquilo que est\xE1 procurando"
+    - O que eu... estou procurando?
+    icons:
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 1
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Pharmie_1
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - "Ol\xE1, Tamaki"
+    - "O dia est\xE1 lindo hoje, n\xE3o acha?"
+    - "Eu n\xE3o sou muito f\xE3 de Sol"
+    - "Mas o dia t\xE1 bem bonito"
+    - "Est\xE1 chegando a \xE9poca dos morangos"
+    - "Sei que voc\xEA gosta bastante"
+    - "Ent\xE3o n\xE3o deixe de vir aqui pegar uma caixa depois da colheita"
+    - Pode deixar, Pharmie!
+    icons:
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  afterDialogText:
+    lines:
+    - "Est\xE1 chegando a \xE9poca dos morangos"
+    - "Sei que voc\xEA gosta bastante"
+    - "Ent\xE3o n\xE3o deixe de vir aqui pegar uma caixa depois da colheita"
+    icons:
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  timeRunningDialog: 0
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

@@ -10,9 +10,29 @@ public class MuteMusicButton : MonoBehaviour
     public AudioMixer mixer;
     public Sprite mutedAudio, defaultAudio;
 
-    void Update()
+    private void Start()
     {
-        float j = 0;
+        mixer.SetFloat("MusicVol", PlayerPrefs.GetFloat("MusicVol"));
+        mixer.SetFloat("SFXVol", PlayerPrefs.GetFloat("SFXVol"));
+
+        float j;
+        mixer.GetFloat(("MusicVol"), out j);
+
+        if(j == -80)
+        {
+            musicVolTog.isOn = true;
+            musicVolTog.GetComponent<Image>().sprite = mutedAudio;
+        }
+        else
+        {
+            musicVolTog.isOn = false;
+            musicVolTog.GetComponent<Image>().sprite = defaultAudio;
+        }
+    }
+
+    void LateUpdate()
+    {
+        float j;
         mixer.GetFloat(("MusicVol"), out j);
 
         if (musicVolTog.isOn)

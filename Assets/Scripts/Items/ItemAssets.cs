@@ -23,4 +23,5 @@ public class ItemAssets : MonoBehaviour
     public Sprite smallManaPotionSprite;
     public Sprite greyKeySprite;
     public Sprite goldenKeySprite;
+    public Sprite cookie;
 }

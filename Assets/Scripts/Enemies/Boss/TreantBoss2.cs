@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreantBoss2 : Fighter
 {
+    public int xpValue;
     public Laser laser;
     public Collider2D hitbox;
+    public float leftCorner, rightCorner, bottomCorner, topCorner;
 
     public GameObject rootAttack;
 
@@ -18,9 +21,9 @@ public class TreantBoss2 : Fighter
     // Update is called once per frame
     void Attacking()
     {
-        if(10.6 >= GameManager.instance.hero.transform.position.x && GameManager.instance.hero.transform.position.x >= 4.18)
+        if(rightCorner >= GameManager.instance.hero.transform.position.x && GameManager.instance.hero.transform.position.x >= leftCorner)
         {
-            if(-17.30 >= GameManager.instance.hero.transform.position.y && GameManager.instance.hero.transform.position.y >= -25.91)
+            if(topCorner >= GameManager.instance.hero.transform.position.y && GameManager.instance.hero.transform.position.y >= bottomCorner)
             {
                 int i;
 
@@ -46,9 +49,10 @@ public class TreantBoss2 : Fighter
     {
         rootAttack.transform.position = GameManager.instance.hero.transform.position;
         yield return new WaitForSeconds(0.5f);
+        GameManager.instance.sfxManager.PlayRootAttack();
         rootAttack.SetActive(true);
 
-        yield return new WaitForSeconds(0.875f);
+        yield return new WaitForSeconds(1.375f);
 
         rootAttack.SetActive(false);
     }
@@ -56,6 +60,27 @@ public class TreantBoss2 : Fighter
     protected override void Death()
     {
         rootAttack.SetActive(false);
+
+        GameManager.instance.sfxManager.PlayBossTreantDamage();
+        GameManager.instance.experience += xpValue;
+
+        GameManager.instance.actualScene = "Level4";
+        SaveSystem.SaveState();
+
+        StartCoroutine(FadeCo());
+    }
+
+    public IEnumerator FadeCo()
+    {
+        GameManager.instance.ChangeModeAnim();
+        if (GameManager.instance.fadeOutPanel != null)
+        {
+            Instantiate(GameManager.instance.fadeOutPanel, Vector3.zero, Quaternion.identity);
+        }
+        yield return new WaitForSeconds(1f);
+        GameManager.instance.hero.availableToInteract = true;
+        SceneManager.LoadScene("Level4");
+
         Destroy(gameObject);
     }
 

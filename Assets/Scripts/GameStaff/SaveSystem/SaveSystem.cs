@@ -49,6 +49,7 @@ public static class SaveSystem
         //Saving Current Quest
         if(GameManager.instance.objectiveManager.GetObjective() != null)
         {
+            save.questID = GameManager.instance.objectiveManager.GetObjective().id;
             save.questTitle = GameManager.instance.objectiveManager.GetObjective().title;
             save.questDescription = GameManager.instance.objectiveManager.GetObjective().description;
             save.questReward = GameManager.instance.objectiveManager.GetObjective().reward;
@@ -169,6 +170,7 @@ public static class SaveSystem
 
                     Objective objective = new Objective();
 
+                    objective.id = save.questID;
                     objective.title = save.questTitle;
                     objective.description = save.questDescription;
                     objective.reward = save.questReward;
@@ -253,7 +255,16 @@ public static class SaveSystem
 
     public static void LoadSavedScene()
     {
-        SceneManager.LoadScene(savedScene);
+        StreamReader sr = new StreamReader(Application.persistentDataPath + "/JSONData.sus");
+
+        string JsonString = sr.ReadToEnd();
+
+        sr.Close();
+
+        //Convert JSON to the Object(save)
+        Save save = JsonUtility.FromJson<Save>(JsonString);
+
+        SceneManager.LoadScene(save.sceneName);
     }
 
 }

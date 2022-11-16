@@ -74,6 +74,36 @@ public class Player : Fighter
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            if (collision.gameObject.GetComponent<ChestOpen>() != null)
+            {
+                if (!collision.gameObject.GetComponent<ChestOpen>().chest.chestAlreadyOpened)
+                    GameManager.instance.InteractButton.SetActive(true);
+            }
+            else
+            {
+                GameManager.instance.InteractButton.SetActive(true);
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            GameManager.instance.InteractButton.SetActive(false);
+        }
+    }
+
+    public void Update()
+    {
+        if (rb.velocity == Vector2.zero)
+            GameManager.instance.floorType = GameManager.FloorType.Null;
+    }
+
     // Update is called once per frame
     public void HandleUpdate()
     {
@@ -140,6 +170,7 @@ public class Player : Fighter
 
         if(rb.velocity == Vector2.zero)
         {
+            GameManager.instance.floorType = GameManager.FloorType.Null;
             GameManager.instance.sfxManager.StopShortGrass();
             GameManager.instance.sfxManager.StopFootstepWood();
             GameManager.instance.sfxManager.StopLongGrass();

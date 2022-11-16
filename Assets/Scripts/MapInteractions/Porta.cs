@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Porta : MonoBehaviour
+public class Porta : Collidable
 {
     public ScriptableDialog dialog;
 
@@ -12,6 +12,8 @@ public class Porta : MonoBehaviour
     public Vector2 playerPosition;
     public TeleportPoint Teleport;
     public float fadeWait;
+
+    private bool enterPortal = false;
 
     void OnTriggerEnter2D(Collider2D coll)
     {
@@ -23,8 +25,18 @@ public class Porta : MonoBehaviour
                 StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.dialogText));
                 return;
             }
+            else
+            {
+                enterPortal = true;
+            }
+        }
+    }
 
-            GameManager.instance.sfxManager.PlayDoor();
+    protected override void OnCollide(Collider2D coll)
+    {
+        //teleport the player
+        if (coll.name == "Hero" && enterPortal)
+        {
             sceneName = sceneNames[Random.Range(0, sceneNames.Length)];
             GameManager.instance.actualScene = sceneName;
 

@@ -53,7 +53,6 @@ public class Treant : Fighter
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
         target = GameManager.instance.hero.transform;
-
         //velocity
         startingPosition = transform.position;
         oldpos = transform.position;
@@ -164,6 +163,11 @@ public class Treant : Fighter
     {
         if (!enemy.alive)
             Destroy(this.gameObject);
+
+        if (!enemy.canMove)
+            characterUnableToMove = true;
+        else
+            characterUnableToMove = false;
     }
 
     private void FixedUpdate()

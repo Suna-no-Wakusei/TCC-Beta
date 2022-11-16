@@ -92,16 +92,20 @@ public class InventoryManager : MonoBehaviour
 
         if (!GameManager.instance.hero.timeRunning) return;
 
+        if (DialogueManager.Instance.dialogRunning) return;
+
+        if (!GameManager.instance.hero.availableToInteract) return;
+
         if (GameManager.instance.state != GameState.Dialog)
         {
             isOpen = !isOpen;
 
             if (isOpen)
             {
+                GameManager.instance.hero.characterUnableToMove = true;
                 menuState = 0;
                 inventoryPanel.SetActive(true);
                 OnPause?.Invoke();
-                Time.timeScale = 0f;
             }
             else
             {
@@ -129,7 +133,7 @@ public class InventoryManager : MonoBehaviour
 
         inventoryPanel.SetActive(false);
         OnEndPause?.Invoke();
-        Time.timeScale = 1f;
+        GameManager.instance.hero.characterUnableToMove = false;
     }
 
     public void ChangeMenu(int i)

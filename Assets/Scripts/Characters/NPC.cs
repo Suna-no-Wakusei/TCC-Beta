@@ -5,14 +5,37 @@ using UnityEngine;
 public class NPC : Collidable, ICollectable
 {
     public ScriptableDialog dialog;
+    private bool itemAdded;
+    private bool lateStarted;
 
     public void Collect()
     {
+        if(dialog.objectiveID != 0 && GameManager.instance.objectiveManager.objectiveActive != null)
+        {
+            if (dialog.objectiveID == GameManager.instance.objectiveManager.objectiveActive.id)
+            {
+                if (!dialog.timeRunningDialog)
+                    Time.timeScale = 0f;
+
+                StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.objectiveText));
+
+                if (dialog.finishObjective)
+                    this.GetComponent<ChangeObjective>().FinishingObjectives();
+                return;
+            }
+        }
+
         if (dialog.dialogAlreadyPlayed == false)
         {
             if (DialogueManager.Instance.dialogRunning == false)
             {
+                if (!dialog.timeRunningDialog)
+                    Time.timeScale = 0f;
+
                 StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.dialogText));
+
+                if (this.GetComponent<ChangeObjective>() != null)
+                    this.GetComponent<ChangeObjective>().FinishingObjectives();
 
                 dialog.dialogStarted = true;
             }
@@ -26,12 +49,17 @@ public class NPC : Collidable, ICollectable
     IEnumerator LateDialog()
     {
         GameManager.instance.hero.availableToInteract = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSecondsRealtime(2f);
         GameManager.instance.hero.characterUnableToMove = true;
         GameManager.instance.hero.animator.SetFloat("Speed", 0);
         GameManager.instance.floorType = GameManager.FloorType.Null;
         Camera.main.transform.GetComponent<CameraMotor>().enabled = false;
-        StartCoroutine(LerpFromTo(Camera.main.transform.position, dialog.camFocus, 1f));
+
+        if(dialog.camFocus != Vector3.zero)
+        {
+            StartCoroutine(LerpFromTo(Camera.main.transform.position, dialog.camFocus, 1f));
+        }
+        
         StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.lateDialogText));
 
         yield return new WaitUntil(() => DialogueManager.Instance.dialogIsOver);
@@ -39,7 +67,7 @@ public class NPC : Collidable, ICollectable
         if (DialogueManager.Instance.dialogIsOver)
         {
             StartCoroutine(LerpFromTo(Camera.main.transform.position, new Vector3(GameManager.instance.hero.transform.position.x, GameManager.instance.hero.transform.position.y, -10), 1f));
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(dialog.lateDelay);
 
             GameManager.instance.hero.characterUnableToMove = false;
             Camera.main.transform.GetComponent<CameraMotor>().enabled = true;
@@ -65,14 +93,24 @@ public class NPC : Collidable, ICollectable
             {
                 if (this.GetComponent<ChangeObjective>() != null)
                 {
-                    this.GetComponent<ChangeObjective>().HandleUpdate();
+                    this.GetComponent<ChangeObjective>().AddingObjectives();
                     dialog.dialogStarted = false;
                 }
                 dialog.dialogAlreadyPlayed = true;
 
-                if (dialog.lateDialog)
+                if (dialog.lateDialog && !lateStarted)
+                {
+                    lateStarted = true;
                     StartCoroutine(LateDialog());
+                }
             }
+        }
+
+        if (dialog.getItemOnDialog && dialog.dialogLineItem == DialogueManager.Instance.currentLine && !itemAdded)
+        {
+            itemAdded = true;
+            GameManager.instance.inventory.AddItem(dialog.item);
+            GameManager.instance.ShowText("+" + dialog.item.amount + " " + dialog.item.ItemName(), 20, Color.white, transform.position + new Vector3(0, (float)1), Vector3.up * 35, 1f);
         }
     }
 

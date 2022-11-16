@@ -96,10 +96,17 @@ MonoBehaviour:
   afterDialogText:
     lines: []
     icons: []
+  timeRunningDialog: 0
   dialogAlreadyPlayed: 0
   dialogStarted: 0
   lateDialog: 0
   lateDialogText:
     lines: []
     icons: []
-  camFocus: {x: 7.77, y: -23.38, z: -10}
+  camFocus: {x: -7.84, y: -4.84, z: -10}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

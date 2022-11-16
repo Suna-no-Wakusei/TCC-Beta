@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
@@ -31,7 +32,6 @@ public class MainMenu : MonoBehaviour
         {
             if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))
             {
-                SaveSystem.LoadState();
                 SaveSystem.LoadSavedScene();
                 AudioListener.pause = false;
             }
@@ -40,8 +40,9 @@ public class MainMenu : MonoBehaviour
                 NewGame();
             }
         }
-        catch
+        catch (ArgumentException e)
         {
+            Debug.LogError(e.Message);
             SceneManager.LoadScene("Casa");
         }
     }

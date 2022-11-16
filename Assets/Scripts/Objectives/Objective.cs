@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Objective
 {
+    public int id;
+
     public string title;
     public string description;
 

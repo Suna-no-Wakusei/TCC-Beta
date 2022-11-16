@@ -17,6 +17,7 @@ public class Item
         SmallManaPotion,
         GreyKey,
         GoldenKey,
+        Cookie,
     }
 
 
@@ -37,6 +38,7 @@ public class Item
             case ItemType.SmallManaPotion: return ItemAssets.Instance.smallManaPotionSprite;
             case ItemType.GreyKey: return ItemAssets.Instance.greyKeySprite;
             case ItemType.GoldenKey: return ItemAssets.Instance.goldenKeySprite;
+            case ItemType.Cookie: return ItemAssets.Instance.cookie;
         }
     }
 
@@ -53,6 +55,7 @@ public class Item
             case ItemType.SmallManaPotion: return "Poção de Mana Pequena";
             case ItemType.GreyKey: return "Chave Cinza";
             case ItemType.GoldenKey: return "Chave Dourada";
+            case ItemType.Cookie: return "Cookie";
         }
     }
 
@@ -69,6 +72,7 @@ public class Item
             case ItemType.SmallManaPotion: return "Essa poção restaura 50% da sua mana";
             case ItemType.GreyKey: return "Uma chave cinza";
             case ItemType.GoldenKey: return "Uma chave dourada";
+            case ItemType.Cookie: return "Um cookie caseiro. Cura 20HP";
         }
     }
 
@@ -86,6 +90,7 @@ public class Item
             case ItemType.LargeManaPotion:   
             case ItemType.MediumManaPotion:
             case ItemType.SmallManaPotion:
+            case ItemType.Cookie:
                 return true;
         }
     }

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Larry_1
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - Sabe, Tamaki
+    - "A maior certeza que eu tenho na vida \xE9 a incerteza"
+    - "Por mais que voc\xEA seja competente e se planeje, \xE0s vezes voc\xEA ainda
+      vai ter que contar com a sorte"
+    - "Li isso em um livro de um antigo s\xE1bio"
+    - "Tem vezes que voc\xEA fala coisas inteligentes demais pra eu entender, vov\xF4
+      Larry"
+    - "Voc\xEA que era o bibliotec\xE1rio do vilarejo antes do James, n\xE3o \xE9?"
+    - "J\xE1 faz um tempo desde que eu me aposentei"
+    - "Passava dias e dias dentro da biblioteca lendo todos os livros que chegavam
+      e relendo os que eu j\xE1 havia lido"
+    - "Agora \xE9 o James que assumiu por l\xE1"
+    - "Espero que ele esteja bem, j\xE1 faz alguns dias que n\xE3o nos falamos"
+    - Aconteceu alguma coisa?
+    - "Como voc\xEA j\xE1 deve saber, o James cresceu sem os seus pais biol\xF3gicos"
+    - Eu criei ele passando todo o conhecimento que eu tinha
+    - "Mas teve algumas coisas que eu n\xE3o consegui ensinar a ele"
+    - "Ele acabou se tornando uma pessoa um pouco mais... digamos... dif\xEDcil"
+    - "Como eu perdi meus pais quando era muito novo, acho que n\xE3o tive tanta
+      refer\xEAncia para educ\xE1-lo"
+    - "Relaxa, vov\xF4"
+    - "Sei que voc\xEA fez o melhor que podia"
+    icons:
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  afterDialogText:
+    lines:
+    - "Eu estava lendo uma dramaturgia \xE9lfica da \xE9poca da Guerra do Babacchi"
+    - Nela, conta como morreram duas figuras extremamente importantes para o povo
+      deles
+    - "Akemi e Kun, ambos eram l\xEDderes de for\xE7as do ex\xE9rcito \xE9lfico"
+    - E acabaram morrendo durante a batalha final
+    icons:
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  timeRunningDialog: 0
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69acb06a4790d0e4a83f259ce13ab078, type: 3}
   m_Name: TreantM1
   m_EditorClassIdentifier: 
-  alive: 0
+  alive: 1
+  canMove: 0

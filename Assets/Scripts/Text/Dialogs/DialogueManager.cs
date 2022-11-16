@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     public event Action OnCloseDialog;
     public bool dialogRunning = false;
     public bool dialogIsOver;
+    public bool dialogTimeStop;
     bool isTyping;
 
     Coroutine lastRoutine;
@@ -27,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
-    int currentLine = 0;
+    public int currentLine = 0;
     DialogueText dialog;
 
     public IEnumerator ShowDialog(DialogueText dialog)
@@ -39,7 +40,6 @@ public class DialogueManager : MonoBehaviour
         
         OnShowDialog?.Invoke();
         GameManager.instance.hero.animator.SetFloat("Speed", 0);
-        Time.timeScale = 0f;
 
         this.dialog = dialog;
 
@@ -71,6 +71,7 @@ public class DialogueManager : MonoBehaviour
                 OnCloseDialog?.Invoke();
                 dialogIsOver = true;
                 GameManager.instance.hero.characterUnableToMove = false;
+
                 Time.timeScale = 1f;
             }
         }
