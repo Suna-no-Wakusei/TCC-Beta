@@ -43,8 +43,7 @@ public class MuteMusicButton : MonoBehaviour
         }
         else
         {
-            mixer.SetFloat("MasterVol", 0);
-            PlayerPrefs.SetFloat("MasterVol", 0);
+            mixer.SetFloat("MasterVol", PlayerPrefs.GetFloat("MasterVol"));
             musicVolTog.GetComponent<Image>().sprite = defaultAudio;
         }
 

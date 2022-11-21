@@ -12,7 +12,8 @@ public class SceneSong : MonoBehaviour
         ThemeSong,
         VillageSong,
         TreantSong,
-        LibrarySong
+        LibrarySong,
+        ForestSong
     }
 
     public Song song;
@@ -53,6 +54,8 @@ public class SceneSong : MonoBehaviour
                 if (!music.treantSong.isPlaying)
                     music.treantSong.Play();
                 music.librarySong.Stop();
+                if(SFXManager.instance.ambient.isPlaying)
+                    SFXManager.instance.ambient.Stop();
                 SFXManager.instance.magicAmbient.Stop();
                 break;
             case Song.LibrarySong:
@@ -61,6 +64,17 @@ public class SceneSong : MonoBehaviour
                 music.treantSong.Stop();
                 if (!music.librarySong.isPlaying)
                     music.librarySong.Play();
+                SFXManager.instance.magicAmbient.Stop();
+                break;
+            case Song.ForestSong:
+                music.themeSong.Stop();
+                music.villageSong.Stop();
+                music.treantSong.Stop();
+                music.librarySong.Stop();
+                if (!music.forestSong.isPlaying)
+                    music.forestSong.Play();
+                if (!SFXManager.instance.ambient.isPlaying)
+                    SFXManager.instance.ambient.Play();
                 SFXManager.instance.magicAmbient.Stop();
                 break;
         }

@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour
 
         AudioListener.pause = false;
 
+        Lareira.chimneyActive = false;
         SceneManager.LoadScene("Casa");
     }
 

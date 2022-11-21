@@ -58,8 +58,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (!ctx.performed) return;
 
-        if (GameManager.instance.state != GameState.Dialog) return;
-
         if (!dialogRunning) { return; }
 
         if (dialogIsOver)

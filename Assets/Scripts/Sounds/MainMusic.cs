@@ -8,6 +8,7 @@ public class MainMusic : MonoBehaviour
     public AudioSource librarySong;
     public AudioSource villageSong;
     public AudioSource treantSong;
+    public AudioSource forestSong;
 
     public static MainMusic instance;
 
@@ -17,6 +18,7 @@ public class MainMusic : MonoBehaviour
         librarySong.ignoreListenerPause = true;
         villageSong.ignoreListenerPause = true;
         treantSong.ignoreListenerPause = true;
+        forestSong.ignoreListenerPause = true;
         DontDestroyOnLoad(gameObject);
 
         DontDestroyOnLoad(this.gameObject);

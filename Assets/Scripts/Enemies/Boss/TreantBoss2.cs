@@ -64,7 +64,7 @@ public class TreantBoss2 : Fighter
 
         GameManager.instance.sfxManager.PlayBossTreantDamage();
         GameManager.instance.experience += xpValue;
-        GameManager.instance.fragments++;
+        GameManager.instance.fragments = 1;
 
         GameManager.instance.actualScene = "Level4";
         SaveSystem.SaveState();
