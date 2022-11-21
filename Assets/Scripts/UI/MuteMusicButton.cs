@@ -30,7 +30,7 @@ public class MuteMusicButton : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void Update()
     {
         float j;
         mixer.GetFloat(("MasterVol"), out j);
@@ -43,14 +43,10 @@ public class MuteMusicButton : MonoBehaviour
         }
         else
         {
-            mixer.SetFloat("MasterVol", PlayerPrefs.GetFloat("MasterVol"));
+            if (PlayerPrefs.GetFloat("MasterVol") == -80) mixer.SetFloat("MasterVol", 0);
+            else mixer.SetFloat("MasterVol", PlayerPrefs.GetFloat("MasterVol"));
             musicVolTog.GetComponent<Image>().sprite = defaultAudio;
         }
-
-        if (j == -80)
-            musicVolTog.GetComponent<Image>().sprite = mutedAudio;
-        else
-            musicVolTog.GetComponent<Image>().sprite = defaultAudio;
 
     }
 }

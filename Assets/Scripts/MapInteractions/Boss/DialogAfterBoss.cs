@@ -41,54 +41,54 @@ public class DialogAfterBoss : MonoBehaviour
         lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[0], dialog.Icons[0]));
     }
 
-    public void Update()
+    public void PassDialog(InputAction.CallbackContext ctx)
     {
+        if (!ctx.performed) return;
+
+        if (!dialogRunning) { return; }
+
         if (dialogIsOver)
             return;
 
         if (dialogScript.dialogAlreadyPlayed)
             return;
 
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (!isTyping)
         {
-            if (!isTyping)
+            ++currentLine;
+            if (currentLine < dialog.Lines.Count)
             {
-                ++currentLine;
-                if (currentLine < dialog.Lines.Count)
-                {
-                    lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine], dialog.Icons[currentLine]));
-                }
-                else
-                {
-                    currentLine = 0;
-                    dialogBox.SetActive(false);
-                    dialogRunning = false;
-                    GameManager.instance.state = GameState.FreeRoam;
-                    dialogIsOver = true;
-                    dialogScript.dialogAlreadyPlayed = true;
-                    Time.timeScale = 1f;
-
-                    for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
-                        GameManager.instance.scriptableEnemies[i].canMove = true;
-
-                    GameManager.instance.playerMode = 0;
-                    SFXManager.instance.StopMagicAmbient();
-                    SFXManager.instance.PlayAmbient();
-                    GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
-                    GameManager.instance.hero.availableToInteract = true;
-                }
+                lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine], dialog.Icons[currentLine]));
             }
             else
             {
-                GameManager.instance.sfxManager.dialogSound.Stop();
-                GameManager.instance.sfxManager.dialogSound1.Stop();
-                GameManager.instance.sfxManager.dialogSound2.Stop();
-                StopCoroutine(lastRoutine);
-                dialogText.text = dialog.Lines[currentLine];
-                isTyping = false;
+                currentLine = 0;
+                dialogBox.SetActive(false);
+                dialogRunning = false;
+                GameManager.instance.state = GameState.FreeRoam;
+                dialogIsOver = true;
+                dialogScript.dialogAlreadyPlayed = true;
+                Time.timeScale = 1f;
+
+                for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
+                    GameManager.instance.scriptableEnemies[i].canMove = true;
+
+                GameManager.instance.playerMode = 0;
+                SFXManager.instance.StopMagicAmbient();
+                SFXManager.instance.PlayAmbient();
+                GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
+                GameManager.instance.hero.availableToInteract = true;
             }
         }
-
+        else
+        {
+            GameManager.instance.sfxManager.dialogSound.Stop();
+            GameManager.instance.sfxManager.dialogSound1.Stop();
+            GameManager.instance.sfxManager.dialogSound2.Stop();
+            StopCoroutine(lastRoutine);
+            dialogText.text = dialog.Lines[currentLine];
+            isTyping = false;
+        }
     }
 
     public IEnumerator TypeDialog(string line, Sprite icon)

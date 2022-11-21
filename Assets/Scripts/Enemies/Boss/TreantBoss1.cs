@@ -50,94 +50,98 @@ public class TreantBoss1 : Fighter
         lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[0], dialog.Icons[0]));
     }
 
-    public void Update()
+    public void PassDialog(InputAction.CallbackContext ctx)
     {
-        if (i == 8)
-            spawnEnemies = false;
+        if (!ctx.performed) return;
+
+        if (!dialogRunning) { return; }
 
         if (dialogIsOver)
             return;
 
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (!isTyping)
         {
-            if (!isTyping)
+            ++currentLine;
+            if (currentLine < dialog.Lines.Count)
             {
-                ++currentLine;
-                if (currentLine < dialog.Lines.Count)
+                lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine], dialog.Icons[currentLine]));
+                switch (currentLine)
                 {
-                    lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[currentLine], dialog.Icons[currentLine]));
-                    switch (currentLine)
-                    {
-                        case 7:
-                            GameManager.instance.playerMode = 1;
-                            SFXManager.instance.StopAmbient();
-                            SFXManager.instance.PlayMagicAmbient();
-                            StartCoroutine(GameManager.instance.ChangeModeAnim());
-                            GameManager.instance.globalVolume.profile = GameManager.instance.akemiProfile;
-                            break;
-                        case 11:
-                            GameManager.instance.playerMode = 0;
-                            SFXManager.instance.StopMagicAmbient();
-                            SFXManager.instance.PlayAmbient();
-                            GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
-                            break;
-                        case 21:
-                            GameManager.instance.playerMode = 1;
-                            SFXManager.instance.StopAmbient();
-                            SFXManager.instance.PlayMagicAmbient();
-                            StartCoroutine(GameManager.instance.ChangeModeAnim());
-                            GameManager.instance.globalVolume.profile = GameManager.instance.akemiProfile;
-                            Camera.main.transform.GetComponent<CameraMotor>().enabled = false;
-                            StartCoroutine(LerpFromTo(Camera.main.transform.position, dialogScript.camFocus, 1f));
-                            break;
-                        case 26:
-                            StartCoroutine(LerpFromTo(Camera.main.transform.position, dialogScript.camFocus, 1f));
-                            break;
-                        case 27:
-                            Camera.main.transform.GetComponent<CameraMotor>().enabled = true;
-                            break;
-                        case 30:
-                            GameManager.instance.magicProficiency = 1;
-                            GameManager.instance.xpPoints = 1;
-                            Spell spell = new Spell();
-                            spell.spellType = Spell.SpellType.Fireball;
-                            GameManager.instance.spellBook.AddSpell(spell);
-                            GameManager.instance.UseSpell(spell);
-                            GameManager.instance.currentMana = 0;
-                            break;
-                    }
-                }
-                else
-                {
-                    currentLine = 0;
-                    dialogBox.SetActive(false);
-                    dialogRunning = false;
-                    GameManager.instance.state = GameState.FreeRoam;
-                    dialogIsOver = true;
-                    Time.timeScale = 1f;
-
-                    for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
-                        GameManager.instance.scriptableEnemies[i].canMove = true;
-
-                    spawnEnemies = true;
-
-                    GameManager.instance.playerMode = 0;
-                    SFXManager.instance.StopMagicAmbient();
-                    SFXManager.instance.PlayAmbient();
-                    GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
-                    GameManager.instance.hero.availableToInteract = true;
+                    case 7:
+                        GameManager.instance.playerMode = 1;
+                        SFXManager.instance.StopAmbient();
+                        SFXManager.instance.PlayMagicAmbient();
+                        StartCoroutine(GameManager.instance.ChangeModeAnim());
+                        GameManager.instance.globalVolume.profile = GameManager.instance.akemiProfile;
+                        break;
+                    case 11:
+                        GameManager.instance.playerMode = 0;
+                        SFXManager.instance.StopMagicAmbient();
+                        SFXManager.instance.PlayAmbient();
+                        GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
+                        break;
+                    case 21:
+                        GameManager.instance.playerMode = 1;
+                        SFXManager.instance.StopAmbient();
+                        SFXManager.instance.PlayMagicAmbient();
+                        StartCoroutine(GameManager.instance.ChangeModeAnim());
+                        GameManager.instance.globalVolume.profile = GameManager.instance.akemiProfile;
+                        Camera.main.transform.GetComponent<CameraMotor>().enabled = false;
+                        StartCoroutine(LerpFromTo(Camera.main.transform.position, dialogScript.camFocus, 1f));
+                        break;
+                    case 26:
+                        StartCoroutine(LerpFromTo(Camera.main.transform.position, dialogScript.camFocus, 1f));
+                        break;
+                    case 27:
+                        Camera.main.transform.GetComponent<CameraMotor>().enabled = true;
+                        break;
+                    case 30:
+                        GameManager.instance.magicProficiency = 1;
+                        GameManager.instance.xpPoints = 1;
+                        Spell spell = new Spell();
+                        spell.spellType = Spell.SpellType.Fireball;
+                        GameManager.instance.spellBook.AddSpell(spell);
+                        GameManager.instance.UseSpell(spell);
+                        GameManager.instance.currentMana = 0;
+                        break;
                 }
             }
             else
             {
-                GameManager.instance.sfxManager.dialogSound.Stop();
-                GameManager.instance.sfxManager.dialogSound1.Stop();
-                GameManager.instance.sfxManager.dialogSound2.Stop();
-                StopCoroutine(lastRoutine);
-                dialogText.text = dialog.Lines[currentLine];
-                isTyping = false;
+                currentLine = 0;
+                dialogBox.SetActive(false);
+                dialogRunning = false;
+                GameManager.instance.state = GameState.FreeRoam;
+                dialogIsOver = true;
+                Time.timeScale = 1f;
+
+                for (int i = 0; i < GameManager.instance.scriptableEnemies.Count; i++)
+                    GameManager.instance.scriptableEnemies[i].canMove = true;
+
+                spawnEnemies = true;
+
+                GameManager.instance.playerMode = 0;
+                SFXManager.instance.StopMagicAmbient();
+                SFXManager.instance.PlayAmbient();
+                GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
+                GameManager.instance.hero.availableToInteract = true;
             }
         }
+        else
+        {
+            GameManager.instance.sfxManager.dialogSound.Stop();
+            GameManager.instance.sfxManager.dialogSound1.Stop();
+            GameManager.instance.sfxManager.dialogSound2.Stop();
+            StopCoroutine(lastRoutine);
+            dialogText.text = dialog.Lines[currentLine];
+            isTyping = false;
+        }
+    }
+
+    public void Update()
+    {
+        if (i == 8)
+            spawnEnemies = false;
     }
 
     public IEnumerator TypeDialog(string line, Sprite icon)

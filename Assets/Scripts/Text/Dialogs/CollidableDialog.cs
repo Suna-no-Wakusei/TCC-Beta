@@ -92,9 +92,25 @@ public class CollidableDialog : MonoBehaviour
         if (dialog.objectiveID != 0)
         {
             if (GameManager.instance.objectiveManager.objectiveActive == null)
-                this.gameObject.GetComponent<Collider2D>().enabled = true;
-            else if (dialog.objectiveID != GameManager.instance.objectiveManager.objectiveActive.id)
-                this.gameObject.GetComponent<Collider2D>().enabled = false;
+            {
+                if(this.gameObject.GetComponent<BoxCollider2D>() != null)
+                    this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                if (this.gameObject.GetComponent<Collider2D>() != null)
+                    this.gameObject.GetComponent<Collider2D>().enabled = true;
+            }
+            else
+            {
+                if (dialog.objectiveID != GameManager.instance.objectiveManager.objectiveActive.id)
+                {
+                    if (this.gameObject.GetComponent<BoxCollider2D>() != null)
+                        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                    if (this.gameObject.GetComponent<Collider2D>() != null)
+                        this.gameObject.GetComponent<Collider2D>().enabled = false;
+                }
+            }   
+
+            
+                
         }
 
         if (dialog.dialogStarted)

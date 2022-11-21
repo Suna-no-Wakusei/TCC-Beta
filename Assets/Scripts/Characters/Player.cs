@@ -251,8 +251,6 @@ public class Player : Fighter
 
         if (characterUnableToMove) return;
 
-        availableToInteract = false;
-
         if (timeRunning)
             Collect();
     }
@@ -297,8 +295,11 @@ public class Player : Fighter
 
         yield return new WaitForSeconds(0.15f);
 
-        characterUnableToMove = false;
-        GameManager.instance.hero.timeRunning = true;
+        if(!DialogueManager.Instance.dialogRunning)
+        {
+            characterUnableToMove = false;
+            GameManager.instance.hero.timeRunning = true;
+        }
 
         yield return new WaitForSeconds(1f);
 
@@ -307,6 +308,9 @@ public class Player : Fighter
 
     public void Collect()
     {
+
+        availableToInteract = false;
+
         var interactPos = transform.position;
 
         var collider = Physics2D.OverlapCircle(interactPos, 0.3f, Interactable);
