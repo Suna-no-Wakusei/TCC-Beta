@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -22,5 +23,15 @@ public class PauseManager : MonoBehaviour
         SaveSystem.SaveState();
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
+    }
+
+    public void Respawn()
+    {
+        if (File.Exists(Application.persistentDataPath + "/JSONData.sus"))
+        {
+            SaveSystem.LoadSavedScene();
+        }
+        else
+            QuitToMenu();
     }
 }

@@ -16,7 +16,7 @@ public class MuteMusicButton : MonoBehaviour
         mixer.SetFloat("SFXVol", PlayerPrefs.GetFloat("SFXVol"));
 
         float j;
-        mixer.GetFloat(("MusicVol"), out j);
+        mixer.GetFloat(("MasterVol"), out j);
 
         if(j == -80)
         {
@@ -33,18 +33,18 @@ public class MuteMusicButton : MonoBehaviour
     void LateUpdate()
     {
         float j;
-        mixer.GetFloat(("MusicVol"), out j);
+        mixer.GetFloat(("MasterVol"), out j);
 
         if (musicVolTog.isOn)
         {
-            mixer.SetFloat("MusicVol", -80);
+            mixer.SetFloat("MasterVol", -80);
             musicVolTog.GetComponent<Image>().sprite = mutedAudio;
-            PlayerPrefs.SetFloat("MusicVol", -80);
+            PlayerPrefs.SetFloat("MasterVol", -80);
         }
         else
         {
-            mixer.SetFloat("MusicVol", 0);
-            PlayerPrefs.SetFloat("MusicVol", 0);
+            mixer.SetFloat("MasterVol", 0);
+            PlayerPrefs.SetFloat("MasterVol", 0);
             musicVolTog.GetComponent<Image>().sprite = defaultAudio;
         }
 

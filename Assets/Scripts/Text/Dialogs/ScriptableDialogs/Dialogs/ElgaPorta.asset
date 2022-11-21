@@ -20,13 +20,18 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
   afterDialogText:
-    lines: []
-    icons: []
+    lines:
+    - A dona Elga deve estar dormindo
+    - "Vou sair de fininho pra n\xE3o acordar ela"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
   objectiveText:
     lines: []
     icons: []
   objectiveID: 0
-  timeRunningDialog: 0
+  finishObjective: 0
+  timeRunningDialog: 1
   dialogAlreadyPlayed: 0
   dialogStarted: 0
   lateDialog: 0

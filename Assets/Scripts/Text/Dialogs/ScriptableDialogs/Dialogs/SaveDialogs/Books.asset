@@ -1,0 +1,316 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Books
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - Talvez eu precise falar com o James antes
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  afterDialogText:
+    lines:
+    - Talvez eu precise falar com o James antes
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  objectiveText:
+    lines:
+    - Agora eu sei como o James ocupa tanto tempo aqui
+    - "S\xE3o livros demais, vai demorar uma eternidade"
+    - "'Guerras Orcneas', 'Conflitos Sociais de Ra\xE7as', 'Cat\xE1strofe da Magia'"
+    - "S\xE3o t\xEDtulos de leitura bem interessantes"
+    - (Ai cara, de novo isso)
+    - "(Da pr\xF3xima vez que for fazer isso, avisa antes pelo menos, t\xE1 legal?)"
+    - "(N\xE3o sei como essa coisa faz eu me sentir t\xE3o enjoado)"
+    - "S\xE3o muitos conte\xFAdos a respeito da Guerra do Babacchi e suas consequ\xEAncias
+      no decorrer da hist\xF3ria"
+    - '''A Magia Negra Dephilim'', parece promissor'
+    - Vejamos... Aqui fala bastante a respeito do Canalizador de Magia Irracional,
+      nas palavras de um mago elfo
+    - "Ele v\xEA o artefato como uma atrocidade a todo ser vivente, com um poder
+      destrutivo gigantesco"
+    - "Durante a Guerra do Babacchi, ele foi usado para reviver o corpo um drag\xE3o
+      imenso"
+    - "E com isso devastou v\xE1rias tropas \xE9lficas que estavam instaladas na
+      regi\xE3o"
+    - "(Como voc\xEA fez pra ler isso tudo t\xE3o r\xE1pido?)"
+    - "(Vejo tudo pelos mesmos olhos que voc\xEA mas mal consegui ler uma palavra
+      de cada p\xE1gina que voc\xEA ia passando)"
+    - "Eu gosto de ler, \xE9 um \xF3timo passatempo e d\xE1 pra adquirir muito conhecimento"
+    - "(Acho que n\xE3o conseguiria fazer isso nem com cem anos de pr\xE1tica)"
+    - "\xC9 um tempo at\xE9 que razo\xE1vel. Com uma dedica\xE7\xE3o di\xE1ria, creio
+      que voc\xEA conseguiria em menos de nove d\xE9cadas"
+    - "(Voc\xEA me assusta um pouco \xE0s vezes... O que mais o livro fala?)"
+    - "Bom... A magia irracional ainda \xE9 muito abstrata para a cultura \xE9lfica"
+    - "Ela pode afetar a realidade e a mat\xE9ria de formas diferentes dos demais
+      tipos de magia"
+    - "Durante uma s\xE9rie de testes feitos com pequenas quantidades de magia irracional
+      extra\xEDdas com muito esfor\xE7o e dificuldade, Foram constatados efeitos
+      como muta\xE7\xF5es f\xEDsicas e ps\xEDquicas, objetos revivificados, transfer\xEAncia
+      de mat\xE9ria e outros n\xE3o listados"
+    - "(Transfer\xEAncia de mat\xE9ria?)"
+    - "Se minha hip\xF3tese estiver correta, ao ser partido em peda\xE7os, o canalizador
+      pode ter ficado irradiado por magia irracional"
+    - "E ent\xE3o esses peda\xE7os carregados poderiam ter sido transportados para
+      outros locais por meio de magia"
+    - "Um transporte t\xE3o instant\xE2neo que faria com que todos pensassem que
+      ele realmente foi destru\xEDdo no momento"
+    - "E tamb\xE9m explicaria como o n\xFAcleo veio parar em um lugar t\xE3o longe
+      do campo de batalha"
+    - "(Ent\xE3o foi essa carga de magia irracional que acabou causando a altera\xE7\xE3o
+      no corpo daquelas \xE1rvores vivas?)"
+    - Muito provavelmente, ao entrar em contato com a magia irracional, a estrutura
+      dos treants foi comprometida e alterada
+    - "(Espera, se eu entendi bem, cada um desses peda\xE7os foram espalhados em
+      algum lugar do mundo, certo?)"
+    - "(Devem ter alguns registros de altera\xE7\xF5es repentinas nas \xE1reas envolta
+      dos fragmentos do canalizador)"
+    - (Que nem aconteceu com os treants e a magia na floresta)
+    - "Bem pensado, vou analisar os livros que foram escritos no per\xEDodo p\xF3s
+      Guerra do Babacchi"
+    - "Interessante... uma boa parcela dos livros de pesquisa e relatos s\xE3o escritos
+      por elfos"
+    - Pelo fato de terem uma grande expectativa de vida e terem prolongado ainda
+      mais sua longevidade com o uso de magia
+    - "Passando, de s\xE9culos, para mil\xEAnios de exist\xEAncia, assim conseguindo
+      se aprofundar mais nas pesquisas"
+    - "(Nossa, n\xE3o sabia que esses caras viviam tanto assim)"
+    - "(Quer dizer que o Yuji vai viver por milhares de anos ainda mesmo depois que
+      eu morrer, ent\xE3o?)"
+    - "(Pensar nisso \xE9 meio bizarro)"
+    - "Quem \xE9 Yuji?"
+    - "(O Yuji? Ele \xE9 um velho amigo meu)"
+    - "(Nos conhecemos quando ainda \xE9ramos crian\xE7as)"
+    - "(Ele se metia em bastante confus\xE3o, mesmo n\xE3o tendo tanta for\xE7a pra
+      aguentar o tranco)"
+    - (Mas mesmo assim eu nunca vi ele desistir, ele sempre ia pra cima com tudo
+      o que tinha)
+    - "(Eu admirava isso nele, e a\xED a gente acabou ficando amigo)"
+    - "(Como ele apanhava bastante, eu comecei a ajudar ele, e acabei apanhando junto,
+      um pouco, tamb\xE9m)"
+    - "(Mas foi assim que a gente acabou ficando mais pr\xF3ximos, e ent\xE3o eu
+      conheci a Lyria...)"
+    - "Lyria? S\xF3 de voc\xEA falar esse nome \xE9 como se seu corpo inteiro tivesse
+      ficado relaxado na hora"
+    - "Ela deve ser algu\xE9m bem especial para voc\xEA"
+    - (Com certeza)
+    - "(Teve uma vez em que o Yuji acabou se enfiando em outra briga com uns tr\xEAs
+      garotos. Eu tive que ir ajudar ele, e a gente tinha conseguido dar conta deles)"
+    - "(At\xE9 que no nada eu senti como se o ar tivesse me dado um soco na cara
+      e no est\xF4mago)"
+    - "(E o Yuji tamb\xE9m acabou caindo por causa disso)"
+    - "(N\xE3o esque\xE7o at\xE9 hoje da vis\xE3o que eu tive ca\xEDdo no ch\xE3o
+      naquele dia. Era como se eu tivesse vendo um anjo bem na minha frente)"
+    - (O vento batendo nos seus fios de cabelo lisos e curtos)
+    - "(Aquele vestido azulado que ela tava usando e o olhar de determina\xE7\xE3o
+      no rosto dela)"
+    - "(Ela era simplesmente a garota mais linda e encantadora que eu j\xE1 tinha
+      visto na vida)"
+    - "(Depois disso, os outros garotos levantaram muito bravos e foram pra cima
+      enquanto a gente ainda tava ca\xEDdo no ch\xE3o)"
+    - (Acho que com isso ela acabou entendo melhor o que realmente tava acontecendo)
+    - "(E mandou os tr\xEAs pra longe com um vento bem forte)"
+    - "Ent\xE3o essa Lyria era uma usu\xE1ria de magia?"
+    - (Os pais dela eram dois magos que tinham acabado de se mudar do reino de Jae)
+    - "(Desde crian\xE7a ela sempre foi um grande prod\xEDgio)"
+    - "(Mesmo tendo s\xF3 dez anos, ela usou magia de cura em mim e no Yuji depois
+      de botar aqueles caras pra correr)"
+    - (O Yuji tava muito bravo na hora e a Lyria achava que ele era muito novo por
+      causa da altura)
+    - (E ficou bem surpresa quando descobriu que ele era uns dois anos mais velho
+      que a gente)
+    - "Voc\xEA, pelo jeito, gosta bastante desses dois, n\xE3o \xE9?"
+    - "(Eles s\xE3o os meus melhores amigos, n\xE3o vejo a hora de poder rever eles)"
+    - "(Espero que o Yuji tenha conseguido passar no teste de admiss\xE3o da guarda
+      real)"
+    - (Desde que ele era mais novo, o Yuji sempre quis ter uma vida boa no reino
+      de Hipolitus)
+    - (Como um membro da guarda real, ganhando muito dinheiro)
+    - "(Por mais que os pais dele n\xE3o gostassem da ideia, porque queriam que ele
+      seguisse a linhagem da magia, igual o resto da fam\xEDlia)"
+    - "(S\xF3 que mesmo com tudo isso, ele continuou treinando diariamente pra seguir
+      o seu sonho)"
+    - "(Tamb\xE9m quero poder reencontrar a Lyria pra criar coragem e contar tudo
+      o que eu sinto e senti por ela nesses anos todos)"
+    - "(O nosso encontro com os treants me fez perceber que eu n\xE3o posso perder
+      mais tempo)"
+    - "Pelo jeito que voc\xEA fala deles, devem realmente ser pessoas incr\xEDveis"
+    - "Enquanto voc\xEA contava isso tudo, eu terminei de analisar boa parte dos
+      livros hist\xF3ricos escritos depois do fim da Guerra do Babacchi"
+    - "(Caramba, eu nem percebi que voc\xEA tinha lido isso tudo enquanto eu falava)"
+    - "Ao findar da grande guerra, o povo orc que estava crescendo em n\xFAmeros
+      e poder b\xE9lico come\xE7ou uma s\xE9rie de guerras de expans\xE3o territorial"
+    - "As chamadas Guerras Orcneas, se aproveitando da fraqueza atual das outras
+      ra\xE7as envolvidas na guerra do Babacchi"
+    - "Durante a Primeira Guerra Orcnea, que resultou na expurga\xE7\xE3o dos meio-drag\xF5es
+      da regi\xE3o de Satus"
+    - "Uma s\xE9rie de casos de desaparecimento come\xE7aram a ocorrer nos arredores
+      da cadeia montanhosa de Wyvern"
+    - "A pr\xF3pria fauna local come\xE7ou a ser extinta sem nenhuma causa aparente"
+    - "Pelo que parece, desde aquela \xE9poca, at\xE9 ent\xE3o, o n\xFAmero de casos
+      n\xE3o parou de crescer"
+    - "(Deve ser um bom lugar pra come\xE7ar a investigar)"
+    - "O \xFAnico problema vai ser cruzar todo o percurso at\xE9 l\xE1, pode levar
+      semanas"
+    - "(Semanas? Com o ponto de teletransporte que fica entre o vilarejo e a cidade
+      de Bingus deve dar pra chegar l\xE1 em poucos dias)"
+    - Os pontos de teletransporte, bem lembrado
+    - "Isso n\xE3o existia na minha \xE9poca"
+    - "Foram desenvolvidos ap\xF3s a Guerra do Babacchi, usando os cristais descobertos
+      nas minas da regi\xE3o de Satus"
+    - "Tamb\xE9m foi um dos motivos de disputa durante guerra, o que levou a essa
+      jun\xE7\xE3o de magia com tecnologia"
+    - "(Voc\xEA realmente fez o dever de casa lendo todos esses livros)"
+    - "(Acho que foram mais livros do que o que eu j\xE1 li na minha vida toda)"
+    - "Ent\xE3o vamos partir, chegando l\xE1 poderemos conseguir mais informa\xE7\xF5es
+      sobre o canalizador"
+    - "(Calma a\xED, j\xE1 t\xE1 ficando tarde e o meu corpo t\xE1 exausto)"
+    - "(Melhor a gente partir de manh\xE3)"
+    - "Eu acabei nem percebendo a queda de desempenho f\xEDsico do seu corpo durante
+      esse tempo"
+    - "Voc\xEA tem raz\xE3o, \xE9 melhor partirmos assim que amanhecer"
+    - "J\xE1 tava at\xE9 me esquecendo de como \xE9 poder me mexer"
+    - Certo, vamos fazer isso!
+    - A resposta pra arrumar isso tudo tem que estar em algum lugar
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+  objectiveID: 4
+  finishObjective: 0
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 1
+  lateDialogText:
+    lines:
+    - "Por que esse idiota ficou tanto tempo falando sozinho l\xE1 na frente da estante?"
+    - "Ele s\xF3 folheou todos os livros e foi embora"
+    - "Um intelectual do meu n\xEDvel poderia ler cada um daqueles livros em cerca
+      de duas a tr\xEAs horas"
+    - Mas o que ele veio fazer aqui, afinal?
+    - "Bem... isso n\xE3o importa"
+    - Foque nos seus estudos, James
+    - Foque nos seus estudos...
+    icons:
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+  camFocus: {x: -2.77, y: -1.43, z: -10}
+  lateDelay: 1
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

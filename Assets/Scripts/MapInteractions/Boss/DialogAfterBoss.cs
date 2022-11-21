@@ -49,7 +49,7 @@ public class DialogAfterBoss : MonoBehaviour
         if (dialogScript.dialogAlreadyPlayed)
             return;
 
-        if (Keyboard.current.enterKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
+        if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             if (!isTyping)
             {
@@ -75,6 +75,7 @@ public class DialogAfterBoss : MonoBehaviour
                     SFXManager.instance.StopMagicAmbient();
                     SFXManager.instance.PlayAmbient();
                     GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
+                    GameManager.instance.hero.availableToInteract = true;
                 }
             }
             else

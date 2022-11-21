@@ -35,9 +35,26 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
   objectiveText:
-    lines: []
-    icons: []
-  objectiveID: 0
+    lines:
+    - Oi, Brenda
+    - "Voc\xEA sabe onde t\xE1 o Yelts?"
+    - "Ol\xE1, Tamaki. Eu n\xE3o o vi hoje, ele deve estar pescando ou fazendo algo
+      assim"
+    - "T\xE1 legal, valeu"
+    - "Vou ver se consigo achar ele por a\xED"
+    - Se o encontrar, avise ele para evitar passar com todos aqueles peixes aqui
+      na frente da padaria
+    - "Da \xFAltima vez o cheiro ficou na cal\xE7ada por v\xE1rios dias"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8160f4147c52a3b4f88b22e253480d80, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8160f4147c52a3b4f88b22e253480d80, type: 3}
+    - {fileID: 21300000, guid: 8160f4147c52a3b4f88b22e253480d80, type: 3}
+  objectiveID: 6
+  finishObjective: 0
   timeRunningDialog: 1
   dialogAlreadyPlayed: 0
   dialogStarted: 0

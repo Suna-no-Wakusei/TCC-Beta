@@ -9,7 +9,6 @@ public class Portal : Collidable
     public string[] sceneNames;
     private string sceneName;
     public Vector2 playerPosition;
-    public TeleportPoint Teleport;
     public float fadeWait;
 
     protected override void OnCollide(Collider2D coll)

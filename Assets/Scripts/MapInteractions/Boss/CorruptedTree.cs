@@ -3,15 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CorruptedTree : MonoBehaviour, ICollectable
+public class CorruptedTree : MonoBehaviour
 {
     public ScriptableDialog dialog;
     public Vector2 bossPlayerPos;
+    private Animator animator;
+    private int i = 0;
 
-    public void Collect()
+    void Awake()
     {
-        Debug.Log("Collect");
-        StartCoroutine(Dialog());
+        animator = this.GetComponent<Animator>();
+    }
+
+    public void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.layer == 10 && i == 0)
+        {
+            i = 1;
+            GameManager.instance.sfxManager.rootAttack2.Play();
+            animator.SetTrigger("Break");
+            StartCoroutine(Dialog());
+        }      
     }
 
     IEnumerator Dialog()
@@ -48,6 +60,10 @@ public class CorruptedTree : MonoBehaviour, ICollectable
     public IEnumerator FadeCo()
     {
         GameManager.instance.ChangeModeAnim();
+
+        CameraShake.Shake(1f, 0.5f);
+        GameManager.instance.sfxManager.thunder.Play();
+
         if (GameManager.instance.fadeOutPanel != null)
         {
             Instantiate(GameManager.instance.fadeOutPanel, Vector3.zero, Quaternion.identity);

@@ -12,17 +12,22 @@ public class CollidableDialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (dialog.objectiveID != 0)
+            if(GameManager.instance.objectiveManager.objectiveActive != null)
             {
-                if (dialog.objectiveID == GameManager.instance.objectiveManager.objectiveActive.id)
+                if (dialog.objectiveID != 0)
                 {
-                    if (!dialog.timeRunningDialog)
-                        Time.timeScale = 0f;
+                    if (dialog.objectiveID == GameManager.instance.objectiveManager.objectiveActive.id)
+                    {
+                        if (!dialog.timeRunningDialog)
+                            Time.timeScale = 0f;
 
-                    StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.objectiveText));
-                    return;
+                        StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.objectiveText));
+                        return;
+                    }
                 }
             }
+
+            if (dialog.dialogText.Lines.Count == 0) return;
 
             if (dialog.dialogAlreadyPlayed == false)
             {
@@ -82,20 +87,15 @@ public class CollidableDialog : MonoBehaviour
         Camera.main.transform.position = pos2;
     }
 
-    private void Start()
-    {
-        if (GameManager.instance.objectiveManager.objectiveActive == null)
-            this.gameObject.SetActive(false);
-        else if (dialog.objectiveID != GameManager.instance.objectiveManager.objectiveActive.id)
-            this.gameObject.SetActive(false);
-    }
-
     private void Update()
     {
-        if(GameManager.instance.objectiveManager.objectiveActive == null)
-            this.gameObject.SetActive(false);
-        else if (dialog.objectiveID != GameManager.instance.objectiveManager.objectiveActive.id)
-            this.gameObject.SetActive(false);
+        if (dialog.objectiveID != 0)
+        {
+            if (GameManager.instance.objectiveManager.objectiveActive == null)
+                this.gameObject.GetComponent<Collider2D>().enabled = true;
+            else if (dialog.objectiveID != GameManager.instance.objectiveManager.objectiveActive.id)
+                this.gameObject.GetComponent<Collider2D>().enabled = false;
+        }
 
         if (dialog.dialogStarted)
         {
@@ -110,8 +110,13 @@ public class CollidableDialog : MonoBehaviour
 
                 if (dialog.lateDialog && !lateStarted)
                 {
+                    GameManager.instance.hero.availableToInteract = false;
                     lateStarted = true;
                     StartCoroutine(LateDialog());
+                }
+                else
+                {
+                    GameManager.instance.hero.availableToInteract = true;
                 }
             }
 

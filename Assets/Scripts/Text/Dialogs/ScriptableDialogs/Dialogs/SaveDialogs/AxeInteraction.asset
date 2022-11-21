@@ -24,5 +24,22 @@ MonoBehaviour:
   afterDialogText:
     lines: []
     icons: []
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 0
+  timeRunningDialog: 0
   dialogAlreadyPlayed: 0
-  dialogStarted: 1
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

@@ -60,9 +60,11 @@ public class TreantBoss2 : Fighter
     protected override void Death()
     {
         rootAttack.SetActive(false);
+        CancelInvoke("Attacking");
 
         GameManager.instance.sfxManager.PlayBossTreantDamage();
         GameManager.instance.experience += xpValue;
+        GameManager.instance.fragments++;
 
         GameManager.instance.actualScene = "Level4";
         SaveSystem.SaveState();

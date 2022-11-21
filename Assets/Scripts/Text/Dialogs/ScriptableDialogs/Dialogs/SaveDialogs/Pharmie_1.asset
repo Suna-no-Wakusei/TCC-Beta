@@ -41,9 +41,24 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
     - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
   objectiveText:
-    lines: []
-    icons: []
-  objectiveID: 0
+    lines:
+    - Oi, Pharmie
+    - "Voc\xEA viu o Yelts por a\xED?"
+    - "Ol\xE1, Tamaki, eu n\xE3o sa\xED da fazenda o dia todo"
+    - "E n\xE3o o vi passar por aqui em nenhum momento"
+    - Talvez ele esteja pescando no lago perto da sua peixaria
+    - "Beleza, vou ver se consigo achar ele por l\xE1, valeu, Pharmie!"
+    - Por nada!
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 84c5832a669e76243adeef7b44f03ced, type: 3}
+  objectiveID: 6
+  finishObjective: 0
   timeRunningDialog: 0
   dialogAlreadyPlayed: 0
   dialogStarted: 0

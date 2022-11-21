@@ -36,7 +36,8 @@ MonoBehaviour:
     lines: []
     icons: []
   objectiveID: 0
-  timeRunningDialog: 0
+  finishObjective: 0
+  timeRunningDialog: 1
   dialogAlreadyPlayed: 0
   dialogStarted: 0
   lateDialog: 0

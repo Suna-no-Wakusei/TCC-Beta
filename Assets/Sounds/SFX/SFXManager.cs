@@ -283,6 +283,7 @@ public class SFXManager : MonoBehaviour
         dialogSound2.ignoreListenerPause = true;
         button.ignoreListenerPause = true;
         dropItem.ignoreListenerPause = true;
+        magicAmbient.ignoreListenerPause = true;
 
         if (Time.deltaTime == 0)
             AudioListener.pause = true;

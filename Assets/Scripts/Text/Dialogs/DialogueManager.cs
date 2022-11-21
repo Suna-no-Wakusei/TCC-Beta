@@ -34,7 +34,6 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ShowDialog(DialogueText dialog)
     {
         dialogIsOver = false;
-        dialogRunning = true;
         GameManager.instance.hero.characterUnableToMove = true;
         yield return new WaitForEndOfFrame();
         
@@ -47,11 +46,21 @@ public class DialogueManager : MonoBehaviour
         lastRoutine = StartCoroutine(TypeDialog(dialog.Lines[0], dialog.Icons[0]));
     }
 
+    private void Update()
+    {
+        if (dialogBox.activeSelf)
+            dialogRunning = true;
+        else
+            dialogRunning = false;
+    }
+
     public void PassDialog(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed) { return; }
+        if (!ctx.performed) return;
 
-        if(!dialogRunning) { return; }
+        if (GameManager.instance.state != GameState.Dialog) return;
+
+        if (!dialogRunning) { return; }
 
         if (dialogIsOver)
             return;

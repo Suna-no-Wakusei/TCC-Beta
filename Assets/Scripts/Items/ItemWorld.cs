@@ -28,6 +28,8 @@ public class ItemWorld : MonoBehaviour
                         //When Player touch the item
                         GameManager.instance.inventory.AddItem(item);
                         Destroy(this.gameObject);
+                        if (InventoryManager.Instance.isOpen)
+                            GameManager.instance.uiInventory.SetInventory(GameManager.instance.inventory);
                     }
                 }
                 else if (!GameManager.instance.inventory.IsArrayFull())
@@ -35,6 +37,8 @@ public class ItemWorld : MonoBehaviour
                     //When Player touch the item
                     GameManager.instance.inventory.AddItem(item);
                     Destroy(this.gameObject);
+                    if (InventoryManager.Instance.isOpen)
+                        GameManager.instance.uiInventory.SetInventory(GameManager.instance.inventory);
                 }
             }
         }

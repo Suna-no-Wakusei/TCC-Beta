@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2831325749111242154}
   - component: {fileID: 2831325749111242155}
   - component: {fileID: 646220854789025462}
-  - component: {fileID: 2713208569161687043}
-  m_Layer: 8
+  - component: {fileID: 1754404067449418557}
+  m_Layer: 0
   m_Name: pfItemWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014082253, y: -0.029918432}
+  m_Offset: {x: -0.005555272, y: -0.029918432}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0732287, y: 0.9135339}
+  m_Size: {x: 0.8743584, y: 0.9135339}
   m_EdgeRadius: 0
 --- !u!50 &2831325749111242155
 Rigidbody2D:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5bddcf00ec93c14583117888ef5311f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &2713208569161687043
+--- !u!61 &1754404067449418557
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030524552, y: 0.029197395}
+  m_Offset: {x: -0.0065021515, y: -0.02647841}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -172,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8168527, y: 0.7027174}
+  m_Size: {x: 0.8054304, y: 0.8562608}
   m_EdgeRadius: 0
 --- !u!1 &4749575342617118005
 GameObject:
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 6177860440398136547}
   - component: {fileID: 3689987159966449915}
   - component: {fileID: 3701938861886119635}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

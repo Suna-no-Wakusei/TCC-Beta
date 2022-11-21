@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: James_1
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - "Voc\xEA por aqui, Tamaki? N\xE3o \xE9 algo que se v\xEA todo dia"
+    - "Tava precisando de umas aulinhas de hist\xF3ria"
+    - "Voc\xEA tem algum livro de mais de dois mil anos atr\xE1s?"
+    - "Dois mil anos tr\xE1s? Por que esse interesse repentino pela Guerra do Babacchi?"
+    - Guerra do Babacchi? (Guerra do Babacchi?)
+    - "\xC9 s\xE9rio que voc\xEA nunca ouviu falar sobre isso, Tamaki?"
+    - "Sabe... hist\xF3ria meio que nunca foi o meu forte"
+    - "Voc\xEA \xE9 mesmo supreendente, a Guerra do Babacchi foi simplesmente o maior
+      conflito que j\xE1 existiu no mundo"
+    - "Ra\xE7as inteiras se aliaram entre si para guerrearem umas com as outras"
+    - "E as consequ\xEAncias desse evento permanecem at\xE9 os dias atuais"
+    - Esse foi um evento de escala global, que gerou a perda de muitas pessoas importantes
+      no campo de batalha
+    - "(Nessa guerra, os humanos, juntamente dos elfos e dos an\xF5es, se aliaram
+      para enfrentar os dephilins, que estavam juntos dos meio-drag\xF5es)"
+    - Tem algo falando sobre um aparelho canalizador de magia impura?
+    - O Artefato Canalizador de Magia Irracional Dephilim?
+    - "\xC9! Esse mesmo!"
+    - "Realmente, hist\xF3ria n\xE3o \xE9 o seu forte"
+    - "Vamos do in\xEDcio, ent\xE3o..."
+    - Havia uma guerra intelectual muito acirrada entre elfos e dephilins
+    - Os elfos dominavam com maestria a magia arcana, uma forma mais refinada de
+      magia
+    - Enquanto os dephilins usavam da magia escura, que era um tipo de magia repugnada
+      pelos elfos
+    - "Ambas as ra\xE7as competiam entre si para ver quem conseguia usar a mana de
+      forma mais eficiente"
+    - "Os elfos come\xE7aram a explorar a magia pura, uma forma de energia mais bruta
+      e poderosa"
+    - "E acabaram descobrindo que o corpo dos demi-humanos era um \xF3timo recipiente
+      para esse tipo de magia"
+    - "O que gerou uma imensa ca\xE7ada e tr\xE1fico de demi-humanos durante essa
+      \xE9poca"
+    - "T\xE1, t\xE1, mas quando o Catabolizador de Magia Impune entra na hist\xF3ria?"
+    - "Eu j\xE1 te disse v\xE1rias vezes que hist\xF3ria n\xE3o \xE9 apenas uma s\xE9rie
+      de fatos!"
+    - Se trata de um processo longo e detalhado!
+    - "E \xE9 Canalizador de Magia Irracional!"
+    - "Tudo bem, eu entendi, n\xE3o precisa se exaltar tanto assim"
+    - "Continuando... para n\xE3o deixar os elfos sa\xEDrem na frente, os dephilins
+      come\xE7aram a explorar a magia irracional"
+    - Uma forma de magia que, assim como a magia pura, sabe-se muito pouco sobre
+    - "V\xE1rios magos, feiticeiros, bruxos, alquimistas e s\xE1bios dephilins se
+      reuniram para estudar essa magia"
+    - "E depois de anos de aperfei\xE7oamento, eles criaram um artefato m\xE1gico
+      capaz de extrair uma certa quantida de magia irracional para o uso"
+    - O Canalizador de Magia Irracional
+    - "(O artefato que foi destru\xEDdo nas minhas mem\xF3rias)"
+    - "E o que aconteceu com esse canalizador ap\xF3s a guerra?"
+    - "Voc\xEA gosta mesmo de me apressar, hein"
+    - "\xC9 que eu tava querendo ir dormir essa noite ainda"
+    - "Quanto mais r\xE1pido eu te contar tudo, mais r\xE1pido voc\xEA deve ir embora"
+    - "Ent\xE3o... o Canalizador de Magia Irracional foi uma grande arma na m\xE3o
+      dos dephilins durante a guerra"
+    - "N\xE3o h\xE1 muitos documentos da \xE9poca falando sobre o que aconteceu com
+      ele, al\xE9m do ocorrido do drag\xE3o que foi ressucitado"
+    - "Mas as especula\xE7\xF5es mais prov\xE1veis \xE9 de que ele tenha sido destru\xEDdo
+      em batalha"
+    - "(O cl\xEDmax da guerra se deu na regi\xE3o de Satus, n\xE3o vejo como o n\xFAcleo
+      viria parar numa floresta daqui)"
+    - "(Que fica a no m\xEDnimo milhares de milhas de dist\xE2ncia de onde era o
+      campo de batalha)"
+    - "Como voc\xEA sabe disso?"
+    - "O que disse? Por acaso est\xE1 duvidando das minhas capacidades e anos de
+      estudo, Tamaki?"
+    - "N\xE3o, eu n\xE3o tava falando com voc\xEA... quer dizer..."
+    - "N\xE3o foi isso que eu quis dizer"
+    - "Os demais livros que falam a respeito dessa \xE9poca se encontram mais ao
+      fundo da biblioteca"
+    - "Fa\xE7a o que tiver que fazer e depois saia logo daqui!"
+    - "N\xE3o precisava desse carinho todo comigo, James"
+    - "Voc\xEA consegue ser t\xE3o irritante!"
+    icons:
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 33ed49559e027cd47bb1a88b8c71a745, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+  afterDialogText:
+    lines:
+    - "Se j\xE1 terminou o que tinha que fazer, a porta est\xE1 aberta!"
+    - "\xC9 bom saber que voc\xEA \xE9 sempre t\xE3o receptivo"
+    icons:
+    - {fileID: 21300000, guid: 8082af03e16bbd84ca6f4103e16f22c7, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 1
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

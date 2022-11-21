@@ -74,14 +74,14 @@ public class OptionsScreen : MonoBehaviour
         //Rebinding System Loading
         for (int i = 0; i < rebindingButtons.Length; i++)
         {
-                int bindingIndex = rebindingButtons[i].GetComponent<RebindingButtons>().input.action.GetBindingIndexForControl(rebindingButtons[i].GetComponent<RebindingButtons>().input.action.controls[0]);
-                rebindingButtons[i].GetComponentInChildren<TMP_Text>().text = InputControlPath.ToHumanReadableString(rebindingButtons[i].GetComponent<RebindingButtons>().input.action.bindings[0].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
+            int bindingIndex = rebindingButtons[i].GetComponent<RebindingButtons>().input.action.GetBindingIndexForControl(rebindingButtons[i].GetComponent<RebindingButtons>().input.action.controls[0]);
+            rebindingButtons[i].GetComponentInChildren<TMP_Text>().text = InputControlPath.ToHumanReadableString(rebindingButtons[i].GetComponent<RebindingButtons>().input.action.bindings[0].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
 
-                if (rebindingButtons[i].GetComponent<RebindingButtons>().input.action.bindings[rebindingButtons[i].GetComponent<RebindingButtons>().inputBindingIndex].isPartOfComposite)
-                {
-                    rebindingButtons[i].GetComponentInChildren<TMP_Text>().text = InputControlPath.ToHumanReadableString(rebindingButtons[i].GetComponent<RebindingButtons>().input.action.bindings[rebindingButtons[i].GetComponent<RebindingButtons>().inputBindingIndex].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
-                }
+            if (rebindingButtons[i].GetComponent<RebindingButtons>().input.action.bindings[rebindingButtons[i].GetComponent<RebindingButtons>().inputBindingIndex].isPartOfComposite)
+            {
+                rebindingButtons[i].GetComponentInChildren<TMP_Text>().text = InputControlPath.ToHumanReadableString(rebindingButtons[i].GetComponent<RebindingButtons>().input.action.bindings[rebindingButtons[i].GetComponent<RebindingButtons>().inputBindingIndex].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
             }
+        }
     }
 
     public void ResLeft()
@@ -249,11 +249,26 @@ public class OptionsScreen : MonoBehaviour
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation => RebindComplete(startRebidingObject))
             .Start();
+
+        if (startRebidingObject.GetComponent<RebindingButtons>().input.action.bindings[startRebidingObject.GetComponent<RebindingButtons>().inputBindingIndex].isPartOfComposite)
+        {
+            rebindingOperationMovement.WithExpectedControlType("Button");
+        }
     }
 
     private void RebindComplete(GameObject startRebidingObject)
     {
-        int bindingIndex = startRebidingObject.GetComponent<RebindingButtons>().input.action.GetBindingIndexForControl(startRebidingObject.GetComponent<RebindingButtons>().input.action.controls[0]);
+        InputAction action = startRebidingObject.GetComponent<RebindingButtons>().input.action;
+        int bindingIndex = action.GetBindingIndexForControl(startRebidingObject.GetComponent<RebindingButtons>().input.action.controls[0]);
+
+        if (CheckDuplicateBindings(action, bindingIndex, false))
+        {
+            action.RemoveBindingOverride(bindingIndex);
+            rebindingOperation.Dispose();
+
+            StartRebinding(startRebidingObject);
+            return;
+        }
 
         startRebidingObject.GetComponentInChildren<TMP_Text>().text = InputControlPath.ToHumanReadableString(startRebidingObject.GetComponent<RebindingButtons>().input.action.bindings[0].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
         rebindingOperation.Dispose();
@@ -268,6 +283,34 @@ public class OptionsScreen : MonoBehaviour
         PlayerPrefs.SetString("rebinds", rebinds);
     }
 
+    private bool CheckDuplicateBindings(InputAction action, int bindingIndex, bool allCompositeParts)
+    {
+        InputBinding newBinding = action.bindings[bindingIndex];
+        foreach(InputBinding binding in action.actionMap.bindings)
+        {
+            if(binding.action == newBinding.action)
+            {
+                continue;
+            }
+            if(binding.effectivePath == newBinding.effectivePath)
+            {
+                return true;
+            }
+        }
+        if (allCompositeParts)
+        {
+            for(int i = 1; i < bindingIndex; ++i)
+            {
+                if (action.bindings[i].effectivePath == newBinding.effectivePath)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     private InputActionRebindingExtensions.RebindingOperation rebindingOperationMovement;
 
     public void StartRebindingMovement(GameObject startRebidingObject)
@@ -279,26 +322,22 @@ public class OptionsScreen : MonoBehaviour
 
         rebindingOperationMovement = startRebidingObject.GetComponent<RebindingButtons>().input.action.PerformInteractiveRebinding(startRebidingObject.GetComponent<RebindingButtons>().inputBindingIndex)
             .OnMatchWaitForAnother(0.1f)
-            .WithCancelingThrough("<Keyboard>/escape")
             .OnComplete(operation => RebindCompleteMovement(startRebidingObject))
-            .Start()
-            .OnCancel((x) =>
-            {
-                // deselect button
-                FindObjectOfType<EventSystem>().SetSelectedGameObject(null);
-                x.Dispose();
-                startRebidingObject.GetComponent<RebindingButtons>().input.action.Enable();
-            }); ;
-
-        if (startRebidingObject.GetComponent<RebindingButtons>().input.action.bindings[startRebidingObject.GetComponent<RebindingButtons>().inputBindingIndex].isPartOfComposite)
-        {
-            rebindingOperationMovement.WithExpectedControlType("Button");
-        }
+            .Start();
     }
 
     private void RebindCompleteMovement(GameObject startRebidingObject)
     {
-        int bindingIndex = startRebidingObject.GetComponent<RebindingButtons>().input.action.GetBindingIndexForControl(startRebidingObject.GetComponent<RebindingButtons>().input.action.controls[0]);
+        InputAction action = startRebidingObject.GetComponent<RebindingButtons>().input.action;
+        int bindingIndex = action.GetBindingIndexForControl(startRebidingObject.GetComponent<RebindingButtons>().input.action.controls[0]);
+
+        if (CheckDuplicateBindings(action, bindingIndex, false))
+        {
+            action.RemoveBindingOverride(bindingIndex);
+            rebindingOperationMovement.Dispose();
+            StartRebinding(startRebidingObject);
+            return;
+        }
 
         startRebidingObject.GetComponentInChildren<TMP_Text>().text = InputControlPath.ToHumanReadableString(startRebidingObject.GetComponent<RebindingButtons>().input.action.bindings[startRebidingObject.GetComponent<RebindingButtons>().inputBindingIndex].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
         rebindingOperationMovement.Dispose();

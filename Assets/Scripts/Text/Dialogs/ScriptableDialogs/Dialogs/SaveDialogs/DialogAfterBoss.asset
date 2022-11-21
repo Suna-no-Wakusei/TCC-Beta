@@ -26,7 +26,6 @@ MonoBehaviour:
     - "Ainda tenho que levar essas madeiras todas at\xE9 o vov\xF4 antes do fim do
       dia"
     - "(Com o seu corpo, agora voc\xEA deve ser capaz de fazer tudo isso a tempo)"
-    - "(Est\xE1 com mais for\xE7a e velocidade do que antes)"
     icons:
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
@@ -36,7 +35,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
-    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
     - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
   afterDialogText:
     lines: []

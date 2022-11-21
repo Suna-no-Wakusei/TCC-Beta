@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class MainMusic : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource themeSong;
+    public AudioSource librarySong;
+    public AudioSource villageSong;
+    public AudioSource treantSong;
 
     public static MainMusic instance;
 
-    void Start()
+    void Awake()
     {
-        audioSource.Play();
-        audioSource.ignoreListenerPause = true;
+        themeSong.ignoreListenerPause = true;
+        librarySong.ignoreListenerPause = true;
+        villageSong.ignoreListenerPause = true;
+        treantSong.ignoreListenerPause = true;
         DontDestroyOnLoad(gameObject);
 
         DontDestroyOnLoad(this.gameObject);

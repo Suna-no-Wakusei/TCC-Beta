@@ -11,6 +11,7 @@ public class Player : Fighter
 {
     public bool timeRunning = true;
     public bool availableToInteract = true;
+    public bool stepingOnDefault = true;
 
     private BoxCollider2D boxCollider;
 
@@ -74,34 +75,55 @@ public class Player : Fighter
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            if (collision.gameObject.GetComponent<ChestOpen>() != null)
-            {
-                if (!collision.gameObject.GetComponent<ChestOpen>().chest.chestAlreadyOpened)
-                    GameManager.instance.InteractButton.SetActive(true);
-            }
-            else
-            {
-                GameManager.instance.InteractButton.SetActive(true);
-            }
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 8)
-        {
-            GameManager.instance.InteractButton.SetActive(false);
-        }
-    }
-
     public void Update()
     {
         if (rb.velocity == Vector2.zero)
             GameManager.instance.floorType = GameManager.FloorType.Null;
+
+        if (GameManager.instance.hero.gameObject.activeSelf)
+        {
+            switch (GameManager.instance.floorType)
+            {
+                case GameManager.FloorType.Null:
+                    GameManager.instance.sfxManager.StopFootstepWood();
+                    GameManager.instance.sfxManager.StopLongGrass();
+                    GameManager.instance.sfxManager.StopEarthStep();
+                    GameManager.instance.sfxManager.StopShortGrass();
+                    break;
+                case GameManager.FloorType.Grass:
+                    if (!GameManager.instance.sfxManager.shortGrass.isPlaying)
+                        StartCoroutine(playShort());
+
+                    GameManager.instance.sfxManager.StopFootstepWood();
+                    GameManager.instance.sfxManager.StopLongGrass();
+                    GameManager.instance.sfxManager.StopEarthStep();
+                    break;
+                case GameManager.FloorType.Wood:
+                    if (!GameManager.instance.sfxManager.footstepWood.isPlaying)
+                        StartCoroutine(playWood());
+
+                    GameManager.instance.sfxManager.StopShortGrass();
+                    GameManager.instance.sfxManager.StopLongGrass();
+                    GameManager.instance.sfxManager.StopEarthStep();
+                    break;
+                case GameManager.FloorType.TallGrass:
+                    if (!GameManager.instance.sfxManager.longGrass.isPlaying)
+                        StartCoroutine(playTall());
+
+                    GameManager.instance.sfxManager.StopShortGrass();
+                    GameManager.instance.sfxManager.StopFootstepWood();
+                    GameManager.instance.sfxManager.StopEarthStep();
+                    break;
+                case GameManager.FloorType.Earth:
+                    if (!GameManager.instance.sfxManager.earthStep.isPlaying)
+                        StartCoroutine(playEarth());
+
+                    GameManager.instance.sfxManager.StopShortGrass();
+                    GameManager.instance.sfxManager.StopFootstepWood();
+                    GameManager.instance.sfxManager.StopLongGrass();
+                    break;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -113,7 +135,6 @@ public class Player : Fighter
             return;
         }
             
-
         if (timeRunning)
         {
             //Movement
@@ -161,6 +182,8 @@ public class Player : Fighter
             //check for diagonal movement
             if (rb.velocity.x != 0 && rb.velocity.y != 0)
             {
+                if(stepingOnDefault)
+                    GameManager.instance.floorType = GameManager.instance.levelType;
                 rb.velocity = rb.velocity * 0.9f;
             }
 
@@ -168,15 +191,6 @@ public class Player : Fighter
             facingDirIdle = new Vector3(animator.GetFloat("IdleHorizontal"), animator.GetFloat("IdleVertical"));
         }
 
-        if(rb.velocity == Vector2.zero)
-        {
-            GameManager.instance.floorType = GameManager.FloorType.Null;
-            GameManager.instance.sfxManager.StopShortGrass();
-            GameManager.instance.sfxManager.StopFootstepWood();
-            GameManager.instance.sfxManager.StopLongGrass();
-            GameManager.instance.sfxManager.StopEarthStep();
-        }
-            
     }
 
     public void Move(InputAction.CallbackContext ctx)
@@ -185,52 +199,6 @@ public class Player : Fighter
 
         if (timeRunning)
         {
-            if (GameManager.instance.hero.gameObject.activeSelf)
-            {
-                switch (GameManager.instance.floorType)
-                {
-                    case GameManager.FloorType.Null:
-                        GameManager.instance.sfxManager.StopFootstepWood();
-                        GameManager.instance.sfxManager.StopLongGrass();
-                        GameManager.instance.sfxManager.StopEarthStep();
-                        GameManager.instance.sfxManager.StopShortGrass();
-                        break;
-                    case GameManager.FloorType.Grass:
-                        if (!GameManager.instance.sfxManager.shortGrass.isPlaying)
-                            StartCoroutine(playShort());
-
-                        GameManager.instance.sfxManager.StopFootstepWood();
-                        GameManager.instance.sfxManager.StopLongGrass();
-                        GameManager.instance.sfxManager.StopEarthStep();
-                        break;
-                    case GameManager.FloorType.Wood:
-                        if (!GameManager.instance.sfxManager.footstepWood.isPlaying)
-                            StartCoroutine(playWood());
-
-                        GameManager.instance.sfxManager.StopShortGrass();
-                        GameManager.instance.sfxManager.StopLongGrass();
-                        GameManager.instance.sfxManager.StopEarthStep();
-                        break;
-                    case GameManager.FloorType.TallGrass:
-                        if (!GameManager.instance.sfxManager.longGrass.isPlaying)
-                            StartCoroutine(playTall());
-
-                        GameManager.instance.sfxManager.StopShortGrass();
-                        GameManager.instance.sfxManager.StopFootstepWood();
-                        GameManager.instance.sfxManager.StopEarthStep();
-                        break;
-                    case GameManager.FloorType.Earth:
-                        if (!GameManager.instance.sfxManager.earthStep.isPlaying)
-                            StartCoroutine(playEarth());
-
-                        GameManager.instance.sfxManager.StopShortGrass();
-                        GameManager.instance.sfxManager.StopFootstepWood();
-                        GameManager.instance.sfxManager.StopLongGrass();
-                        break;
-                }
-            }
-            
-            
             inputMovement = inputValue;
         }
         else
@@ -282,6 +250,8 @@ public class Player : Fighter
         if (!availableToInteract) return;
 
         if (characterUnableToMove) return;
+
+        availableToInteract = false;
 
         if (timeRunning)
             Collect();
@@ -344,6 +314,8 @@ public class Player : Fighter
         {
             collider.GetComponent<ICollectable>()?.Collect();
         }
+
+        availableToInteract = true;
     }
 
     //ARRUMAR QUARTENIAL DO ATAQUE

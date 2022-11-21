@@ -7,6 +7,8 @@ using UnityEngine.InputSystem.Controls;
 
 public class SpellBarUI : MonoBehaviour
 {
+    public static SpellBarUI instance;
+
     private SpellBook spellBook;
     public GameObject[] spellSlot = new GameObject[8];
     private GameObject[] spellPF;
@@ -14,6 +16,8 @@ public class SpellBarUI : MonoBehaviour
     private void Awake()
     {
         spellPF = new GameObject[8];
+
+        instance = this;
     }
 
     void Update()
@@ -83,8 +87,6 @@ public class SpellBarUI : MonoBehaviour
         for (int i = 0; i < spellBook.GetSpellList().Length; i++)
         {
             if (spellBook.GetSpellList()[i] == null) continue;
-            Debug.Log(spellBook.GetSpellList()[i].spellType);
-            Debug.Log(i);
         }
 
         RefreshBookSpells();

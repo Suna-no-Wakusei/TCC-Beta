@@ -14,12 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 6570b73228eff94419e5665a20275335
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 0ed8ee58e37f99b4d9350d81af320f27
@@ -47,6 +41,45 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HubPortal_1.unity
     guid: c6fa00155aa8c5f4eb6609505c18e9a2
+  - enabled: 1
+    path: Assets/Scenes/Biblioteca.unity
+    guid: be237fdf9e64e4e49b0bd59344e42f63
+  - enabled: 1
+    path: Assets/Scenes/Biblioteca_1.unity
+    guid: fd1dee7dc672e38478ef28b20efb8321
+  - enabled: 1
+    path: Assets/Scenes/Casa_3.unity
+    guid: 1413a6c8d32c7df4b9c318bfd12ad124
+  - enabled: 1
+    path: Assets/Scenes/Casa_4.unity
+    guid: 29df5ebaef8453b4dac8b25515d9272a
+  - enabled: 1
+    path: Assets/Scenes/HubPortal_2.unity
+    guid: d14c1deaabc10234993eb4c7259e109c
+  - enabled: 1
+    path: Assets/Scenes/HubPortal_3.unity
+    guid: 9d1b7175a6417e84badc0ff66f3c17dd
+  - enabled: 1
+    path: Assets/Scenes/Level1_3.unity
+    guid: f711aa01938db484993b5a8f960096fc
+  - enabled: 1
+    path: Assets/Scenes/Level1_4.unity
+    guid: 2d61598d92054a14b8dd7113bbd03fcc
+  - enabled: 1
+    path: Assets/Scenes/Level4_1.unity
+    guid: de80bdb4daba39748bbad8283cec2e92
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 360eb3aa1d6d984458a08ed8552eb7ff
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
+    guid: 960c4b02375e0d74b9efa3e1bfc93322
+  - enabled: 1
+    path: Assets/Scenes/Level4_2.unity
+    guid: 6525244ff0ef3cf4eaacb6fd68df2889
+  - enabled: 1
+    path: Assets/Scenes/0Credits.unity
+    guid: 7756dd0bbc0c47442836f57a8e2ef445
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2871b85f256ff8f4d96664b0d0d9f323, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 1ca58183fe226b149ad2e1ab2d4ffffa, type: 2}

@@ -10,7 +10,6 @@ public class Porta : Collidable
     public string[] sceneNames;
     private string sceneName;
     public Vector2 playerPosition;
-    public TeleportPoint Teleport;
     public float fadeWait;
 
     private bool enterPortal = false;

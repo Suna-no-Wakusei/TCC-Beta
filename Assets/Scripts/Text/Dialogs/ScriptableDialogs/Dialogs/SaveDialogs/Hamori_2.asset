@@ -14,6 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText:
     lines:
+    - "Quem diria que voc\xEA iria conseguir mesmo"
+    - Atrasado! Mas trouxe todas as madeiras de carvalho escuro que eu pedi
+    - "Eu te falei, vov\xF4, sou o seu melhor lenhador"
+    - "Depois dessa, acho que eu merecia at\xE9 um aumento"
+    - "N\xE3o v\xE1 come\xE7ando a se achar s\xF3 por causa disso"
+    - "Voc\xEA ainda tem muito a evoluir"
+    - "Vou ter que ir at\xE9 o reino de Hipolitus para tratar de alguns assuntos
+      importantes"
+    - "Todos os pedidos j\xE1 foram carregados"
+    - "Ent\xE3o n\xE3o vai precisar vir aqui enquanto eu estiver fora"
+    - "J\xE1 tava na hora n\xE9 vov\xF4, vou aproveitar o tempo pra resolver umas
+      coisinhas tamb\xE9m"
+    - "S\xF3 vou ficar fora por alguns dias, ent\xE3o n\xE3o se empolgue"
+    - "At\xE9 l\xE1, voc\xEA est\xE1 dispensado"
     - "N\xE3o sabia que voc\xEA tinha conhecido o rei de Hipolitus em pessoa"
     - "De onde voc\xEA ouviu isso?"
     - Um cara me contou quando eu tava passando pela floresta
@@ -36,6 +50,18 @@ MonoBehaviour:
     - "E imagina o tanto de comidas diferentes que ainda v\xE3o ser inventadas em
       tanto tempo-"
     icons:
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
+    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
@@ -66,38 +92,12 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
   objectiveText:
-    lines:
-    - "Quem diria que voc\xEA iria conseguir mesmo"
-    - Atrasado! Mas trouxe todas as madeiras de carvalho escuro que eu pedi
-    - "Eu te falei, vov\xF4, sou o seu melhor lenhador"
-    - "Depois dessa, acho que eu merecia at\xE9 um aumento"
-    - "N\xE3o v\xE1 come\xE7ando a se achar s\xF3 por causa disso"
-    - "Voc\xEA ainda tem muito a evoluir"
-    - "Vou ter que ir at\xE9 o reino de Hipolitus para tratar de alguns assuntos
-      importantes"
-    - "Todos os pedidos j\xE1 foram carregados"
-    - "Ent\xE3o n\xE3o vai precisar vir aqui enquanto eu estiver fora"
-    - "J\xE1 tava na hora n\xE9 vov\xF4, vou aproveitar o tempo pra resolver umas
-      coisinhas tamb\xE9m"
-    - "S\xF3 vou ficar fora por alguns dias, ent\xE3o n\xE3o se empolgue"
-    - "At\xE9 l\xE1, voc\xEA est\xE1 dispensado"
-    icons:
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
-    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-    - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
-  objectiveID: 2
-  finishObjective: 1
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 0
   timeRunningDialog: 1
-  dialogAlreadyPlayed: 1
+  dialogAlreadyPlayed: 0
   dialogStarted: 0
   lateDialog: 1
   lateDialogText:

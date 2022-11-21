@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: SecDayStart
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - Yaaaawn... eu dormi como uma pedra
+    - "Nunca me senti t\xE3o cansado antes"
+    - "(Bom dia, Tamaki! Seu corpo ainda n\xE3o est\xE1 acostumado com o gasto de
+      mana e seu processo de recupera\xE7\xE3o)"
+    - "(Por isso voc\xEA acabou se desgastando bastante e tamb\xE9m se mexeu muito
+      durante a noite)"
+    - "Bom dia... Parando para pensar agora, acho que a gente podia pensar em um
+      nome pra voc\xEA"
+    - "Pra que eu consiga te chamar de algum jeito, enquanto voc\xEA ainda n\xE3o
+      lembra o seu nome de verdade"
+    - (Um nome? Bem pensado...)
+    - (Hmmmm...)
+    - "(Akemi \xE9 um nome que me atrai)"
+    - "(\xC9 o mesmo nome de quem liderou as tropas \xE9lficas na incurs\xE3o na
+      regi\xE3o de Satus, juntamente do general Kun)"
+    - "(Ambos acabaram morrendo em batalha e a perda deles acabou agravando o decl\xEDnio
+      dos elfos ap\xF3s o fim da guerra)"
+    - "Voc\xEA estudou bastante coisa mesmo ontem l\xE1 na biblioteca, Akemi \xE9
+      um nome legal"
+    - "Essa noite voc\xEA ficou sem dormir o tempo todo?"
+    - "(Depois que voc\xEA come\xE7ou a dormir eu n\xE3o consegui mais enxergar)"
+    - "(Mas ainda conseguia sentir seu corpo se mexendo e ouvia voc\xEA roncando)"
+    - "(Eu n\xE3o sentia vontade de dormir, ent\xE3o acabei usando boa parte do tempo
+      para ficar meditando)"
+    - "N\xE3o sei como eu aguentaria ficar a noite toda em claro sem conseguir fazer
+      nada"
+    - "E eu tamb\xE9m n\xE3o ronco quando durmo, que estranho"
+    - "(N\xE3o foi bem o que aconteceu)"
+    - "T\xE1 legal, o ponto de teletransporte fica ao norte do vilarejo, no meio
+      da rota que leva at\xE9 Bingus"
+    - "Tudo que eu preciso fazer agora \xE9 pegar a minha... minha... Minha credencial!"
+    - "Eu coloquei ela em algum lugar e agora n\xE3o me lembro mais onde foi"
+    - "(O que seria essa credencial de que voc\xEA est\xE1 falando?)"
+    - "Eu s\xF3 tenho a credencial que serve para usar os portais que levam at\xE9
+      a regi\xE3o de Satus e tamb\xE9m os da regi\xE3o m\xE1gica de Mentia"
+    - "Como eu ajudei o velinho uma vez com um carregamento que era para uma fam\xEDlia
+      do reino de Tutis, ele comprou pra mim uma credencial"
+    - "Sem a credencial, n\xE3o \xE9 poss\xEDvel usar os portais de teletransporte
+      para ir de uma regi\xE3o para a outra"
+    - (Eu lembro de ter lido algo sobre isso)
+    - "(Depois da derrota dos orcs contra os humanos na Quarta Guerra Orcnea de expans\xE3o
+      territorial)"
+    - "(A tecnologia dos portais ainda estava come\xE7ando a ser implementada pelo
+      mundo)"
+    - "(Poucos anos depois do fim dessa guerra, um batalh\xE3o revolucion\xE1rio
+      orc invadiu um dos pontos de teletransporte)"
+    - (E realizaram um ataque surpresa ao reino de Hipolitus, que ficou conhecido
+      como Enders Massacre)
+    - "(Depois desse ocorrido, passaram a ser tomadas algumas medidas para que n\xE3o
+      ocorressem mais epis\xF3dios como esse)"
+    - "Agora que eu n\xE3o tenho mais a minha credencial, chegar em Tutis vai levar
+      uma eternidade"
+    - "(N\xE3o consegue se lembrar quando voc\xEA usou ela pela \xFAltima vez?)"
+    - Teve uma vez que o velho Yelts me pediu ajuda pra levar os peixes que ele ia
+      vender em Satus
+    - Nesse dia ele me deu um linguado bem grande como pagamento
+    - "Depois disso eu n\xE3o lembro de ter ido pra t\xE3o longe do vilarejo de novo"
+    - (Talvez falar com ele possa ajudar a se lembrar de algo)
+    - "\xC9 uma boa ideia!"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  afterDialogText:
+    lines: []
+    icons: []
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 0
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

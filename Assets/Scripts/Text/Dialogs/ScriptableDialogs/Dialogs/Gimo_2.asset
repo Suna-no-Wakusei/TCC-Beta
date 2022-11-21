@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Gimo_2
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - "As po\xE7\xF5es de cura passaram a ser artif\xEDcios muito utilizados"
+    - "Elas s\xE3o equivalentes \xE0 magia de cura"
+    - "O que faz com que sejam muito \xFAteis para pessoas que n\xE3o conseguem conjurar
+      magia"
+    - "Ou at\xE9 para usu\xE1rios capazes de manipular mana que querem poupar suas
+      energias"
+    icons:
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+  afterDialogText:
+    lines:
+    - "As po\xE7\xF5es de cura passaram a ser artif\xEDcios muito utilizados"
+    - "Elas s\xE3o equivalentes \xE0 magia de cura"
+    - "O que faz com que sejam muito \xFAteis para pessoas que n\xE3o conseguem conjurar
+      magia"
+    - "Ou at\xE9 para usu\xE1rios capazes de manipular mana que querem poupar suas
+      energias"
+    icons:
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 0
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0.5
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 1
+  dialogLineItem: 22

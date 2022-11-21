@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
         actualScene = SceneManager.GetActiveScene().name;
 
-        if (actualScene == "Projeto")
+        if (actualScene == "Level4")
             sfxManager.PlayAmbient();
         else
             sfxManager.StopAmbient();
@@ -104,7 +104,6 @@ public class GameManager : MonoBehaviour
 
     //public weapon weapon...
     public FloatingTextManager floatingTextManager;
-    public TeleportPoint teleport;
     public Slider expSlider;
     public SlicedFilledImage manaSlider, hpSlider;
     public RectTransform maxHPUI, maxManaUI;

@@ -10,17 +10,20 @@ public class CollectableDialog : Collidable, ICollectable
 
     public void Collect()
     {
-        if (dialog.objectiveID != 0)
-        {
-            if (dialog.objectiveID == GameManager.instance.objectiveManager.objectiveActive.id)
+        if(GameManager.instance.objectiveManager.objectiveActive != null)
+            if (dialog.objectiveID != 0)
             {
-                if (!dialog.timeRunningDialog)
-                    Time.timeScale = 0f;
+                if (dialog.objectiveID == GameManager.instance.objectiveManager.objectiveActive.id)
+                {
+                    if (!dialog.timeRunningDialog)
+                        Time.timeScale = 0f;
 
-                StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.objectiveText));
-                return;
+                    StartCoroutine(DialogueManager.Instance.ShowDialog(dialog.objectiveText));
+                    return;
+                }
             }
-        }
+
+        if (dialog.dialogText.Lines.Count == 0) return;
 
         if (dialog.dialogAlreadyPlayed == false)
         {

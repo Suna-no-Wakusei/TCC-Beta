@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
   m_Name: Gimo_1
   m_EditorClassIdentifier: 
-  objectiveText:
-    lines: []
-    icons: []
-  objectiveID: 0
   dialogText:
     lines:
     - "O que faz um rapaz t\xE3o novo sozinho no meio da floresta?"
@@ -92,21 +88,16 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
     - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
   afterDialogText:
-    lines:
-    - "As po\xE7\xF5es de cura passaram a ser artif\xEDcios muito utilizados"
-    - "Elas s\xE3o equivalentes \xE0 magia de cura"
-    - "O que faz com que sejam muito \xFAteis para pessoas que n\xE3o conseguem conjurar
-      magia"
-    - "Ou at\xE9 para usu\xE1rios capazes de manipular mana que querem poupar suas
-      energias"
-    icons:
-    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
-    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
-    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
-    - {fileID: 21300000, guid: 13610cf2daf65f640863bf0b63c16572, type: 3}
+    lines: []
+    icons: []
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 0
   timeRunningDialog: 1
-  dialogAlreadyPlayed: 1
-  dialogStarted: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
   lateDialog: 0
   lateDialogText:
     lines: []

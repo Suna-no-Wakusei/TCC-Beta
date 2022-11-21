@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
   m_Name: Hamori_1
   m_EditorClassIdentifier: 
-  objectiveText:
-    lines: []
-    icons: []
-  objectiveID: 0
   dialogText:
     lines:
     - "Est\xE1 atrasado! De novo!"
@@ -91,8 +87,13 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 468a52552ffd2a6488178120351b2786, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 0
   timeRunningDialog: 1
-  dialogAlreadyPlayed: 1
+  dialogAlreadyPlayed: 0
   dialogStarted: 0
   lateDialog: 1
   lateDialogText:

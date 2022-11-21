@@ -69,9 +69,17 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
     - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
   objectiveText:
-    lines: []
-    icons: []
-  objectiveID: 0
+    lines:
+    - "Senhora Elga, voc\xEA viu o velinho Yelts?"
+    - "Yelts? J\xE1 faz um tempo que eu n\xE3o falo com ele"
+    - "Inclusive, estava precisando encomentar alguns peixes dele para preparar na
+      p\xE1scoa"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+    - {fileID: 21300000, guid: b6e517d4b7b51a548abd614a1e78bb38, type: 3}
+  objectiveID: 6
+  finishObjective: 0
   timeRunningDialog: 1
   dialogAlreadyPlayed: 0
   dialogStarted: 0

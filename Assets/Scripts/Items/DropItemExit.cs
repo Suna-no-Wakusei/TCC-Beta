@@ -37,14 +37,17 @@ public class DropItemExit : MonoBehaviour, IDropHandler
                 thisItem = eventData.pointerDrag.gameObject;
                 itemUI = thisItem.GetComponent<ItemUI>();
 
-                item = itemUI.item;
+                if(itemUI != null)
+                {
+                    item = itemUI.item;
 
-                // Drop Item
-                Destroy(thisItem);
+                    // Drop Item
+                    Destroy(thisItem);
 
-                Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
-                GameManager.instance.inventory.RemoveItem(item);
-                ItemWorld.DropItem(GameObject.Find("Hero").transform.position, duplicateItem);
+                    Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
+                    GameManager.instance.inventory.RemoveItem(item);
+                    ItemWorld.DropItem(GameObject.Find("Hero").transform.position, duplicateItem);
+                }
             }
         }
     }

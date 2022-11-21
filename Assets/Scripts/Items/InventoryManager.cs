@@ -11,9 +11,9 @@ public class InventoryManager : MonoBehaviour
     public event Action OnPause;
     public event Action OnEndPause;
     private int menuState;
-    [SerializeField] private GameObject inventoryPanel, inventoryMenu, spellsMenu, missionsMenu, configsMenu, iconInventory, iconSpells, iconMissions, iconConfigs, quitMenu;
-    [SerializeField] private Sprite invIcon, spellsIcon, missionsIcon, configsIcon;
-    [SerializeField] private Sprite invIconSelected, spellsIconSelected, missionsIconSelected, configsIconSelected;
+    [SerializeField] private GameObject inventoryPanel, inventoryMenu, spellsMenu, missionsMenu, mapMenu, configsMenu, iconInventory, iconSpells, iconMissions, iconMap, iconConfigs, quitMenu;
+    [SerializeField] private Sprite invIcon, spellsIcon, missionsIcon, mapIcon, configsIcon;
+    [SerializeField] private Sprite invIconSelected, spellsIconSelected, missionsIconSelected, mapIconSelected, configsIconSelected;
 
     public static InventoryManager Instance { get; private set; }
 
@@ -37,40 +37,60 @@ public class InventoryManager : MonoBehaviour
                 inventoryMenu.SetActive(true);
                 spellsMenu.SetActive(false);
                 missionsMenu.SetActive(false);
+                mapMenu.SetActive(false);
                 configsMenu.SetActive(false);
                 iconInventory.GetComponent<Image>().sprite = invIconSelected;
                 iconSpells.GetComponent<Image>().sprite = spellsIcon;
                 iconMissions.GetComponent<Image>().sprite = missionsIcon;
+                iconMap.GetComponent<Image>().sprite = mapIcon;
                 iconConfigs.GetComponent<Image>().sprite = configsIcon;
                 break;
             case 1:
                 inventoryMenu.SetActive(false);
                 spellsMenu.SetActive(true);
                 missionsMenu.SetActive(false);
+                mapMenu.SetActive(false);
                 configsMenu.SetActive(false);
                 iconInventory.GetComponent<Image>().sprite = invIcon;
                 iconSpells.GetComponent<Image>().sprite = spellsIconSelected;
                 iconMissions.GetComponent<Image>().sprite = missionsIcon;
+                iconMap.GetComponent<Image>().sprite = mapIcon;
                 iconConfigs.GetComponent<Image>().sprite = configsIcon;
                 break;
             case 2:
                 inventoryMenu.SetActive(false);
                 spellsMenu.SetActive(false);
                 missionsMenu.SetActive(true);
+                mapMenu.SetActive(false);
                 configsMenu.SetActive(false);
                 iconInventory.GetComponent<Image>().sprite = invIcon;
                 iconSpells.GetComponent<Image>().sprite = spellsIcon;
                 iconMissions.GetComponent<Image>().sprite = missionsIconSelected;
+                iconMap.GetComponent<Image>().sprite = mapIcon;
                 iconConfigs.GetComponent<Image>().sprite = configsIcon;
                 break;
             case 3:
                 inventoryMenu.SetActive(false);
                 spellsMenu.SetActive(false);
                 missionsMenu.SetActive(false);
+                mapMenu.SetActive(true);
+                configsMenu.SetActive(false);
+                iconInventory.GetComponent<Image>().sprite = invIcon;
+                iconSpells.GetComponent<Image>().sprite = spellsIcon;
+                iconMissions.GetComponent<Image>().sprite = missionsIcon;
+                iconMap.GetComponent<Image>().sprite = mapIconSelected;
+                iconConfigs.GetComponent<Image>().sprite = configsIcon;
+                break;
+            case 4:
+                inventoryMenu.SetActive(false);
+                spellsMenu.SetActive(false);
+                missionsMenu.SetActive(false);
+                mapMenu.SetActive(false);
                 configsMenu.SetActive(true);
                 iconInventory.GetComponent<Image>().sprite = invIcon;
                 iconSpells.GetComponent<Image>().sprite = spellsIcon;
                 iconMissions.GetComponent<Image>().sprite = missionsIcon;
+                iconMap.GetComponent<Image>().sprite = mapIcon;
                 iconConfigs.GetComponent<Image>().sprite = configsIconSelected;
                 break;
         }
@@ -89,8 +109,6 @@ public class InventoryManager : MonoBehaviour
     public void OpenIt(InputAction.CallbackContext ctx)
     {
         if (quitMenu.activeSelf) return;
-
-        if (!GameManager.instance.hero.timeRunning) return;
 
         if (DialogueManager.Instance.dialogRunning) return;
 
@@ -122,14 +140,12 @@ public class InventoryManager : MonoBehaviour
         if (GameObject.Find("SpellBox(Clone)") != null)
             Destroy(GameObject.Find("SpellBox(Clone)"));
 
-        if (iconConfigs.GetComponent<IconDesc>().iconDesc.activeSelf)
-            iconConfigs.GetComponent<IconDesc>().iconDesc.SetActive(false);
-        else if(iconInventory.GetComponent<IconDesc>().iconDesc.activeSelf)
-            iconInventory.GetComponent<IconDesc>().iconDesc.SetActive(false);
-        else if (iconMissions.GetComponent<IconDesc>().iconDesc.activeSelf)
-            iconMissions.GetComponent<IconDesc>().iconDesc.SetActive(false);
-        else if (iconSpells.GetComponent<IconDesc>().iconDesc.activeSelf)
-            iconSpells.GetComponent<IconDesc>().iconDesc.SetActive(false);
+        var foundIconDescs = FindObjectsOfType<IconDesc>();
+
+        foreach (var iconDesc in foundIconDescs)
+        {
+            foreach(Transform child in iconDesc.transform) child.gameObject.SetActive(false);
+        }
 
         inventoryPanel.SetActive(false);
         OnEndPause?.Invoke();

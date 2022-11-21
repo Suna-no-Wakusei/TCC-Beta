@@ -208,11 +208,24 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
     - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
   objectiveText:
-    lines: []
-    icons: []
-  objectiveID: 0
+    lines:
+    - "Oi, padre, voc\xEA viu o vov\xF4 Yelts em algum lugar por a\xED?"
+    - Normalmente ele sempre vem para as missas de domingo
+    - "No restante da semana eu n\xE3o costumo ver ele passar muito por aqui na capela"
+    - Ok, vou ver se consigo encontrar ele
+    - Obrigado, padre Marcel
+    - "N\xE3o deixe de vir na pr\xF3xima missa, Tamaki, estarei esperando por voc\xEA"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 6015609240b28f6438faef2dc6f8ce29, type: 3}
+  objectiveID: 6
+  finishObjective: 0
   timeRunningDialog: 1
-  dialogAlreadyPlayed: 1
+  dialogAlreadyPlayed: 0
   dialogStarted: 0
   lateDialog: 0
   lateDialogText:

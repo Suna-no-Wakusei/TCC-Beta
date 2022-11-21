@@ -52,10 +52,13 @@ public class TreantBoss1 : Fighter
 
     public void Update()
     {
+        if (i == 8)
+            spawnEnemies = false;
+
         if (dialogIsOver)
             return;
 
-        if (Keyboard.current.enterKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
+        if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             if (!isTyping)
             {
@@ -122,6 +125,7 @@ public class TreantBoss1 : Fighter
                     SFXManager.instance.StopMagicAmbient();
                     SFXManager.instance.PlayAmbient();
                     GameManager.instance.globalVolume.profile = GameManager.instance.tamakiProfile;
+                    GameManager.instance.hero.availableToInteract = true;
                 }
             }
             else
@@ -134,7 +138,6 @@ public class TreantBoss1 : Fighter
                 isTyping = false;
             }
         }
-
     }
 
     public IEnumerator TypeDialog(string line, Sprite icon)
@@ -178,6 +181,8 @@ public class TreantBoss1 : Fighter
         Camera.main.transform.position = pos2;
     }
 
+    private int i = 0;
+
     private void SpawnEnemies()
     {
         if (!spawnEnemies) return;
@@ -191,6 +196,7 @@ public class TreantBoss1 : Fighter
 
         treant.enemy.alive = true;
         treant.enemy.canMove = true;
+        i++;
     }
 
     private void Awake()

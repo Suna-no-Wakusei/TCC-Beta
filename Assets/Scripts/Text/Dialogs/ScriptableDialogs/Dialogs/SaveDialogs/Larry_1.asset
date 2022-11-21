@@ -68,9 +68,18 @@ MonoBehaviour:
     - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
     - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
   objectiveText:
-    lines: []
-    icons: []
-  objectiveID: 0
+    lines:
+    - "Ei, vov\xF4 Larry, voc\xEA viu o velinho Yelts por a\xED?"
+    - "Eu havia sa\xEDdo para pescar com ele h\xE1 uns tr\xEAs dias atr\xE1s"
+    - "Depois disso, n\xE3o lembro de ter falado com ele de novo"
+    - "Ok, vov\xF4, obrigado"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: ef7ddda11eb6d91408486b20ed6c7d95, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+  objectiveID: 6
+  finishObjective: 0
   timeRunningDialog: 0
   dialogAlreadyPlayed: 0
   dialogStarted: 0

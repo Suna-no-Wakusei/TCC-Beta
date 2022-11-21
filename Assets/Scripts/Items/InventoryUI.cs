@@ -66,9 +66,6 @@ public class InventoryUI : MonoBehaviour
         for (int i = 0; i < inventory.GetItemList().Length; i++)
         {
             if (inventory.GetItemList()[i] == null) continue;
-            Debug.Log(inventory.GetItemList()[i].itemType);
-            Debug.Log(inventory.GetItemList()[i].amount);
-            Debug.Log(i);
         }
 
         RefreshInventoryItems();
@@ -130,8 +127,6 @@ public class InventoryUI : MonoBehaviour
 
                                 inventory.GetItemList()[i] = item;
                                 inventory.GetItemList()[y] = null;
-
-
                             }
                         }
                     }

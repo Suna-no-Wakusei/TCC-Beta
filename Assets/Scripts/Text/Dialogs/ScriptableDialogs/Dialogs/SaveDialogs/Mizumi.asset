@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Mizumi
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - "Ta-ta-ta-tamaki! E-eu n\xE3o esperava ver voc\xEA por aqui..."
+    - "Como que voc\xEA t\xE1, Mizumi? N\xE3o sabia que voc\xEA gostava de caminhar"
+    - "E-e-\xE9... Eu gosto de caminhar, me ajuda a pensar e ficar mais relaxada"
+    - "Quando eu n\xE3o t\xF4 bem, vir aqui e ficar olhando o vendo bater nas \xE1guas
+      me acalma"
+    - "Aqui \xE9 bem bonito mesmo, esse ar fresco todo..."
+    - "Eu achava que voc\xEA tinha uns gostos mais esquisitos"
+    - O que?? Co-co-como assim???
+    - "(Voc\xEA realmente n\xE3o pensa direito antes de falar, n\xE3o \xE9?)"
+    - "Lembrei! Voc\xEA t\xE1 com uma credencial que o seu pai te deu esses dias?"
+    - Ela era minha, e eu acabei perdendo quando fui ajudar ele semana passada
+    - "Ent\xE3o... ela era su-sus-su-sua?"
+    - "Me-meu pai tinha deixado ela comigo, para caso algu\xE9m desse falta alguma
+      hora"
+    - "S\xF3 n\xE3o esperava que essa pessoa fosse ser vo-vo-voc\xEA..."
+    - "(A m\xE3o dela est\xE1 tremendo, e ela n\xE3o para de olhar para baixo)"
+    - "Obrigado, Mizu! Eu tenho umas coisas pra fazer agora, ent\xE3o j\xE1 vou indo"
+    - "A gente se v\xEA outro dia"
+    - Mi-mi-mizu!?? Se-se ver outro dia??
+    icons:
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+  afterDialogText:
+    lines:
+    - Mizu... Mizu... Mi-mi-mizu...
+    - Ele me chamou de... Mizu?
+    - "Tudo bem a\xED, Mizumi?"
+    - Ta-ta-tamaki!
+    - (Ela ficou muito vermelha de uma hora para outra)
+    icons:
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: a929087d61ccb534e8b19e17a203d6ca, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 1
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines:
+    - "(Voc\xEAs dois se conhecem faz tempo?)"
+    - Quem? Eu e a Mizumi?
+    - "O velho Yelts \xE9 amigo do Hamori, ent\xE3o o velinho me apresentou pra ele
+      pouco tempo depois de eu ter vindo pra c\xE1"
+    - "A\xED eu acabei trombando com a Mizumi algumas vezes, como ela ajudava o pai
+      dela na loja"
+    - "(Ela parecia bem nervosa conversando com voc\xEA)"
+    - "Eu achava ela meio esquisita no come\xE7o, mas depois entendi que esse era
+      mais o jeito dela"
+    - "(Mesmo estando meio tr\xEAmula, ela falava com firmeza das coisas que gostava)"
+    - "(E parecia estar bem feliz com a sua presen\xE7a)"
+    - "Fazer o que se eu sou muito carism\xE1tico, acabo provocando essa alegria
+      nas pessoas"
+    - "(N\xE3o s\xF3 alegre, ela parecia gostar de verdade de estar com voc\xEA)"
+    - "Como assim? Eu n\xE3o entendi"
+    - "(Aiai Tamaki... Voc\xEA \xE9 mesmo impressionante)"
+    - "Do que voc\xEA t\xE1 falando? Eu realmente n\xE3o t\xF4 entendo"
+    - "(\xC9 melhor n\xF3s seguirmos at\xE9 o ponto de teletransporte enquanto ainda
+      \xE9 cedo)"
+    icons:
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 1
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0

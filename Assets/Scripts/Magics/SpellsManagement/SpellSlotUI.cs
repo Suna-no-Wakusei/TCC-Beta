@@ -19,11 +19,12 @@ public class SpellSlotUI : MonoBehaviour, IPointerDownHandler
     {
         image = transform.GetComponent<Image>();
         defaultSprite = image.sprite;
-        spellSlot = GameObject.FindGameObjectsWithTag("SpellSlot");
     }
 
     private void Update()
     {
+        spellSlot = SpellBarUI.instance.spellSlot;
+
         if (!slotSelected)
         {
             image.sprite = defaultSprite;

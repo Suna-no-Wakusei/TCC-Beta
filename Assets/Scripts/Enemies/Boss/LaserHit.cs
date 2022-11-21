@@ -27,14 +27,14 @@ public class LaserHit : MonoBehaviour
             coll.transform.SendMessage("ReceiveDamage", dmg, SendMessageOptions.DontRequireReceiver);
 
             laserSR.size = new Vector2(8, Vector2.Distance(collisionPos, laserSR.transform.position) + 5.75f);
-            laserLight.localScale = new Vector2(0.1f * (Vector2.Distance(collisionPos, laserSR.transform.position) + 5.75f), laserLight.localScale.y);
+            laserLight.localScale = new Vector2(0.125f * (Vector2.Distance(collisionPos, laserSR.transform.position) + 5.75f), laserLight.localScale.y);
         }
         else if (coll.gameObject.layer != gameObject.layer && coll.gameObject.tag != "NotSolid")
         {
             if (coll.gameObject.layer != 8)
             {
                 laserSR.size = new Vector2(8, Vector2.Distance(collisionPos, laserSR.transform.position) + 5.75f);
-                laserLight.localScale = new Vector2(0.1f * (Vector2.Distance(collisionPos, laserSR.transform.position) + 5.75f), laserLight.localScale.y);
+                laserLight.localScale = new Vector2(0.125f * (Vector2.Distance(collisionPos, laserSR.transform.position) + 5.75f), laserLight.localScale.y);
             }
         }
     }

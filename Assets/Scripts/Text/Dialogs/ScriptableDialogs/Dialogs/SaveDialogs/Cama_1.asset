@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f9b8a6234207441a3a55284dd83ed2, type: 3}
+  m_Name: Cama_1
+  m_EditorClassIdentifier: 
+  dialogText:
+    lines:
+    - Esse dia foi bem longo
+    - "Amanh\xE3 a gente vai ter que levantar cedo e ir investigar a regi\xE3o montanhosa"
+    - "Ent\xE3o \xE9 bom conseguir descansar por agora"
+    - "O que vai acontecer com voc\xEA quando eu dormir?"
+    - "(Estava pensando nisso tamb\xE9m)"
+    - "(Para mim ainda \xE9 uma inc\xF3gnita)"
+    - "Bom, acho que s\xF3 testando pra descobrir ent\xE3o n\xE9"
+    - "(Durma bem, Tamaki, amanh\xE3 o dia ser\xE1 trabalhoso)"
+    - "Valeu, boa noite pra voc\xEA tamb\xE9m, eu acho"
+    - Te vejo quando amanhecer
+    - "(Vou estar esperando por voc\xEA)"
+    icons:
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: 1fbd1c87aaf57aa4c994e748ec541d15, type: 3}
+    - {fileID: 21300000, guid: d12280d7f4967224cb6bbd79516f9028, type: 3}
+  afterDialogText:
+    lines: []
+    icons: []
+  objectiveText:
+    lines: []
+    icons: []
+  objectiveID: 0
+  finishObjective: 0
+  timeRunningDialog: 1
+  dialogAlreadyPlayed: 0
+  dialogStarted: 0
+  lateDialog: 0
+  lateDialogText:
+    lines: []
+    icons: []
+  camFocus: {x: 0, y: 0, z: 0}
+  lateDelay: 0
+  getItemOnDialog: 0
+  item:
+    itemType: 0
+    amount: 0
+  dialogLineItem: 0
