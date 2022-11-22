@@ -49190,7 +49190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f01601da20ab3f4fb3bf8c13fc73c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song: 5
+  song: 3
 --- !u!4 &1337237961
 Transform:
   m_ObjectHideFlags: 0

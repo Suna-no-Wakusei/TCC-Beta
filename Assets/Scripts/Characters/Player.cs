@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using System.IO;
+using UnityEngine.EventSystems;
 
 public class Player : Fighter
 {
@@ -40,6 +41,7 @@ public class Player : Fighter
 
     public LayerMask Interactable;
     public Animator animator;
+    private bool clickUp = true;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +79,10 @@ public class Player : Fighter
 
     public void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            clickUp = false;
+        else clickUp = true;
+
         if (rb.velocity == Vector2.zero)
             GameManager.instance.floorType = GameManager.FloorType.Null;
 
@@ -236,6 +242,8 @@ public class Player : Fighter
         if (immune) return;
 
         if(characterUnableToMove) { return; }
+
+        if (!clickUp) return;
 
         if(Time.deltaTime == 0) { return; }
 
