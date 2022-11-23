@@ -77,9 +77,22 @@ public class Player : Fighter
         }
     }
 
+    public static bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        foreach (RaycastResult r in results)
+            if (r.gameObject.GetComponent<RectTransform>() != null)
+                return true;
+
+        return false;
+    }
+
     public void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (IsPointerOverUIObject())
             clickUp = false;
         else clickUp = true;
 
@@ -316,7 +329,6 @@ public class Player : Fighter
 
     public void Collect()
     {
-
         availableToInteract = false;
 
         var interactPos = transform.position;

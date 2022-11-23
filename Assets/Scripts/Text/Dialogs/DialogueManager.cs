@@ -10,14 +10,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject dialogBox;
     [SerializeField] Text dialogText;
     [SerializeField] Image imageDialog;
-    [SerializeField] int letterPerSecond;
+    public int letterPerSecond;
 
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
     public bool dialogRunning = false;
     public bool dialogIsOver;
     public bool dialogTimeStop;
-    bool isTyping;
+    public bool isTyping;
 
     Coroutine lastRoutine;
 
@@ -54,10 +54,8 @@ public class DialogueManager : MonoBehaviour
             dialogRunning = false;
     }
 
-    public void PassDialog(InputAction.CallbackContext ctx)
+    public void NextDialog()
     {
-        if (!ctx.performed) return;
-
         if (!dialogRunning) { return; }
 
         if (dialogIsOver)
@@ -91,6 +89,13 @@ public class DialogueManager : MonoBehaviour
             dialogText.text = dialog.Lines[currentLine];
             isTyping = false;
         }
+    }
+
+    public void PassDialog(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed) return;
+
+        NextDialog();
     }
 
     public IEnumerator TypeDialog(string line, Sprite icon)

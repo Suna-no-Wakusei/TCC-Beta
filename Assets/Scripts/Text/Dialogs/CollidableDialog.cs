@@ -108,9 +108,6 @@ public class CollidableDialog : MonoBehaviour
                         this.gameObject.GetComponent<Collider2D>().enabled = false;
                 }
             }   
-
-            
-                
         }
 
         if (dialog.dialogStarted)

@@ -13,10 +13,9 @@ public class SFXManager : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-
         if (instance == null)
         {
+            DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
         else

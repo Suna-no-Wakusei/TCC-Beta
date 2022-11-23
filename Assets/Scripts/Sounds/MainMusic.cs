@@ -19,12 +19,10 @@ public class MainMusic : MonoBehaviour
         villageSong.ignoreListenerPause = true;
         treantSong.ignoreListenerPause = true;
         forestSong.ignoreListenerPause = true;
-        DontDestroyOnLoad(gameObject);
-
-        DontDestroyOnLoad(this.gameObject);
 
         if (instance == null)
         {
+            DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
         else

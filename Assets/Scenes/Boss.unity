@@ -2367,7 +2367,7 @@ MonoBehaviour:
   dialogBox: {fileID: 1511439944}
   dialogText: {fileID: 1511439943}
   imageDialog: {fileID: 1511439942}
-  letterPerSecond: 45
+  letterPerSecond: 70
   TreantBoss2: {fileID: 1380416060}
   hitbox: {fileID: 1141969304}
   treantPF: {fileID: 2320537626741736825, guid: 6a5f7408728de204eaa28cf52a078dd0, type: 3}
@@ -9583,6 +9583,7 @@ MonoBehaviour:
   dialogRunning: 0
   dialogIsOver: 0
   dialogTimeStop: 0
+  isTyping: 0
   currentLine: 0
 --- !u!4 &240070898
 Transform:
@@ -56944,6 +56945,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 809373191}
     m_Modifications:
+    - target: {fileID: 1127561803589834632, guid: bca3d0655178fe34cae8a204680780c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8776305251966046559, guid: bca3d0655178fe34cae8a204680780c5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -62,6 +62,8 @@ public class TreantBoss2 : Fighter
         rootAttack.SetActive(false);
         CancelInvoke("Attacking");
 
+        CameraShake.Shake(1f, 0.5f);
+
         GameManager.instance.sfxManager.PlayBossTreantDamage();
         GameManager.instance.experience += xpValue;
         GameManager.instance.fragments = 1;

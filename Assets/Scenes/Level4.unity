@@ -35406,6 +35406,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1413116391}
     m_Modifications:
+    - target: {fileID: 1127561803589834632, guid: bca3d0655178fe34cae8a204680780c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8776305251966046559, guid: bca3d0655178fe34cae8a204680780c5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -50265,6 +50269,7 @@ MonoBehaviour:
   dialogRunning: 0
   dialogIsOver: 0
   dialogTimeStop: 0
+  isTyping: 0
   currentLine: 0
 --- !u!4 &1320289482
 Transform:
